@@ -7,121 +7,177 @@
 <title>College Football - Spice Bets</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
+/* Layout: a scoreboard. Wide-set display type, sport cards on a grid, numbers in mono with
+   tabular figures. One green accent, used on the live/positive things only. */
 :root{
-  --ground:#f4f8f5; --surface:#ffffff; --ink:#0d1611; --ink-soft:#56665d;
-  --line:#d2e1d7; --line-soft:#e5eee8;
-  --accent:#0d9c54; --accent-soft:#dff5e9; --accent-line:#1e5c39;
-  --win:#0d9c54; --loss:#c4352c; --pend:#56665d;
+  --ground:#f6f8f7; --surface:#ffffff; --raise:#eef2f0;
+  --ink:#0e1613; --ink-soft:#5a6b64; --ink-faint:#8a9a93;
+  --line:#dde5e1; --line-soft:#eaf0ed;
+  --accent:#07864a; --accent-ink:#ffffff; --accent-soft:#e4f4ec;
+  --win:#07864a; --loss:#c0392c; --pend:#8a9a93;
   --display:'Archivo','Helvetica Neue',Arial,sans-serif;
-  --body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  --body:'Archivo','Helvetica Neue',Arial,sans-serif;
   --mono:'IBM Plex Mono','SF Mono',Consolas,monospace;
+  --shadow:0 1px 2px rgba(14,22,19,.05), 0 8px 24px -12px rgba(14,22,19,.14);
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
-  --ground:#080b09; --surface:#101613; --ink:#e9f2ec; --ink-soft:#85978d;
-  --line:#223029; --line-soft:#18211c;
-  --accent:#3ddc84; --accent-soft:#0e2718; --accent-line:#86d7ab;
-  --win:#3ddc84; --loss:#ff6b63; --pend:#85978d; color-scheme:dark;
+  --ground:#0a0e0c; --surface:#121816; --raise:#19211d;
+  --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#6b7d75;
+  --line:#222c27; --line-soft:#1a221e;
+  --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
+  --win:#3ddc84; --loss:#ff6b63; --pend:#6b7d75;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
 }}
 :root[data-theme="dark"]{
-  --ground:#080b09; --surface:#101613; --ink:#e9f2ec; --ink-soft:#85978d;
-  --line:#223029; --line-soft:#18211c;
-  --accent:#3ddc84; --accent-soft:#0e2718; --accent-line:#86d7ab;
-  --win:#3ddc84; --loss:#ff6b63; --pend:#85978d; color-scheme:dark;
+  --ground:#0a0e0c; --surface:#121816; --raise:#19211d;
+  --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#6b7d75;
+  --line:#222c27; --line-soft:#1a221e;
+  --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
+  --win:#3ddc84; --loss:#ff6b63; --pend:#6b7d75;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:68rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 a{color:inherit}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.02em}
+h1,h2,h3{margin:0;font-family:var(--display);text-wrap:balance;font-variation-settings:'wdth' 118;letter-spacing:-.015em;line-height:1.08}
 .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0}
 
-/* header */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:20;background:var(--surface)}
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:19;background:var(--surface);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;gap:1.25rem;padding-block:.75rem;flex-wrap:wrap}
-.mark{font-family:var(--display);font-weight:800;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:.55rem}
-.mark .dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--accent);flex:none}
-nav.top{margin-left:auto;display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center}
-nav.top a{font-family:var(--mono);font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);padding-block:.2rem;border-bottom:1px solid transparent}
-nav.top a:hover,nav.top a:focus-visible{color:var(--ink);border-bottom-color:var(--accent)}
-nav.top a.here{color:var(--ink);border-bottom-color:var(--accent)}
-nav.top a.cta{color:var(--ground);background:var(--accent);border:0;border-radius:2px;padding:.35rem .7rem}
-nav.top a.cta:hover{filter:brightness(1.08)}
+/* ---- header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:29;background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:1.5rem;padding-block:.85rem;flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:.55rem;font-family:var(--display);font-variation-settings:'wdth' 122;font-weight:800;font-size:1rem;letter-spacing:.02em;text-decoration:none}
+.mark .dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 0 3px var(--accent-soft)}
+nav.top{margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center}
+nav.top a{font-size:.82rem;font-weight:600;text-decoration:none;color:var(--ink-soft);padding:.35rem .6rem;border-radius:6px}
+nav.top a:hover,nav.top a:focus-visible{color:var(--ink);background:var(--raise)}
+nav.top a.here{color:var(--accent);background:var(--accent-soft)}
+nav.top a.cta{color:var(--accent-ink);background:var(--accent);margin-left:.4rem}
+nav.top a.cta:hover{background:var(--accent);filter:brightness(1.08)}
 
-/* hero */
-.hero{border-bottom:1px solid var(--line)}
-.hero .wrap{padding-block:3.5rem 2.75rem}
-.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 1.1rem}
-h1{font-size:clamp(2.1rem,6vw,3.5rem);font-weight:800;line-height:1.04;max-width:18ch}
-.lede{font-size:1.1rem;color:var(--ink-soft);max-width:60ch;margin:1.25rem 0 0}
+/* ---- hero */
+.hero{background:var(--surface);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-block:4.5rem 3.5rem;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:3rem;align-items:start}
+h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
+.lede{font-size:1.08rem;color:var(--ink-soft);margin:1.4rem 0 0;max-width:46ch}
 .lede strong{color:var(--ink);font-weight:600}
+.herocard{background:var(--raise);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.herocard .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
+.herocard .big{font-family:var(--display);font-variation-settings:'wdth' 112;font-weight:800;font-size:3.1rem;line-height:1;margin:.5rem 0 .3rem;font-variant-numeric:tabular-nums;color:var(--accent)}
+.herocard .sub{font-size:.88rem;color:var(--ink-soft)}
+.herocard hr{border:0;border-top:1px solid var(--line);margin:1.1rem 0}
+.minirow{display:flex;justify-content:space-between;gap:1rem;font-size:.88rem;padding:.3rem 0}
+.minirow span:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+.minirow span:first-child{color:var(--ink-soft)}
+.hero.solo .wrap{grid-template-columns:1fr;gap:0;padding-block:3.25rem 2.75rem}
+.hero.solo h1{max-width:20ch}
+@media(max-width:860px){ .hero .wrap{grid-template-columns:1fr;gap:2rem;padding-block:3rem 2.5rem} }
 
-/* stat strip */
-.strip{border-bottom:1px solid var(--line);background:var(--surface)}
-.strip .wrap{padding-block:1.6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1.5rem}
-.stat .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.35rem}
-.stat .v{font-family:var(--display);font-weight:700;font-size:1.95rem;line-height:1;font-variant-numeric:tabular-nums}
-.stat .s{font-size:.82rem;color:var(--ink-soft);margin-top:.3rem}
-.pos{color:var(--accent)} .neg{color:var(--loss)}
-
-/* sections */
-section{border-bottom:1px solid var(--line)}
-section .wrap{padding-block:3rem}
-.sechead{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 1.5rem;padding-bottom:.6rem;border-bottom:1px solid var(--line-soft)}
-h2{font-size:1.6rem;font-weight:700;margin-bottom:.6rem}
+/* ---- sections */
+section .wrap{padding-block:3.75rem}
+.sechead{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem}
+.sechead h2{font-size:1.75rem;font-weight:700}
+.sechead p{margin:.45rem 0 0;color:var(--ink-soft);max-width:58ch}
 .note{color:var(--ink-soft);max-width:62ch}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
 
-/* ledger table */
-.ledger{width:100%;border-collapse:collapse;font-size:.92rem}
-.ledger th{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:right;font-weight:500;padding:.5rem .6rem;border-bottom:1px solid var(--line)}
-.ledger th:first-child,.ledger td:first-child{text-align:left;padding-left:0}
-.ledger th:last-child,.ledger td:last-child{padding-right:0}
-.ledger td{padding:.62rem .6rem;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
+/* ---- sport cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));gap:1rem}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.35rem;text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}
+.card:hover,.card:focus-visible{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow)}
+.card .top{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:1rem}
+.card h3{font-size:1.1rem;font-weight:700;font-variation-settings:'wdth' 112}
+.card .clv{font-family:var(--display);font-variation-settings:'wdth' 108;font-weight:800;font-size:2.05rem;line-height:1;font-variant-numeric:tabular-nums}
+.card .unit{font-size:.9rem;font-weight:600;color:var(--ink-soft);margin-left:.15rem}
+.card .cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:.45rem}
+.card .feet{display:flex;gap:1.5rem;margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--line-soft)}
+.card .feet div{font-size:.8rem;color:var(--ink-soft)}
+.card .feet b{display:block;font-family:var(--mono);font-size:.95rem;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+.card .go{margin-top:1.1rem;font-size:.82rem;font-weight:600;color:var(--accent)}
+.pos{color:var(--win)} .neg{color:var(--loss)} .flat{color:var(--pend)}
+.tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .45rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+
+/* ---- stat tiles (sport pages) */
+.statband{padding-block:2.25rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1rem}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+.stat .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.55rem}
+.stat .v{font-family:var(--display);font-variation-settings:'wdth' 108;font-weight:800;font-size:1.85rem;line-height:1;font-variant-numeric:tabular-nums}
+.stat .s{font-size:.82rem;color:var(--ink-soft);margin-top:.45rem}
+
+/* ---- tables */
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.ledger{width:100%;border-collapse:collapse;font-size:.9rem;min-width:36rem}
+.ledger th{font-family:var(--mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);text-align:right;font-weight:500;padding:.8rem .9rem;border-bottom:1px solid var(--line);background:var(--raise);white-space:nowrap}
+.ledger th:first-child,.ledger td:first-child{text-align:left}
+.ledger td{padding:.72rem .9rem;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
 .ledger tr:last-child td{border-bottom:0}
 .ledger td.mono,.ledger th.mono{font-family:var(--mono)}
-.ledger a.sport{font-family:var(--display);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent)}
-.ledger a.sport:hover{color:var(--accent)}
-.scroll{overflow-x:auto}
-.tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;padding:.1rem .4rem;border-radius:2px;background:var(--accent-soft);color:var(--accent-line)}
+.ledger tbody tr:hover{background:var(--raise)}
 .w{color:var(--win);font-weight:600} .l{color:var(--loss);font-weight:600} .pnd{color:var(--pend)}
 
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
-.step .n{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--accent);margin-bottom:.6rem}
-.step h3{font-size:1.05rem;font-weight:700;margin-bottom:.45rem}
-.step p{margin:0;color:var(--ink-soft);font-size:.94rem}
+/* ---- steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-family:var(--mono);font-size:.78rem;font-weight:600;margin-bottom:.9rem}
+.step h3{font-size:1.02rem;font-weight:700;margin-bottom:.5rem;font-variation-settings:'wdth' 108}
+.step p{margin:0;color:var(--ink-soft);font-size:.92rem}
 
-/* chart */
-.chart{width:100%;height:auto;max-width:100%;display:block;margin-top:.5rem}
-
-/* callout */
-.callout{border-left:3px solid var(--accent);background:var(--surface);padding:1.1rem 1.25rem;margin-top:1.75rem}
-.callout p{margin:0;color:var(--ink-soft);font-size:.94rem}
-.callout p+p{margin-top:.7rem}
+/* ---- chart + callout */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.chart{width:100%;height:auto;max-width:100%;display:block}
+.callout{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;background:var(--surface);padding:1.25rem 1.4rem}
+.callout p{margin:0;color:var(--ink-soft);font-size:.93rem}
+.callout p+p{margin-top:.8rem}
 .callout strong{color:var(--ink)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:1rem}
 
-footer .wrap{padding-block:2.5rem;color:var(--ink-soft);font-size:.86rem}
-footer a{color:var(--ink-soft)}
-.foot-links{display:flex;gap:1.25rem;flex-wrap:wrap;margin-bottom:1rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ---- footer */
+footer{background:var(--surface);border-top:1px solid var(--line)}
+footer .wrap{padding-block:3rem 2.25rem}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(auto-fit,minmax(9rem,1fr));gap:2rem;margin-bottom:2.25rem}
+.fgrid h4{margin:0 0 .8rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:500}
+.fgrid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.fgrid a{font-size:.9rem;color:var(--ink-soft);text-decoration:none}
+.fgrid a:hover{color:var(--accent)}
+.fgrid p{margin:0;color:var(--ink-soft);font-size:.9rem;max-width:40ch}
+.fine{border-top:1px solid var(--line-soft);padding-top:1.5rem;color:var(--ink-faint);font-size:.82rem}
+.fine p{margin:0 0 .6rem}
+.fine strong{color:var(--ink-soft)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="mark" href="index.html"><span class="dot"></span>Spice Bets</a><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html" class="here">CFB</a><a href="mlb.html">MLB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="method.html">Method</a><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full log</a><a class="cta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></nav></div></header><div class="hero"><div class="wrap">
+<header class="top"><div class="wrap"><a class="mark" href="index.html"><span class="dot"></span>Spice Bets</a><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html" class="here">CFB</a><a href="mlb.html">MLB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="method.html">Method</a><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full log</a><a class="cta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></nav></div></header><div class="hero solo"><div class="wrap">
 <p class="eyebrow">253 picks &middot; 201 graded closes</p>
 <h1>College Football</h1>
 <p class="lede">Saturday boards, Sunday through Thursday screening. The biggest book and the one that has turned over most.</p>
-</div></div><div class="strip"><div class="wrap"><div class="stat"><div class="k">Mean CLV</div><div class="v pos">+0.15%</div><div class="s">over 201 closes</div></div><div class="stat"><div class="k">Beat the close</div><div class="v">48%</div><div class="s">priced better than the finish</div></div><div class="stat"><div class="k">Record</div><div class="v">113-102</div><div class="s">straight win-loss, paper</div></div><div class="stat"><div class="k">Close capture</div><div class="v">79%</div><div class="s">of picks have a captured close</div></div></div></div><section><div class="wrap"><p class="sechead">Most recent 40 picks</p><div class="scroll"><table class="ledger"><thead><tr><th class="mono">Date</th><th>Game</th><th>Pick</th><th class="mono">Entry</th><th class="mono">Close</th><th class="mono">CLV</th><th class="mono">Result</th></tr></thead><tbody><tr><td class="mono">2026-10-31</td><td>Arizona @ Texas Tech</td><td>Arizona</td><td class="mono">-112</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-31</td><td>Auburn @ Ole Miss</td><td>Ole Miss</td><td class="mono">-104</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-30</td><td>Tulane @ Charlotte</td><td>Charlotte</td><td class="mono">-115</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-30</td><td>Baylor @ UCF</td><td>Baylor</td><td class="mono">-112</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-28</td><td>Jax State @ N. Mexico St</td><td>N. Mexico St</td><td class="mono">-100</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-28</td><td>Kennesaw St @ Middle Tenn</td><td>Kennesaw St</td><td class="mono">-105</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-27</td><td>Sam Houston @ Missouri St</td><td>Sam Houston</td><td class="mono">-110</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-27</td><td>Delaware @ W. Kentucky</td><td>W. Kentucky</td><td class="mono">-102</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-24</td><td>Iowa @ Minnesota</td><td>Iowa</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Sac State @ Ball State</td><td>Ball State</td><td class="mono">102</td><td class="mono">-105</td><td class="mono"><span class="pos">+1.71%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Tennessee @ S. Carolina</td><td>S. Carolina</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Oklahoma @ Mississippi St</td><td>Oklahoma</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>K State @ Arizona St</td><td>K State</td><td class="mono">-105</td><td class="mono">-104</td><td class="mono"><span class="neg">-0.24%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>LA-Monroe @ Troy</td><td>LA-Monroe</td><td class="mono">-110</td><td class="mono">-102</td><td class="mono"><span class="neg">-1.89%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Hawaii @ N. Illinois</td><td>N. Illinois</td><td class="mono">-102</td><td class="mono">-130</td><td class="mono"><span class="pos">+6.03%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Texas A&amp;M @ Alabama</td><td>Texas A&amp;M</td><td class="mono">-105</td><td class="mono">-110</td><td class="mono"><span class="pos">+1.16%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>LSU @ Auburn</td><td>LSU</td><td class="mono">-110</td><td class="mono">-104</td><td class="mono"><span class="neg">-1.40%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>West Virginia @ TCU</td><td>TCU</td><td class="mono">-106</td><td class="mono">-100</td><td class="mono"><span class="neg">-1.46%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>W. Michigan @ Toledo</td><td>W. Michigan</td><td class="mono">102</td><td class="mono">-104</td><td class="mono"><span class="pos">+1.48%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Rice @ FL Atlantic</td><td>Rice</td><td class="mono">-114</td><td class="mono">-100</td><td class="mono"><span class="neg">-3.27%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Oregon @ Illinois</td><td>Illinois</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Boston Col @ GA Tech</td><td>Boston Col</td><td class="mono">-115</td><td class="mono">-115</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Miami (OH) @ C. Michigan</td><td>Miami (OH)</td><td class="mono">-114</td><td class="mono">-110</td><td class="mono"><span class="neg">-0.89%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Akron @ Kent State</td><td>Akron</td><td class="mono">102</td><td class="mono">102</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>E. Michigan @ Ohio</td><td>Ohio</td><td class="mono">-110</td><td class="mono">-105</td><td class="mono"><span class="neg">-1.16%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Michigan St @ UCLA</td><td>UCLA</td><td class="mono">-114</td><td class="mono">-110</td><td class="mono"><span class="neg">-0.89%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>ND State @ New Mexico</td><td>New Mexico</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>USC @ Wisconsin</td><td>USC</td><td class="mono">-124</td><td class="mono">-112</td><td class="mono"><span class="neg">-2.53%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Baylor @ Kansas</td><td>Kansas</td><td class="mono">-118</td><td class="mono">-105</td><td class="mono"><span class="neg">-2.91%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Louisiana @ Southern Miss</td><td>Southern Miss</td><td class="mono">-105</td><td class="mono">-105</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>San Jose St @ Nevada</td><td>Nevada</td><td class="mono">-105</td><td class="mono">-110</td><td class="mono"><span class="pos">+1.16%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Syracuse @ UNC</td><td>Syracuse</td><td class="mono">-108</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.46%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>VA Tech @ Clemson</td><td>Clemson</td><td class="mono">-122</td><td class="mono">-124</td><td class="mono"><span class="pos">+0.40%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Boise State @ Washington St</td><td>Washington St</td><td class="mono">-115</td><td class="mono">-115</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Old Dominion @ LA Tech</td><td>LA Tech</td><td class="mono">-110</td><td class="mono">-114</td><td class="mono"><span class="pos">+0.89%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Ole Miss @ Texas</td><td>Ole Miss</td><td class="mono">-115</td><td class="mono">-128</td><td class="mono"><span class="pos">+2.65%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Utah State @ Texas St</td><td>Texas St</td><td class="mono">-115</td><td class="mono">-106</td><td class="mono"><span class="neg">-2.03%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Georgia State @ Arkansas St</td><td>Georgia State</td><td class="mono">-105</td><td class="mono">-110</td><td class="mono"><span class="pos">+1.16%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-23</td><td>Air Force @ Wyoming</td><td>Wyoming</td><td class="mono">-114</td><td class="mono">-110</td><td class="mono"><span class="neg">-0.89%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-23</td><td>Duke @ Virginia</td><td>Duke</td><td class="mono">-110</td><td class="mono">-106</td><td class="mono"><span class="neg">-0.92%</span></td><td class="mono"><span class="w">W</span></td></tr></tbody></table></div><p class="note" style="margin-top:1.25rem">The full log for every sport, with filters and the method notes, is on the <a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">tracker</a>.</p></div></section><footer><div class="wrap">
-<div class="foot-links">
-<a href="https://x.com/spice_bets" target="_blank" rel="noopener">@spice_bets</a>
-<a href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a>
-<a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full pick log</a>
-<a href="method.html">Method</a>
+</div></div><div class="statband"><div class="wrap stats"><div class="stat"><div class="k">Mean CLV</div><div class="v pos">+0.15%</div><div class="s">over 201 closes</div></div><div class="stat"><div class="k">Beat the close</div><div class="v">48%</div><div class="s">priced better than the finish</div></div><div class="stat"><div class="k">Record</div><div class="v">113-102</div><div class="s">straight win-loss, paper</div></div><div class="stat"><div class="k">Close capture</div><div class="v">79%</div><div class="s">of picks have a captured close</div></div></div></div><section><div class="wrap"><div class="sechead"><div><h2>Most recent 40 picks</h2></div></div><div class="scroll"><table class="ledger"><thead><tr><th class="mono">Date</th><th>Game</th><th>Pick</th><th class="mono">Entry</th><th class="mono">Close</th><th class="mono">CLV</th><th class="mono">Result</th></tr></thead><tbody><tr><td class="mono">2026-10-31</td><td>Arizona @ Texas Tech</td><td>Arizona</td><td class="mono">-112</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-31</td><td>Auburn @ Ole Miss</td><td>Ole Miss</td><td class="mono">-104</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-30</td><td>Tulane @ Charlotte</td><td>Charlotte</td><td class="mono">-115</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-30</td><td>Baylor @ UCF</td><td>Baylor</td><td class="mono">-112</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-28</td><td>Jax State @ N. Mexico St</td><td>N. Mexico St</td><td class="mono">-100</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-28</td><td>Kennesaw St @ Middle Tenn</td><td>Kennesaw St</td><td class="mono">-105</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-27</td><td>Sam Houston @ Missouri St</td><td>Sam Houston</td><td class="mono">-110</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-27</td><td>Delaware @ W. Kentucky</td><td>W. Kentucky</td><td class="mono">-102</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-24</td><td>Iowa @ Minnesota</td><td>Iowa</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Sac State @ Ball State</td><td>Ball State</td><td class="mono">102</td><td class="mono">-105</td><td class="mono"><span class="pos">+1.71%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Tennessee @ S. Carolina</td><td>S. Carolina</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Oklahoma @ Mississippi St</td><td>Oklahoma</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>K State @ Arizona St</td><td>K State</td><td class="mono">-105</td><td class="mono">-104</td><td class="mono"><span class="neg">-0.24%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>LA-Monroe @ Troy</td><td>LA-Monroe</td><td class="mono">-110</td><td class="mono">-102</td><td class="mono"><span class="neg">-1.89%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Hawaii @ N. Illinois</td><td>N. Illinois</td><td class="mono">-102</td><td class="mono">-130</td><td class="mono"><span class="pos">+6.03%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Texas A&amp;M @ Alabama</td><td>Texas A&amp;M</td><td class="mono">-105</td><td class="mono">-110</td><td class="mono"><span class="pos">+1.16%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>LSU @ Auburn</td><td>LSU</td><td class="mono">-110</td><td class="mono">-104</td><td class="mono"><span class="neg">-1.40%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>West Virginia @ TCU</td><td>TCU</td><td class="mono">-106</td><td class="mono">-100</td><td class="mono"><span class="neg">-1.46%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>W. Michigan @ Toledo</td><td>W. Michigan</td><td class="mono">102</td><td class="mono">-104</td><td class="mono"><span class="pos">+1.48%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Rice @ FL Atlantic</td><td>Rice</td><td class="mono">-114</td><td class="mono">-100</td><td class="mono"><span class="neg">-3.27%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Oregon @ Illinois</td><td>Illinois</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Boston Col @ GA Tech</td><td>Boston Col</td><td class="mono">-115</td><td class="mono">-115</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Miami (OH) @ C. Michigan</td><td>Miami (OH)</td><td class="mono">-114</td><td class="mono">-110</td><td class="mono"><span class="neg">-0.89%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Akron @ Kent State</td><td>Akron</td><td class="mono">102</td><td class="mono">102</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>E. Michigan @ Ohio</td><td>Ohio</td><td class="mono">-110</td><td class="mono">-105</td><td class="mono"><span class="neg">-1.16%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Michigan St @ UCLA</td><td>UCLA</td><td class="mono">-114</td><td class="mono">-110</td><td class="mono"><span class="neg">-0.89%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>ND State @ New Mexico</td><td>New Mexico</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>USC @ Wisconsin</td><td>USC</td><td class="mono">-124</td><td class="mono">-112</td><td class="mono"><span class="neg">-2.53%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Baylor @ Kansas</td><td>Kansas</td><td class="mono">-118</td><td class="mono">-105</td><td class="mono"><span class="neg">-2.91%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Louisiana @ Southern Miss</td><td>Southern Miss</td><td class="mono">-105</td><td class="mono">-105</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>San Jose St @ Nevada</td><td>Nevada</td><td class="mono">-105</td><td class="mono">-110</td><td class="mono"><span class="pos">+1.16%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Syracuse @ UNC</td><td>Syracuse</td><td class="mono">-108</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.46%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>VA Tech @ Clemson</td><td>Clemson</td><td class="mono">-122</td><td class="mono">-124</td><td class="mono"><span class="pos">+0.40%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Boise State @ Washington St</td><td>Washington St</td><td class="mono">-115</td><td class="mono">-115</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Old Dominion @ LA Tech</td><td>LA Tech</td><td class="mono">-110</td><td class="mono">-114</td><td class="mono"><span class="pos">+0.89%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-24</td><td>Ole Miss @ Texas</td><td>Ole Miss</td><td class="mono">-115</td><td class="mono">-128</td><td class="mono"><span class="pos">+2.65%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Utah State @ Texas St</td><td>Texas St</td><td class="mono">-115</td><td class="mono">-106</td><td class="mono"><span class="neg">-2.03%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-24</td><td>Georgia State @ Arkansas St</td><td>Georgia State</td><td class="mono">-105</td><td class="mono">-110</td><td class="mono"><span class="pos">+1.16%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-23</td><td>Air Force @ Wyoming</td><td>Wyoming</td><td class="mono">-114</td><td class="mono">-110</td><td class="mono"><span class="neg">-0.89%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-23</td><td>Duke @ Virginia</td><td>Duke</td><td class="mono">-110</td><td class="mono">-106</td><td class="mono"><span class="neg">-0.92%</span></td><td class="mono"><span class="w">W</span></td></tr></tbody></table></div><p class="note" style="margin-top:1.25rem">The full log for every sport, with filters and the method notes, is on the <a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">tracker</a>.</p></div></section><footer><div class="wrap">
+<div class="fgrid">
+  <div>
+    <a class="mark" href="index.html" style="margin-bottom:.9rem"><span class="dot"></span>Spice Bets</a>
+    <p>A paper betting log. Every pick is written down at the price it was offered and graded against the closing line &mdash; including the ones that lost to it.</p>
+  </div>
+  <div><h4>Boards</h4><ul><li><a href="soccer.html">Soccer</a></li><li><a href="cfb.html">College Football</a></li><li><a href="mlb.html">MLB</a></li><li><a href="nfl.html">NFL</a></li><li><a href="nhl.html">NHL</a></li><li><a href="nba.html">NBA</a></li></ul></div>
+  <div><h4>The book</h4><ul>
+    <li><a href="method.html">Method</a></li>
+    <li><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full pick log</a></li>
+  </ul></div>
+  <div><h4>Elsewhere</h4><ul>
+    <li><a href="https://x.com/spice_bets" target="_blank" rel="noopener">@spice_bets</a></li>
+    <li><a href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></li>
+  </ul></div>
 </div>
-<p>Every pick here is <strong>paper</strong> &mdash; a logged screener output, not a betting slip. Prices are FanDuel at the moment the pick was written, and the closing price is captured automatically before the game starts. Records are frozen once graded and are never re-priced.</p>
-<p>Nothing on this page is betting advice. Built 27 Oct 2026, 23:06 UTC from the same pick log that powers the tracker.</p>
+<div class="fine">
+<p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Prices are FanDuel at the moment the pick was written; the closing price is captured automatically before the game starts. Records are frozen once graded and are never re-priced.</p>
+<p>Nothing on this site is betting advice. Built 27 Oct 2026, 23:15 UTC.</p>
+</div>
 </div></footer>
 </body>
 </html>

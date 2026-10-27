@@ -7,132 +7,201 @@
 <title>Spice Bets</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
+/* Layout: a scoreboard. Wide-set display type, sport cards on a grid, numbers in mono with
+   tabular figures. One green accent, used on the live/positive things only. */
 :root{
-  --ground:#f4f8f5; --surface:#ffffff; --ink:#0d1611; --ink-soft:#56665d;
-  --line:#d2e1d7; --line-soft:#e5eee8;
-  --accent:#0d9c54; --accent-soft:#dff5e9; --accent-line:#1e5c39;
-  --win:#0d9c54; --loss:#c4352c; --pend:#56665d;
+  --ground:#f6f8f7; --surface:#ffffff; --raise:#eef2f0;
+  --ink:#0e1613; --ink-soft:#5a6b64; --ink-faint:#8a9a93;
+  --line:#dde5e1; --line-soft:#eaf0ed;
+  --accent:#07864a; --accent-ink:#ffffff; --accent-soft:#e4f4ec;
+  --win:#07864a; --loss:#c0392c; --pend:#8a9a93;
   --display:'Archivo','Helvetica Neue',Arial,sans-serif;
-  --body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  --body:'Archivo','Helvetica Neue',Arial,sans-serif;
   --mono:'IBM Plex Mono','SF Mono',Consolas,monospace;
+  --shadow:0 1px 2px rgba(14,22,19,.05), 0 8px 24px -12px rgba(14,22,19,.14);
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
-  --ground:#080b09; --surface:#101613; --ink:#e9f2ec; --ink-soft:#85978d;
-  --line:#223029; --line-soft:#18211c;
-  --accent:#3ddc84; --accent-soft:#0e2718; --accent-line:#86d7ab;
-  --win:#3ddc84; --loss:#ff6b63; --pend:#85978d; color-scheme:dark;
+  --ground:#0a0e0c; --surface:#121816; --raise:#19211d;
+  --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#6b7d75;
+  --line:#222c27; --line-soft:#1a221e;
+  --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
+  --win:#3ddc84; --loss:#ff6b63; --pend:#6b7d75;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
 }}
 :root[data-theme="dark"]{
-  --ground:#080b09; --surface:#101613; --ink:#e9f2ec; --ink-soft:#85978d;
-  --line:#223029; --line-soft:#18211c;
-  --accent:#3ddc84; --accent-soft:#0e2718; --accent-line:#86d7ab;
-  --win:#3ddc84; --loss:#ff6b63; --pend:#85978d; color-scheme:dark;
+  --ground:#0a0e0c; --surface:#121816; --raise:#19211d;
+  --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#6b7d75;
+  --line:#222c27; --line-soft:#1a221e;
+  --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
+  --win:#3ddc84; --loss:#ff6b63; --pend:#6b7d75;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:68rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 a{color:inherit}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.02em}
+h1,h2,h3{margin:0;font-family:var(--display);text-wrap:balance;font-variation-settings:'wdth' 118;letter-spacing:-.015em;line-height:1.08}
 .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0}
 
-/* header */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:20;background:var(--surface)}
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:19;background:var(--surface);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;gap:1.25rem;padding-block:.75rem;flex-wrap:wrap}
-.mark{font-family:var(--display);font-weight:800;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:.55rem}
-.mark .dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--accent);flex:none}
-nav.top{margin-left:auto;display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center}
-nav.top a{font-family:var(--mono);font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);padding-block:.2rem;border-bottom:1px solid transparent}
-nav.top a:hover,nav.top a:focus-visible{color:var(--ink);border-bottom-color:var(--accent)}
-nav.top a.here{color:var(--ink);border-bottom-color:var(--accent)}
-nav.top a.cta{color:var(--ground);background:var(--accent);border:0;border-radius:2px;padding:.35rem .7rem}
-nav.top a.cta:hover{filter:brightness(1.08)}
+/* ---- header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:29;background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:1.5rem;padding-block:.85rem;flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:.55rem;font-family:var(--display);font-variation-settings:'wdth' 122;font-weight:800;font-size:1rem;letter-spacing:.02em;text-decoration:none}
+.mark .dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 0 3px var(--accent-soft)}
+nav.top{margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center}
+nav.top a{font-size:.82rem;font-weight:600;text-decoration:none;color:var(--ink-soft);padding:.35rem .6rem;border-radius:6px}
+nav.top a:hover,nav.top a:focus-visible{color:var(--ink);background:var(--raise)}
+nav.top a.here{color:var(--accent);background:var(--accent-soft)}
+nav.top a.cta{color:var(--accent-ink);background:var(--accent);margin-left:.4rem}
+nav.top a.cta:hover{background:var(--accent);filter:brightness(1.08)}
 
-/* hero */
-.hero{border-bottom:1px solid var(--line)}
-.hero .wrap{padding-block:3.5rem 2.75rem}
-.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 1.1rem}
-h1{font-size:clamp(2.1rem,6vw,3.5rem);font-weight:800;line-height:1.04;max-width:18ch}
-.lede{font-size:1.1rem;color:var(--ink-soft);max-width:60ch;margin:1.25rem 0 0}
+/* ---- hero */
+.hero{background:var(--surface);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-block:4.5rem 3.5rem;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:3rem;align-items:start}
+h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
+.lede{font-size:1.08rem;color:var(--ink-soft);margin:1.4rem 0 0;max-width:46ch}
 .lede strong{color:var(--ink);font-weight:600}
+.herocard{background:var(--raise);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.herocard .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
+.herocard .big{font-family:var(--display);font-variation-settings:'wdth' 112;font-weight:800;font-size:3.1rem;line-height:1;margin:.5rem 0 .3rem;font-variant-numeric:tabular-nums;color:var(--accent)}
+.herocard .sub{font-size:.88rem;color:var(--ink-soft)}
+.herocard hr{border:0;border-top:1px solid var(--line);margin:1.1rem 0}
+.minirow{display:flex;justify-content:space-between;gap:1rem;font-size:.88rem;padding:.3rem 0}
+.minirow span:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+.minirow span:first-child{color:var(--ink-soft)}
+.hero.solo .wrap{grid-template-columns:1fr;gap:0;padding-block:3.25rem 2.75rem}
+.hero.solo h1{max-width:20ch}
+@media(max-width:860px){ .hero .wrap{grid-template-columns:1fr;gap:2rem;padding-block:3rem 2.5rem} }
 
-/* stat strip */
-.strip{border-bottom:1px solid var(--line);background:var(--surface)}
-.strip .wrap{padding-block:1.6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1.5rem}
-.stat .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.35rem}
-.stat .v{font-family:var(--display);font-weight:700;font-size:1.95rem;line-height:1;font-variant-numeric:tabular-nums}
-.stat .s{font-size:.82rem;color:var(--ink-soft);margin-top:.3rem}
-.pos{color:var(--accent)} .neg{color:var(--loss)}
-
-/* sections */
-section{border-bottom:1px solid var(--line)}
-section .wrap{padding-block:3rem}
-.sechead{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 1.5rem;padding-bottom:.6rem;border-bottom:1px solid var(--line-soft)}
-h2{font-size:1.6rem;font-weight:700;margin-bottom:.6rem}
+/* ---- sections */
+section .wrap{padding-block:3.75rem}
+.sechead{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem}
+.sechead h2{font-size:1.75rem;font-weight:700}
+.sechead p{margin:.45rem 0 0;color:var(--ink-soft);max-width:58ch}
 .note{color:var(--ink-soft);max-width:62ch}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
 
-/* ledger table */
-.ledger{width:100%;border-collapse:collapse;font-size:.92rem}
-.ledger th{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:right;font-weight:500;padding:.5rem .6rem;border-bottom:1px solid var(--line)}
-.ledger th:first-child,.ledger td:first-child{text-align:left;padding-left:0}
-.ledger th:last-child,.ledger td:last-child{padding-right:0}
-.ledger td{padding:.62rem .6rem;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
+/* ---- sport cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));gap:1rem}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.35rem;text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}
+.card:hover,.card:focus-visible{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow)}
+.card .top{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:1rem}
+.card h3{font-size:1.1rem;font-weight:700;font-variation-settings:'wdth' 112}
+.card .clv{font-family:var(--display);font-variation-settings:'wdth' 108;font-weight:800;font-size:2.05rem;line-height:1;font-variant-numeric:tabular-nums}
+.card .unit{font-size:.9rem;font-weight:600;color:var(--ink-soft);margin-left:.15rem}
+.card .cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:.45rem}
+.card .feet{display:flex;gap:1.5rem;margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--line-soft)}
+.card .feet div{font-size:.8rem;color:var(--ink-soft)}
+.card .feet b{display:block;font-family:var(--mono);font-size:.95rem;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+.card .go{margin-top:1.1rem;font-size:.82rem;font-weight:600;color:var(--accent)}
+.pos{color:var(--win)} .neg{color:var(--loss)} .flat{color:var(--pend)}
+.tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .45rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+
+/* ---- stat tiles (sport pages) */
+.statband{padding-block:2.25rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1rem}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+.stat .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.55rem}
+.stat .v{font-family:var(--display);font-variation-settings:'wdth' 108;font-weight:800;font-size:1.85rem;line-height:1;font-variant-numeric:tabular-nums}
+.stat .s{font-size:.82rem;color:var(--ink-soft);margin-top:.45rem}
+
+/* ---- tables */
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.ledger{width:100%;border-collapse:collapse;font-size:.9rem;min-width:36rem}
+.ledger th{font-family:var(--mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);text-align:right;font-weight:500;padding:.8rem .9rem;border-bottom:1px solid var(--line);background:var(--raise);white-space:nowrap}
+.ledger th:first-child,.ledger td:first-child{text-align:left}
+.ledger td{padding:.72rem .9rem;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
 .ledger tr:last-child td{border-bottom:0}
 .ledger td.mono,.ledger th.mono{font-family:var(--mono)}
-.ledger a.sport{font-family:var(--display);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent)}
-.ledger a.sport:hover{color:var(--accent)}
-.scroll{overflow-x:auto}
-.tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;padding:.1rem .4rem;border-radius:2px;background:var(--accent-soft);color:var(--accent-line)}
+.ledger tbody tr:hover{background:var(--raise)}
 .w{color:var(--win);font-weight:600} .l{color:var(--loss);font-weight:600} .pnd{color:var(--pend)}
 
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
-.step .n{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--accent);margin-bottom:.6rem}
-.step h3{font-size:1.05rem;font-weight:700;margin-bottom:.45rem}
-.step p{margin:0;color:var(--ink-soft);font-size:.94rem}
+/* ---- steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-family:var(--mono);font-size:.78rem;font-weight:600;margin-bottom:.9rem}
+.step h3{font-size:1.02rem;font-weight:700;margin-bottom:.5rem;font-variation-settings:'wdth' 108}
+.step p{margin:0;color:var(--ink-soft);font-size:.92rem}
 
-/* chart */
-.chart{width:100%;height:auto;max-width:100%;display:block;margin-top:.5rem}
-
-/* callout */
-.callout{border-left:3px solid var(--accent);background:var(--surface);padding:1.1rem 1.25rem;margin-top:1.75rem}
-.callout p{margin:0;color:var(--ink-soft);font-size:.94rem}
-.callout p+p{margin-top:.7rem}
+/* ---- chart + callout */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.chart{width:100%;height:auto;max-width:100%;display:block}
+.callout{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;background:var(--surface);padding:1.25rem 1.4rem}
+.callout p{margin:0;color:var(--ink-soft);font-size:.93rem}
+.callout p+p{margin-top:.8rem}
 .callout strong{color:var(--ink)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:1rem}
 
-footer .wrap{padding-block:2.5rem;color:var(--ink-soft);font-size:.86rem}
-footer a{color:var(--ink-soft)}
-.foot-links{display:flex;gap:1.25rem;flex-wrap:wrap;margin-bottom:1rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ---- footer */
+footer{background:var(--surface);border-top:1px solid var(--line)}
+footer .wrap{padding-block:3rem 2.25rem}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(auto-fit,minmax(9rem,1fr));gap:2rem;margin-bottom:2.25rem}
+.fgrid h4{margin:0 0 .8rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:500}
+.fgrid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.fgrid a{font-size:.9rem;color:var(--ink-soft);text-decoration:none}
+.fgrid a:hover{color:var(--accent)}
+.fgrid p{margin:0;color:var(--ink-soft);font-size:.9rem;max-width:40ch}
+.fine{border-top:1px solid var(--line-soft);padding-top:1.5rem;color:var(--ink-faint);font-size:.82rem}
+.fine p{margin:0 0 .6rem}
+.fine strong{color:var(--ink-soft)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap"><a class="mark" href="index.html"><span class="dot"></span>Spice Bets</a><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="mlb.html">MLB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="method.html">Method</a><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full log</a><a class="cta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></nav></div></header><div class="hero"><div class="wrap">
-<p class="eyebrow">Paper log &middot; 711 picks since 31 August 2026, plus 31 on the NBA shadow book</p>
+<div>
+<p class="eyebrow">Paper log &middot; since 31 August 2026</p>
 <h1>Every pick, graded against the closing line.</h1>
-<p class="lede">This is a <strong>line-movement</strong> book. It has no opinion on whether a team is good &mdash; only on where the money went and whether the market kept moving that way afterwards. So the measure that matters here is not the win-loss record. It is <strong>closing-line value</strong>: did the price beat where the market finished? That number is published below for every sport, <strong>including the sports where it is negative</strong>.</p>
-</div></div><div class="strip"><div class="wrap"><div class="stat"><div class="k">Mean CLV</div><div class="v pos">+0.26%</div><div class="s">across 615 captured closes</div></div><div class="stat"><div class="k">Beat the close</div><div class="v">46%</div><div class="s">of picks priced better than the finish</div></div><div class="stat"><div class="k">Straight record</div><div class="v">328-329-1</div><div class="s">49.9% â€” essentially a coin flip</div></div><div class="stat"><div class="k">Closes captured</div><div class="v">86%</div><div class="s">615 of 711 picks</div></div></div></div><section><div class="wrap"><p class="sechead">The book by sport</p><div class="scroll"><table class="ledger"><thead><tr><th>Sport</th><th class="mono">Picks</th><th class="mono">Closes</th><th class="mono">Mean CLV</th><th class="mono">Beat close</th><th class="mono">Record</th></tr></thead><tbody><tr><td><a class="sport" href="soccer.html">Soccer</a></td><td class="mono">252</td><td class="mono">241</td><td class="mono pos">+0.65%</td><td class="mono">51%</td><td class="mono">123-126</td></tr><tr><td><a class="sport" href="cfb.html">College Football</a></td><td class="mono">253</td><td class="mono">201</td><td class="mono pos">+0.15%</td><td class="mono">48%</td><td class="mono">113-102</td></tr><tr><td><a class="sport" href="mlb.html">MLB</a></td><td class="mono">118</td><td class="mono">90</td><td class="mono neg">-0.27%</td><td class="mono">32%</td><td class="mono">54-57</td></tr><tr><td><a class="sport" href="nfl.html">NFL</a></td><td class="mono">64</td><td class="mono">62</td><td class="mono neg">-0.23%</td><td class="mono">40%</td><td class="mono">30-33-1</td></tr><tr><td><a class="sport" href="nhl.html">NHL</a></td><td class="mono">24</td><td class="mono">21</td><td class="mono pos">+0.67%</td><td class="mono">48%</td><td class="mono">8-11</td></tr><tr><td><a class="sport" href="nba.html">NBA</a> <span class="tag">paper</span></td><td class="mono">31</td><td class="mono">30</td><td class="mono pos">+0.65 pts</td><td class="mono">47%</td><td class="mono">18-12</td></tr></tbody></table></div><p class="note" style="margin-top:1rem;font-size:.88rem"><strong>The NBA row is measured in points, not percent, and the two do not average together.</strong> Those picks are spreads, where the number itself moves; the rest of the book is totals and moneylines, where only the price moves. A points figure is the honest unit for a spread. On the 12 NBA picks whose line did not move at all, the price comparison works and comes to +0.21%. Every NBA pick is also <em>paper</em> in a stricter sense than the rest of this page &mdash; see the <a href="nba.html">NBA page</a>.</p><div class="callout"><p><strong>Read the CLV column, not the record column.</strong> A screener that bets into the same prices it derives fair value from always enters at roughly fair-minus-vig. What it is really betting is that the number keeps moving. Only CLV can tell you whether that happened, and on this book it has happened in soccer and hockey and has not happened in baseball or the NFL.</p></div></div></section><section><div class="wrap"><p class="sechead">Mean CLV by week</p><h2>The trend, not the headline</h2><p class="note">Each bar is the average closing-line value of every pick graded that week, in percentage points of implied probability. The number under each bar is how many closes it is built on. Weeks with fewer than five are left out, because at that size the bar says more about the sample than about the book.</p><svg class="chart" viewBox="0 0 760 200" role="img" aria-label="Mean closing-line value by month"><line x1="46.0" y1="16.0" x2="746.0" y2="16.0" stroke="var(--line-soft)" stroke-width="1"/><text x="39.0" y="19.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="end">+0.9</text><line x1="46.0" y1="91.0" x2="746.0" y2="91.0" stroke="var(--line)" stroke-width="1"/><text x="39.0" y="94.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="end">+0.0</text><line x1="46.0" y1="166.0" x2="746.0" y2="166.0" stroke="var(--line-soft)" stroke-width="1"/><text x="39.0" y="169.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="end">-0.9</text><rect x="67.9" y="91.0" width="34.0" height="1.9" fill="var(--loss)" rx="1"><title>week of 2026-08-31: -0.02% over 15 closes</title></rect><text x="84.9" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">31 Aug</text><text x="84.9" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">15</text><rect x="145.7" y="69.0" width="34.0" height="22.0" fill="var(--accent)" rx="1"><title>week of 2026-09-07: +0.26% over 76 closes</title></rect><text x="162.7" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">7 Sep</text><text x="162.7" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">76</text><rect x="223.4" y="69.4" width="34.0" height="21.6" fill="var(--accent)" rx="1"><title>week of 2026-09-14: +0.26% over 124 closes</title></rect><text x="240.4" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">14 Sep</text><text x="240.4" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">124</text><rect x="301.2" y="70.6" width="34.0" height="20.4" fill="var(--accent)" rx="1"><title>week of 2026-09-21: +0.24% over 73 closes</title></rect><text x="318.2" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">21 Sep</text><text x="318.2" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">73</text><rect x="379.0" y="91.0" width="34.0" height="1.9" fill="var(--loss)" rx="1"><title>week of 2026-09-28: -0.02% over 56 closes</title></rect><text x="396.0" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">28 Sep</text><text x="396.0" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">56</text><rect x="456.8" y="91.0" width="34.0" height="7.9" fill="var(--loss)" rx="1"><title>week of 2026-10-05: -0.09% over 60 closes</title></rect><text x="473.8" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">5 Oct</text><text x="473.8" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">60</text><rect x="534.6" y="73.8" width="34.0" height="17.2" fill="var(--accent)" rx="1"><title>week of 2026-10-12: +0.21% over 111 closes</title></rect><text x="551.6" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">12 Oct</text><text x="551.6" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">111</text><rect x="612.3" y="26.1" width="34.0" height="64.9" fill="var(--accent)" rx="1"><title>week of 2026-10-19: +0.78% over 95 closes</title></rect><text x="629.3" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">19 Oct</text><text x="629.3" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">95</text><rect x="690.1" y="50.2" width="34.0" height="40.8" fill="var(--accent)" rx="1"><title>week of 2026-10-26: +0.49% over 5 closes</title></rect><text x="707.1" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">26 Oct</text><text x="707.1" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">5</text></svg></div></section><section><div class="wrap"><p class="sechead">How a pick gets here</p>
-<div class="steps">
-<div class="step"><div class="n">01</div><h3>Screen the board for disagreement</h3><p>Every market on the board is read for the gap between where the <em>money</em> is and where the <em>tickets</em> are, and for how far the number has already travelled from its opener. A pick needs both: a crowd it disagrees with, and a line already moving.</p></div>
-<div class="step"><div class="n">02</div><h3>Log it at the price it was offered</h3><p>The pick is written down with the FanDuel price at that moment and is never re-priced afterwards. The number here today is the number that was here when it was written.</p></div>
-<div class="step"><div class="n">03</div><h3>Capture the close, then grade</h3><p>A scheduled job takes the closing price before the game starts &mdash; not a remembered one, not one looked up later. The pick is then graded on the result and on whether the entry beat that close. Both go on the record, win or lose.</p></div>
-</div></div></section><section><div class="wrap"><p class="sechead">What this is not</p><h2>The limits, stated up front</h2>
-<div class="callout">
-<p><strong>It is paper.</strong> These are screener outputs, logged and graded. They are not a record of money staked.</p>
-<p><strong>There is no daily headline play here.</strong> Four of the five entry gates are either unproven or uncalibrated, so the book does not publish a crowned pick of the day. That stays off until the gates earn it.</p>
-<p><strong>The straight record is a coin flip, and that is expected.</strong> A movement system is not a projection model. If you are looking for a score prediction for tonight's game, this is the wrong page.</p>
-<p><strong>Negative numbers stay on the page.</strong> MLB and the NFL are both below zero on CLV and are shown that way. The record is the whole record, not the good months.</p>
-</div></div></section><footer><div class="wrap">
-<div class="foot-links">
-<a href="https://x.com/spice_bets" target="_blank" rel="noopener">@spice_bets</a>
-<a href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a>
-<a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full pick log</a>
-<a href="method.html">Method</a>
+<p class="lede">This is a <strong>line-movement</strong> book. It has no opinion on whether a team is good &mdash; only on where the money went, and whether the market kept moving that way afterwards. So the measure that matters is not the win-loss record. It is <strong>closing-line value</strong>: did the price beat where the market finished?</p>
+<p class="lede">That number is published below for every sport, <strong>including the ones where it is negative</strong>.</p>
 </div>
-<p>Every pick here is <strong>paper</strong> &mdash; a logged screener output, not a betting slip. Prices are FanDuel at the moment the pick was written, and the closing price is captured automatically before the game starts. Records are frozen once graded and are never re-priced.</p>
-<p>Nothing on this page is betting advice. Built 27 Oct 2026, 23:06 UTC from the same pick log that powers the tracker.</p>
+<div class="herocard">
+  <div class="k">Mean closing-line value</div>
+  <div class="big">+0.26%</div>
+  <div class="sub">across 615 captured closes</div>
+  <hr>
+  <div class="minirow"><span>Picks logged</span><span>711</span></div>
+  <div class="minirow"><span>Beat the close</span><span>46%</span></div>
+  <div class="minirow"><span>Straight record</span><span>328-329-1</span></div>
+  <div class="minirow"><span>Closes captured</span><span>86%</span></div>
+</div>
+</div></div><section><div class="wrap"><div class="sechead"><div><h2>The boards</h2><p>Each sport is screened, logged and graded on its own. Open one for every pick it has ever made.</p></div></div><div class="cards"><a class="card" href="soccer.html"><div class="top"><h3>Soccer</h3></div><div><span class="clv pos">+0.65%</span></div><div class="cap">mean CLV / 241 closes</div><div class="feet"><div>Picks<b>252</b></div><div>Record<b>123-126</b></div><div>Beat close<b>51%</b></div></div><div class="go">View the board &rarr;</div></a><a class="card" href="cfb.html"><div class="top"><h3>College Football</h3></div><div><span class="clv pos">+0.15%</span></div><div class="cap">mean CLV / 201 closes</div><div class="feet"><div>Picks<b>253</b></div><div>Record<b>113-102</b></div><div>Beat close<b>48%</b></div></div><div class="go">View the board &rarr;</div></a><a class="card" href="mlb.html"><div class="top"><h3>MLB</h3></div><div><span class="clv neg">-0.27%</span></div><div class="cap">mean CLV / 90 closes</div><div class="feet"><div>Picks<b>118</b></div><div>Record<b>54-57</b></div><div>Beat close<b>32%</b></div></div><div class="go">View the board &rarr;</div></a><a class="card" href="nfl.html"><div class="top"><h3>NFL</h3></div><div><span class="clv neg">-0.23%</span></div><div class="cap">mean CLV / 62 closes</div><div class="feet"><div>Picks<b>64</b></div><div>Record<b>30-33-1</b></div><div>Beat close<b>40%</b></div></div><div class="go">View the board &rarr;</div></a><a class="card" href="nhl.html"><div class="top"><h3>NHL</h3></div><div><span class="clv pos">+0.67%</span></div><div class="cap">mean CLV / 21 closes</div><div class="feet"><div>Picks<b>24</b></div><div>Record<b>8-11</b></div><div>Beat close<b>48%</b></div></div><div class="go">View the board &rarr;</div></a><a class="card" href="nba.html"><div class="top"><h3>NBA</h3><span class="tag">paper</span></div><div><span class="clv pos">+0.65</span><span class="unit">pts</span></div><div class="cap">line CLV / 30 closes</div><div class="feet"><div>Picks<b>31</b></div><div>Record<b>18-12</b></div><div>Beat close<b>47%</b></div></div><div class="go">View the board &rarr;</div></a></div><p class="note" style="margin-top:1.25rem;font-size:.88rem"><strong>The NBA card is measured in points, not percent, and the two do not average together.</strong> Those picks are spreads, where the number itself moves; the rest of the book is totals and moneylines, where only the price moves. On the 12 NBA picks whose line never moved, the price comparison works and comes to +0.21%.</p></div></section><section class="alt"><div class="wrap"><div class="sechead"><div><h2>Closing-line value by week</h2><p>Each bar is the average CLV of every pick graded that week, in percentage points of implied probability. The number beneath it is how many closes it is built on; weeks under five are left out, because at that size the bar says more about the sample than the book.</p></div></div><div class="panel"><svg class="chart" viewBox="0 0 760 200" role="img" aria-label="Mean closing-line value by month"><line x1="46.0" y1="16.0" x2="746.0" y2="16.0" stroke="var(--line-soft)" stroke-width="1"/><text x="39.0" y="19.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="end">+0.9</text><line x1="46.0" y1="91.0" x2="746.0" y2="91.0" stroke="var(--line)" stroke-width="1"/><text x="39.0" y="94.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="end">+0.0</text><line x1="46.0" y1="166.0" x2="746.0" y2="166.0" stroke="var(--line-soft)" stroke-width="1"/><text x="39.0" y="169.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="end">-0.9</text><rect x="67.9" y="91.0" width="34.0" height="1.9" fill="var(--loss)" rx="1"><title>week of 2026-08-31: -0.02% over 15 closes</title></rect><text x="84.9" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">31 Aug</text><text x="84.9" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">15</text><rect x="145.7" y="69.0" width="34.0" height="22.0" fill="var(--accent)" rx="1"><title>week of 2026-09-07: +0.26% over 76 closes</title></rect><text x="162.7" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">7 Sep</text><text x="162.7" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">76</text><rect x="223.4" y="69.4" width="34.0" height="21.6" fill="var(--accent)" rx="1"><title>week of 2026-09-14: +0.26% over 124 closes</title></rect><text x="240.4" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">14 Sep</text><text x="240.4" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">124</text><rect x="301.2" y="70.6" width="34.0" height="20.4" fill="var(--accent)" rx="1"><title>week of 2026-09-21: +0.24% over 73 closes</title></rect><text x="318.2" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">21 Sep</text><text x="318.2" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">73</text><rect x="379.0" y="91.0" width="34.0" height="1.9" fill="var(--loss)" rx="1"><title>week of 2026-09-28: -0.02% over 56 closes</title></rect><text x="396.0" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">28 Sep</text><text x="396.0" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">56</text><rect x="456.8" y="91.0" width="34.0" height="7.9" fill="var(--loss)" rx="1"><title>week of 2026-10-05: -0.09% over 60 closes</title></rect><text x="473.8" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">5 Oct</text><text x="473.8" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">60</text><rect x="534.6" y="73.8" width="34.0" height="17.2" fill="var(--accent)" rx="1"><title>week of 2026-10-12: +0.21% over 111 closes</title></rect><text x="551.6" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">12 Oct</text><text x="551.6" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">111</text><rect x="612.3" y="26.1" width="34.0" height="64.9" fill="var(--accent)" rx="1"><title>week of 2026-10-19: +0.78% over 95 closes</title></rect><text x="629.3" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">19 Oct</text><text x="629.3" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">95</text><rect x="690.1" y="50.2" width="34.0" height="40.8" fill="var(--accent)" rx="1"><title>week of 2026-10-26: +0.49% over 5 closes</title></rect><text x="707.1" y="186.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">26 Oct</text><text x="707.1" y="197.0" fill="var(--ink-soft)" font-size="9" font-family="monospace" text-anchor="middle">5</text></svg></div></div></section><section><div class="wrap"><div class="sechead"><div><h2>How a pick gets here</h2><p>Three steps, in order, every time.</p></div></div>
+<div class="steps">
+<div class="step"><div class="n">1</div><h3>Screen for disagreement</h3><p>Every market on the board is read for the gap between where the <em>money</em> is and where the <em>tickets</em> are, and for how far the number has already travelled from its opener. A pick needs both: a crowd it disagrees with, and a line already moving.</p></div>
+<div class="step"><div class="n">2</div><h3>Log it at the price offered</h3><p>The pick is written down with the price at that moment and is never re-priced afterwards. The number shown here today is the number that was here when it was written.</p></div>
+<div class="step"><div class="n">3</div><h3>Capture the close, then grade</h3><p>A scheduled job takes the closing price before the game starts &mdash; not a remembered one, not one looked up later. The pick is then graded on the result <em>and</em> on whether the entry beat that close. Both go on the record, win or lose.</p></div>
+</div></div></section><section class="alt"><div class="wrap"><div class="sechead"><div><h2>Latest graded picks</h2><p>The ten most recently settled, across every board.</p></div></div><div class="scroll"><table class="ledger"><thead><tr><th class="mono">Date</th><th>Sport</th><th>Game</th><th>Pick</th><th class="mono">Entry</th><th class="mono">Close</th><th class="mono">CLV</th><th class="mono">Result</th></tr></thead><tbody><tr><td class="mono">2026-10-26</td><td>Soccer</td><td>Lyon @ Paris Saint-Germain</td><td>Paris Saint-Germain -1.5</td><td class="mono">-120</td><td class="mono">-136</td><td class="mono"><span class="pos">+3.08%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-26</td><td>NFL</td><td>Cowboys @ Eagles</td><td>Cowboys</td><td class="mono">-104</td><td class="mono">-105</td><td class="mono"><span class="pos">+0.24%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-26</td><td>NHL</td><td>Maple Leafs @ Flames</td><td>Calgary Flames</td><td class="mono">116</td><td class="mono">118</td><td class="mono"><span class="neg">-0.42%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-26</td><td>Soccer</td><td>Lyon @ Paris Saint-Germain</td><td>Over 3.5</td><td class="mono">-112</td><td class="mono">-110</td><td class="mono"><span class="neg">-0.45%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-26</td><td>NHL</td><td>Red Wings @ Oilers</td><td>Detroit Red Wings</td><td class="mono">146</td><td class="mono">146</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-25</td><td>NFL</td><td>Bengals @ Ravens</td><td>Bengals</td><td class="mono">-105</td><td class="mono">-105</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-25</td><td>NFL</td><td>49ers @ Falcons</td><td>Falcons</td><td class="mono">-102</td><td class="mono">-104</td><td class="mono"><span class="pos">+0.49%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-25</td><td>NFL</td><td>Giants @ Texans</td><td>Texans</td><td class="mono">-105</td><td class="mono">-102</td><td class="mono"><span class="neg">-0.72%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-25</td><td>NFL</td><td>Rams @ Raiders</td><td>Raiders</td><td class="mono">-112</td><td class="mono">-122</td><td class="mono"><span class="pos">+2.12%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-25</td><td>NFL</td><td>Colts @ Vikings</td><td>Vikings</td><td class="mono">-105</td><td class="mono">-120</td><td class="mono"><span class="pos">+3.33%</span></td><td class="mono"><span class="l">L</span></td></tr></tbody></table></div></div></section><section><div class="wrap"><div class="sechead"><div><h2>What this is not</h2><p>The limits, stated up front rather than in the small print.</p></div></div>
+<div class="grid2">
+<div class="callout"><p><strong>It is paper.</strong> These are screener outputs, logged and graded. No figure on this site represents money staked, and there is no bankroll behind it.</p></div>
+<div class="callout"><p><strong>There is no headline play of the day.</strong> Most of the entry gates behind these picks are unproven or uncalibrated, so the book does not crown a daily pick in public. That stays off until the gates earn it.</p></div>
+<div class="callout"><p><strong>The straight record is a coin flip, and that is expected.</strong> A movement system is not a projection model. If you want a score prediction for tonight's game, this is the wrong page.</p></div>
+<div class="callout"><p><strong>Negative numbers stay up.</strong> Two of the boards are below zero on CLV and are shown that way. The record is the whole record, not the good months.</p></div>
+</div></div></section><footer><div class="wrap">
+<div class="fgrid">
+  <div>
+    <a class="mark" href="index.html" style="margin-bottom:.9rem"><span class="dot"></span>Spice Bets</a>
+    <p>A paper betting log. Every pick is written down at the price it was offered and graded against the closing line &mdash; including the ones that lost to it.</p>
+  </div>
+  <div><h4>Boards</h4><ul><li><a href="soccer.html">Soccer</a></li><li><a href="cfb.html">College Football</a></li><li><a href="mlb.html">MLB</a></li><li><a href="nfl.html">NFL</a></li><li><a href="nhl.html">NHL</a></li><li><a href="nba.html">NBA</a></li></ul></div>
+  <div><h4>The book</h4><ul>
+    <li><a href="method.html">Method</a></li>
+    <li><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full pick log</a></li>
+  </ul></div>
+  <div><h4>Elsewhere</h4><ul>
+    <li><a href="https://x.com/spice_bets" target="_blank" rel="noopener">@spice_bets</a></li>
+    <li><a href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></li>
+  </ul></div>
+</div>
+<div class="fine">
+<p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Prices are FanDuel at the moment the pick was written; the closing price is captured automatically before the game starts. Records are frozen once graded and are never re-priced.</p>
+<p>Nothing on this site is betting advice. Built 27 Oct 2026, 23:15 UTC.</p>
+</div>
 </div></footer>
 </body>
 </html>
