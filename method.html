@@ -83,6 +83,7 @@ h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
 section .wrap{padding-block:3.75rem}
 .sechead{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem}
 .sechead h2{font-size:1.75rem;font-weight:700}
+.sechead .eyebrow{margin-bottom:.6rem}
 .sechead p{margin:.45rem 0 0;color:var(--ink-soft);max-width:58ch}
 .note{color:var(--ink-soft);max-width:62ch}
 .alt{background:var(--surface);border-block:1px solid var(--line)}
@@ -136,7 +137,7 @@ section .wrap{padding-block:3.75rem}
 .callout p{margin:0;color:var(--ink-soft);font-size:.93rem}
 .callout p+p{margin-top:.8rem}
 .callout strong{color:var(--ink)}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:1rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(24rem,1fr));gap:1rem}
 
 /* ---- footer */
 footer{background:var(--surface);border-top:1px solid var(--line)}
@@ -159,18 +160,15 @@ footer .wrap{padding-block:3rem 2.25rem}
 <h1>What the bot actually does.</h1>
 <p class="lede">No part of this is a score projection. The whole system reads one thing &mdash; the gap between where the money is and where the tickets are &mdash; and bets that the number keeps moving.</p>
 </div></div>
-<section><div class="wrap"><div class="sechead"><div><h2>The signal</h2></div></div>
-<h2>Money against tickets</h2>
+<section><div class="wrap"><div class="sechead"><div><p class="eyebrow">The signal</p><h2>Money against tickets</h2></div></div>
 <p class="note">Sportsbooks report two different shares on a market: the percentage of <em>bets</em> on each side, and the percentage of <em>money</em>. When those two disagree sharply, a small number of large bets are on one side and a large number of small bets are on the other. The book screens for that gap, and for how far the price has already moved from its opening number. A pick needs both. A crowd it disagrees with but a line that has not moved is not a signal; a line that has moved for a reason everyone can already read &mdash; a starter ruled out, a goalie confirmed &mdash; is not one either.</p>
 <div class="callout"><p><strong>This is not a value model, and it is worth being exact about that.</strong> Fair value here is derived from the same prices the book is betting into, so the entry is always roughly fair-minus-vig. There is no independent estimate of who should win. The only honest test of a system like this is whether the market agreed with it afterwards &mdash; which is why closing-line value, and not the win rate, is the headline number on every page of this site.</p></div>
 </div></section>
-<section><div class="wrap"><div class="sechead"><div><h2>Prices and grading</h2></div></div>
-<h2>Where the numbers come from</h2>
+<section><div class="wrap"><div class="sechead"><div><p class="eyebrow">Prices and grading</p><h2>Where the numbers come from</h2></div></div>
 <p class="note">Entry prices are FanDuel, recorded at the moment the pick is written. Closing prices are captured by a scheduled job that runs before the game starts &mdash; the close is taken live, never looked up afterwards, because most books purge their own line history within a day of a game finishing. A pick with no captured close is shown with a dash rather than an estimate.</p>
 <p class="note" style="margin-top:1rem">CLV is reported in percentage points of implied probability: the implied probability of the closing price minus the implied probability of the entry price. A positive number means the market finished shorter than the price the pick was written at.</p>
 </div></section>
-<section><div class="wrap"><div class="sechead"><div><h2>Honesty rules</h2></div></div>
-<h2>Things this site will not do</h2>
+<section><div class="wrap"><div class="sechead"><div><p class="eyebrow">Honesty rules</p><h2>Things this site will not do</h2></div></div>
 <p class="note">Records are frozen once graded and never re-priced. Picks are never deleted after the fact. Sports where CLV is negative stay on the page with the negative number visible. There is no crowned play of the day, because most of the entry gates behind these picks have not yet collected enough closes to be judged, and publishing a daily headline pick would imply a confidence the data does not support yet.</p>
 </div></section><footer><div class="wrap">
 <div class="fgrid">
@@ -190,7 +188,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Prices are FanDuel at the moment the pick was written; the closing price is captured automatically before the game starts. Records are frozen once graded and are never re-priced.</p>
-<p>Nothing on this site is betting advice. Built 27 Oct 2026, 23:15 UTC.</p>
+<p>Nothing on this site is betting advice. Built 27 Oct 2026, 23:17 UTC.</p>
 </div>
 </div></footer>
 </body>
