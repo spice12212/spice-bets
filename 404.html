@@ -136,6 +136,12 @@ section .wrap{padding-block:3.75rem}
 
 /* ---- chart + callout */
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+/* the big ledgers carry min-width:36rem so their columns stay readable inside .scroll; a short
+   table dropped straight into a half-width panel must not inherit that, or it overflows the
+   panel's rounded border instead of fitting it. */
+.panel .ledger{min-width:0}
+.panel .ledger th,.panel .ledger td{padding-inline:0 .4rem}
+.panel .ledger td:last-child{padding-right:0}
 .chart{width:100%;height:auto;max-width:100%;display:block}
 .callout{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;background:var(--surface);padding:1.25rem 1.4rem}
 .callout p{margin:0;color:var(--ink-soft);font-size:.93rem}
@@ -239,7 +245,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Prices are FanDuel at the moment the pick was written; the closing price is captured automatically before the game starts. Records are frozen once graded and are never re-priced.</p>
-<p>Nothing on this site is betting advice. Built 27 Oct 2026, 23:31 UTC.</p>
+<p>Nothing on this site is betting advice. Built 27 Oct 2026, 23:33 UTC.</p>
 </div>
 </div></footer>
 </body>
