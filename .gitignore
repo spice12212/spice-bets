@@ -1,0 +1,19 @@
+# ALLOWLIST, NOT A BLOCKLIST.
+#
+# This repo is public. Everything is ignored by default and only the files named below can ever
+# be committed, so a stray file dropped into this folder cannot reach the open web by accident.
+# Add a new line here deliberately or it does not ship.
+*
+
+!.gitignore
+!.nojekyll
+!README.md
+!*.html
+!robots.txt
+!sitemap.xml
+!CNAME
+
+# The Artifact-only copy of the home page. It has no <!doctype>, <html>, <head> or <body> -
+# the Artifact publisher supplies those - so served as a real web page it renders in quirks
+# mode with no charset and no viewport. index.html is the real home page; this is not.
+artifact-index.html

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="24 paper picks in NHL, each graded against the closing line.">
+<title>NHL - Spice Bets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{
+  --ground:#f4f8f5; --surface:#ffffff; --ink:#0d1611; --ink-soft:#56665d;
+  --line:#d2e1d7; --line-soft:#e5eee8;
+  --accent:#0d9c54; --accent-soft:#dff5e9; --accent-line:#1e5c39;
+  --win:#0d9c54; --loss:#c4352c; --pend:#56665d;
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  --mono:'IBM Plex Mono','SF Mono',Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --ground:#080b09; --surface:#101613; --ink:#e9f2ec; --ink-soft:#85978d;
+  --line:#223029; --line-soft:#18211c;
+  --accent:#3ddc84; --accent-soft:#0e2718; --accent-line:#86d7ab;
+  --win:#3ddc84; --loss:#ff6b63; --pend:#85978d; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --ground:#080b09; --surface:#101613; --ink:#e9f2ec; --ink-soft:#85978d;
+  --line:#223029; --line-soft:#18211c;
+  --accent:#3ddc84; --accent-soft:#0e2718; --accent-line:#86d7ab;
+  --win:#3ddc84; --loss:#ff6b63; --pend:#85978d; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.02em}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:20;background:var(--surface)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:19;background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:1.25rem;padding-block:.75rem;flex-wrap:wrap}
+.mark{font-family:var(--display);font-weight:800;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:.55rem}
+.mark .dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--accent);flex:none}
+nav.top{margin-left:auto;display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center}
+nav.top a{font-family:var(--mono);font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);padding-block:.2rem;border-bottom:1px solid transparent}
+nav.top a:hover,nav.top a:focus-visible{color:var(--ink);border-bottom-color:var(--accent)}
+nav.top a.here{color:var(--ink);border-bottom-color:var(--accent)}
+nav.top a.cta{color:var(--ground);background:var(--accent);border:0;border-radius:2px;padding:.35rem .7rem}
+nav.top a.cta:hover{filter:brightness(1.08)}
+
+/* hero */
+.hero{border-bottom:1px solid var(--line)}
+.hero .wrap{padding-block:3.5rem 2.75rem}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 1.1rem}
+h1{font-size:clamp(2.1rem,6vw,3.5rem);font-weight:800;line-height:1.04;max-width:18ch}
+.lede{font-size:1.1rem;color:var(--ink-soft);max-width:60ch;margin:1.25rem 0 0}
+.lede strong{color:var(--ink);font-weight:600}
+
+/* stat strip */
+.strip{border-bottom:1px solid var(--line);background:var(--surface)}
+.strip .wrap{padding-block:1.6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1.5rem}
+.stat .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.35rem}
+.stat .v{font-family:var(--display);font-weight:700;font-size:1.95rem;line-height:1;font-variant-numeric:tabular-nums}
+.stat .s{font-size:.82rem;color:var(--ink-soft);margin-top:.3rem}
+.pos{color:var(--accent)} .neg{color:var(--loss)}
+
+/* sections */
+section{border-bottom:1px solid var(--line)}
+section .wrap{padding-block:3rem}
+.sechead{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 1.5rem;padding-bottom:.6rem;border-bottom:1px solid var(--line-soft)}
+h2{font-size:1.6rem;font-weight:700;margin-bottom:.6rem}
+.note{color:var(--ink-soft);max-width:62ch}
+
+/* ledger table */
+.ledger{width:100%;border-collapse:collapse;font-size:.92rem}
+.ledger th{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:right;font-weight:500;padding:.5rem .6rem;border-bottom:1px solid var(--line)}
+.ledger th:first-child,.ledger td:first-child{text-align:left;padding-left:0}
+.ledger th:last-child,.ledger td:last-child{padding-right:0}
+.ledger td{padding:.62rem .6rem;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
+.ledger tr:last-child td{border-bottom:0}
+.ledger td.mono,.ledger th.mono{font-family:var(--mono)}
+.ledger a.sport{font-family:var(--display);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent)}
+.ledger a.sport:hover{color:var(--accent)}
+.scroll{overflow-x:auto}
+.tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;padding:.1rem .4rem;border-radius:2px;background:var(--accent-soft);color:var(--accent-line)}
+.w{color:var(--win);font-weight:600} .l{color:var(--loss);font-weight:600} .pnd{color:var(--pend)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
+.step .n{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--accent);margin-bottom:.6rem}
+.step h3{font-size:1.05rem;font-weight:700;margin-bottom:.45rem}
+.step p{margin:0;color:var(--ink-soft);font-size:.94rem}
+
+/* chart */
+.chart{width:100%;height:auto;max-width:100%;display:block;margin-top:.5rem}
+
+/* callout */
+.callout{border-left:3px solid var(--accent);background:var(--surface);padding:1.1rem 1.25rem;margin-top:1.75rem}
+.callout p{margin:0;color:var(--ink-soft);font-size:.94rem}
+.callout p+p{margin-top:.7rem}
+.callout strong{color:var(--ink)}
+
+footer .wrap{padding-block:2.5rem;color:var(--ink-soft);font-size:.86rem}
+footer a{color:var(--ink-soft)}
+.foot-links{display:flex;gap:1.25rem;flex-wrap:wrap;margin-bottom:1rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="mark" href="index.html"><span class="dot"></span>Spice Bets</a><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="mlb.html">MLB</a><a href="nfl.html">NFL</a><a href="nhl.html" class="here">NHL</a><a href="nba.html">NBA</a><a href="method.html">Method</a><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full log</a><a class="cta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></nav></div></header><div class="hero"><div class="wrap">
+<p class="eyebrow">24 picks &middot; 21 graded closes</p>
+<h1>NHL</h1>
+<p class="lede">The newest board. The entry gate here fires but has never been calibrated, so treat the sample as young.</p>
+</div></div><div class="strip"><div class="wrap"><div class="stat"><div class="k">Mean CLV</div><div class="v pos">+0.67%</div><div class="s">over 21 closes</div></div><div class="stat"><div class="k">Beat the close</div><div class="v">48%</div><div class="s">priced better than the finish</div></div><div class="stat"><div class="k">Record</div><div class="v">8-11</div><div class="s">straight win-loss, paper</div></div><div class="stat"><div class="k">Close capture</div><div class="v">88%</div><div class="s">of picks have a captured close</div></div></div></div><section><div class="wrap"><p class="sechead">Most recent 40 picks</p><div class="scroll"><table class="ledger"><thead><tr><th class="mono">Date</th><th>Game</th><th>Pick</th><th class="mono">Entry</th><th class="mono">Close</th><th class="mono">CLV</th><th class="mono">Result</th></tr></thead><tbody><tr><td class="mono">2026-10-27</td><td>Devils @ Stars</td><td>New Jersey Devils</td><td class="mono">-106</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-26</td><td>Maple Leafs @ Flames</td><td>Calgary Flames</td><td class="mono">116</td><td class="mono">118</td><td class="mono"><span class="neg">-0.42%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-26</td><td>Red Wings @ Oilers</td><td>Detroit Red Wings</td><td class="mono">146</td><td class="mono">146</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-22</td><td>Golden Knights @ Blues</td><td>St. Louis Blues</td><td class="mono">-100</td><td class="mono">-104</td><td class="mono"><span class="pos">+0.98%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-20</td><td>Red Wings @ Kraken</td><td>Detroit Red Wings</td><td class="mono">-114</td><td class="mono">-120</td><td class="mono"><span class="pos">+1.27%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-15</td><td>Rangers @ Devils</td><td>New York Rangers</td><td class="mono">108</td><td class="mono">110</td><td class="mono"><span class="neg">-0.46%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-15</td><td>Blues @ Wild</td><td>St. Louis Blues</td><td class="mono">118</td><td class="mono">120</td><td class="mono"><span class="neg">-0.42%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-15</td><td>Utah @ Oilers</td><td>Utah Mammoth</td><td class="mono">-102</td><td class="mono">-118</td><td class="mono"><span class="pos">+3.63%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-13</td><td>Blues @ Senators</td><td>St. Louis Blues</td><td class="mono">-102</td><td class="mono">-126</td><td class="mono"><span class="pos">+5.26%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-10</td><td>Blue Jackets @ Blues</td><td>Columbus Blue Jackets</td><td class="mono">106</td><td class="mono">-102</td><td class="mono"><span class="pos">+1.95%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-08</td><td>Stars @ Sabres</td><td>Dallas Stars</td><td class="mono">-108</td><td class="mono">-113</td><td class="mono"><span class="pos">+1.13%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-06</td><td>Blues @ Blackhawks</td><td>St. Louis Blues</td><td class="mono">-135</td><td class="mono">-135</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-04</td><td>Flames @ Kraken</td><td>Seattle Kraken</td><td class="mono">-164</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-03</td><td>Devils @ Islanders</td><td>New Jersey Devils</td><td class="mono">-132</td><td class="mono">-137</td><td class="mono"><span class="pos">+0.91%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-03</td><td>Canadiens @ Penguins</td><td>Montreal Canadiens</td><td class="mono">-125</td><td class="mono">-111</td><td class="mono"><span class="neg">-2.95%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-03</td><td>Senators @ Maple Leafs</td><td>Ottawa Senators</td><td class="mono">-102</td><td class="mono">-110</td><td class="mono"><span class="pos">+1.89%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-10-03</td><td>Capitals @ Lightning</td><td>Tampa Bay Lightning</td><td class="mono">-200</td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">&mdash;</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-10-03</td><td>Kraken @ Oilers</td><td>Seattle Kraken</td><td class="mono">164</td><td class="mono">164</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-03</td><td>Kings @ Sharks</td><td>Los Angeles Kings</td><td class="mono">-104</td><td class="mono">-104</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-02</td><td>Bruins @ Jets</td><td>Winnipeg Jets</td><td class="mono">-125</td><td class="mono">-120</td><td class="mono"><span class="neg">-1.01%</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-10-01</td><td>Flyers @ Devils</td><td>New Jersey Devils</td><td class="mono">-182</td><td class="mono">-188</td><td class="mono"><span class="pos">+0.74%</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-09-30</td><td>Islanders @ Maple Leafs</td><td>Toronto Maple Leafs</td><td class="mono">-130</td><td class="mono">-140</td><td class="mono"><span class="pos">+1.81%</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-09-30</td><td>Penguins @ Flyers</td><td>Philadelphia Flyers</td><td class="mono">-146</td><td class="mono">-144</td><td class="mono"><span class="neg">-0.33%</span></td><td class="mono"><span class="pnd">open</span></td></tr><tr><td class="mono">2026-09-29</td><td>Rangers @ Bruins</td><td>New York Rangers</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+0.00%</span></td><td class="mono"><span class="l">L</span></td></tr></tbody></table></div><p class="note" style="margin-top:1.25rem">The full log for every sport, with filters and the method notes, is on the <a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">tracker</a>.</p></div></section><footer><div class="wrap">
+<div class="foot-links">
+<a href="https://x.com/spice_bets" target="_blank" rel="noopener">@spice_bets</a>
+<a href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a>
+<a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full pick log</a>
+<a href="method.html">Method</a>
+</div>
+<p>Every pick here is <strong>paper</strong> &mdash; a logged screener output, not a betting slip. Prices are FanDuel at the moment the pick was written, and the closing price is captured automatically before the game starts. Records are frozen once graded and are never re-priced.</p>
+<p>Nothing on this page is betting advice. Built 27 Oct 2026, 21:37 UTC from the same pick log that powers the tracker.</p>
+</div></footer>
+</body>
+</html>
