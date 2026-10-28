@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="A weekly coverage count for all FBS teams. No index, no ranking, no play - a baseline being accumulated forward.">
+<meta name="theme-color" content="#0a0e0c">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e0c'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%233ddc84'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://spice12212.github.io/spice-bets/cfb-attention.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Spice Bets">
+<meta property="og:title" content="CFB Attention Log - Spice Bets">
+<meta property="og:description" content="A weekly coverage count for all FBS teams. No index, no ranking, no play - a baseline being accumulated forward.">
+<meta property="og:url" content="https://spice12212.github.io/spice-bets/cfb-attention.html">
+<meta property="og:image" content="https://spice12212.github.io/spice-bets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CFB Attention Log - Spice Bets">
+<meta name="twitter:description" content="A weekly coverage count for all FBS teams. No index, no ranking, no play - a baseline being accumulated forward.">
+<meta name="twitter:image" content="https://spice12212.github.io/spice-bets/og.png"><title>CFB Attention Log - Spice Bets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: a scoreboard. Wide-set display type, sport cards on a grid, numbers in mono with
+   tabular figures. One green accent, used on the live/positive things only. */
+:root{
+  --ground:#f6f8f7; --surface:#ffffff; --raise:#eef2f0;
+  --ink:#0e1613; --ink-soft:#5a6b64; --ink-faint:#8a9a93;
+  --line:#dde5e1; --line-soft:#eaf0ed;
+  --accent:#07864a; --accent-ink:#ffffff; --accent-soft:#e4f4ec;
+  --win:#07864a; --loss:#c0392c; --pend:#8a9a93;
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono','SF Mono',Consolas,monospace;
+  --shadow:0 1px 2px rgba(14,22,19,.05), 0 8px 24px -12px rgba(14,22,19,.14);
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --ground:#0a0e0c; --surface:#121816; --raise:#19211d;
+  --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#6b7d75;
+  --line:#222c27; --line-soft:#1a221e;
+  --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
+  --win:#3ddc84; --loss:#ff6b63; --pend:#6b7d75;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --ground:#0a0e0c; --surface:#121816; --raise:#19211d;
+  --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#6b7d75;
+  --line:#222c27; --line-soft:#1a221e;
+  --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
+  --win:#3ddc84; --loss:#ff6b63; --pend:#6b7d75;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:68rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--display);text-wrap:balance;font-variation-settings:'wdth' 118;letter-spacing:-.015em;line-height:1.08}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0}
+
+/* ---- header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:29;background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:1.5rem;padding-block:.85rem;flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:.55rem;font-family:var(--display);font-variation-settings:'wdth' 122;font-weight:800;font-size:1rem;letter-spacing:.02em;text-decoration:none}
+.mark .dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 0 3px var(--accent-soft)}
+nav.top{margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center}
+nav.top a{font-size:.82rem;font-weight:600;text-decoration:none;color:var(--ink-soft);padding:.35rem .6rem;border-radius:6px}
+nav.top a:hover,nav.top a:focus-visible{color:var(--ink);background:var(--raise)}
+nav.top a.here{color:var(--accent);background:var(--accent-soft)}
+nav.top a.cta{color:var(--accent-ink);background:var(--accent);margin-left:.4rem}
+nav.top a.cta:hover{background:var(--accent);filter:brightness(1.08)}
+.themebtn{display:inline-flex;align-items:center;justify-content:center;width:2.05rem;height:2.05rem;margin-left:.3rem;padding:0;border:1px solid var(--line);border-radius:7px;background:transparent;color:var(--ink-soft);cursor:pointer;flex:none}
+.themebtn:hover{color:var(--ink);background:var(--raise)}
+.themebtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.themebtn svg{width:1.02rem;height:1.02rem;display:block}
+
+/* ---- hero */
+.hero{background:var(--surface);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-block:4.5rem 3.5rem;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:3rem;align-items:start}
+h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
+.lede{font-size:1.08rem;color:var(--ink-soft);margin:1.4rem 0 0;max-width:46ch}
+.lede strong{color:var(--ink);font-weight:600}
+.herocard{background:var(--raise);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.herocard .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
+.herocard .big{font-family:var(--display);font-variation-settings:'wdth' 112;font-weight:800;font-size:3.1rem;line-height:1;margin:.5rem 0 .3rem;font-variant-numeric:tabular-nums;color:var(--accent)}
+.herocard .sub{font-size:.88rem;color:var(--ink-soft)}
+.herocard hr{border:0;border-top:1px solid var(--line);margin:1.1rem 0}
+.minirow{display:flex;justify-content:space-between;gap:1rem;font-size:.88rem;padding:.3rem 0}
+.minirow span:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+.minirow span:first-child{color:var(--ink-soft)}
+.hero.solo .wrap{grid-template-columns:1fr;gap:0;padding-block:3.25rem 2.75rem}
+.hero.solo h1{max-width:20ch}
+@media(max-width:860px){ .hero .wrap{grid-template-columns:1fr;gap:2rem;padding-block:3rem 2.5rem} }
+
+/* ---- sections */
+section .wrap{padding-block:3.75rem}
+.sechead{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem}
+.sechead h2{font-size:1.75rem;font-weight:700}
+.sechead .eyebrow{margin-bottom:.6rem}
+.sechead p{margin:.45rem 0 0;color:var(--ink-soft);max-width:58ch}
+.note{color:var(--ink-soft);max-width:62ch}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+
+/* ---- sport cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));gap:1rem}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.35rem;text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}
+.card:hover,.card:focus-visible{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow)}
+.card .top{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:1rem}
+.card h3{font-size:1.1rem;font-weight:700;font-variation-settings:'wdth' 112}
+.card .clv{font-family:var(--display);font-variation-settings:'wdth' 108;font-weight:800;font-size:2.05rem;line-height:1;font-variant-numeric:tabular-nums}
+.card .unit{font-size:.9rem;font-weight:600;color:var(--ink-soft);margin-left:.15rem}
+.card .cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:.45rem}
+.card .feet{display:flex;gap:1.5rem;margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--line-soft)}
+.card .feet div{font-size:.8rem;color:var(--ink-soft)}
+.card .feet b{display:block;font-family:var(--mono);font-size:.95rem;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+.card .go{margin-top:1.1rem;font-size:.82rem;font-weight:600;color:var(--accent)}
+.pos{color:var(--win)} .neg{color:var(--loss)} .flat{color:var(--pend)}
+.tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .45rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+
+/* ---- stat tiles (sport pages) */
+.statband{padding-block:2.25rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1rem}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+.stat .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.55rem}
+.stat .v{font-family:var(--display);font-variation-settings:'wdth' 108;font-weight:800;font-size:1.85rem;line-height:1;font-variant-numeric:tabular-nums}
+.stat .s{font-size:.82rem;color:var(--ink-soft);margin-top:.45rem}
+
+/* ---- tables */
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.ledger{width:100%;border-collapse:collapse;font-size:.9rem;min-width:36rem}
+.ledger th{font-family:var(--mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);text-align:right;font-weight:500;padding:.8rem .9rem;border-bottom:1px solid var(--line);background:var(--raise);white-space:nowrap}
+.ledger th:first-child,.ledger td:first-child{text-align:left}
+.ledger td{padding:.72rem .9rem;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
+.ledger tr:last-child td{border-bottom:0}
+.ledger td.mono,.ledger th.mono{font-family:var(--mono)}
+.ledger tbody tr:hover{background:var(--raise)}
+.w{color:var(--win);font-weight:600} .l{color:var(--loss);font-weight:600} .pnd{color:var(--pend)}
+
+/* ---- steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-family:var(--mono);font-size:.78rem;font-weight:600;margin-bottom:.9rem}
+.step h3{font-size:1.02rem;font-weight:700;margin-bottom:.5rem;font-variation-settings:'wdth' 108}
+.step p{margin:0;color:var(--ink-soft);font-size:.92rem}
+
+/* ---- chart + callout */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+/* the big ledgers carry min-width:36rem so their columns stay readable inside .scroll; a short
+   table dropped straight into a half-width panel must not inherit that, or it overflows the
+   panel's rounded border instead of fitting it. */
+.panel .ledger{min-width:0}
+.panel .ledger th,.panel .ledger td{padding-inline:0 .4rem}
+.panel .ledger td:last-child{padding-right:0}
+.chart{width:100%;height:auto;max-width:100%;display:block}
+.callout{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;background:var(--surface);padding:1.25rem 1.4rem}
+.callout p{margin:0;color:var(--ink-soft);font-size:.93rem}
+.callout p+p{margin-top:.8rem}
+.callout strong{color:var(--ink)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(24rem,1fr));gap:1rem}
+
+/* ---- subscribe block */
+.join{background:var(--accent-soft);border-block:1px solid var(--line)}
+.joinbox{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:2.75rem;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:2.4rem;box-shadow:var(--shadow)}
+.joinbox h2{font-size:1.95rem}
+.joinbox>div>p{color:var(--ink-soft);margin:.9rem 0 0}
+.price{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;margin:1.6rem 0 0}
+.price .free{font-family:var(--display);font-variation-settings:'wdth' 112;font-weight:800;font-size:2.3rem;line-height:1;color:var(--accent)}
+.price .then{color:var(--ink-soft);font-size:.95rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;font-size:.97rem;padding:.8rem 1.35rem;border-radius:9px;margin-top:1.5rem}
+.btn:hover{filter:brightness(1.08)}
+.smallprint{margin:1rem 0 0;font-size:.8rem;color:var(--ink-faint);max-width:38ch}
+.perks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.85rem}
+.perks h4{margin:0 0 .25rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:500}
+.perks li{display:flex;gap:.65rem;font-size:.94rem;line-height:1.45}
+.perks svg{width:1.05rem;height:1.05rem;flex:none;margin-top:.2rem;color:var(--accent)}
+@media(max-width:820px){ .joinbox{grid-template-columns:1fr;gap:1.9rem;padding:1.6rem} }
+
+/* ---- footer */
+footer{background:var(--surface);border-top:1px solid var(--line)}
+footer .wrap{padding-block:3rem 2.25rem}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(auto-fit,minmax(9rem,1fr));gap:2rem;margin-bottom:2.25rem}
+.fgrid h4{margin:0 0 .8rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:500}
+.fgrid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.fgrid a{font-size:.9rem;color:var(--ink-soft);text-decoration:none}
+.fgrid a:hover{color:var(--accent)}
+.fgrid p{margin:0;color:var(--ink-soft);font-size:.9rem;max-width:40ch}
+.fine{border-top:1px solid var(--line-soft);padding-top:1.5rem;color:var(--ink-faint);font-size:.82rem}
+.fine p{margin:0 0 .6rem}
+.fine strong{color:var(--ink-soft)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<script>
+(function(){
+  var r = document.documentElement, KEY = 'sb-theme';
+  var SUN  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.2v2.3M12 19.5v2.3M4.1 4.1l1.6 1.6M18.3 18.3l1.6 1.6M2.2 12h2.3M19.5 12h2.3M4.1 19.9l1.6-1.6M18.3 5.7l1.6-1.6"/></svg>';
+  var MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.4A8.6 8.6 0 1 1 9.6 3.5a6.9 6.9 0 0 0 10.9 10.9z"/></svg>';
+  function read(){ try { return localStorage.getItem(KEY); } catch(e){ return null; } }
+  function write(v){ try { localStorage.setItem(KEY, v); } catch(e){} }
+  var saved = read();
+  if(saved === 'dark' || saved === 'light'){ r.setAttribute('data-theme', saved); }
+  function isDark(){
+    var set = r.getAttribute('data-theme');
+    if(set) return set === 'dark';
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches; } catch(e){ return false; }
+  }
+  function paint(){
+    var btn = document.getElementById('themeToggle');
+    if(!btn) return;
+    var dark = isDark();
+    btn.innerHTML = dark ? SUN : MOON;
+    btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+  }
+  function wire(){
+    var btn = document.getElementById('themeToggle');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var next = isDark() ? 'light' : 'dark';
+      r.setAttribute('data-theme', next);
+      write(next);
+      paint();
+    });
+    paint();
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', wire); } else { wire(); }
+  try {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(){
+      if(!r.getAttribute('data-theme')) paint();
+    });
+  } catch(e){}
+})();
+</script><header class="top"><div class="wrap"><a class="mark" href="index.html"><span class="dot"></span>Spice Bets</a><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="mlb.html">MLB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html" class="here">Attention</a><a href="method.html">Method</a><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full log</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></nav></div></header><div class="hero solo"><div class="wrap">
+<p class="eyebrow">College football &middot; collection log</p>
+<h1>Counting, not ranking.</h1>
+<p class="lede">The attention collector runs on all 138 FBS teams every week. It produces <strong>no index, no ranking and no play</strong> &mdash; and that is the design, not an unfinished edge. This page exists to show what has been banked so far.</p>
+</div></div><div class="statband"><div class="wrap stats"><div class="stat"><div class="k">Weeks banked</div><div class="v">3</div><div class="s">forward-only, cannot be backfilled</div></div><div class="stat"><div class="k">Teams tracked</div><div class="v">138</div><div class="s">every FBS team, including the zeros</div></div><div class="stat"><div class="k">Team-weeks</div><div class="v">414</div><div class="s">rows in the log</div></div><div class="stat"><div class="k">Mentions counted</div><div class="v">2,276</div><div class="s">across every editorial article</div></div></div></div><section><div class="wrap"><div class="sechead"><div><p class="eyebrow">Why there is no number</p><h2>A CFB attention index would mostly re-discover the schedule</h2>
+<p>Alabama and Georgia top the raw counts in a given week because they are <em>playing each other on Saturday</em> &mdash; which the betting market has already priced. Ranking teams by coverage would hand back the fixture list dressed as a signal.</p></div></div>
+<div class="callout">
+<p><strong>The question that is not circular is team-relative:</strong> is this team getting more coverage than <em>it</em> normally gets? That needs a per-team baseline, and the news archive only begins in October 2026, so there is nothing yet to compare against.</p>
+<p><strong>A baseline is the one thing that cannot be built later.</strong> It can only be accumulated going forward, which is why collection started before the measure existed rather than after. Every week banked here is a week that could not have been recovered.</p>
+</div></div></section><section class="alt"><div class="wrap"><div class="sechead"><div><p class="eyebrow">The bank</p><h2>What is in the log</h2></div></div><div class="scroll"><table class="ledger"><thead><tr><th class="mono">Week ending</th><th class="mono">Teams</th><th class="mono">Articles</th><th class="mono">Mentions, all</th><th class="mono">Mentions, solo</th><th class="mono">Partial rows</th></tr></thead><tbody><tr><td class="mono">2026-10-10</td><td class="mono">138</td><td class="mono">123</td><td class="mono">617</td><td class="mono">173</td><td class="mono">138</td></tr><tr><td class="mono">2026-10-15</td><td class="mono">138</td><td class="mono">192</td><td class="mono">845</td><td class="mono">275</td><td class="mono">&mdash;</td></tr><tr><td class="mono">2026-10-22</td><td class="mono">138</td><td class="mono">185</td><td class="mono">814</td><td class="mono">274</td><td class="mono">&mdash;</td></tr></tbody></table></div><p class="note" style="margin-top:1.25rem">A team with no coverage in a week still gets a row. The zeros are data: a blank has to be distinguishable from the collector not running.</p></div></section><section><div class="wrap"><div class="sechead"><div><p class="eyebrow">The open question</p><h2>Two counts, kept side by side on purpose</h2>
+<p>The NFL model throws away any article tagging more than six teams, on the grounds that a league-wide roundup is noise. Carried into college football unchecked, that rule is destructive.</p></div></div>
+<div class="grid2">
+<div class="callout"><p><strong>It would discard 68% of the mentions.</strong> 2,276 across all articles becomes 722 under the cutoff.</p></div>
+<div class="callout"><p><strong>And it would invent silence.</strong> 165 of 414 team-weeks look like zero coverage under the cutoff. The true figure is 58.</p></div>
+</div>
+<p class="note" style="margin-top:1.5rem">So both counts are stored and neither is chosen. That judgement gets settled on months of data, rather than baked in now by whoever happened to write the first version.</p>
+</div></section><footer><div class="wrap">
+<div class="fgrid">
+  <div>
+    <a class="mark" href="index.html" style="margin-bottom:.9rem"><span class="dot"></span>Spice Bets</a>
+    <p>A paper betting log. Every pick is written down at the price it was offered and graded against the closing line &mdash; including the ones that lost to it.</p>
+  </div>
+  <div><h4>Boards</h4><ul><li><a href="soccer.html">Soccer</a></li><li><a href="cfb.html">College Football</a></li><li><a href="mlb.html">MLB</a></li><li><a href="nfl.html">NFL</a></li><li><a href="nhl.html">NHL</a></li><li><a href="nba.html">NBA</a></li></ul></div>
+  <div><h4>The book</h4><ul>
+    <li><a href="method.html">Method</a></li>
+    <li><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full pick log</a></li>
+  </ul></div>
+  <div><h4>Elsewhere</h4><ul>
+    <li><a href="https://x.com/spice_bets" target="_blank" rel="noopener">@spice_bets</a></li>
+    <li><a href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></li>
+  </ul></div>
+</div>
+<div class="fine">
+<p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Prices are FanDuel at the moment the pick was written; the closing price is captured automatically before the game starts. Records are frozen once graded and are never re-priced.</p>
+<p>Nothing on this site is betting advice. Built 28 Oct 2026, 01:50 UTC.</p>
+</div>
+</div></footer>
+</body>
+</html>
