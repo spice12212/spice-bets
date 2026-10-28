@@ -246,11 +246,12 @@ footer .wrap{padding-block:3rem 2.25rem}
 <div class="callout"><p><strong>This is not a value model, and it is worth being exact about that.</strong> Fair value here is derived from the same prices the book is betting into, so the entry is always roughly fair-minus-vig. There is no independent estimate of who should win. The only honest test of a system like this is whether the market agreed with it afterwards &mdash; which is why closing-line value, and not the win rate, is the headline number on every page of this site.</p></div>
 </div></section>
 <section><div class="wrap"><div class="sechead"><div><p class="eyebrow">Prices and grading</p><h2>Where the numbers come from</h2></div></div>
-<p class="note">Entry prices are FanDuel, recorded at the moment the pick is written. Closing prices are captured by a scheduled job that runs before the game starts &mdash; the close is taken live, never looked up afterwards, because most books purge their own line history within a day of a game finishing. A pick with no captured close is shown with a dash rather than an estimate.</p>
+<p class="note">Entry prices are FanDuel on almost every pick, recorded at the moment it is written. Two exceptions, both small and both worth naming: a little over twenty football and hockey picks are priced on Polymarket, a zero-hold exchange, and the NBA board records whichever book was offering the best number at the time &mdash; which is part of why the NBA page is measured in points rather than percent. Closing prices are captured by a scheduled job that runs before the game starts &mdash; the close is taken live, never looked up afterwards, because most books purge their own line history within a day of a game finishing. A pick with no captured close is shown with a dash rather than an estimate.</p>
 <p class="note" style="margin-top:1rem">CLV is reported in percentage points of implied probability: the implied probability of the closing price minus the implied probability of the entry price. A positive number means the market finished shorter than the price the pick was written at.</p>
 </div></section>
 <section><div class="wrap"><div class="sechead"><div><p class="eyebrow">Honesty rules</p><h2>Things this site will not do</h2></div></div>
-<p class="note">Records are frozen once graded and never re-priced. Picks are never deleted after the fact. Sports where CLV is negative stay on the page with the negative number visible. There is no crowned play of the day, because most of the entry gates behind these picks have not yet collected enough closes to be judged, and publishing a daily headline pick would imply a confidence the data does not support yet.</p>
+<p class="note">Records are frozen once graded and never re-priced. Sports where CLV is negative stay on the page with the negative number visible. There is no crowned play of the day, because most of the entry gates behind these picks have not yet collected enough closes to be judged, and publishing a daily headline pick would imply a confidence the data does not support yet.</p>
+<div class="callout" style="margin-top:1.5rem"><p><strong>Picks have been removed from this log once, and it flattered the record.</strong> A price longer than +280 does not meet the entry rule, so those picks are no longer logged at all. In October 2026 that rule was also applied backwards, which deleted <strong>14 soccer picks that had gone 2-10</strong> and moved the published record from &minus;9 to &minus;1. Mean CLV barely moved, 0.62% to 0.59%, which is the measure this book is actually judged on &mdash; but the win-loss figure improved because losing picks were taken out, and a page that did not say so would be hiding the one edit that made it look better.</p></div>
 </div></section><footer><div class="wrap">
 <div class="fgrid">
   <div>
@@ -268,8 +269,8 @@ footer .wrap{padding-block:3rem 2.25rem}
   </ul></div>
 </div>
 <div class="fine">
-<p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Prices are FanDuel at the moment the pick was written; the closing price is captured automatically before the game starts. Records are frozen once graded and are never re-priced.</p>
-<p>Nothing on this site is betting advice. Built 28 Oct 2026, 02:08 UTC.</p>
+<p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
+<p>Nothing on this site is betting advice. Built 28 Oct 2026, 02:23 UTC.</p>
 </div>
 </div></footer>
 </body>
