@@ -211,7 +211,7 @@ nav.top a.ref .ad,.flink .ad{font-family:var(--mono);font-size:.56rem;letter-spa
 .bpotd h3{font-size:1rem;font-weight:700;font-variation-settings:'wdth' 92;margin:0 0 .4rem}
 .bpotd h3+p{margin:0 0 1.4rem;color:var(--ink-soft);max-width:60ch}
 .bpotd h3+p:last-child{margin-bottom:0}
-.bpotd-cta{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:10px;padding:1.5rem;position:sticky;top:5rem}
+.bpotd-cta{background:transparent;border:0;border-top:3px solid var(--brand);border-radius:0;padding:1.2rem 0 0;position:sticky;top:5rem}
 .bpotd-cta p{margin:.5rem 0 0;color:var(--ink-soft);font-size:.92rem}
 .bpotd-cta .eyebrow{margin-bottom:.2rem}
 .bpotd-cta .btn{margin-top:1.2rem}
@@ -219,8 +219,8 @@ nav.top a.ref .ad,.flink .ad{font-family:var(--mono);font-size:.56rem;letter-spa
 @media(max-width:860px){ .bpotd{grid-template-columns:1fr;gap:1.75rem} .bpotd-cta{position:static} }
 
 /* ---- offers page */
-.offer{position:relative;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--tint,var(--ink));border-radius:10px;padding:1.5rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.25rem;align-items:center}
-.offer + .offer{margin-top:1rem}
+.offer{position:relative;background:transparent;border:0;border-left:3px solid var(--tint,var(--ink));border-radius:0;padding:1.3rem 0 1.3rem 1.3rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.25rem;align-items:center}
+.offer + .offer{margin-top:0;border-top:1px solid var(--line)}
 .offer .chip{display:inline-block;font-family:var(--display);font-variation-settings:'wdth' 92;font-weight:800;font-size:.82rem;letter-spacing:.01em;padding:.34rem .72rem;border-radius:5px;background:var(--ink);color:#fff}
 /* The partner chip: their own glyph or wordmark, on their own colour, beside their name.
    lmode decides how the asset is treated and the three partners genuinely differ, which is why
@@ -260,12 +260,7 @@ h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
    PERFORATION rather than a hairline, because the thing below it is the stub. Small moves, but
    together they are the difference between "a card component" and an object with a reason to
    look the way it does. */
-.herocard{position:relative;background:var(--raise);border:1px solid var(--line);border-radius:10px;padding:1.5rem;overflow:hidden}
 .herocard::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--brand)}
-.herocard .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
-.herocard .big{font-family:var(--display);font-variation-settings:'wdth' 88;font-weight:800;font-size:3.4rem;line-height:1;margin:.5rem 0 .3rem;font-variant-numeric:tabular-nums;letter-spacing:-.025em;color:var(--accent)}
-.herocard .sub{font-size:.88rem;color:var(--ink-soft)}
-.herocard hr{border:0;border-top:1px dashed var(--line);margin:1.1rem 0}
 .minirow{display:flex;justify-content:space-between;gap:1rem;font-size:.88rem;padding:.3rem 0}
 .minirow span:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
 .minirow span:first-child{color:var(--ink-soft)}
@@ -274,22 +269,22 @@ h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
 
 /* ---- hero numbers. Built mobile-first because that is where the owner saw the problem:
    three stacked tiles on a phone, three across from 560px. */
-.htiles{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);
-  border-radius:12px;overflow:hidden;margin-top:1.6rem}
-.htile{background:var(--raise);padding:1.1rem 1.15rem}
+.htiles{display:grid;grid-template-columns:1fr;gap:0;border-top:3px solid var(--ink);border-bottom:1px solid var(--line);margin-top:1.6rem}
+.htile{background:transparent;padding:1.05rem 0;border-bottom:1px solid var(--line-soft)}
 .htile .k{font-family:var(--mono);font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
 .htile .v{font-family:var(--display);font-variation-settings:'wdth' 88;font-weight:800;font-size:2.6rem;
   line-height:1;margin:.4rem 0 .35rem;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
 .htile .s{font-size:.82rem;color:var(--ink-soft);line-height:1.35}
-@media(min-width:560px){ .htiles{grid-template-columns:repeat(3,1fr)} }
+@media(min-width:560px){ .htiles{grid-template-columns:repeat(3,1fr)} .htile{border-bottom:0;padding:1.15rem 1.4rem;border-left:1px solid var(--line)} .htile:first-child{padding-left:0;border-left:0} }
 
 /* per-sport chips: name, record, headline figure. Horizontally scrollable on a phone rather
    than wrapping to three ragged rows. */
-.scts{display:flex;gap:.6rem;margin-top:1rem;overflow-x:auto;padding-bottom:.2rem;-webkit-overflow-scrolling:touch}
+.scts{display:flex;gap:0;margin-top:1.1rem;overflow-x:auto;padding-bottom:.2rem;-webkit-overflow-scrolling:touch}
 .scts::-webkit-scrollbar{display:none}
-.sct{flex:0 0 auto;display:flex;flex-direction:column;gap:.15rem;min-width:6.4rem;text-decoration:none;
-  background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:.65rem .8rem;transition:border-color .15s}
-.sct:hover{border-color:var(--brand-line)}
+.sct{flex:0 0 auto;display:flex;flex-direction:column;gap:.12rem;min-width:6rem;text-decoration:none;
+  padding:.1rem .95rem .1rem 0;margin-right:.95rem;border-right:1px solid var(--line);transition:opacity .15s}
+.sct:hover{opacity:.62}
+.sct:last-child{border-right:0;margin-right:0}
 .sct .n{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
 .sct .r{font-family:var(--display);font-variation-settings:'wdth' 92;font-weight:800;font-size:1.12rem;line-height:1.1;font-variant-numeric:tabular-nums}
 .sct .c{font-family:var(--mono);font-size:.74rem;font-variant-numeric:tabular-nums}
@@ -343,14 +338,14 @@ section .wrap{padding-block:3.75rem}
 
 /* ---- stat tiles (sport pages) */
 .statband{padding-block:2.25rem}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1rem}
-.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1.6rem}
+.stat{background:transparent;border:0;border-top:3px solid var(--ink);padding:.9rem 0 0}
 .stat .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.55rem}
 .stat .v{font-family:var(--display);font-variation-settings:'wdth' 108;font-weight:800;font-size:1.85rem;line-height:1;font-variant-numeric:tabular-nums}
 .stat .s{font-size:.82rem;color:var(--ink-soft);margin-top:.45rem}
 
 /* ---- tables */
-.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.scroll{overflow-x:auto;border:0;border-top:2px solid var(--ink);background:transparent}
 .ledger{width:100%;border-collapse:collapse;font-size:.9rem;min-width:36rem}
 .ledger th{font-family:var(--mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);text-align:right;font-weight:500;padding:.8rem .9rem;border-bottom:1px solid var(--line);background:var(--raise);white-space:nowrap}
 .ledger th:first-child,.ledger td:first-child{text-align:left}
@@ -359,14 +354,14 @@ section .wrap{padding-block:3.75rem}
 .ledger td.mono,.ledger th.mono{font-family:var(--mono)}
 /* ---- one collapsible block per football week. The summary IS that week's result line, so
    the season reads top to bottom without expanding anything. */
-.wkblock{border:1px solid var(--line);border-radius:10px;background:var(--surface);margin-bottom:.6rem;overflow:hidden}
+.wkblock{border:0;border-bottom:1px solid var(--line);background:transparent;margin:0}
 .wkblock>summary{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap;cursor:pointer;list-style:none;
-  padding:.85rem 1rem;background:var(--raise)}
+  padding:.8rem .25rem;background:transparent}
 .wkblock>summary::-webkit-details-marker{display:none}
 .wkblock>summary::after{content:"+";margin-left:auto;font-family:var(--mono);color:var(--ink-faint);font-size:1rem;line-height:1}
 .wkblock[open]>summary::after{content:"\2212"}
-.wkblock[open]>summary{border-bottom:1px solid var(--line)}
-.wkblock>summary:hover{background:var(--surface-2)}
+.wkblock[open]>summary{border-bottom:1px solid var(--line-soft)}
+.wkblock>summary:hover{background:var(--surface)}
 .wkblock .wkn{font-family:var(--display);font-variation-settings:'wdth' 92;font-weight:800;font-size:1.02rem;letter-spacing:-.015em}
 .wkblock .wkd{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
 .wkblock .wkstat{font-size:.82rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
@@ -378,14 +373,14 @@ section .wrap{padding-block:3.75rem}
 
 /* ---- steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.5rem}
+.step{background:transparent;border:0;border-top:1px solid var(--line);padding:1.1rem 0 0}
 .step .stepsub{font-family:var(--mono);font-size:.68rem;letter-spacing:.11em;text-transform:lowercase;color:var(--ink-faint);margin:.2rem 0 .7rem}
 .step .n{display:inline-flex;align-items:center;justify-content:center;width:1.9rem;height:1.9rem;border-radius:3px;background:var(--brand);color:#fff;font-family:var(--mono);font-size:.78rem;font-weight:600;margin-bottom:.9rem}
 .step h3{font-size:1.02rem;font-weight:700;margin-bottom:.5rem;font-variation-settings:'wdth' 108}
 .step p{margin:0;color:var(--ink-soft);font-size:.92rem}
 
 /* ---- chart + callout */
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.panel{background:transparent;border:0;border-top:3px solid var(--ink);padding:1.4rem 0 0}
 /* the big ledgers carry min-width:36rem so their columns stay readable inside .scroll; a short
    table dropped straight into a half-width panel must not inherit that, or it overflows the
    panel's rounded border instead of fitting it. */
@@ -393,7 +388,7 @@ section .wrap{padding-block:3.75rem}
 .panel .ledger th,.panel .ledger td{padding-inline:0 .4rem}
 .panel .ledger td:last-child{padding-right:0}
 .chart{width:100%;height:auto;max-width:100%;display:block}
-.callout{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;background:var(--surface);padding:1.25rem 1.4rem}
+.callout{border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:0;border-top:0;border-right:0;border-bottom:0;background:var(--surface);padding:1.25rem 1.4rem}
 .callout p{margin:0;color:var(--ink-soft);font-size:.93rem}
 .callout p+p{margin-top:.8rem}
 .callout strong{color:var(--ink)}
@@ -401,13 +396,13 @@ section .wrap{padding-block:3.75rem}
 
 /* ---- subscribe block */
 .join{background:var(--brand-soft);border-block:1px solid var(--line)}
-.joinbox{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:2.75rem;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:2.4rem;box-shadow:var(--shadow)}
+.joinbox{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:2.75rem;background:var(--surface);border:0;border-top:4px solid var(--brand);border-radius:0;padding:2.2rem 0 0;box-shadow:none}
 .joinbox h2{font-size:1.95rem}
 .joinbox>div>p{color:var(--ink-soft);margin:.9rem 0 0}
 .price{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;margin:1.6rem 0 0}
 .price .free{font-family:var(--display);font-variation-settings:'wdth' 112;font-weight:800;font-size:2.3rem;line-height:1;color:var(--brand)}
 .price .then{color:var(--ink-soft);font-size:.95rem}
-.btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:700;font-size:.97rem;padding:.8rem 1.35rem;border-radius:9px;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:700;font-size:.97rem;padding:.8rem 1.35rem;border-radius:3px;margin-top:1.5rem}
 .btn:hover{filter:brightness(1.08)}
 .smallprint{margin:1rem 0 0;font-size:.8rem;color:var(--ink-faint);max-width:38ch}
 .perks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.85rem}
@@ -524,7 +519,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
 <p><strong>The MLB board is out of season and is not shown.</strong> Its last pick was 12 October 2026. The board has been taken off the navigation because nothing is screening it, but its 111 picks are <strong>still counted in every figure on this site</strong>, including the site-wide closing-line value. MLB is the weakest board in the book, so leaving it in the arithmetic is the point &mdash; hiding the page is a tidying-up decision and hiding the losses would not be.</p>
 <p><strong>Some links are paid.</strong> The banner at the top of every page, and everything on the <a href="offers.html">offers</a> page, are referral links and may earn a commission. They buy no influence over anything on this site: no pick, price, record or figure here is affected by them, and the entry prices in the log are the ones that were actually offered.</p>
-<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 21:45 UTC.</p>
+<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 21:48 UTC.</p>
 </div>
 </div></footer>
 </body>
