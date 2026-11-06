@@ -40,7 +40,7 @@
   --ink:#0e1613; --ink-soft:#5a6b64; --ink-faint:#8a9a93;
   --line:#dde5e1; --line-soft:#eaf0ed;
   --accent:#07864a; --accent-ink:#ffffff; --accent-soft:#e4f4ec;
-  --brand:#b2541a; --brand-ink:#ffffff; --brand-soft:#fbe9dd; --brand-line:#e8c2a5;
+  --brand:#c42e26; --brand-ink:#ffffff; --brand-soft:#fbe7e5; --brand-line:#eab4af;
   --win:#07864a; --loss:#c0392c; --pend:#8a9a93;
   /* The banner gets EXPLICIT tokens instead of inheriting ink/ground. Derived, it flipped to a
      pale cream bar in dark mode - a washed-out strip sitting under a near-black header, which
@@ -58,7 +58,7 @@
   --line:#222c27; --line-soft:#1a221e;
   --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
 
-  --brand:#f0914a; --brand-ink:#1a0d04; --brand-soft:#2e1a0d; --brand-line:#5a3317;
+  --brand:#f0655a; --brand-ink:#1a0605; --brand-soft:#2f1310; --brand-line:#5d221d;
 
 
   --promo-bg:#2a1708; --promo-ink:#ffeada;
@@ -74,7 +74,7 @@
   --line:#222c27; --line-soft:#1a221e;
   --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
 
-  --brand:#f0914a; --brand-ink:#1a0d04; --brand-soft:#2e1a0d; --brand-line:#5a3317;
+  --brand:#f0655a; --brand-ink:#1a0605; --brand-soft:#2f1310; --brand-line:#5d221d;
 
 
   --promo-bg:#2a1708; --promo-ink:#ffeada;
@@ -117,21 +117,16 @@ header.top .wrap{display:flex;align-items:center;gap:1.5rem;padding-block:.85rem
    with a punched hole and a torn edge, which is what the site actually is - a pile of slips
    written down before the event. 'Spice' carries the brand colour, 'Bets' stays in ink, so the
    name reads as a name rather than as a label. */
-.mark{display:flex;align-items:center;gap:.5rem;font-family:var(--display);font-variation-settings:'wdth' 100;font-weight:800;font-size:1.05rem;letter-spacing:-.01em;text-decoration:none}
-.mark .stub{
-  position:relative;width:1.15rem;height:.95rem;flex:none;border-radius:3px;
-  background:var(--brand);
-  /* the punch, and the perforation down the tear line */
-  -webkit-mask:radial-gradient(circle at 72% 50%,transparent .17rem,#000 .18rem),
-        repeating-linear-gradient(to bottom,#000 0 2px,transparent 2px 4px) 72% 0/1px 100% no-repeat,
-        linear-gradient(#000,#000);
-  -webkit-mask-composite:source-in,xor;
-  mask:radial-gradient(circle at 72% 50%,transparent .17rem,#000 .18rem),
-       linear-gradient(#000,#000);
-  mask-composite:intersect;
-}
-.mark .wm b{color:var(--brand);font-weight:800}
-.mark:hover .stub{filter:brightness(1.1)}
+/* The owner's own lockup: SPICE over BETS, BETS in red with a rule under it, set tight and
+   wide the way their banner sets it. Two words on two lines in a header bar is deliberate -
+   it is how the mark is drawn, and it gives the masthead a shape no template has. */
+.mark{display:inline-flex;text-decoration:none;line-height:1}
+.mark .wm{display:flex;flex-direction:column;font-family:var(--display);
+  font-variation-settings:'wdth' 112;font-weight:800;letter-spacing:.01em;line-height:.88}
+.mark .wm b{font-weight:800;font-size:1.02rem;color:var(--ink)}
+.mark .wm i{font-style:normal;font-weight:800;font-size:1.02rem;color:var(--brand);
+  border-bottom:2px solid var(--brand);padding-bottom:1px;width:max-content}
+.mark:hover .wm i{filter:brightness(1.12)}
 nav.top{margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center}
 nav.top a{font-size:.82rem;font-weight:600;text-decoration:none;color:var(--ink-soft);padding:.35rem .6rem;border-radius:6px}
 nav.top a:hover,nav.top a:focus-visible{color:var(--ink);background:var(--raise)}
@@ -342,8 +337,9 @@ section .wrap{padding-block:3.75rem}
 
 /* ---- steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
-.step .n{display:inline-flex;align-items:center;justify-content:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-family:var(--mono);font-size:.78rem;font-weight:600;margin-bottom:.9rem}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.5rem}
+.step .stepsub{font-family:var(--mono);font-size:.68rem;letter-spacing:.11em;text-transform:lowercase;color:var(--ink-faint);margin:.2rem 0 .7rem}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:1.9rem;height:1.9rem;border-radius:3px;background:var(--brand);color:#fff;font-family:var(--mono);font-size:.78rem;font-weight:600;margin-bottom:.9rem}
 .step h3{font-size:1.02rem;font-weight:700;margin-bottom:.5rem;font-variation-settings:'wdth' 108}
 .step p{margin:0;color:var(--ink-soft);font-size:.92rem}
 
@@ -388,6 +384,9 @@ footer .wrap{padding-block:3rem 2.25rem}
 .fgrid a{font-size:.9rem;color:var(--ink-soft);text-decoration:none}
 .fgrid a:hover{color:var(--accent)}
 .fgrid p{margin:0;color:var(--ink-soft);font-size:.9rem;max-width:40ch}
+/* the account's own line, off their banner */
+.ftag{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--brand)!important;margin:.55rem 0 .7rem!important}
 .fine{border-top:1px solid var(--line-soft);padding-top:1.5rem;color:var(--ink-faint);font-size:.82rem}
 .fine p{margin:0 0 .6rem}
 .fine strong{color:var(--ink-soft)}
@@ -435,7 +434,7 @@ footer .wrap{padding-block:3rem 2.25rem}
     });
   } catch(e){}
 })();
-</script><header class="top"><div class="wrap"><a class="mark" href="index.html"><span class="stub" aria-hidden="true"></span><span class="wm"><b>Spice</b> Bets</span></a><nav class="top"><a href="soccer.html" class="here">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><a class="ref" href="offers.html">Gambit</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;background:#1652f0;color:#ffffff"><span class="wrap"><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;background:#0b0d10;color:#ffffff"><span class="wrap"><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;background:#c0f018;color:#111409"><span class="wrap"><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
+</script><header class="top"><div class="wrap"><a class="mark" href="index.html"><span class="wm"><b>SPICE</b><i>BETS</i></span></a><nav class="top"><a href="soccer.html" class="here">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><a class="ref" href="offers.html">Gambit</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;background:#1652f0;color:#ffffff"><span class="wrap"><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;background:#0b0d10;color:#ffffff"><span class="wrap"><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;background:#c0f018;color:#111409"><span class="wrap"><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
 <p class="eyebrow">321 picks &middot; 304 graded closes</p>
 <h1>Soccer</h1>
 <p class="lede">Match totals, three-way sides and handicaps across the European leagues and the continental cups.</p>
@@ -452,7 +451,8 @@ footer .wrap{padding-block:3rem 2.25rem}
 </div></div></section><footer><div class="wrap">
 <div class="fgrid">
   <div>
-    <a class="mark" href="index.html" style="margin-bottom:.9rem"><span class="stub" aria-hidden="true"></span><span class="wm"><b>Spice</b> Bets</span></a>
+    <a class="mark" href="index.html" style="margin-bottom:.9rem"><span class="wm"><b>SPICE</b><i>BETS</i></span></a>
+    <p class="ftag">Watching where the money goes</p>
     <p>A paper betting log. Every pick is written down at the price it was offered and graded against the closing line &mdash; including the ones that lost to it.</p>
   </div>
   <div><h4>Boards</h4><ul><li><a href="soccer.html">Soccer</a></li><li><a href="cfb.html">College Football</a></li><li><a href="nfl.html">NFL</a></li><li><a href="nhl.html">NHL</a></li><li><a href="nba.html">NBA</a></li></ul></div>
@@ -471,7 +471,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
 <p><strong>The MLB board is out of season and is not shown.</strong> Its last pick was 12 October 2026. The board has been taken off the navigation because nothing is screening it, but its 111 picks are <strong>still counted in every figure on this site</strong>, including the site-wide closing-line value. MLB is the weakest board in the book, so leaving it in the arithmetic is the point &mdash; hiding the page is a tidying-up decision and hiding the losses would not be.</p>
 <p><strong>Some links are paid.</strong> The banner at the top of every page, and everything on the <a href="offers.html">offers</a> page, are referral links and may earn a commission. They buy no influence over anything on this site: no pick, price, record or figure here is affected by them, and the entry prices in the log are the ones that were actually offered.</p>
-<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 21:32 UTC.</p>
+<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 21:38 UTC.</p>
 </div>
 </div></footer>
 </body>
