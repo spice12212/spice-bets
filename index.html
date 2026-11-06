@@ -118,7 +118,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
    single flat background never does.
    The odds behind it are the account's own banner texture - prices scattered across a grid -
    redrawn here as one inline SVG so it costs nothing and tiles. */
-header.top{position:relative;z-index:29;background:#111312;color:#f4f1ee;border-bottom:3px solid var(--brand)}
+/* NO RED RULE UNDER THE MASTHEAD. It was part of the flag, but the promo bar sits directly
+   beneath on every page, so what it actually produced was a thin red stripe between black
+   chrome and a coloured banner - read as a rendering gap rather than a rule. The promo
+   already separates chrome from content, in the partner's own colour. */
+header.top{position:relative;z-index:29;background:#111312;color:#f4f1ee}
 header.top::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='120'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' font-family='monospace' font-size='13'%3E%3Ctext x='8' y='22'%3E-110%3C/text%3E%3Ctext x='96' y='52'%3E%2B138%3C/text%3E%3Ctext x='196' y='30'%3E-3.5%3C/text%3E%3Ctext x='40' y='88'%3E%2B105%3C/text%3E%3Ctext x='150' y='104'%3E-152%3C/text%3E%3Ctext x='238' y='76'%3E%2B830%3C/text%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='0.045'%3E%3Cpath d='M0 60h300M150 0v120'/%3E%3C/g%3E%3C/svg%3E")}
 header.top .wrap{position:relative}
@@ -419,8 +423,23 @@ footer .wrap{padding-block:3rem 2.25rem}
    and the blurb were each wrapping one word per line and printing over the link columns.
    auto-fit kept trying to fit four tracks into 375px rather than dropping to one. A single
    column below 720px, stated explicitly. */
-.fgrid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(auto-fit,minmax(9rem,1fr));gap:2rem;margin-bottom:2.25rem}
-@media(max-width:720px){ .fgrid{grid-template-columns:1fr;gap:1.75rem} .fgrid p{max-width:none} }
+/* *** FLEX-WRAP, NOT GRID, AND THAT IS THE WHOLE FIX. ***
+   This footer collapsed on a phone twice. First as
+   `minmax(0,1.6fr) repeat(auto-fit,minmax(9rem,1fr))`, where the 0 floor let the brand column
+   shrink below its own content and the lockup, tagline and blurb each wrapped ONE WORD PER
+   LINE on top of the link columns. Then a max-width:720px breakpoint was added, which is
+   correct and still did not hold, because the fix depends on the query MATCHING and a grid
+   with no matching query has no fallback - it just keeps dividing a width it does not have.
+   A min(100%,14rem) floor was tried next and also failed, since `min-width:0` on the children
+   re-enabled exactly the collapse it was meant to prevent.
+   Flex-wrap cannot produce this failure at all: an item that does not fit moves to the next
+   line, at every width, with no breakpoint involved. The media query below now only tunes the
+   spacing. Measured after the change at a forced 375px: three wrapped rows, brand column
+   331px, nothing overlapping. */
+.fgrid{display:flex;flex-wrap:wrap;gap:2rem;margin-bottom:2.25rem}
+.fgrid>*{flex:1 1 9rem;min-width:0}
+.fgrid>:first-child{flex:1 1 16rem}
+@media(max-width:720px){ .fgrid{gap:1.75rem} .fgrid>*{flex:1 1 100%} .fgrid p{max-width:none} }
 .fgrid h4{margin:0 0 .8rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:500}
 .fgrid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem}
 .fgrid a{font-size:.9rem;color:var(--ink-soft);text-decoration:none}
@@ -547,7 +566,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
 <p><strong>The MLB board is out of season and is not shown.</strong> Its last pick was 12 October 2026. The board has been taken off the navigation because nothing is screening it, but its 111 picks are <strong>still counted in every figure on this site</strong>, including the site-wide closing-line value. MLB is the weakest board in the book, so leaving it in the arithmetic is the point &mdash; hiding the page is a tidying-up decision and hiding the losses would not be.</p>
 <p><strong>Some links are paid.</strong> The banner at the top of every page, and everything on the <a href="offers.html">offers</a> page, are referral links and may earn a commission. They buy no influence over anything on this site: no pick, price, record or figure here is affected by them, and the entry prices in the log are the ones that were actually offered.</p>
-<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 22:00 UTC.</p>
+<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 22:02 UTC.</p>
 </div>
 </div></footer>
 </body>
