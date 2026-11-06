@@ -42,6 +42,10 @@
   --accent:#07864a; --accent-ink:#ffffff; --accent-soft:#e4f4ec;
   --brand:#b2541a; --brand-ink:#ffffff; --brand-soft:#fbe9dd; --brand-line:#e8c2a5;
   --win:#07864a; --loss:#c0392c; --pend:#8a9a93;
+  /* The banner gets EXPLICIT tokens instead of inheriting ink/ground. Derived, it flipped to a
+     pale cream bar in dark mode - a washed-out strip sitting under a near-black header, which
+     is the one element on the page that has to stay legible as a band in both themes. */
+  --promo-bg:#1a1310; --promo-ink:#f6efe8;
   --display:'Bricolage Grotesque','Archivo','Helvetica Neue',Arial,sans-serif;
   --body:'Archivo','Helvetica Neue',Arial,sans-serif;
   --mono:'IBM Plex Mono','SF Mono',Consolas,monospace;
@@ -53,6 +57,13 @@
   --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#6b7d75;
   --line:#222c27; --line-soft:#1a221e;
   --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
+
+  --brand:#f0914a; --brand-ink:#1a0d04; --brand-soft:#2e1a0d; --brand-line:#5a3317;
+
+
+  --promo-bg:#2a1708; --promo-ink:#ffeada;
+
+  --grain:.055;
   --win:#3ddc84; --loss:#ff6b63; --pend:#6b7d75;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
   color-scheme:dark;
@@ -62,6 +73,13 @@
   --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#6b7d75;
   --line:#222c27; --line-soft:#1a221e;
   --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
+
+  --brand:#f0914a; --brand-ink:#1a0d04; --brand-soft:#2e1a0d; --brand-line:#5a3317;
+
+
+  --promo-bg:#2a1708; --promo-ink:#ffeada;
+
+  --grain:.055;
   --win:#3ddc84; --loss:#ff6b63; --pend:#6b7d75;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
   color-scheme:dark;
@@ -72,24 +90,109 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);
 a{color:inherit}
 h1,h2,h3{margin:0;font-family:var(--display);text-wrap:balance;font-variation-settings:'wdth' 118;letter-spacing:-.015em;line-height:1.08}
 .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
-.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0}
+
+/* ---- paper grain.
+   One pseudo-element over the whole page at very low opacity. The reason it is here is that a
+   flat fill plus a soft shadow plus a 14px radius is the house style of every generated site
+   on the internet, and the owner's note was that this one looked like one. Grain is the
+   cheapest honest fix: it reads as printed stock rather than a rendered rectangle, costs one
+   inline SVG, and is pointer-events:none so it can never eat a click. Kept subtle enough to
+   be felt and not seen - if it is visible as texture it is turned up too far. */
+body::after{
+  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:var(--grain);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) body::after{mix-blend-mode:screen} }
+:root[data-theme="dark"] body::after{mix-blend-mode:screen}
 
 /* ---- header */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:29;background:var(--surface);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;gap:1.5rem;padding-block:.85rem;flex-wrap:wrap}
-.mark{display:flex;align-items:center;gap:.55rem;font-family:var(--display);font-variation-settings:'wdth' 122;font-weight:800;font-size:1rem;letter-spacing:.02em;text-decoration:none}
-.mark .dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 0 3px var(--accent-soft)}
+/* ---- the wordmark.
+   Was a green dot beside plain text. The dot was the same green as a winning number, and the
+   whole lockup could have belonged to any product. This is a TICKET STUB: a small amber block
+   with a punched hole and a torn edge, which is what the site actually is - a pile of slips
+   written down before the event. 'Spice' carries the brand colour, 'Bets' stays in ink, so the
+   name reads as a name rather than as a label. */
+.mark{display:flex;align-items:center;gap:.5rem;font-family:var(--display);font-variation-settings:'wdth' 100;font-weight:800;font-size:1.05rem;letter-spacing:-.01em;text-decoration:none}
+.mark .stub{
+  position:relative;width:1.15rem;height:.95rem;flex:none;border-radius:3px;
+  background:var(--brand);
+  /* the punch, and the perforation down the tear line */
+  -webkit-mask:radial-gradient(circle at 72% 50%,transparent .17rem,#000 .18rem),
+        repeating-linear-gradient(to bottom,#000 0 2px,transparent 2px 4px) 72% 0/1px 100% no-repeat,
+        linear-gradient(#000,#000);
+  -webkit-mask-composite:source-in,xor;
+  mask:radial-gradient(circle at 72% 50%,transparent .17rem,#000 .18rem),
+       linear-gradient(#000,#000);
+  mask-composite:intersect;
+}
+.mark .wm b{color:var(--brand);font-weight:800}
+.mark:hover .stub{filter:brightness(1.1)}
 nav.top{margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center}
 nav.top a{font-size:.82rem;font-weight:600;text-decoration:none;color:var(--ink-soft);padding:.35rem .6rem;border-radius:6px}
 nav.top a:hover,nav.top a:focus-visible{color:var(--ink);background:var(--raise)}
-nav.top a.here{color:var(--accent);background:var(--accent-soft)}
-nav.top a.cta{color:var(--accent-ink);background:var(--accent);margin-left:.4rem}
-nav.top a.cta:hover{background:var(--accent);filter:brightness(1.08)}
+nav.top a.here{color:var(--brand);background:var(--brand-soft)}
+/* AMBER, NOT GREEN - see the two-colour rule at the top. This button is an advert; green on
+   this site means a number came out positive and must not be lent to one. */
+nav.top a.cta{color:var(--brand-ink);background:var(--brand);margin-left:.4rem;font-weight:700}
+nav.top a.cta:hover{background:var(--brand);filter:brightness(1.08)}
+/* The Gambit referral. Deliberately the QUIETEST link in the bar: outlined, not filled, and
+   carrying a visible 'ad' chip. The owner asked for it "not as emphasis as the Playbooki one",
+   and a paid referral on a page that sells itself on straight reporting has to be labelled as
+   one - the X post that used this link carried #ad for the same reason. */
+nav.top a.ref{border:1px solid var(--line);color:var(--ink-soft);font-weight:600;display:inline-flex;align-items:center;gap:.35rem}
+nav.top a.ref:hover{border-color:var(--brand-line);color:var(--ink);background:transparent}
+nav.top a.ref .ad,.flink .ad{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);border:1px solid var(--line);border-radius:3px;padding:0 .22rem;line-height:1.5}
 .themebtn{display:inline-flex;align-items:center;justify-content:center;width:2.05rem;height:2.05rem;margin-left:.3rem;padding:0;border:1px solid var(--line);border-radius:7px;background:transparent;color:var(--ink-soft);cursor:pointer;flex:none}
 .themebtn:hover{color:var(--ink);background:var(--raise)}
 .themebtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .themebtn svg{width:1.02rem;height:1.02rem;display:block}
+
+/* ---- offer banner.
+   A thin strip under the header that cycles through the referral offers. CSS-only crossfade on
+   a keyframe timeline, no JS, so it cannot break the page and costs nothing.
+
+   IT IS AMBER-ON-INK, NOT GREEN, for the two-colour rule at the top: this is advertising and it
+   sits directly above published results. It also carries a permanent 'ad' chip rather than one
+   per slide, because a rotating strip where the label changes with the slide is a label that
+   can be missed.
+
+   REDUCED MOTION TURNS THE ROTATION OFF and pins the first offer. An auto-animating banner is
+   exactly the thing that setting exists for. */
+.promo{position:relative;z-index:28;background:var(--promo-bg);color:var(--promo-ink);overflow:hidden}
+.promo .wrap{display:flex;align-items:center;gap:.6rem;padding-block:.5rem;min-height:2.1rem}
+.promo .ad{font-family:var(--mono);font-size:.55rem;letter-spacing:.11em;text-transform:uppercase;border:1px solid currentColor;opacity:.5;border-radius:3px;padding:0 .22rem;flex:none}
+.promo .reel{position:relative;flex:1 1 auto;min-width:0;height:1.25rem}
+.promo .slide{position:absolute;inset:0;display:flex;align-items:center;gap:.6rem;opacity:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none;color:inherit}
+.promo .slide b{font-family:var(--display);font-variation-settings:'wdth' 92;font-weight:800;font-size:.9rem;color:var(--brand);flex:none}
+.promo .slide .sep{opacity:.3;flex:none}
+.promo .slide .txt{font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;overflow:hidden;text-overflow:ellipsis}
+.promo .slide .go{margin-left:auto;font-size:.76rem;font-weight:600;flex:none;opacity:.85}
+.promo .slide:hover .go{opacity:1;text-decoration:underline}
+@keyframes promocycle{ 0%,4%{opacity:0} 8%,28%{opacity:1} 33%,100%{opacity:0} }
+.promo[data-n="1"] .slide{opacity:1;animation:none}
+@media(prefers-reduced-motion:reduce){ .promo .slide{animation:none!important;opacity:0} .promo .slide:first-of-type{opacity:1} }
+@media(max-width:620px){ .promo .slide .go{display:none} .promo .slide .txt{font-size:.66rem} }
+
+/* ---- offers page */
+.offer{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.5rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.25rem;align-items:center}
+.offer + .offer{margin-top:1rem}
+.offer .chip{display:inline-block;font-family:var(--display);font-variation-settings:'wdth' 92;font-weight:800;font-size:.82rem;letter-spacing:.01em;padding:.3rem .7rem;border-radius:5px;background:var(--ink);color:var(--ground)}
+.offer .head{font-family:var(--display);font-variation-settings:'wdth' 88;font-weight:800;font-size:2.1rem;line-height:1;letter-spacing:-.025em;margin:.85rem 0 0}
+.offer .head span{font-size:1rem;font-weight:600;color:var(--ink-soft);letter-spacing:0;margin-left:.3rem}
+.offer p{margin:.6rem 0 0;color:var(--ink-soft);font-size:.92rem;max-width:46ch}
+.offer .claim{display:inline-flex;align-items:center;gap:.4rem;background:var(--ink);color:var(--ground);text-decoration:none;font-weight:700;font-size:.95rem;padding:.8rem 1.3rem;border-radius:7px;white-space:nowrap}
+.offer .claim:hover{filter:brightness(1.15)}
+.codebox{display:inline-flex;align-items:center;gap:.6rem;margin-top:1rem;border:1px dashed var(--line);border-radius:6px;padding:.45rem .7rem;background:transparent;cursor:pointer;font:inherit;color:inherit}
+.codebox .lab{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.codebox .val{font-family:var(--mono);font-weight:600;letter-spacing:.04em}
+.codebox .hint{font-size:.76rem;color:var(--ink-faint)}
+.codebox:hover{border-color:var(--brand-line)}
+@media(max-width:640px){ .offer{grid-template-columns:1fr} .offer .claim{justify-content:center} }
 
 /* ---- hero */
 .hero{background:var(--surface);border-bottom:1px solid var(--line)}
@@ -97,11 +200,16 @@ nav.top a.cta:hover{background:var(--accent);filter:brightness(1.08)}
 h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
 .lede{font-size:1.08rem;color:var(--ink-soft);margin:1.4rem 0 0;max-width:46ch}
 .lede strong{color:var(--ink);font-weight:600}
-.herocard{background:var(--raise);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+/* The hero card is the slip: amber rule stamped across the top, and the divider is a
+   PERFORATION rather than a hairline, because the thing below it is the stub. Small moves, but
+   together they are the difference between "a card component" and an object with a reason to
+   look the way it does. */
+.herocard{position:relative;background:var(--raise);border:1px solid var(--line);border-radius:10px;padding:1.5rem;overflow:hidden}
+.herocard::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--brand)}
 .herocard .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
-.herocard .big{font-family:var(--display);font-variation-settings:'wdth' 112;font-weight:800;font-size:3.1rem;line-height:1;margin:.5rem 0 .3rem;font-variant-numeric:tabular-nums;color:var(--accent)}
+.herocard .big{font-family:var(--display);font-variation-settings:'wdth' 88;font-weight:800;font-size:3.4rem;line-height:1;margin:.5rem 0 .3rem;font-variant-numeric:tabular-nums;letter-spacing:-.025em;color:var(--accent)}
 .herocard .sub{font-size:.88rem;color:var(--ink-soft)}
-.herocard hr{border:0;border-top:1px solid var(--line);margin:1.1rem 0}
+.herocard hr{border:0;border-top:1px dashed var(--line);margin:1.1rem 0}
 .minirow{display:flex;justify-content:space-between;gap:1rem;font-size:.88rem;padding:.3rem 0}
 .minirow span:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
 .minirow span:first-child{color:var(--ink-soft)}
@@ -111,8 +219,10 @@ h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
 
 /* ---- sections */
 section .wrap{padding-block:3.75rem}
-.sechead{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem}
-.sechead h2{font-size:1.75rem;font-weight:700}
+.sechead{position:relative;display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem;padding-top:1.1rem}
+/* a short amber rule over each section head - the one repeated brand gesture on the page */
+.sechead::before{content:"";position:absolute;top:0;left:0;width:2.25rem;height:3px;background:var(--brand);border-radius:2px}
+.sechead h2{font-size:1.85rem;font-weight:800;font-variation-settings:'wdth' 92;letter-spacing:-.022em}
 .sechead .eyebrow{margin-bottom:.6rem}
 .sechead p{margin:.45rem 0 0;color:var(--ink-soft);max-width:58ch}
 .note{color:var(--ink-soft);max-width:62ch}
@@ -120,19 +230,21 @@ section .wrap{padding-block:3.75rem}
 
 /* ---- sport cards */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));gap:1rem}
-.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.35rem;text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}
-.card:hover,.card:focus-visible{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow)}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.35rem;text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}
+.card:hover,.card:focus-visible{border-color:var(--brand-line);transform:translateY(-2px);box-shadow:var(--shadow)}
 .card .top{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:1rem}
-.card h3{font-size:1.1rem;font-weight:700;font-variation-settings:'wdth' 112}
-.card .clv{font-family:var(--display);font-variation-settings:'wdth' 108;font-weight:800;font-size:2.05rem;line-height:1;font-variant-numeric:tabular-nums}
+.card h3{font-size:1.1rem;font-weight:700;font-variation-settings:'wdth' 90;letter-spacing:-.015em}
+.card .clv{font-family:var(--display);font-variation-settings:'wdth' 88;font-weight:800;font-size:2.2rem;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.025em}
 .card .unit{font-size:.9rem;font-weight:600;color:var(--ink-soft);margin-left:.15rem}
 .card .cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:.45rem}
 .card .feet{display:flex;gap:1.5rem;margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--line-soft)}
 .card .feet div{font-size:.8rem;color:var(--ink-soft)}
 .card .feet b{display:block;font-family:var(--mono);font-size:.95rem;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
-.card .go{margin-top:1.1rem;font-size:.82rem;font-weight:600;color:var(--accent)}
+.card .go{margin-top:1.1rem;font-size:.82rem;font-weight:600;color:var(--brand)}
 .pos{color:var(--win)} .neg{color:var(--loss)} .flat{color:var(--pend)}
-.tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .45rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+/* CLOSED is a status, not a result, so it is grey - amber would make a dormant board look
+   like it was being promoted and green would read as a good outcome. */
+.tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .45rem;border-radius:3px;background:var(--raise);color:var(--ink-faint);font-weight:600;border:1px solid var(--line)}
 
 /* ---- stat tiles (sport pages) */
 .statband{padding-block:2.25rem}
@@ -248,7 +360,7 @@ footer .wrap{padding-block:3rem 2.25rem}
     });
   } catch(e){}
 })();
-</script><header class="top"><div class="wrap"><a class="mark" href="index.html"><span class="dot"></span>Spice Bets</a><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="mlb.html">MLB</a><a href="nfl.html" class="here">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html">Method</a><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full log</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></nav></div></header><div class="hero solo"><div class="wrap">
+</script><header class="top"><div class="wrap"><a class="mark" href="index.html"><span class="stub" aria-hidden="true"></span><span class="wm"><b>Spice</b> Bets</span></a><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="mlb.html">MLB</a><a href="nfl.html" class="here">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full log</a><a class="ref" href="https://gambitmarkets.com/r/spice_bets" target="_blank" rel="noopener sponsored">Gambit<span class="ad">ad</span></a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></nav></div></header><div class="promo" data-n="1"><div class="wrap"><span class="ad">ad</span><div class="reel"><a class="slide" href="offers.html"><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></a></div></div></div><div class="hero solo"><div class="wrap">
 <p class="eyebrow">76 picks &middot; 69 graded closes</p>
 <h1>NFL</h1>
 <p class="lede">Sunday slates, screened off the same movement rules as college.</p>
@@ -265,22 +377,25 @@ footer .wrap{padding-block:3rem 2.25rem}
 </div></div></section><footer><div class="wrap">
 <div class="fgrid">
   <div>
-    <a class="mark" href="index.html" style="margin-bottom:.9rem"><span class="dot"></span>Spice Bets</a>
+    <a class="mark" href="index.html" style="margin-bottom:.9rem"><span class="stub" aria-hidden="true"></span><span class="wm"><b>Spice</b> Bets</span></a>
     <p>A paper betting log. Every pick is written down at the price it was offered and graded against the closing line &mdash; including the ones that lost to it.</p>
   </div>
   <div><h4>Boards</h4><ul><li><a href="soccer.html">Soccer</a></li><li><a href="cfb.html">College Football</a></li><li><a href="mlb.html">MLB</a></li><li><a href="nfl.html">NFL</a></li><li><a href="nhl.html">NHL</a></li><li><a href="nba.html">NBA</a></li></ul></div>
   <div><h4>The book</h4><ul>
     <li><a href="method.html">Method</a></li><li><a href="cfb-attention.html">CFB attention log</a></li>
     <li><a href="https://claude.ai/artifact/V2vzf6cSbiKLza7jTGcguQ" target="_blank" rel="noopener">Full pick log</a></li>
+    <li><a href="disclaimer.html">Disclaimer &amp; terms</a></li>
   </ul></div>
   <div><h4>Elsewhere</h4><ul>
     <li><a href="https://x.com/spice_bets" target="_blank" rel="noopener">@spice_bets</a></li>
     <li><a href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></li>
+    <li class="flink"><a href="https://gambitmarkets.com/r/spice_bets" target="_blank" rel="noopener sponsored">Gambit Markets</a> <span class="ad">ad</span></li>
   </ul></div>
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p>Nothing on this site is betting advice. Built 6 Nov 2026, 08:00 UTC.</p>
+<p><strong>Some links are paid.</strong> Links marked <span class="ad">ad</span> are referrals and may earn a commission. They buy no influence over anything on this site: no pick, price, record or figure here is affected by them, and the entry prices in the log are the ones that were actually offered.</p>
+<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 08:07 UTC.</p>
 </div>
 </div></footer>
 </body>
