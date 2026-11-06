@@ -194,7 +194,15 @@ nav.top a.ref .ad,.flink .ad{font-family:var(--mono);font-size:.56rem;letter-spa
 .offer{position:relative;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--tint,var(--ink));border-radius:10px;padding:1.5rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.25rem;align-items:center}
 .offer + .offer{margin-top:1rem}
 .offer .chip{display:inline-block;font-family:var(--display);font-variation-settings:'wdth' 92;font-weight:800;font-size:.82rem;letter-spacing:.01em;padding:.34rem .72rem;border-radius:5px;background:var(--ink);color:#fff}
-.offer .olog{display:block;height:1.6rem;width:auto;max-width:11rem;object-fit:contain}
+/* the partner chip: their own glyph or wordmark, on their own colour, beside their name.
+   img is forced white because every asset fetched is a dark-on-transparent mark and the chips
+   are dark; a partner supplying a full-colour asset should drop the filter on that row. */
+.offer .olog{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .75rem;border-radius:6px;color:#fff}
+.offer .olog img{height:1.05rem;width:auto;max-width:6.5rem;object-fit:contain;display:block;filter:brightness(0) invert(1)}
+.offer .olog b{font-family:var(--display);font-variation-settings:'wdth' 92;font-weight:800;font-size:.82rem;letter-spacing:.01em}
+/* Novig's asset IS the wordmark, so the name beside it would read twice */
+.offer .olog:has(img[src*="novig"]) b{display:none}
+.offer .olog img[src*="novig"]{height:.95rem;max-width:7rem}
 .offer .head{font-family:var(--display);font-variation-settings:'wdth' 88;font-weight:800;font-size:2.1rem;line-height:1;letter-spacing:-.025em;margin:.85rem 0 0}
 .offer .head span{font-size:1rem;font-weight:600;color:var(--ink-soft);letter-spacing:0;margin-left:.3rem}
 .offer p{margin:.6rem 0 0;color:var(--ink-soft);font-size:.92rem;max-width:46ch}
@@ -457,7 +465,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
 <p><strong>The MLB board is out of season and is not shown.</strong> Its last pick was 12 October 2026. The board has been taken off the navigation because nothing is screening it, but its 111 picks are <strong>still counted in every figure on this site</strong>, including the site-wide closing-line value. MLB is the weakest board in the book, so leaving it in the arithmetic is the point &mdash; hiding the page is a tidying-up decision and hiding the losses would not be.</p>
 <p><strong>Some links are paid.</strong> Links marked <span class="ad">ad</span> are referrals and may earn a commission. They buy no influence over anything on this site: no pick, price, record or figure here is affected by them, and the entry prices in the log are the ones that were actually offered.</p>
-<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 20:08 UTC.</p>
+<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 20:15 UTC.</p>
 </div>
 </div></footer>
 </body>
