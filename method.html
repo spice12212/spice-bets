@@ -297,9 +297,9 @@ h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
 section .wrap{padding-block:3.75rem}
 .sechead{position:relative;display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem;padding-top:1.1rem}
 /* a short amber rule over each section head - the one repeated brand gesture on the page */
-.sechead::before{content:"";position:absolute;top:0;left:0;width:2.25rem;height:3px;background:var(--brand);border-radius:2px}
+.sechead::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--line)}
 .sechead h2{font-size:1.85rem;font-weight:800;font-variation-settings:'wdth' 92;letter-spacing:-.022em}
-.sechead .eyebrow{margin-bottom:.6rem}
+.sechead .eyebrow{margin-bottom:.6rem;color:var(--brand)}
 .sechead p{margin:.45rem 0 0;color:var(--ink-soft);max-width:58ch}
 .note{color:var(--ink-soft);max-width:62ch}
 .alt{background:var(--surface);border-block:1px solid var(--line)}
@@ -494,21 +494,21 @@ footer .wrap{padding-block:3rem 2.25rem}
 </script><header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><span class="wm"><b>SPICE</b><i>BETS</i></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html" class="here">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;background:#1652f0;color:#ffffff"><span class="wrap"><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;background:#0b0d10;color:#ffffff"><span class="wrap"><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;background:#c0f018;color:#111409"><span class="wrap"><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
 <p class="eyebrow">Method</p>
 <h1>What the bot actually does.</h1>
-<p class="lede">No part of this is a score projection. The whole system reads one thing &mdash; the gap between where the money is and where the tickets are &mdash; and bets that the number keeps moving.</p>
+<p class="lede">No part of this is a score projection. The whole system reads one thing, the gap between where the money is and where the tickets are, and bets that the number keeps moving.</p>
 </div></div>
 <section><div class="wrap"><div class="sechead"><div><p class="eyebrow">The signal</p><h2>Money against tickets</h2></div></div>
-<p class="note">Sportsbooks report two different shares on a market: the percentage of <em>bets</em> on each side, and the percentage of <em>money</em>. When those two disagree sharply, a small number of large bets are on one side and a large number of small bets are on the other. The book screens for that gap, and for how far the price has already moved from its opening number. A pick needs both. A crowd it disagrees with but a line that has not moved is not a signal; a line that has moved for a reason everyone can already read &mdash; a starter ruled out, a goalie confirmed &mdash; is not one either.</p>
-<div class="callout"><p><strong>This is not a value model, and it is worth being exact about that.</strong> Fair value here is derived from the same prices the book is betting into, so the entry is always roughly fair-minus-vig. There is no independent estimate of who should win. The only honest test of a system like this is whether the market agreed with it afterwards &mdash; which is why closing-line value, and not the win rate, is the headline number on every page of this site.</p></div>
+<p class="note">Sportsbooks report two different shares on a market: the percentage of <em>bets</em> on each side, and the percentage of <em>money</em>. When those two disagree sharply, a small number of large bets are on one side and a large number of small bets are on the other. The book screens for that gap, and for how far the price has already moved from its opening number. A pick needs both. A crowd it disagrees with but a line that has not moved is not a signal; a line that has moved for a reason everyone can already read, such as a starter ruled out or a goalie confirmed, is not one either.</p>
+<div class="callout"><p><strong>This is not a value model, and it is worth being exact about that.</strong> Fair value here is derived from the same prices the book is betting into, so the entry is always roughly fair-minus-vig. There is no independent estimate of who should win. The only honest test of a system like this is whether the market agreed with it afterwards, which is why closing-line value, and not the win rate, is the headline number on every page of this site.</p></div>
 </div></section>
 <section><div class="wrap"><div class="sechead"><div><p class="eyebrow">Prices and grading</p><h2>Where the numbers come from</h2></div></div>
-<p class="note">Entry prices are FanDuel on almost every pick. Two exceptions worth naming: a little over twenty football and hockey picks are priced on Polymarket, and the NBA board records whichever book had the best number at the time &mdash; which is part of why the NBA page is measured in points rather than percent. Closing prices are captured before the game starts, never looked up afterwards. A pick with no captured close is shown with a dash rather than an estimate.</p>
+<p class="note">Entry prices are FanDuel on almost every pick. Two exceptions worth naming: a little over twenty football and hockey picks are priced on Polymarket, and the NBA board records whichever book had the best number at the time, which is part of why the NBA page is measured in points rather than percent. Closing prices are captured before the game starts, never looked up afterwards. A pick with no captured close is shown with a dash rather than an estimate.</p>
 <p class="note" style="margin-top:1rem">CLV is reported in percentage points of implied probability: the implied probability of the closing price minus the implied probability of the entry price. A positive number means the market finished shorter than the price the pick was written at.</p>
 </div></section><footer><div class="wrap">
 <div class="fgrid">
   <div>
     <a class="mark" href="index.html" style="margin-bottom:.9rem"><span class="wm"><b>SPICE</b><i>BETS</i></span></a>
     <p class="ftag">Watching where the money goes</p>
-    <p>A paper betting log. Every pick is written down at the price it was offered and graded against the closing line &mdash; including the ones that lost to it.</p>
+    <p>A paper betting log. Every pick is written down at the price it was offered and graded against the closing line, including the ones that lost to it.</p>
   </div>
   <div><h4>Boards</h4><ul><li><a href="soccer.html">Soccer</a></li><li><a href="cfb.html">College Football</a></li><li><a href="nfl.html">NFL</a></li><li><a href="nhl.html">NHL</a></li><li><a href="nba.html">NBA</a></li></ul></div>
   <div><h4>The book</h4><ul>
@@ -523,8 +523,8 @@ footer .wrap{padding-block:3rem 2.25rem}
   </ul></div>
 </div>
 <div class="fine">
-<p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 6 Nov 2026, 23:49 UTC</p>
+<p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 6 Nov 2026, 23:53 UTC</p>
 </div>
 </div></footer>
 </body>
