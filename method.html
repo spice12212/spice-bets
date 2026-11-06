@@ -178,6 +178,18 @@ nav.top a.ref .ad,.flink .ad{font-family:var(--mono);font-size:.56rem;letter-spa
 @media(prefers-reduced-motion:reduce){ .promo .slide{animation:none!important;opacity:0} .promo .slide:first-of-type{opacity:1} }
 @media(max-width:620px){ .promo .slide .go{display:none} .promo .slide .txt{font-size:.66rem} }
 
+/* ---- Bot Play of the Day */
+.bpotd{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.85fr);gap:2.5rem;align-items:start}
+.bpotd h3{font-size:1rem;font-weight:700;font-variation-settings:'wdth' 92;margin:0 0 .4rem}
+.bpotd h3+p{margin:0 0 1.4rem;color:var(--ink-soft);max-width:60ch}
+.bpotd h3+p:last-child{margin-bottom:0}
+.bpotd-cta{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:10px;padding:1.5rem;position:sticky;top:5rem}
+.bpotd-cta p{margin:.5rem 0 0;color:var(--ink-soft);font-size:.92rem}
+.bpotd-cta .eyebrow{margin-bottom:.2rem}
+.bpotd-cta .btn{margin-top:1.2rem}
+.bpotd-cta .smallprint{font-size:.8rem;color:var(--ink-faint);margin-top:.9rem}
+@media(max-width:860px){ .bpotd{grid-template-columns:1fr;gap:1.75rem} .bpotd-cta{position:static} }
+
 /* ---- offers page */
 .offer{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.5rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.25rem;align-items:center}
 .offer + .offer{margin-top:1rem}
@@ -399,7 +411,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
 <p><strong>The MLB board is out of season and is not shown.</strong> Its last pick was 12 October 2026. The board has been taken off the navigation because nothing is screening it, but its 111 picks are <strong>still counted in every figure on this site</strong>, including the site-wide closing-line value. MLB is the weakest board in the book, so leaving it in the arithmetic is the point &mdash; hiding the page is a tidying-up decision and hiding the losses would not be.</p>
 <p><strong>Some links are paid.</strong> Links marked <span class="ad">ad</span> are referrals and may earn a commission. They buy no influence over anything on this site: no pick, price, record or figure here is affected by them, and the entry prices in the log are the ones that were actually offered.</p>
-<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 18:46 UTC.</p>
+<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 19:00 UTC.</p>
 </div>
 </div></footer>
 </body>
