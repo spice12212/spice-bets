@@ -21,20 +21,32 @@
 <meta name="twitter:image" content="https://spice12212.github.io/spice-bets/og.png"><title>Method - Spice Bets</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
-/* Layout: a scoreboard. Wide-set display type, sport cards on a grid, numbers in mono with
-   tabular figures. One green accent, used on the live/positive things only. */
+/* Layout: a betting slip pinned to a scoreboard. Numbers in mono with tabular figures, sport
+   cards on a grid, display type with some width to it.
+
+   *** THE TWO-COLOUR RULE, AND IT IS NOT DECORATION. *** Green and red belong to the DATA and
+   to nothing else. Green means a number came out positive, red means it came out negative, and
+   that is the only thing either colour is ever allowed to say on this site. Brand furniture -
+   the wordmark, eyebrows, section rules, the Playbooki button - uses a warm amber that appears
+   nowhere in a figure. Before this (6 Nov 2026) the subscribe button was the same green as a
+   positive CLV, so the loudest green on the page was an advert sitting among the results it
+   was being judged by. A site whose argument is that it publishes its numbers straight cannot
+   paint its own promo in the colour that means "this went well". If a new element needs a
+   colour, ask first whether it is reporting a result. If it is not, it is amber. */
 :root{
   --ground:#f6f8f7; --surface:#ffffff; --raise:#eef2f0;
   --ink:#0e1613; --ink-soft:#5a6b64; --ink-faint:#8a9a93;
   --line:#dde5e1; --line-soft:#eaf0ed;
   --accent:#07864a; --accent-ink:#ffffff; --accent-soft:#e4f4ec;
+  --brand:#b2541a; --brand-ink:#ffffff; --brand-soft:#fbe9dd; --brand-line:#e8c2a5;
   --win:#07864a; --loss:#c0392c; --pend:#8a9a93;
-  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --display:'Bricolage Grotesque','Archivo','Helvetica Neue',Arial,sans-serif;
   --body:'Archivo','Helvetica Neue',Arial,sans-serif;
   --mono:'IBM Plex Mono','SF Mono',Consolas,monospace;
   --shadow:0 1px 2px rgba(14,22,19,.05), 0 8px 24px -12px rgba(14,22,19,.14);
+  --grain:.035;
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
   --ground:#0a0e0c; --surface:#121816; --raise:#19211d;
@@ -271,7 +283,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p>Nothing on this site is betting advice. Built 6 Nov 2026, 05:45 UTC.</p>
+<p>Nothing on this site is betting advice. Built 6 Nov 2026, 08:00 UTC.</p>
 </div>
 </div></footer>
 </body>
