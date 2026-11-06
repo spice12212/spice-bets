@@ -274,6 +274,12 @@ section .wrap{padding-block:3.75rem}
 .ledger td{padding:.72rem .9rem;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
 .ledger tr:last-child td{border-bottom:0}
 .ledger td.mono,.ledger th.mono{font-family:var(--mono)}
+/* week divider inside the picks table - a band, not a row of data */
+.ledger tr.wkrow td{background:var(--raise);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  text-align:left;padding:.55rem .9rem;font-family:var(--display);font-variation-settings:'wdth' 92;
+  font-size:.95rem;letter-spacing:-.01em}
+.ledger tr.wkrow .wkdate{font-family:var(--mono);font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-faint);font-weight:400;margin-left:.5rem}
 .ledger tbody tr:hover{background:var(--raise)}
 .w{color:var(--win);font-weight:600} .l{color:var(--loss);font-weight:600} .pnd{color:var(--pend)}
 
@@ -399,7 +405,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
 <p><strong>The MLB board is out of season and is not shown.</strong> Its last pick was 12 October 2026. The board has been taken off the navigation because nothing is screening it, but its 111 picks are <strong>still counted in every figure on this site</strong>, including the site-wide closing-line value. MLB is the weakest board in the book, so leaving it in the arithmetic is the point &mdash; hiding the page is a tidying-up decision and hiding the losses would not be.</p>
 <p><strong>Some links are paid.</strong> Links marked <span class="ad">ad</span> are referrals and may earn a commission. They buy no influence over anything on this site: no pick, price, record or figure here is affected by them, and the entry prices in the log are the ones that were actually offered.</p>
-<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 19:45 UTC.</p>
+<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 19:57 UTC.</p>
 </div>
 </div></footer>
 </body>
