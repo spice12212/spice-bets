@@ -109,8 +109,25 @@ body::after{
 
 /* ---- header */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:29;background:var(--surface);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;gap:1.5rem;padding-block:.85rem;flex-wrap:wrap}
+/* ---- THE MASTHEAD, built as a FLAG rather than an app bar.
+   A thin sticky strip with a logo on the left and links on the right is the single most
+   template-looking element on the web, and it was the first thing anyone saw here. This is the
+   top of a printed betting sheet instead: a near-black block carrying the lockup large with
+   the tagline beside it, a heavy red rule under it, and the navigation as a separate row of
+   small caps below. Dark chrome against light paper also gives the page a hard edge that a
+   single flat background never does.
+   The odds behind it are the account's own banner texture - prices scattered across a grid -
+   redrawn here as one inline SVG so it costs nothing and tiles. */
+header.top{position:relative;z-index:29;background:#111312;color:#f4f1ee;border-bottom:3px solid var(--brand)}
+header.top::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='120'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' font-family='monospace' font-size='13'%3E%3Ctext x='8' y='22'%3E-110%3C/text%3E%3Ctext x='96' y='52'%3E%2B138%3C/text%3E%3Ctext x='196' y='30'%3E-3.5%3C/text%3E%3Ctext x='40' y='88'%3E%2B105%3C/text%3E%3Ctext x='150' y='104'%3E-152%3C/text%3E%3Ctext x='238' y='76'%3E%2B830%3C/text%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='0.045'%3E%3Cpath d='M0 60h300M150 0v120'/%3E%3C/g%3E%3C/svg%3E")}
+header.top .wrap{position:relative}
+.flag{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;padding-block:1.15rem .8rem}
+.flag .strap{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brand);padding-bottom:.18rem}
+.flag .since{margin-left:auto;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;
+  text-transform:uppercase;color:#7d837f;padding-bottom:.2rem}
+@media(max-width:620px){ .flag .since{display:none} .flag{gap:.6rem} }
 /* ---- the wordmark.
    Was a green dot beside plain text. The dot was the same green as a winning number, and the
    whole lockup could have belonged to any product. This is a TICKET STUB: a small amber block
@@ -122,15 +139,23 @@ header.top .wrap{display:flex;align-items:center;gap:1.5rem;padding-block:.85rem
    it is how the mark is drawn, and it gives the masthead a shape no template has. */
 .mark{display:inline-flex;text-decoration:none;line-height:1}
 .mark .wm{display:flex;flex-direction:column;font-family:var(--display);
-  font-variation-settings:'wdth' 112;font-weight:800;letter-spacing:.01em;line-height:.88}
-.mark .wm b{font-weight:800;font-size:1.02rem;color:var(--ink)}
-.mark .wm i{font-style:normal;font-weight:800;font-size:1.02rem;color:var(--brand);
-  border-bottom:2px solid var(--brand);padding-bottom:1px;width:max-content}
+  font-variation-settings:'wdth' 118;font-weight:800;letter-spacing:.005em;line-height:.84}
+.mark .wm b{font-weight:800;font-size:2.05rem;color:#fff}
+.mark .wm i{font-style:normal;font-weight:800;font-size:2.05rem;color:var(--brand);
+  border-bottom:4px solid var(--brand);padding-bottom:2px;width:max-content}
 .mark:hover .wm i{filter:brightness(1.12)}
-nav.top{margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center}
-nav.top a{font-size:.82rem;font-weight:600;text-decoration:none;color:var(--ink-soft);padding:.35rem .6rem;border-radius:6px}
-nav.top a:hover,nav.top a:focus-visible{color:var(--ink);background:var(--raise)}
-nav.top a.here{color:var(--brand);background:var(--brand-soft)}
+/* the footer carries the same lockup at reading size */
+footer .mark .wm b,footer .mark .wm i{font-size:1.35rem;color:var(--ink)}
+footer .mark .wm i{color:var(--brand)}
+@media(max-width:620px){ .mark .wm b,.mark .wm i{font-size:1.6rem} }
+/* Navigation as a ruled row of small caps under the flag, the way a sheet lists its sections -
+   not a right-aligned cluster of pills. */
+nav.top{display:flex;gap:.1rem;flex-wrap:wrap;align-items:center;border-top:1px solid #272a28;
+  padding-block:.4rem .45rem;margin-top:.1rem}
+nav.top a{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  font-weight:500;text-decoration:none;color:#9aa19c;padding:.4rem .62rem;border-radius:4px}
+nav.top a:hover,nav.top a:focus-visible{color:#fff;background:#1e211f}
+nav.top a.here{color:#fff;background:transparent;box-shadow:inset 0 -2px 0 var(--brand)}
 /* AMBER, NOT GREEN - see the two-colour rule at the top. This button is an advert; green on
    this site means a number came out positive and must not be lent to one. */
 nav.top a.cta{color:var(--brand-ink);background:var(--brand);margin-left:.4rem;font-weight:700}
@@ -283,18 +308,32 @@ section .wrap{padding-block:3.75rem}
 .alt{background:var(--surface);border-block:1px solid var(--line)}
 
 /* ---- sport cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));gap:1rem}
-.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.35rem;text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}
-.card:hover,.card:focus-visible{border-color:var(--brand-line);transform:translateY(-2px);box-shadow:var(--shadow)}
-.card .top{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:1rem}
-.card h3{font-size:1.1rem;font-weight:700;font-variation-settings:'wdth' 90;letter-spacing:-.015em}
-.card .clv{font-family:var(--display);font-variation-settings:'wdth' 88;font-weight:800;font-size:2.2rem;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.025em}
-.card .unit{font-size:.9rem;font-weight:600;color:var(--ink-soft);margin-left:.15rem}
-.card .cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:.45rem}
-.card .feet{display:flex;gap:1.5rem;margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--line-soft)}
-.card .feet div{font-size:.8rem;color:var(--ink-soft)}
-.card .feet b{display:block;font-family:var(--mono);font-size:.95rem;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
-.card .go{margin-top:1.1rem;font-size:.82rem;font-weight:600;color:var(--brand)}
+/* ---- THE BOARDS AS A RULED SHEET, NOT A BENTO GRID.
+   A responsive grid of equal rounded cards is the other thing that reads as assembled rather
+   than designed, and it was carrying the most important content on the page. This is a
+   standings table instead: one ruled row per board, the sport set large on the left, the
+   headline figure set large on the right, the supporting counts in mono between them. Rows
+   compare down a column, which is the entire point of putting five boards next to each other
+   and the one thing a card grid cannot do. */
+.cards{border-top:2px solid var(--ink)}
+.card{display:grid;grid-template-columns:minmax(7rem,1.1fr) minmax(0,1.6fr) auto;align-items:center;gap:1rem;
+  padding:1.05rem .25rem;text-decoration:none;border-bottom:1px solid var(--line);transition:background .12s}
+.card:hover,.card:focus-visible{background:var(--surface)}
+.card .bname{display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap}
+.card h3{font-family:var(--display);font-size:1.45rem;font-weight:800;font-variation-settings:'wdth' 100;letter-spacing:-.02em}
+.card .bfig{text-align:right}
+.card .clv{font-family:var(--display);font-variation-settings:'wdth' 88;font-weight:800;font-size:2.1rem;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.03em;display:block;white-space:nowrap}
+.card .clv em{font-style:normal;font-family:var(--body);font-size:.82rem;font-weight:600;color:var(--ink-soft);letter-spacing:0;margin-left:.2rem}
+.card .cap{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:.3rem;white-space:nowrap}
+.card .feet{display:flex;gap:1.4rem}
+.card .feet div{font-family:var(--mono);font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint)}
+.card .feet b{display:block;font-family:var(--mono);font-size:.95rem;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:0;text-transform:none;margin-top:.15rem}
+.card .go{display:none}
+@media(max-width:720px){
+  .card{grid-template-columns:1fr auto;gap:.5rem 1rem;padding:.95rem .25rem}
+  .card .feet{grid-column:1;gap:1.1rem}
+  .card>div:nth-child(2){grid-row:1;grid-column:2;text-align:right}
+}
 .pos{color:var(--win)} .neg{color:var(--loss)} .flat{color:var(--pend)}
 /* CLOSED is a status, not a result, so it is grey - amber would make a dormant board look
    like it was being promoted and green would read as a good outcome. */
@@ -434,7 +473,7 @@ footer .wrap{padding-block:3rem 2.25rem}
     });
   } catch(e){}
 })();
-</script><header class="top"><div class="wrap"><a class="mark" href="index.html"><span class="wm"><b>SPICE</b><i>BETS</i></span></a><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html" class="here">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><a class="ref" href="offers.html">Gambit</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;background:#1652f0;color:#ffffff"><span class="wrap"><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;background:#0b0d10;color:#ffffff"><span class="wrap"><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;background:#c0f018;color:#111409"><span class="wrap"><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
+</script><header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><span class="wm"><b>SPICE</b><i>BETS</i></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html" class="here">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><a class="ref" href="offers.html">Gambit</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;background:#1652f0;color:#ffffff"><span class="wrap"><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;background:#0b0d10;color:#ffffff"><span class="wrap"><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;background:#c0f018;color:#111409"><span class="wrap"><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
 <p class="eyebrow">Method</p>
 <h1>What the bot actually does.</h1>
 <p class="lede">No part of this is a score projection. The whole system reads one thing &mdash; the gap between where the money is and where the tickets are &mdash; and bets that the number keeps moving.</p>
@@ -474,7 +513,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
 <p><strong>The MLB board is out of season and is not shown.</strong> Its last pick was 12 October 2026. The board has been taken off the navigation because nothing is screening it, but its 111 picks are <strong>still counted in every figure on this site</strong>, including the site-wide closing-line value. MLB is the weakest board in the book, so leaving it in the arithmetic is the point &mdash; hiding the page is a tidying-up decision and hiding the losses would not be.</p>
 <p><strong>Some links are paid.</strong> The banner at the top of every page, and everything on the <a href="offers.html">offers</a> page, are referral links and may earn a commission. They buy no influence over anything on this site: no pick, price, record or figure here is affected by them, and the entry prices in the log are the ones that were actually offered.</p>
-<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 21:38 UTC.</p>
+<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 21:45 UTC.</p>
 </div>
 </div></footer>
 </body>
