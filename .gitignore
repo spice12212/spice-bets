@@ -19,6 +19,24 @@
 # which is what happened on the first publish of the social tags.
 !og.png
 
+# Partner and Playbooki logos, fetched from each brand's own site. Named as a folder because
+# the set grows whenever a referral is added, and a per-file line would be forgotten.
+#
+# *** THIS LINE WAS MISSING FOR THREE CONSECUTIVE PUSHES ON 6 Nov 2026 AND NOBODY SAW IT. ***
+# The logos were committed-looking - git add -A reported nothing unusual, the local build
+# embedded the right <img> paths, and the pages rendered correctly on disk - but the allowlist
+# above silently dropped every file in brand/, so all four 404'd on the live site and the
+# onerror fallback quietly swapped each one back to plain text. The fallback is what hid it:
+# the site never looked broken, it just never looked different.
+#
+# TWO REAL LESSONS. The first is that a file:// preview cannot load these assets either, so
+# "it renders locally" proved nothing about deployment and the only honest check is fetching
+# the URL off the live host. The second is that a graceful degradation path makes a missing
+# file invisible - which is the right behaviour for a reader and the worst one for whoever is
+# trying to tell whether the deploy worked.
+!brand/
+!brand/*
+
 # The Artifact-only copy of the home page. It has no <!doctype>, <html>, <head> or <body> -
 # the Artifact publisher supplies those - so served as a real web page it renders in quirks
 # mode with no charset and no viewport. index.html is the real home page; this is not.
