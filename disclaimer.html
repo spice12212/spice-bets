@@ -245,6 +245,29 @@ h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
 .minirow span:first-child{color:var(--ink-soft)}
 .hero.solo .wrap{grid-template-columns:1fr;gap:0;padding-block:3.25rem 2.75rem}
 .hero.solo h1{max-width:20ch}
+
+/* ---- hero numbers. Built mobile-first because that is where the owner saw the problem:
+   three stacked tiles on a phone, three across from 560px. */
+.htiles{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:12px;overflow:hidden;margin-top:1.6rem}
+.htile{background:var(--raise);padding:1.1rem 1.15rem}
+.htile .k{font-family:var(--mono);font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
+.htile .v{font-family:var(--display);font-variation-settings:'wdth' 88;font-weight:800;font-size:2.6rem;
+  line-height:1;margin:.4rem 0 .35rem;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.htile .s{font-size:.82rem;color:var(--ink-soft);line-height:1.35}
+@media(min-width:560px){ .htiles{grid-template-columns:repeat(3,1fr)} }
+
+/* per-sport chips: name, record, headline figure. Horizontally scrollable on a phone rather
+   than wrapping to three ragged rows. */
+.scts{display:flex;gap:.6rem;margin-top:1rem;overflow-x:auto;padding-bottom:.2rem;-webkit-overflow-scrolling:touch}
+.scts::-webkit-scrollbar{display:none}
+.sct{flex:0 0 auto;display:flex;flex-direction:column;gap:.15rem;min-width:6.4rem;text-decoration:none;
+  background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:.65rem .8rem;transition:border-color .15s}
+.sct:hover{border-color:var(--brand-line)}
+.sct .n{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.sct .r{font-family:var(--display);font-variation-settings:'wdth' 92;font-weight:800;font-size:1.12rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.sct .c{font-family:var(--mono);font-size:.74rem;font-variant-numeric:tabular-nums}
+.herofoot{font-size:.95rem;margin-top:1.5rem;max-width:62ch}
 @media(max-width:860px){ .hero .wrap{grid-template-columns:1fr;gap:2rem;padding-block:3rem 2.5rem} }
 
 /* ---- sections */
@@ -502,7 +525,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks &mdash; the exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
 <p><strong>The MLB board is out of season and is not shown.</strong> Its last pick was 12 October 2026. The board has been taken off the navigation because nothing is screening it, but its 111 picks are <strong>still counted in every figure on this site</strong>, including the site-wide closing-line value. MLB is the weakest board in the book, so leaving it in the arithmetic is the point &mdash; hiding the page is a tidying-up decision and hiding the losses would not be.</p>
 <p><strong>Some links are paid.</strong> The banner at the top of every page, and everything on the <a href="offers.html">offers</a> page, are referral links and may earn a commission. They buy no influence over anything on this site: no pick, price, record or figure here is affected by them, and the entry prices in the log are the ones that were actually offered.</p>
-<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 20:45 UTC.</p>
+<p>Nothing on this site is betting advice. 21+ where legal. Read the full <a href="disclaimer.html">disclaimer and terms</a>. Built 6 Nov 2026, 20:58 UTC.</p>
 </div>
 </div></footer>
 </body>
