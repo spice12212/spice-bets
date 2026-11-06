@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://spice12212.github.io/spice-bets/sitemap.xml
+Sitemap: https://spicebets.bet/sitemap.xml
