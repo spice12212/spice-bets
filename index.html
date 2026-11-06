@@ -389,6 +389,16 @@ section .wrap{padding-block:3.75rem}
 .callout p+p{margin-top:.8rem}
 .callout strong{color:var(--ink)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(24rem,1fr));gap:1rem}
+/* A definition run, not four boxes. The limits section used to be a 2x2 grid of identical
+   .callout cards, every one of them "<strong>Claim.</strong> explanation" - the same shape
+   four times over, which is what makes a page read as generated. Terms in a narrow left
+   column against hairlines is a colophon/spec-sheet device: it is typeset rather than
+   boxed, and it lets the four entries differ in length without looking ragged. */
+.limits{margin:0;border-top:1px solid var(--line)}
+.limits>div{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:1.75rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.limits dt{font-weight:700;font-size:1.02rem;letter-spacing:-.012em;color:var(--ink);line-height:1.35}
+.limits dd{margin:0;color:var(--ink-soft);font-size:.93rem;line-height:1.68}
+@media(max-width:720px){.limits>div{grid-template-columns:1fr;gap:.45rem;padding:1.25rem 0}}
 
 /* ---- subscribe block */
 .join{background:var(--brand-soft);border-block:1px solid var(--line)}
@@ -528,12 +538,12 @@ footer .wrap{padding-block:3rem 2.25rem}
 </div>
 <ul class="perks"><h4>What members get</h4><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6.5 9.4 17.1 4 11.7"/></svg><span>Bot Play of the Day: the crowned pick, no longer posted publicly</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6.5 9.4 17.1 4 11.7"/></svg><span>The complete pick log, every row and every sport, filterable</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6.5 9.4 17.1 4 11.7"/></svg><span>Write-ups explaining what the screener saw and why the number moved</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6.5 9.4 17.1 4 11.7"/></svg><span>Script plays, my own reads, always marked as mine</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6.5 9.4 17.1 4 11.7"/></svg><span>Live plays and in-game bets, posted as I take them</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6.5 9.4 17.1 4 11.7"/></svg><span>CFB card Saturdays, NFL card Sundays</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6.5 9.4 17.1 4 11.7"/></svg><span>Exclusive parlays that never go out on X</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6.5 9.4 17.1 4 11.7"/></svg><span>Full NFL attention board, all 32 teams including the quiet end</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6.5 9.4 17.1 4 11.7"/></svg><span>Daily recaps with every pick graded</span></li></ul>
 </div></div></section><section><div class="wrap"><div class="sechead"><div><h2>What this is not</h2><p>The limits, stated up front rather than in the small print.</p></div></div>
-<div class="grid2">
-<div class="callout"><p><strong>It is paper.</strong> These are screener outputs, logged and graded. No figure on this site represents money staked, and there is no bankroll behind it.</p></div>
-<div class="callout"><p><strong>There is no headline play of the day.</strong> Most of the entry gates behind these picks are unproven or uncalibrated, so the book does not crown a daily pick in public. That stays off until the gates earn it.</p></div>
-<div class="callout"><p><strong>The straight record is a coin flip, and that is expected.</strong> A movement system is not a projection model. If you want a score prediction for tonight's game, this is the wrong page.</p></div>
-<div class="callout"><p><strong>Negative numbers stay up.</strong> Two of the boards are below zero on CLV and are shown that way. The record is the whole record, not the good months.</p></div>
-</div></div></section><footer><div class="wrap">
+<dl class="limits">
+<div><dt>Paper only</dt><dd>Screener outputs, logged and graded. No figure here represents money staked and there is no bankroll behind it.</dd></div>
+<div><dt>Nothing is crowned in public</dt><dd>Most of the entry gates behind these picks are still unproven or uncalibrated. Until they earn it, the daily pick stays with members rather than going out as a tip.</dd></div>
+<div><dt>The straight record is close to a coin flip</dt><dd>It is supposed to be. This reads price movement, it does not project scores, and if you came for who wins tonight you want a different page.</dd></div>
+<div><dt>Negative numbers stay up</dt><dd>Two boards are below zero and are shown that way. The whole record, not the good months.</dd></div>
+</dl></div></section><footer><div class="wrap">
 <div class="fgrid">
   <div>
     <a class="mark" href="index.html" style="margin-bottom:.9rem"><span class="wm"><b>SPICE</b><i>BETS</i></span></a>
@@ -554,7 +564,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 6 Nov 2026, 23:53 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 6 Nov 2026, 23:56 UTC</p>
 </div>
 </div></footer>
 </body>

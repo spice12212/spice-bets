@@ -389,6 +389,16 @@ section .wrap{padding-block:3.75rem}
 .callout p+p{margin-top:.8rem}
 .callout strong{color:var(--ink)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(24rem,1fr));gap:1rem}
+/* A definition run, not four boxes. The limits section used to be a 2x2 grid of identical
+   .callout cards, every one of them "<strong>Claim.</strong> explanation" - the same shape
+   four times over, which is what makes a page read as generated. Terms in a narrow left
+   column against hairlines is a colophon/spec-sheet device: it is typeset rather than
+   boxed, and it lets the four entries differ in length without looking ragged. */
+.limits{margin:0;border-top:1px solid var(--line)}
+.limits>div{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:1.75rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.limits dt{font-weight:700;font-size:1.02rem;letter-spacing:-.012em;color:var(--ink);line-height:1.35}
+.limits dd{margin:0;color:var(--ink-soft);font-size:.93rem;line-height:1.68}
+@media(max-width:720px){.limits>div{grid-template-columns:1fr;gap:.45rem;padding:1.25rem 0}}
 
 /* ---- subscribe block */
 .join{background:var(--brand-soft);border-block:1px solid var(--line)}
@@ -517,7 +527,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 6 Nov 2026, 23:53 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 6 Nov 2026, 23:56 UTC</p>
 </div>
 </div></footer>
 </body>

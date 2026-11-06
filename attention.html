@@ -389,6 +389,16 @@ section .wrap{padding-block:3.75rem}
 .callout p+p{margin-top:.8rem}
 .callout strong{color:var(--ink)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(24rem,1fr));gap:1rem}
+/* A definition run, not four boxes. The limits section used to be a 2x2 grid of identical
+   .callout cards, every one of them "<strong>Claim.</strong> explanation" - the same shape
+   four times over, which is what makes a page read as generated. Terms in a narrow left
+   column against hairlines is a colophon/spec-sheet device: it is typeset rather than
+   boxed, and it lets the four entries differ in length without looking ragged. */
+.limits{margin:0;border-top:1px solid var(--line)}
+.limits>div{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:1.75rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.limits dt{font-weight:700;font-size:1.02rem;letter-spacing:-.012em;color:var(--ink);line-height:1.35}
+.limits dd{margin:0;color:var(--ink-soft);font-size:.93rem;line-height:1.68}
+@media(max-width:720px){.limits>div{grid-template-columns:1fr;gap:.45rem;padding:1.25rem 0}}
 
 /* ---- subscribe block */
 .join{background:var(--brand-soft);border-block:1px solid var(--line)}
@@ -496,12 +506,12 @@ footer .wrap{padding-block:3rem 2.25rem}
 <h1>The attention board.</h1>
 <p class="lede">Every week it reads the league's editorial coverage and works out <strong>who the story is</strong> and who is invisible. Not who is good. Who is being <em>written about</em>. The loud end of the board is below; the rest is for members.</p>
 </div></div><div class="statband"><div class="wrap stats"><div class="stat"><div class="k">Teams ranked</div><div class="v">32</div><div class="s">all 32, every week</div></div><div class="stat"><div class="k">Articles read</div><div class="v">212</div><div class="s">in the last 7 days</div></div><div class="stat"><div class="k">Games scored</div><div class="v">15</div><div class="s">both sides of each matchup</div></div><div class="stat"><div class="k">Last built</div><div class="v">5 Nov 2026</div><div class="s">rebuilds Thursday mornings</div></div></div></div><section><div class="wrap"><div class="sechead"><div><p class="eyebrow">Published slice</p><h2>Who the league is writing about</h2><p>The three most-covered teams in the latest build. An index of 1.00 is an even share of coverage; 2.50 is two and a half times its share.</p></div></div><div class="grid2"><div class="panel"><h4 style="margin:0 0 1rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:500">Carrying the story</h4><table class="ledger"><tbody><tr><td>Baltimore Ravens</td><td class="mono pos">2.07</td><td class="mono" style="color:var(--ink-soft)">18 art.</td></tr><tr><td>Green Bay Packers</td><td class="mono pos">1.96</td><td class="mono" style="color:var(--ink-soft)">17 art.</td></tr><tr><td>Indianapolis Colts</td><td class="mono pos">1.96</td><td class="mono" style="color:var(--ink-soft)">17 art.</td></tr></tbody></table></div><div class="panel" style="border-color:var(--accent)"><h4 style="margin:0 0 1rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:500">The quiet end</h4><p style="margin:0 0 1rem;color:var(--ink-soft);font-size:.93rem">The teams nobody is writing about are the half you cannot work out for yourself, so they are not on this page. <strong style="color:var(--ink)">18 of the 32 teams sit below an even share of coverage this week, and 4 are under half of it</strong>, and the lowest is on 0.12. Which teams those are, and where they land against the betting splits, goes to members.</p><a class="btn" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" style="margin-top:0">See the full board &rarr;</a></div></div></div></section><section class="alt"><div class="wrap"><div class="sechead"><div><p class="eyebrow">Scope</p><h2>What members get that this page does not show</h2><p>Said plainly, because a static page cannot hide anything: the rest is simply not written into this file.</p></div></div>
-<div class="grid2">
-<div class="callout"><p><strong>The other 29 teams.</strong> Only the three most-covered are published. The middle is where the interesting disagreements sit, and it is also where the measure is least tested.</p></div>
-<div class="callout"><p><strong>The per-game view.</strong> The model also lines up both sides of all 15 matchups with each team's index next to the other, so which side of a game is riding the story and which is being ignored.</p></div>
-<div class="callout"><p><strong>The spot flags.</strong> It marks games where coverage and the betting split pull in opposite directions. 1 game is flagged in the current build.</p></div>
-<div class="callout"><p><strong>How it gets used.</strong> Where a pick sits on the board goes in the member write-up next to the price read. It is never the reason for the pick, and it never changes one.</p></div>
-</div></div></section><section><div class="wrap"><div class="sechead"><div><p class="eyebrow">Before you read anything into it</p><h2>This is a measurement, not an edge</h2></div></div>
+<dl class="limits">
+<div><dt>The other 29 teams</dt><dd>Only the three most-covered are published here. The middle of the table is where the interesting disagreements sit, and it is also where the measure is least tested.</dd></div>
+<div><dt>The per-game view</dt><dd>Both sides of all 15 matchups, each team's index against the other, so you can see which side is riding the story and which is being ignored.</dd></div>
+<div><dt>The spot flags</dt><dd>Games where coverage and the betting split pull in opposite directions. 1 is flagged in the current build.</dd></div>
+<div><dt>How it gets used</dt><dd>Where a pick sits on the board goes in the write-up next to the price read. It is never the reason for a pick and it never changes one.</dd></div>
+</dl></div></section><section><div class="wrap"><div class="sechead"><div><p class="eyebrow">Before you read anything into it</p><h2>This is a measurement, not an edge</h2></div></div>
 <div class="callout">
 <p><strong>It has never changed a pick, and it is not allowed to.</strong> The house rule is that the board is reported as context next to the price read and never overrides it. Picks are made on money against tickets, the same as every other page here.</p>
 <p><strong>It is not validated, and will not be for a long time.</strong> The pre-registration needs 120 graded games before it is allowed to claim anything, at roughly fifteen a week. That is a 2027 question. Until then every number on it is an observation, not a result.</p>
@@ -538,7 +548,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 6 Nov 2026, 23:53 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 6 Nov 2026, 23:56 UTC</p>
 </div>
 </div></footer>
 </body>
