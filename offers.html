@@ -303,7 +303,15 @@ section .wrap{padding-block:3.75rem}
    margin the viewport actually has spare: the clamp floors at 0, so below 68rem nothing
    moves and the mobile layout is untouched. No negative margin is ever larger than the gap
    it is pulling into, which is what stops this trick causing a horizontal scrollbar. */
-.bleed{margin-inline:calc(-1 * clamp(0rem, (100vw - 68rem) / 2, 7rem))}
+.bleed{margin-inline:calc(-1 * clamp(0rem, (100vw - 71rem) / 2, 7rem))}
+/* *** THE 71rem IS A BUFFER AND IT IS LOAD-BEARING. *** The wrap is 68rem, so the spare
+   margin at a viewport of W is (W - 68rem)/2 and that is what the pull wants to be. But
+   100vw INCLUDES THE SCROLLBAR, which the content area does not, so on any desktop with a
+   classic scrollbar the clamp reads the page as ~15px wider than it is and the pull comes
+   out about half a scrollbar too large - enough to put a horizontal scrollbar on the page
+   in the window between 68rem and 82rem, which is an extremely common laptop width.
+   Measuring against 71rem means nothing moves until there is a clear 3rem of slack, which
+   absorbs the widest scrollbar with room to spare. */
 /* MEASURE. Prose set across the full 68rem wrap runs to about 110 characters a line, which
    is roughly half as long again as anything comfortable. .note and .lede were already
    capped; these two were not, and they carry most of the explanatory copy on the site. */
@@ -602,7 +610,7 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 00:30 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 00:31 UTC</p>
 </div>
 </div></footer>
 </body>
