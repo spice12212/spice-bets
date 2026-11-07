@@ -295,6 +295,15 @@ h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
 
 /* ---- sections */
 section .wrap{padding-block:3.75rem}
+/* ---- BREAKOUT. Every block on the page sat in the same 68rem column, so prose and data
+   shared one width and the page had a single rhythm from masthead to footer. A reading
+   measure and a data table want opposite things: text wants to be narrow, a table of
+   numbers wants room.
+   .bleed pulls a block out past the text column by up to 7rem a side, but ONLY out of the
+   margin the viewport actually has spare: the clamp floors at 0, so below 68rem nothing
+   moves and the mobile layout is untouched. No negative margin is ever larger than the gap
+   it is pulling into, which is what stops this trick causing a horizontal scrollbar. */
+.bleed{margin-inline:calc(-1 * clamp(0rem, (100vw - 68rem) / 2, 7rem))}
 /* MEASURE. Prose set across the full 68rem wrap runs to about 110 characters a line, which
    is roughly half as long again as anything comfortable. .note and .lede were already
    capped; these two were not, and they carry most of the explanatory copy on the site. */
@@ -596,7 +605,7 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 00:15 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 00:30 UTC</p>
 </div>
 </div></footer>
 </body>
