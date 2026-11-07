@@ -37,11 +37,19 @@
    colour, ask first whether it is reporting a result. If it is not, it is amber. */
 :root{
   --ground:#f6f8f7; --surface:#ffffff; --raise:#eef2f0;
-  --ink:#0e1613; --ink-soft:#5a6b64; --ink-faint:#8a9a93;
+  /* CONTRAST, measured 7 Nov 2026 against all three light backgrounds.
+     --ink-faint was #8a9a93: 2.61:1 on --raise, 2.76:1 on --ground. It carries captions,
+     chart labels, board-card keys and the footer heads, all of them small text, which WCAG
+     puts at 4.5:1 - so it was failing by a wide margin rather than marginally. #61716a
+     clears 4.56:1, but that landed on top of --ink-soft at #5a6b64 and collapsed three tiers
+     into two, so --ink-soft moves to #45534d (7.16:1) to keep a visible step. --ink is
+     unchanged at 16.27:1. */
+  --ink:#0e1613; --ink-soft:#45534d; --ink-faint:#61716a;
   --line:#dde5e1; --line-soft:#eaf0ed;
-  --accent:#07864a; --accent-ink:#ffffff; --accent-soft:#e4f4ec;
+  /* 4.12:1 on --raise, just under. #067c45 clears 4.68:1 and is the same green. */
+  --accent:#067c45; --accent-ink:#ffffff; --accent-soft:#e4f4ec;
   --brand:#c42e26; --brand-ink:#ffffff; --brand-soft:#fbe7e5; --brand-line:#eab4af;
-  --win:#07864a; --loss:#c0392c; --pend:#8a9a93;
+  --win:#067c45; --loss:#c0392c; --pend:#61716a;
   /* The banner gets EXPLICIT tokens instead of inheriting ink/ground. Derived, it flipped to a
      pale cream bar in dark mode - a washed-out strip sitting under a near-black header, which
      is the one element on the page that has to stay legible as a band in both themes. */
@@ -54,7 +62,9 @@
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
   --ground:#0a0e0c; --surface:#121816; --raise:#19211d;
-  --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#6b7d75;
+  /* --ink-faint was 3.77:1 on --raise. #778b82 clears 4.54:1 and still sits clearly below
+     --ink-soft at #93a49c, so the three tiers survive. */
+  --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#778b82;
   --line:#222c27; --line-soft:#1a221e;
   --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
 
@@ -64,13 +74,15 @@
   --promo-bg:#2a1708; --promo-ink:#ffeada;
 
   --grain:.055;
-  --win:#3ddc84; --loss:#ff6b63; --pend:#6b7d75;
+  --win:#3ddc84; --loss:#ff6b63; --pend:#778b82;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
   color-scheme:dark;
 }}
 :root[data-theme="dark"]{
   --ground:#0a0e0c; --surface:#121816; --raise:#19211d;
-  --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#6b7d75;
+  /* --ink-faint was 3.77:1 on --raise. #778b82 clears 4.54:1 and still sits clearly below
+     --ink-soft at #93a49c, so the three tiers survive. */
+  --ink:#e9f0ec; --ink-soft:#93a49c; --ink-faint:#778b82;
   --line:#222c27; --line-soft:#1a221e;
   --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
 
@@ -80,7 +92,7 @@
   --promo-bg:#2a1708; --promo-ink:#ffeada;
 
   --grain:.055;
-  --win:#3ddc84; --loss:#ff6b63; --pend:#6b7d75;
+  --win:#3ddc84; --loss:#ff6b63; --pend:#778b82;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
   color-scheme:dark;
 }
@@ -637,7 +649,7 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 01:08 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 01:11 UTC</p>
 </div>
 </div></footer>
 </main>
