@@ -172,6 +172,21 @@ nav.top a.cta:hover{background:var(--brand);filter:brightness(1.08)}
    drawn for. The mark is 2003x214, so height alone sets it and the width follows. */
 nav.top a.pbcta{display:inline-flex;align-items:center;background:#1b1d1b;color:#fff;padding:.42rem .72rem}
 nav.top a.pbcta img{height:.82rem;width:auto;display:block}
+/* PHONE NAV. Wrapping eleven small-caps links at 375px produced three stacked rows that
+   pushed the headline most of a screen down, and a wrapped row reads as an overflowing list
+   rather than a navigation bar. One scrolling row instead - the same device the sport chips
+   already use, so the page has one answer to "too many items" rather than two.
+   The negative margin lets it bleed to the screen edges so the last item is visibly cut off,
+   which is what tells a reader it scrolls; padding puts the first and last back in line with
+   the rest of the page. */
+@media(max-width:620px){
+  nav.top{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    margin-inline:calc(-1 * max(16px, env(safe-area-inset-left,0px)));
+    padding-inline:max(16px, env(safe-area-inset-left,0px));
+    scrollbar-width:none}
+  nav.top::-webkit-scrollbar{display:none}
+  nav.top a{flex:0 0 auto}
+}
 nav.top a.pbcta:has(img) span{display:none}
 nav.top a.pbcta:hover{background:#242723;filter:none}
 /* The Gambit referral. Deliberately the QUIETEST link in the bar: outlined, not filled, and
@@ -495,6 +510,12 @@ footer .wrap{padding-block:3rem 2.25rem}
 
 /* Selected text picks up the brand instead of the browser's default blue. */
 ::selection{background:var(--brand);color:#fff}
+/* Skip link. Keyboard and screen-reader users land on the masthead and would otherwise tab
+   through the whole nav on every page before reaching anything. Off-canvas until focused. */
+.skip{position:absolute;left:-9999px;top:0;z-index:999;background:var(--brand);color:#fff;
+  padding:.7rem 1.1rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-decoration:none}
+.skip:focus{left:.5rem;top:.5rem}
+main{display:block}
 
 /* text-wrap:pretty stops a paragraph ending on a single orphaned word. h1-h3 already
    carry text-wrap:balance; this is the body-copy equivalent. */
@@ -530,6 +551,8 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
 <script>
 (function(){
   var r = document.documentElement, KEY = 'sb-theme';
@@ -570,7 +593,7 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
     });
   } catch(e){}
 })();
-</script><header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><span class="wm"><b>SPICE</b><i>BETS</i></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html" class="here">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;background:#1652f0;color:#ffffff"><span class="wrap"><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;background:#0b0d10;color:#ffffff"><span class="wrap"><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;background:#c0f018;color:#111409"><span class="wrap"><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
+</script><header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><span class="wm"><b>SPICE</b><i>BETS</i></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html" class="here" aria-current="page">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" width="2003" height="214" decoding="async" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;background:#1652f0;color:#ffffff"><span class="wrap"><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;background:#0b0d10;color:#ffffff"><span class="wrap"><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;background:#c0f018;color:#111409"><span class="wrap"><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
 <p class="eyebrow">Method</p>
 <h1>What the bot actually does.</h1>
 <p class="lede">No part of this is a score projection. The whole system reads one thing, the gap between where the money is and where the tickets are, and bets that the number keeps moving.</p>
@@ -604,8 +627,9 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 01:00 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 01:08 UTC</p>
 </div>
 </div></footer>
+</main>
 </body>
 </html>
