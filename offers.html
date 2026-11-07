@@ -458,6 +458,44 @@ footer .wrap{padding-block:3rem 2.25rem}
 .fine p{margin:0 0 .6rem}
 .fine strong{color:var(--ink-soft)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---- craft details. None of these change the layout; all of them are things a reader
+   notices without being able to name, and a generated page almost never has. */
+
+/* Selected text picks up the brand instead of the browser's default blue. */
+::selection{background:var(--brand);color:#fff}
+
+/* text-wrap:pretty stops a paragraph ending on a single orphaned word. h1-h3 already
+   carry text-wrap:balance; this is the body-copy equivalent. */
+p,li,dd,figcaption{text-wrap:pretty}
+
+/* Anchor links land with the heading clear of the sticky masthead rather than under it. */
+section[id],h2[id],h3[id]{scroll-margin-top:5rem}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Numerals in running prose line up with the ones in the tables. */
+body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
+
+/* ---- PRINT. A betting log is a document people may want on paper or as a PDF, and the
+   screen version prints as dark rectangles with navigation and sales copy in the middle
+   of it. Everything that is chrome, promotional or interactive comes out; the record
+   stays, in black on white, with link destinations spelled out. */
+@media print{
+  :root{--ground:#fff;--surface:#fff;--raise:#fff;--ink:#000;--ink-soft:#333;--ink-faint:#555;
+        --line:#bbb;--line-soft:#ddd;--brand:#8a1f19;--accent:#0a6b35;--loss:#9a1c1c}
+  body{background:#fff;color:#000;font-size:10.5pt}
+  nav.top,.promo,.flag,.themer,.bpotd-cta,.join,.cta,.btn,.scts{display:none!important}
+  a{color:#000;text-decoration:underline}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8.5pt;color:#555;word-break:break-all}
+  a[href^="#"]::after{content:""}
+  .wrap{max-width:none;padding:0}
+  section,.panel,.callout,.limits>div{break-inside:avoid}
+  thead{display:table-header-group}
+  tr{break-inside:avoid}
+  .hero{padding-top:0}
+  .fineline{border-top:1px solid #bbb;padding-top:.5rem}
+}
 </style>
 </head>
 <body>
@@ -545,7 +583,7 @@ footer .wrap{padding-block:3rem 2.25rem}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 00:11 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 00:12 UTC</p>
 </div>
 </div></footer>
 </body>
