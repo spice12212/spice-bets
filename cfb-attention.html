@@ -295,6 +295,16 @@ h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;margin-top:1.1rem}
 
 /* ---- sections */
 section .wrap{padding-block:3.75rem}
+/* MEASURE. Prose set across the full 68rem wrap runs to about 110 characters a line, which
+   is roughly half as long again as anything comfortable. .note and .lede were already
+   capped; these two were not, and they carry most of the explanatory copy on the site. */
+.callout p{max-width:68ch}
+.limits dd{max-width:64ch}
+/* RHYTHM. Every section carried identical vertical padding, which gives the page one
+   metronomic beat from top to bottom. The tinted sections are the feature slots, so they
+   get more room; a section that only introduces the one below it gets less. */
+section.alt .wrap{padding-block:4.5rem}
+section + section:not(.alt) .wrap{padding-block:3.25rem}
 .sechead{position:relative;display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem;padding-top:1.1rem}
 /* a short amber rule over each section head - the one repeated brand gesture on the page */
 .sechead::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--line)}
