@@ -410,6 +410,8 @@ section + section:not(.alt) .wrap{padding-block:3.25rem}
 .ledger th{font-family:var(--mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);text-align:right;font-weight:500;padding:.8rem .9rem;border-bottom:1px solid var(--line);background:var(--raise);white-space:nowrap}
 .ledger th:first-child,.ledger td:first-child{text-align:left}
 .ledger td{padding:.72rem .9rem;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
+.ledger td.dt{white-space:nowrap;color:var(--ink-soft)}
+.ledger td.dt:empty::after{content:""}
 .ledger tr:last-child td{border-bottom:0}
 .ledger td.mono,.ledger th.mono{font-family:var(--mono)}
 /* ---- one collapsible block per football week. The summary IS that week's result line, so
@@ -652,7 +654,7 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 01:11 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 01:14 UTC</p>
 </div>
 </div></footer>
 </main>

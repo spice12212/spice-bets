@@ -410,6 +410,8 @@ section + section:not(.alt) .wrap{padding-block:3.25rem}
 .ledger th{font-family:var(--mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);text-align:right;font-weight:500;padding:.8rem .9rem;border-bottom:1px solid var(--line);background:var(--raise);white-space:nowrap}
 .ledger th:first-child,.ledger td:first-child{text-align:left}
 .ledger td{padding:.72rem .9rem;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
+.ledger td.dt{white-space:nowrap;color:var(--ink-soft)}
+.ledger td.dt:empty::after{content:""}
 .ledger tr:last-child td{border-bottom:0}
 .ledger td.mono,.ledger th.mono{font-family:var(--mono)}
 /* ---- one collapsible block per football week. The summary IS that week's result line, so
@@ -618,9 +620,7 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
 <div class="bpotd">
 <div>
 <h3>What the crown actually is</h3>
-<p>Of every pick the screeners log on a given day, one is flagged as the best play. It is ranked purely on <strong>price action</strong>: where the money sits against where the tickets sit, and how far the number has travelled since it opened. That is the same measure every board on this site is graded by.</p>
-<h3>What it ranks on</h3>
-<p>Price action, and only price action. The crown goes to the pick where the money and the tickets disagree most sharply and the number has already started to move. It is a reading of the market, not a prediction of the scoreboard, which is why it is graded on closing-line value first and the result second.</p>
+<p>Of every pick the screeners log on a given day, one is flagged as the best play, ranked on <strong>price action</strong> alone: where the money sits against where the tickets sit, and how far the number has travelled since it opened. It is a reading of the market rather than a prediction of the scoreboard, which is why it is graded on closing-line value first and the result second.</p>
 <h3>Why it is members-only</h3>
 <p>It goes out with the write-up attached and at the price actually taken, so it can be followed properly rather than screenshotted out of context. That is the whole reason it left X in October: a bare pick in a post is a tip, and this is a log.</p>
 </div>
@@ -662,7 +662,7 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 01:11 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 7 Nov 2026, 01:14 UTC</p>
 </div>
 </div></footer>
 </main>
