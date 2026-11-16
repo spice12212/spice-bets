@@ -650,6 +650,77 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   --rule:rgba(255,255,255,.028); --edge:#3a2225; --ground-rgb:7,5,6;
 }
 
+/* ---------------------------------------------------------------- v5 behaviour styling
+   The motion layer. Everything here degrades: without JS the cursor never appears, the hero
+   simply renders static, .rv elements are revealed by the script's own fallback branch, and
+   prefers-reduced-motion is honoured in BOTH the stylesheet and the script - the script paints
+   one canvas frame instead of animating, which CSS alone cannot do. */
+body.cursored{cursor:none}
+body.cursored a,body.cursored button,body.cursored summary{cursor:none}
+#cur,#cur2{position:fixed;top:0;left:0;pointer-events:none;z-index:999;border-radius:50%;mix-blend-mode:difference}
+#cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
+#cur2{width:34px;height:34px;border:1px solid rgba(255,255,255,.45);margin:-17px 0 0 -17px;transition:transform .18s,opacity .18s}
+body.hot #cur2{transform:scale(1.9);opacity:.5}
+@media(hover:none){#cur,#cur2{display:none}body.cursored{cursor:auto}}
+
+#intro{position:fixed;inset:0;z-index:900;background:var(--ground);display:flex;align-items:center;justify-content:center;transition:opacity .7s .25s,visibility .7s .25s}
+#intro.done{opacity:0;visibility:hidden}
+#intro .n{font-family:var(--mono);font-size:clamp(3rem,13vw,9rem);font-weight:700;letter-spacing:-.05em;color:var(--win);font-variant-numeric:tabular-nums}
+#intro .bar{position:absolute;left:0;bottom:0;height:2px;background:var(--brand);width:0}
+
+#cv{position:absolute;inset:0;z-index:0}
+.hero .veil{z-index:1}
+
+/* THE HEADLINE BREAKS THE VIEWPORT. 118% width with the lines masked and sliding up on a long
+   cubic-bezier. The overflow is the point - a headline that fits inside its column reads as a
+   paragraph that happens to be large. */
+.hero h1{font-size:clamp(2.6rem,11.5vw,10rem);font-weight:900;font-variation-settings:'wdth' 118;
+  letter-spacing:-.055em;line-height:.84;width:116%;max-width:none}
+.hero h1 span{display:block;overflow:hidden}
+.hero h1 i{display:block;font-style:normal;transform:translateY(105%);
+  transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.hero.lit h1 i{transform:translateY(0)}
+.hero h1 i:nth-child(1){transition-delay:.04s}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero .htiles{opacity:0;transform:translateY(18px);transition:opacity .8s .45s,transform .8s .45s}
+.hero.lit .htiles{opacity:1;transform:none}
+
+.rv{opacity:0;transform:translateY(26px);
+  transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* BOARD ROWS FILL ON HOVER. The wipe replaces the 3px rule: same idea, committed to. */
+.card{overflow:hidden}
+.card .fill{position:absolute;inset:0;background:var(--brand);transform:scaleX(0);transform-origin:left;
+  transition:transform .55s cubic-bezier(.16,1,.3,1);z-index:0}
+.card:hover .fill{transform:scaleX(1)}
+.card>*:not(.fill){position:relative;z-index:1;transition:color .3s}
+.card .fill{z-index:0}
+/* The wipe inverts EVERY descendant, not a hand-listed few. .clv carries its own pos/neg colour
+   from a class, so naming ancestors is not enough - the win/loss colour wins on specificity and
+   a green +0.76% was left sitting on brand red. The * selector plus !important is the honest fix:
+   on a fully filled row there is exactly one legible ink colour and it is not negotiable. */
+.card:hover,.card:hover *:not(.fill){color:#140404!important}
+.card:hover .tag{border-color:#140404;opacity:.75}
+.card:hover::before{transform:scaleY(0)}
+.card:hover{background:transparent}
+
+.mq{border-block:1px solid var(--line);overflow:hidden;padding:.85rem 0;background:var(--surface)}
+.mq div{display:flex;gap:2.6rem;width:max-content;animation:mqslide 48s linear infinite;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--ink-faint);text-transform:uppercase}
+@keyframes mqslide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mq div{animation:none}.hero h1 i{transform:none}.rv{opacity:1;transform:none}}
+
+/* THE PARTNER STRIP. Palette colours, with each partner's own tint reduced to a dot - see the
+   note in PromoBar for why the full-bleed brand background came off. */
+.promo{background:var(--promo-bg);border-bottom:1px solid var(--line)}
+.promo .slide{color:var(--promo-ink)}
+.promo .pdot{width:7px;height:7px;border-radius:50%;flex:none;display:block}
+.promo .slide b{font-weight:800;font-variation-settings:'wdth' 90}
+.promo .txt{color:var(--promo-ink);opacity:.72}
+.promo .go{color:var(--brand);font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase}
+.promo .sep{opacity:.25}
+
 /* THE RESULT FIELD behind the hero. The marks are rotated and over-scaled so the grid reads as a
    drift of results running off both edges rather than a tidy block, and a radial veil darkens
    the left half so the headline keeps its contrast over them.
@@ -760,7 +831,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
     });
   } catch(e){}
 })();
-</script><header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><span class="wm"><b>SPICE</b><i>BETS</i></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html" class="here" aria-current="page">NBA</a><a href="attention.html">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" width="2003" height="214" decoding="async" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;background:#1652f0;color:#ffffff"><span class="wrap"><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;background:#0b0d10;color:#ffffff"><span class="wrap"><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;background:#c0f018;color:#111409"><span class="wrap"><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
+</script><header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><span class="wm"><b>SPICE</b><i>BETS</i></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html" class="here" aria-current="page">NBA</a><a href="attention.html">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" width="2003" height="214" decoding="async" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;"><span class="wrap"><i class="pdot" style="background:#1652f0"></i><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;"><span class="wrap"><i class="pdot" style="background:#0b0d10"></i><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;"><span class="wrap"><i class="pdot" style="background:#c0f018"></i><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
 <p class="eyebrow">Shadow book &middot; 110 picks &middot; nothing here is bet</p>
 <h1>NBA</h1>
 <p class="lede">The newest board and the one held furthest back. Every pick on this page is written by the screener and graded, and <strong>none of it feeds a bet</strong>. It exists to find out whether the entry rule is worth anything before it is ever trusted with a stake.</p>
@@ -801,9 +872,107 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 22:30 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 22:45 UTC</p>
 </div>
 </div></footer>
 </main>
+<script>
+(function(){
+var RM = matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* ---- cursor. Hidden entirely on touch, where a lagging ring is meaningless. */
+if(matchMedia('(hover:hover)').matches){
+  var c1=document.createElement('div'),c2=document.createElement('div');
+  c1.id='cur';c2.id='cur2';document.body.appendChild(c1);document.body.appendChild(c2);
+  var tx=0,ty=0,cx=0,cy=0;
+  addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;c1.style.transform='translate('+tx+'px,'+ty+'px)';});
+  (function l(){cx+=(tx-cx)*.16;cy+=(ty-cy)*.16;c2.style.left=cx+'px';c2.style.top=cy+'px';requestAnimationFrame(l);})();
+  document.addEventListener('mouseover',function(e){
+    if(e.target.closest('a,button,summary,.card,.band')) document.body.classList.add('hot');});
+  document.addEventListener('mouseout',function(e){
+    if(e.target.closest('a,button,summary,.card,.band')) document.body.classList.remove('hot');});
+  document.body.classList.add('cursored');
+}
+
+/* ---- the drift field. One particle per graded pick, coloured by its result. */
+var cv=document.getElementById('cv');
+if(cv && cv.getContext){
+  var ctx=cv.getContext('2d'),DPR=Math.min(devicePixelRatio||1,2),ps=[];
+  var W=+cv.dataset.w||0,L=+cv.dataset.l||0,P=+cv.dataset.p||0;
+  function size(){cv.width=cv.offsetWidth*DPR;cv.height=cv.offsetHeight*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);}
+  size();addEventListener('resize',size);
+  var cols=['#19e08a','#ff4d44','#3a2225'],cnt=[W,L,P];
+  for(var k=0;k<3;k++)for(var i=0;i<cnt[k];i++)ps.push({
+    x:Math.random()*cv.offsetWidth,y:Math.random()*cv.offsetHeight,
+    vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,
+    c:cols[k],s:Math.random()*1.6+1.4,ph:Math.random()*6.28});
+  var mx=-9999,my=-9999,t=0;
+  addEventListener('mousemove',function(e){var r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;});
+  function paint(){
+    ctx.clearRect(0,0,cv.offsetWidth,cv.offsetHeight);
+    for(var i=0;i<ps.length;i++){var q=ps[i];
+      ctx.fillStyle=q.c;ctx.globalAlpha=.62;ctx.fillRect(q.x,q.y,q.s,q.s);}
+    ctx.globalAlpha=1;
+  }
+  function step(){
+    t+=.0045;
+    for(var i=0;i<ps.length;i++){var q=ps[i];
+      q.x+=q.vx+Math.sin(t+q.ph)*.14;q.y+=q.vy+Math.cos(t*.8+q.ph)*.1;
+      var dx=q.x-mx,dy=q.y-my,d2=dx*dx+dy*dy;
+      if(d2<16000){var f=(16000-d2)/16000*.05;q.x+=dx*f;q.y+=dy*f;}
+      var w=cv.offsetWidth,h=cv.offsetHeight;
+      if(q.x<-10)q.x=w+10;if(q.x>w+10)q.x=-10;
+      if(q.y<-10)q.y=h+10;if(q.y>h+10)q.y=-10;}
+    paint();requestAnimationFrame(step);
+  }
+  if(RM) paint(); else step();
+}
+
+/* ---- count-up. Any element with data-count animates to it and keeps its own formatting. */
+function countTo(el){
+  var to=parseFloat(el.dataset.count),dp=+(el.dataset.dp||0),sfx=el.dataset.sfx||'',
+      sgn=el.dataset.sign==='1',ms=900,s=null;
+  if(RM){el.textContent=(sgn&&to>0?'+':'')+to.toFixed(dp)+sfx;return;}
+  function f(ts){if(!s)s=ts;var k=Math.min((ts-s)/ms,1),e=1-Math.pow(1-k,3),v=to*e;
+    el.textContent=(sgn&&v>0?'+':'')+v.toFixed(dp)+sfx;if(k<1)requestAnimationFrame(f);}
+  requestAnimationFrame(f);
+}
+
+/* ---- intro. Homepage only - an overlay on every click would be an obstacle, not a flourish. */
+var intro=document.getElementById('intro'),hero=document.querySelector('.hero');
+function light(){
+  if(hero) hero.classList.add('lit');
+  document.querySelectorAll('[data-count]').forEach(countTo);
+}
+if(intro){
+  var ic=intro.querySelector('.n'),ib=intro.querySelector('.bar'),N=+intro.dataset.n||0,st=null;
+  /* *** FAILSAFE. An intro must never be able to trap the page. *** requestAnimationFrame is
+     throttled to roughly 1fps in a background tab, so a visitor who opens this in a new tab and
+     comes back could otherwise find a full-screen overlay still sitting there. A hard timer and
+     a first-interaction handler both force it open regardless of how far the count got. */
+  var fired=false;
+  function finish(){if(fired)return;fired=true;intro.classList.add('done');light();}
+  setTimeout(finish,2600);
+  ['pointerdown','keydown','wheel','touchstart'].forEach(function(ev){
+    addEventListener(ev,finish,{once:true,passive:true});});
+  if(RM){finish();}
+  else{
+    (function run(ts){if(!st)st=ts;var k=Math.min((ts-st)/1500,1),e=1-Math.pow(1-k,3);
+      if(ic)ic.textContent=Math.round(e*N);if(ib)ib.style.width=(e*100)+'%';
+      if(k<1&&!fired)requestAnimationFrame(run);else finish();})(0);
+  }
+} else { light(); }
+
+/* ---- scroll reveals */
+if('IntersectionObserver' in window && !RM){
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){
+    if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el,i){
+    el.style.transitionDelay=((i%6)*0.055)+'s';io.observe(el);});
+} else {
+  document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
+}
+})();
+</script>
 </body>
 </html>
