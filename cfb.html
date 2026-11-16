@@ -171,14 +171,13 @@ header.top .wrap{position:relative}
 .mark{display:inline-flex;text-decoration:none;line-height:1}
 .mark .wm{display:flex;flex-direction:column;font-family:var(--display);
   font-variation-settings:'wdth' 118;font-weight:800;letter-spacing:.005em;line-height:.84}
-.mark .wm b{font-weight:800;font-size:2.05rem;color:#fff}
-.mark .wm i{font-style:normal;font-weight:800;font-size:2.05rem;color:var(--brand);
-  border-bottom:4px solid var(--brand);padding-bottom:2px;width:max-content}
-.mark:hover .wm i{filter:brightness(1.12)}
+.mark .wm b{font-weight:800;font-size:2.05rem}
+.mark .wm i{font-style:normal;font-weight:800;font-size:2.05rem}
+
 /* the footer carries the same lockup at reading size */
-footer .mark .wm b,footer .mark .wm i{font-size:1.35rem;color:var(--ink)}
-footer .mark .wm i{color:var(--brand)}
-@media(max-width:620px){ .mark .wm b,.mark .wm i{font-size:1.6rem} }
+footer .mark .wm b,footer .mark .wm i{font-size:1.35rem}
+
+@media(max-width:620px){ .mark .wm b,.mark .wm i{font-size:1.6rem} .mark .wm{gap:.4rem} }
 /* Navigation as a ruled row of small caps under the flag, the way a sheet lists its sections -
    not a right-aligned cluster of pills. */
 nav.top{display:flex;gap:.1rem;flex-wrap:wrap;align-items:center;border-top:1px solid #272a28;
@@ -772,32 +771,45 @@ nav.top a:hover,nav.top a:focus-visible{color:var(--ink);background:var(--raise)
 nav.top a.here{color:var(--ink);background:transparent;box-shadow:inset 0 -2px 0 var(--brand)}
 nav.top a.pbcta{background:var(--raise)}
 
-/* ================================================================ THE LOCKUP, DRAWN NOT TYPED
-   Two words, optically justified: BETS is tracked out until its rendered width equals SPICE's,
-   so the mark is a solid block of type closed by a red rule the exact same width. That is the
-   difference between a logo and two words in a <span>.
-   THE TRACKING IS MEASURED, NOT GUESSED. The display face is variable and the mark renders at
-   three sizes - header, footer, phone - so any hand-picked letter-spacing would be correct at
-   one of them and wrong at the other two. The behaviour script measures both words as actually
-   rendered and solves for the spacing, after the webfont has loaded.
-   Tracking rather than transform:scaleX, because stretching glyphs distorts the letterforms,
-   and distorted letterforms are the one thing a wordmark may not have. */
-/* *** align-items MATTERS HERE, AND IT IS NOT COSMETIC. *** .wm is a column flex container, so
-   by default both words STRETCH to the container's width - which means getBoundingClientRect()
-   returned the same number for each and the justifier computed a tracking of zero and silently
-   did nothing. flex-start makes each word shrink to its own ink, which is the thing being
-   measured. The measurement was never wrong; it was being handed two identical boxes. */
-.mark .wm{align-items:flex-start}
-.mark .wm b{color:var(--ink)}
-.mark .wm i{border-bottom:0;position:relative;padding-bottom:.14em;display:block;
-  transition:transform .4s cubic-bezier(.16,1,.3,1)}
-.mark .wm i::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
-  background:var(--brand);transition:background .4s}
-/* THE RULE IS THE CLOSING LINE AND THE MARK BEATS IT. On hover the word lifts clear of its own
-   rule - the site's entire subject, in three pixels. */
-.mark:hover .wm i{transform:translateY(-3px)}
-.mark:hover .wm i::after{background:var(--win)}
-footer .mark .wm i::after{height:3px}
+/* ================================================================ THE LOCKUP: CUT BY THE LINE
+   *** THE CLOSING LINE RUNS THROUGH THE NAME. *** The previous mark was SPICE over BETS with a
+   rule underneath - two words and an underline, which is what every other book's logo is. This
+   one puts the whole name on one line and cuts it horizontally: the letterforms are ink above
+   the cut and brand red below it, with a hard edge, and a red rule sits exactly on that edge and
+   bleeds past both ends of the word.
+   That is the site's entire subject drawn as a mark. Every number on this page is measured
+   against a line; so is the name.
+   HOW THE TWO-TONE WORKS: a linear-gradient with two hard stops at the same position, clipped to
+   the text. One element, one paint - not two stacked copies of the word, which would double the
+   glyphs for a screen reader and drift by a subpixel at some zoom level.
+   --split is a registered custom property so the cut can ANIMATE. Without @property the browser
+   cannot interpolate a percentage inside a gradient and the hover would snap; with it, the line
+   slides. Where @property is unsupported the mark still renders correctly and the hover simply
+   jumps, which is a degradation nobody will notice. */
+/* *** 56% WAS A STRIKETHROUGH. *** At mid cap-height the rule lands exactly where a strike
+   goes and the mark read as the name crossed out - the opposite of what a logo may say. At 76%
+   it sits at the letters' feet: the word STANDS ON the line, the bottom of each glyph picks up
+   the brand red, and the device reads as a line rather than a cancellation. */
+@property --split{syntax:'<percentage>';inherits:false;initial-value:76%}
+/* THE GAP IS IN rem, NOT em. .wm sets no font-size of its own - the 2.05rem lives on the two
+   child words - so an em gap resolved against the inherited 16px body size and came out at
+   3.5px, which closed the space entirely and the mark read SPICEBETS. */
+.mark .wm{flex-direction:row;align-items:baseline;gap:.52rem;position:relative;--split:76%;
+  background:linear-gradient(to bottom,var(--ink) 0 var(--split),var(--brand) var(--split) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  transition:--split .45s cubic-bezier(.16,1,.3,1)}
+.mark .wm b,.mark .wm i{color:transparent;-webkit-text-fill-color:transparent;border-bottom:0;
+  padding-bottom:0;width:auto;letter-spacing:inherit}
+/* THE RULE SITS ON THE CUT AND BLEEDS PAST THE WORD. Flush ends would read as an underline that
+   happens to be in the wrong place; overhanging ends read as a line the name is sitting on. */
+.mark .wm::after{content:"";position:absolute;left:-.12em;right:-.12em;top:var(--split);
+  height:3px;margin-top:-1.5px;background:var(--brand);transition:top .45s cubic-bezier(.16,1,.3,1),background .45s}
+/* ON HOVER THE LINE MOVES AND THE NAME BEATS IT - more of the mark ends up above the cut. */
+/* ON HOVER THE LINE DROPS AND THE NAME CLEARS IT. */
+.mark:hover .wm{--split:92%}
+.mark:hover .wm::after{background:var(--win)}
+footer .mark .wm{gap:.34rem}
+footer .mark .wm::after{height:2px;margin-top:-1px}
 
 /* ---------------------------------------------------------------- the board row ghost numeral
    Each board row carries its own pick count as an oversized outlined numeral bleeding off the
@@ -1018,7 +1030,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:36 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:41 UTC</p>
 </div>
 </div></footer>
 </main>
@@ -1139,29 +1151,6 @@ if(intro){
     a.addEventListener('mouseleave', function(){ clearInterval(timer); a.textContent = real; });
   });
 })();
-
-/* ---- THE WORDMARK IS JUSTIFIED BY MEASUREMENT.
-   SPICE and BETS are different letter counts, so they only line up if the shorter one is
-   tracked out to meet the longer. Solved from the rendered widths: letter-spacing applies
-   after EVERY character including the last, so n-1 gaps have to absorb the difference and the
-   element is then given an explicit width so its rule spans the ink and not the trailing gap.
-   Runs after document.fonts.ready - measuring before the display face loads returns fallback
-   metrics and would justify the mark to the wrong width, permanently. */
-function fitMark(){
-  document.querySelectorAll('.mark .wm').forEach(function(wm){
-    var b = wm.querySelector('b'), i = wm.querySelector('i');
-    if(!b || !i) return;
-    i.style.letterSpacing = '0px'; i.style.width = 'auto';
-    var bw = b.getBoundingClientRect().width,
-        iw = i.getBoundingClientRect().width,
-        n  = (i.textContent || '').length;
-    if(!bw || !iw || n < 2) return;
-    i.style.letterSpacing = ((bw - iw) / (n - 1)).toFixed(3) + 'px';
-    i.style.width = bw.toFixed(2) + 'px';
-  });
-}
-if(document.fonts && document.fonts.ready){ document.fonts.ready.then(fitMark); } else { fitMark(); }
-addEventListener('resize', fitMark);
 
 /* ---- THE CLV COLUMN IS A CHART.
    Every ledger already prints a signed CLV per row; this measures the column and draws each
