@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="That page does not exist.">
-<meta name="theme-color" content="#0a0e0c">
+<!-- THE BROWSER CHROME MATCHES THE PAGE, PER THEME. This was left on the pre-redesign green
+     (#0a0e0c) after the warm palette went in, so on a phone the address bar painted dark
+     green above a near-black page - the one piece of the old skin a visitor could still see.
+     Two tags with media queries, because a single theme-color cannot be right in both modes
+     and the page honours the system setting. -->
+<meta name="theme-color" content="#fbf7f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070506" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c42e26'/%3E%3Ctext x='16' y='22' font-family='Segoe UI,Arial,sans-serif' font-size='19' font-weight='700' fill='%23ffffff' text-anchor='middle'%3ES%3C/text%3E%3Crect x='9' y='24.5' width='14' height='2.5' rx='1.2' fill='%23ffffff' fill-opacity='0.85'/%3E%3C/svg%3E">
 <link rel="canonical" href="https://spicebets.bet/404.html">
 <meta property="og:type" content="website">
@@ -861,7 +867,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 22:49 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:00 UTC</p>
 </div>
 </div></footer>
 </main>
@@ -952,14 +958,29 @@ if(intro){
   }
 } else { light(); }
 
-/* ---- scroll reveals */
+/* ---- scroll reveals.
+   *** THE SCRIPT MARKS ITS OWN TARGETS. *** .rv carries opacity:0, so if the class were written
+   into the HTML every section below the fold would be invisible in the SERVED markup and a script
+   that failed to load - a CSP, a blocked file, a syntax error on an old browser - would leave a
+   blank page under a working masthead. Marking from in here means no-JS and broken-JS both render
+   the page in full and the reveal is strictly additive. It is also why there is no else branch:
+   without IntersectionObserver nothing is ever marked, which is already the correct outcome.
+   Elements ALREADY IN VIEW are skipped. Hiding something the reader can see, to fade it back in,
+   is a flash and not a reveal, and on a short page it would be most of the content.
+   Descendants of a marked element are skipped too - querySelectorAll is in document order, so an
+   ancestor is always marked first and .closest catches the child before it animates twice. */
+var RVSEL = '.sechead,.cards,.panel,.scroll,.grid2';
 if('IntersectionObserver' in window && !RM){
   var io=new IntersectionObserver(function(es){es.forEach(function(x){
-    if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});
-  document.querySelectorAll('.rv').forEach(function(el,i){
-    el.style.transitionDelay=((i%6)*0.055)+'s';io.observe(el);});
-} else {
-  document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
+    if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.08});
+  var seen=0;
+  document.querySelectorAll(RVSEL).forEach(function(el){
+    if(el.closest('.rv')) return;
+    if(el.getBoundingClientRect().top < innerHeight*0.92) return;
+    el.classList.add('rv');
+    el.style.transitionDelay=((seen++ % 4)*0.06)+'s';
+    io.observe(el);
+  });
 }
 })();
 </script>
