@@ -571,6 +571,43 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
   .hero{padding-top:0}
   .fineline{border-top:1px solid #bbb;padding-top:.5rem}
 }
+/* ---------------------------------------------------------------- tables and interaction
+   Added 16 Nov 2026. The stylesheet already had row hover (.ledger tbody tr:hover above) and
+   tabular figures. What it did not have was MOTION, or a rail for the eye to track along:
+   three transitions existed across the whole file and nth-child appeared zero times, so every
+   table was a flat field of hairlines. On nfl.html that survives at 94 rows; cfb.html carries
+   348 and does not.
+
+   THE STRIPE IS A BACKGROUND, NOT A BORDER, and it is one neutral rather than a new theme
+   token. rgba(127,140,133,.055) darkens against the light ground and lightens against the dark
+   one, so it needs no entry in either :root block and cannot drift out of step with them the
+   way a hardcoded pair would.
+
+   HOVER PAINTS td, NOT tr, and that is load-bearing rather than stylistic: a tr background
+   sits BEHIND its cells, so it loses to any td carrying one of its own - the stripe would win
+   on every even row and the hover would appear broken on half the table.
+
+   THE BRAND EDGE IS AN INSET SHADOW, not a border-left, so it occupies no width and cannot
+   shift the column grid by 3px on hover. */
+.ledger tbody tr{transition:background .12s ease}
+.ledger tbody tr:nth-child(even) td{background:rgba(127,140,133,.055)}
+.ledger tbody tr:hover td{background:var(--raise)}
+.ledger tbody tr:hover td:first-child{box-shadow:inset 3px 0 0 var(--brand)}
+.ledger td,.ledger th{font-variant-numeric:tabular-nums lining-nums}
+.ledger td{padding-block:.62rem}
+.ledger th{padding-block:.6rem}
+
+/* THE INTERACTION LAYER. Nothing below changes a colour or a layout - it only makes the ones
+   already chosen arrive over 120ms instead of instantly. That is most of the difference between
+   a page that reads as built and one that reads as generated.
+   :focus-visible is the part that is not cosmetic: keyboard navigation previously got whatever
+   the browser defaulted to, which on a dark ground is frequently invisible. */
+a{transition:color .12s ease,background-color .12s ease,border-color .12s ease,opacity .12s ease}
+button,summary,.chip{transition:background-color .12s ease,border-color .12s ease,color .12s ease}
+summary:hover{background:var(--raise)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:2px}
+/* No prefers-reduced-motion block added here: the stylesheet already carries one and a
+   second would be a duplicate rule nobody would know to keep in step with the first. */
 </style>
 </head>
 <body>
@@ -655,7 +692,7 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 20:45 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 21:30 UTC</p>
 </div>
 </div></footer>
 </main>
