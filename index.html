@@ -668,7 +668,11 @@ body.hot #cur2{transform:scale(1.9);opacity:.5}
 #intro .n{font-family:var(--mono);font-size:clamp(3rem,13vw,9rem);font-weight:700;letter-spacing:-.05em;color:var(--win);font-variant-numeric:tabular-nums}
 #intro .bar{position:absolute;left:0;bottom:0;height:2px;background:var(--brand);width:0}
 
-#cv{position:absolute;inset:0;z-index:0}
+/* WIDTH AND HEIGHT ARE EXPLICIT BECAUSE A CANVAS IS A REPLACED ELEMENT. With inset:0 and an
+   auto width, a replaced element resolves to its INTRINSIC size - the canvas default of
+   300x150 - not to its containing block. The field was being drawn into a 300px box in the
+   corner of an 877px hero, which is why it looked like it had not rendered at all. */
+#cv{position:absolute;inset:0;width:100%;height:100%;z-index:0}
 .hero .veil{z-index:1}
 
 /* THE HEADLINE BREAKS THE VIEWPORT. 118% width with the lines masked and sliding up on a long
@@ -835,7 +839,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 <div class="hero solo"><canvas id="cv" data-w="446" data-l="451" data-p="1" aria-hidden="true"></canvas><div class="veil" aria-hidden="true"></div><div class="wrap">
 <h1><span><i>Graded against</i></span><span><i>the closing line.</i></span><span><i><em>Losses included.</em></i></span></h1>
 <div class="htiles">
-<div class="htile lead"><div class="k">Mean closing-line value</div><div class="v pos"><span data-count="0.55" data-dp="2" data-sfx="%" data-sign="1">+0.55</span>%</div><div class="s">446 captured closes</div></div>
+<div class="htile lead"><div class="k">Mean closing-line value</div><div class="v pos"><span data-count="0.55" data-dp="2" data-sfx="%" data-sign="1">+0.55%</span></div><div class="s">446 captured closes</div></div>
 <div class="htile "><div class="k">Bot Play of the Day</div><div class="v pos">24-19</div><div class="s">56% &middot; 44 crowned, CLV +0.34%</div></div>
 <div class="htile "><div class="k">Straight record</div><div class="v neg">446-451-1</div><div class="s">902 picks logged</div></div>
 </div><div class="scts"><a class="sct" href="soccer.html"><span class="n">Soccer</span><span class="r neg">164-177</span><span class="c pos">+0.76%</span></a><a class="sct" href="cfb.html"><span class="n">CFB</span><span class="r pos">173-160</span><span class="c pos">+0.04 pts</span></a><a class="sct" href="nfl.html"><span class="n">NFL</span><span class="r neg">40-42-1</span><span class="c pos">+0.03 pts</span></a><a class="sct" href="nhl.html"><span class="n">NHL</span><span class="r flat">15-15</span><span class="c pos">+0.72%</span></a><a class="sct" href="nba.html"><span class="n">NBA</span><span class="r pos">54-51-1</span><span class="c pos">+0.20 pts</span></a></div><p class="lede herofoot">Updated daily. CLV asks whether the price beat where the market finished, and it is published for every board, <strong>including the negative ones</strong>. <a href="method.html">How it works</a>.</p>
@@ -887,7 +891,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 22:45 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 22:49 UTC</p>
 </div>
 </div></footer>
 </main>
