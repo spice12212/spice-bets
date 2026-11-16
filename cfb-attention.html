@@ -744,6 +744,18 @@ main{counter-reset:sec}
 .sechead>*{position:relative;z-index:1}
 @media(max-width:700px){ .sechead::after{font-size:3rem;opacity:.5;top:-.1em} }
 
+/* ================================================================ FILM GRAIN
+   A single generated-noise layer over the whole page at 3.5% - enough that the flat near-black
+   stops reading as a blank #070506 fill and starts reading as a surface, not enough to be
+   visible as texture on its own. It is on html::after because body::before AND body::after are
+   both already spoken for (safe-area inset, ruled grid), and a third overlay fighting for one
+   of those would silently kill whichever lost.
+   SVG feTurbulence rather than a PNG: no request, no bytes on the wire, and it scales to any
+   viewport without tiling seams. pointer-events:none so it never eats a click. */
+html::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+@media(prefers-reduced-motion:reduce){html::after{opacity:.02}}
+
 /* ================================================================ THE MASTHEAD, RETINTED
    *** header.top AND nav.top WERE NEVER TOUCHED BY THE WARM PALETTE. *** The bar was #111312
    with #9aa19c links, a #272a28 rule and a #1e211f hover - every one of them a cool grey from
@@ -1007,7 +1019,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:34 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:36 UTC</p>
 </div>
 </div></footer>
 </main>
@@ -1097,6 +1109,37 @@ if(intro){
       if(k<1&&!fired)requestAnimationFrame(run);else finish();})(0);
   }
 } else { light(); }
+
+/* ---- NAV DECODE.
+   Each nav label scrambles and resolves left-to-right on hover. It only works because the nav
+   is set in a MONOSPACE face at a fixed size: in a proportional face every substituted glyph
+   would change the label's width and the whole row would jitter as the reader moved across it.
+   The real text is captured once, up front, and restored on mouseleave AND when the run ends,
+   so an interrupted animation can never leave a link reading "QJXZ". Skipped entirely under
+   prefers-reduced-motion, and skipped for the one nav item that is an image rather than text. */
+(function(){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var CH = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  document.querySelectorAll('nav.top a').forEach(function(a){
+    if(a.querySelector('img')) return;
+    var real = a.textContent, timer = null;
+    if(!real || real.length > 24) return;
+    a.addEventListener('mouseenter', function(){
+      var f = 0;
+      clearInterval(timer);
+      timer = setInterval(function(){
+        f++;
+        var out = '';
+        for(var k = 0; k < real.length; k++){
+          out += (real[k] === ' ' || k < f / 2) ? real[k] : CH[(Math.random() * CH.length) | 0];
+        }
+        a.textContent = out;
+        if(f / 2 >= real.length){ clearInterval(timer); a.textContent = real; }
+      }, 28);
+    });
+    a.addEventListener('mouseleave', function(){ clearInterval(timer); a.textContent = real; });
+  });
+})();
 
 /* ---- THE WORDMARK IS JUSTIFIED BY MEASUREMENT.
    SPICE and BETS are different letter counts, so they only line up if the shorter one is
