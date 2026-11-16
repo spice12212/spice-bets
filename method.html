@@ -1021,7 +1021,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:50 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:58 UTC</p>
 </div>
 </div></footer>
 </main>
@@ -1048,8 +1048,27 @@ var cv=document.getElementById('cv');
 if(cv && cv.getContext){
   var ctx=cv.getContext('2d'),DPR=Math.min(devicePixelRatio||1,2),ps=[];
   var W=+cv.dataset.w||0,L=+cv.dataset.l||0,P=+cv.dataset.p||0;
-  function size(){cv.width=cv.offsetWidth*DPR;cv.height=cv.offsetHeight*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);}
-  size();addEventListener('resize',size);
+  /* *** THE CANVAS MUST BE RESIZED BY THE ELEMENT, NOT BY THE WINDOW. *** This listened only
+     for window resize, but the hero's HEIGHT changes several times with no window resize at all:
+     when the intro overlay closes, when .lit reveals the stat tiles, and when the display face
+     finishes loading. Each time, the backing store kept its older, taller dimensions while the
+     element's box shrank - so the browser scaled the whole drawing down into the shorter box,
+     squashing every square particle into a wide dash and compressing the field into a band along
+     the bottom edge. It was not the particles piling up; it was the picture being squashed.
+     Particle positions are rescaled proportionally on every size change too, otherwise a shorter
+     hero leaves them clustered in the top fraction of their old space. */
+  var lastW = 0, lastH = 0, frame = 0;
+  function size(){
+    var w = cv.offsetWidth, h = cv.offsetHeight;
+    if(!w || !h) return;
+    if(lastW && lastH && (w !== lastW || h !== lastH)){
+      for(var q = 0; q < ps.length; q++){ ps[q].x *= w / lastW; ps[q].y *= h / lastH; }
+    }
+    lastW = w; lastH = h;
+    cv.width = w * DPR; cv.height = h * DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+  }
+  size(); addEventListener('resize', size);
+  if(window.ResizeObserver){ new ResizeObserver(size).observe(cv); }
   var cols=['#19e08a','#ff4d44','#3a2225'],cnt=[W,L,P];
   for(var k=0;k<3;k++)for(var i=0;i<cnt[k];i++)ps.push({
     x:Math.random()*cv.offsetWidth,y:Math.random()*cv.offsetHeight,
@@ -1064,6 +1083,12 @@ if(cv && cv.getContext){
     ctx.globalAlpha=1;
   }
   function step(){
+    /* A ResizeObserver is the right tool and is attached above, but its callbacks are DEFERRED
+       while a page is backgrounded or throttled, and a stale backing store is exactly the bug
+       this is meant to prevent - the field reappears squashed the moment the tab is looked at.
+       Re-checking the box every 30 frames costs one layout read per half second and makes the
+       correctness independent of when the observer happens to fire. */
+    if((++frame % 30) === 0 && (cv.offsetWidth !== lastW || cv.offsetHeight !== lastH)) size();
     t+=.0045;
     for(var i=0;i<ps.length;i++){var q=ps[i];
       q.x+=q.vx+Math.sin(t+q.ph)*.14;q.y+=q.vy+Math.cos(t*.8+q.ph)*.1;
