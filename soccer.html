@@ -755,17 +755,27 @@ main{counter-reset:sec}
    own box and its own --split and puts the line there. A hardcoded top would be right on one
    screen and visibly off by a few pixels on every other, and "a few pixels" is precisely the
    difference between a line through the name and a line near it. */
-header.top{--tilt:-1.15deg; --linetop:46px}
-header.top::after{content:"";position:absolute;left:-6vw;right:-6vw;top:var(--linetop);height:2px;
+/* *** overflow:hidden IS LOad-BEARING. *** The line is absolutely positioned to -6vw on both
+   sides so it bleeds off the screen, and an absolutely positioned box that sticks out past
+   its containing block still counts as page overflow: at 375px it widened the document to
+   397 and gave the whole site a horizontal scroll. Clipping it at the masthead keeps the
+   bleed and loses the scrollbar. */
+header.top{--tilt:-1.15deg; overflow:hidden}
+/* A REAL ELEMENT, NOT A PSEUDO. ::after could not be measured - getBoundingClientRect does not
+   reach a pseudo-element - so when the line landed in the wrong place there was no way to ask it
+   where it actually was, only to re-read a computed style that disagreed with the screen. An
+   <i> can be measured, logged and corrected. */
+header.top .hline{position:absolute;left:-6vw;right:-6vw;height:2px;
   background:var(--brand);transform:rotate(var(--tilt));transform-origin:center;
-  pointer-events:none;z-index:0;opacity:.9;transition:top .45s cubic-bezier(.16,1,.3,1)}
+  pointer-events:none;z-index:0;opacity:.9;display:block;
+  transition:top .45s cubic-bezier(.16,1,.3,1)}
 header.top .wrap{z-index:1}
 /* the glyph cut carries the same tilt: 180deg is a flat top-to-bottom boundary, so subtracting
    the tilt rotates the boundary the same way transform:rotate() does. */
 header.top .mark .wm{background:linear-gradient(calc(180deg + var(--tilt)),
   var(--ink) 0 var(--split), var(--brand) var(--split) 100%);
   -webkit-background-clip:text;background-clip:text}
-@media(max-width:620px){ header.top::after{left:-12vw;right:-12vw} }
+@media(max-width:620px){ header.top .hline{left:-14vw;right:-14vw} }
 
 /* ================================================================ FILM GRAIN
    A single generated-noise layer over the whole page at 3.5% - enough that the flat near-black
@@ -1061,7 +1071,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:45 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:47 UTC</p>
 </div>
 </div></footer>
 </main>
@@ -1159,11 +1169,25 @@ if(intro){
 function placeHeaderLine(){
   var h = document.querySelector('header.top'), wm = h && h.querySelector('.wm');
   if(!h || !wm) return;
+  var line = h.querySelector('.hline');
+  if(!line){ line = document.createElement('i'); line.className = 'hline'; line.setAttribute('aria-hidden','true'); h.appendChild(line); }
   var hr = h.getBoundingClientRect(), wr = wm.getBoundingClientRect();
   if(!wr.height) return;
   var split = parseFloat(getComputedStyle(wm).getPropertyValue('--split'));
   if(!isFinite(split)) split = 76;
-  h.style.setProperty('--linetop', (wr.top - hr.top + wr.height * split / 100).toFixed(1) + 'px');
+  /* *** THE TILT HAS TO BE SOLVED FOR, NOT IGNORED. *** The line is rotated about its own
+     centre, which is the centre of the MASTHEAD, while the wordmark sits far to the left. At
+     1.15 degrees over a 400px lever that is six pixels of drop by the time the line reaches the
+     name - so a line placed at the cut's height passed six pixels under it, and the two read as
+     a cut and a separate rule instead of as one line.
+     Place the centre so the line is at the cut WHERE IT CROSSES THE WORDMARK:
+       y(x) = cy + (x - cx)*tan(tilt)   =>   cy = cutY - (wmCx - cx)*tan(tilt)
+     Minus one more pixel to centre the 2px rule on the colour change rather than hang it below. */
+  var tilt = parseFloat(getComputedStyle(h).getPropertyValue('--tilt'));
+  if(!isFinite(tilt)) tilt = 0;
+  var dx  = (wr.left + wr.width / 2) - (hr.left + hr.width / 2);
+  var cut = wr.top - hr.top + wr.height * split / 100;
+  line.style.top = (cut - dx * Math.tan(tilt * Math.PI / 180) - 1).toFixed(1) + 'px';
 }
 if(document.fonts && document.fonts.ready){ document.fonts.ready.then(placeHeaderLine); } else { placeHeaderLine(); }
 addEventListener('resize', placeHeaderLine);
