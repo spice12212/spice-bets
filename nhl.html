@@ -608,6 +608,93 @@ summary:hover{background:var(--raise)}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:2px}
 /* No prefers-reduced-motion block added here: the stylesheet already carries one and a
    second would be a duplicate rule nobody would know to keep in step with the first. */
+/* ================================================================= v4 SKIN, 16 Nov 2026
+   A full visual re-skin, applied as an OVERRIDE BLOCK at the end of the stylesheet rather than
+   by rewriting the rules above it. That choice is deliberate and worth stating:
+
+     - the markup does not change, so no PowerShell emitting HTML had to be touched. Every
+       class this restyles (.hero, .htile, .card, .bname, .clv, .ledger, .flag) already existed;
+     - it is reversible by deleting one contiguous block, which matters on a generator that
+       pushes straight to a live site via autograde;
+     - later rules win at equal specificity, so the old design is overridden rather than deleted,
+       and anything this block misses still renders with its original styling instead of naked.
+
+   THE DESIGN: a ledger. Warm near-black, a ruled 32px grid the whole page sits on, oversized
+   Archivo at heavy widths for display, JetBrains Mono for every number, and red committed to
+   rather than used as a garnish. Tokens are redefined in all THREE theme shapes the sheet
+   declares - :root, the prefers-color-scheme media query, and :root[data-theme] - because
+   missing one leaves a visitor on that path with half the old palette. */
+
+:root{
+  --ground:#fbf7f4; --surface:#ffffff; --raise:#f3ece8;
+  --ink:#120c0b; --ink-soft:#4e403d; --ink-faint:#6f5e5a;
+  --line:#e6dad4; --line-soft:#f0e7e2;
+  --brand:#d8281a; --brand-soft:#fde9e6; --brand-line:#f0b9b2;
+  --win:#0b7a4a; --loss:#c22c1e;
+  --rule:rgba(18,12,11,.045); --edge:#d9c7c0;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --ground:#070506; --surface:#0f0b0c; --raise:#17100f;
+  --ink:#f7f3f2; --ink-soft:#a0908f; --ink-faint:#6b5755;
+  --line:#271719; --line-soft:#1a1012;
+  --brand:#ff2d1f; --brand-soft:#2a100c; --brand-line:#5c1d16;
+  --win:#19e08a; --loss:#ff4d44;
+  --rule:rgba(255,255,255,.028); --edge:#3a2225;
+} }
+:root[data-theme="dark"]{
+  --ground:#070506; --surface:#0f0b0c; --raise:#17100f;
+  --ink:#f7f3f2; --ink-soft:#a0908f; --ink-faint:#6b5755;
+  --line:#271719; --line-soft:#1a1012;
+  --brand:#ff2d1f; --brand-soft:#2a100c; --brand-line:#5c1d16;
+  --win:#19e08a; --loss:#ff4d44;
+  --rule:rgba(255,255,255,.028); --edge:#3a2225;
+}
+
+/* THE RULED PAPER. ::before, not ::after - the sheet already uses ::after for its grain layer
+   and stacking two full-bleed pseudo-elements on one element would have the grain fight the
+   rules for the same z-index. */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:repeating-linear-gradient(to bottom,transparent 0 31px,var(--rule) 31px 32px),
+                   repeating-linear-gradient(to right,transparent 0 31px,var(--rule) 31px 32px)}
+body>*{position:relative;z-index:1}
+
+/* DISPLAY TYPE. The scale gap is the point: very large down to 10px micro-labels with little in
+   between, which is most of what separates a designed page from a generated one. */
+h1{font-weight:900;font-variation-settings:'wdth' 108;letter-spacing:-.042em;line-height:.9}
+h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
+.eyebrow,.cap,.k,.smallprint{font-family:var(--mono);letter-spacing:.2em;text-transform:uppercase;font-size:10px;color:var(--ink-faint)}
+
+.flag{border-bottom:1px solid var(--line)}
+.wm{font-variation-settings:'wdth' 62;font-weight:900;letter-spacing:.07em}
+
+/* HERO STATS. Four equal tiles read as four equal claims; the mean CLV is the page's whole
+   argument, so the first tile is promoted and the rest become a supporting rail. */
+.hero .htiles{align-items:end}
+.htile .v{font-family:var(--mono);font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.04em;line-height:.8}
+.htile.solo .v,.htiles .htile:first-child .v{font-size:clamp(3.4rem,9vw,7rem);color:var(--win)}
+.htile:not(:first-child) .v{font-size:clamp(1.5rem,3vw,2.1rem)}
+.htile .k{display:block;margin-bottom:.5rem}
+
+/* BOARD CARDS -> BANDS. Same markup, read as full-width rows with a red rule that wipes in. */
+.card{position:relative;background:transparent;border:0;border-top:1px solid var(--line);
+  border-radius:0;padding:1.5rem 0;transition:background .18s,padding-left .18s}
+.card:last-of-type{border-bottom:1px solid var(--line)}
+.card:hover{background:var(--surface);padding-left:1.1rem}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--brand);
+  transform:scaleY(0);transition:transform .2s}
+.card:hover::before{transform:scaleY(1)}
+.bname{font-size:clamp(1.25rem,2.6vw,2rem);font-weight:900;font-variation-settings:'wdth' 88;letter-spacing:-.025em}
+.bfig,.card .clv{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.card .clv{font-size:1.45rem;font-weight:700}
+
+/* LEDGER. Mono throughout - these are numbers and should read as a terminal, not as prose. */
+.ledger{font-family:var(--mono);font-size:12.5px}
+.ledger th{font-size:9.5px;letter-spacing:.16em;border-bottom:1px solid var(--edge);background:transparent}
+.ledger td{border-bottom:1px solid var(--line-soft);color:var(--ink-soft)}
+.ledger td:nth-child(2){color:var(--ink);font-family:var(--body);font-size:13.5px;font-weight:500}
+.ledger tbody tr:nth-child(even) td{background:transparent}
+.ledger tbody tr:hover td{background:var(--surface)}
+.ledger tbody tr:hover td:first-child{box-shadow:inset 3px 0 0 var(--brand)}
 </style>
 </head>
 <body>
@@ -688,7 +775,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 21:30 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 21:45 UTC</p>
 </div>
 </div></footer>
 </main>
