@@ -1,5 +1,11 @@
 <!doctype html>
-<html lang="en">
+<!-- DARK ONLY, PINNED. Decided 16 Nov 2026 - the warm palette was designed dark and the
+     light rendering was always the weaker of the two. data-theme is set here rather than
+     the light token block being deleted because :root[data-theme="dark"] already carries a
+     complete palette and outranks the bare :root defaults on specificity, so one attribute
+     turns the whole site dark without touching a single colour value - and nothing silently
+     half-reverts if a rule somewhere still reads the light tokens. -->
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -9,8 +15,7 @@
      green above a near-black page - the one piece of the old skin a visitor could still see.
      Two tags with media queries, because a single theme-color cannot be right in both modes
      and the page honours the system setting. -->
-<meta name="theme-color" content="#fbf7f4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#070506" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#070506">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c42e26'/%3E%3Ctext x='16' y='22' font-family='Segoe UI,Arial,sans-serif' font-size='19' font-weight='700' fill='%23ffffff' text-anchor='middle'%3ES%3C/text%3E%3Crect x='9' y='24.5' width='14' height='2.5' rx='1.2' fill='%23ffffff' fill-opacity='0.85'/%3E%3C/svg%3E">
 <link rel="canonical" href="https://spicebets.bet/">
 <meta property="og:type" content="website">
@@ -718,6 +723,61 @@ body.hot #cur2{transform:scale(1.9);opacity:.5}
 .card:hover{background:transparent}
 
 .mq{border-block:1px solid var(--line);overflow:hidden;padding:.85rem 0;background:var(--surface)}
+
+/* ================================================================ EDITORIAL SECTION INDEX
+   Every section head carries its own number, set in the page's own counter. CSS counters do this
+   with NO markup and no PowerShell: the sections are numbered by their order in the document, so
+   a board page with four sections and the homepage with six both number correctly and neither can
+   drift out of sync with the content. Nothing to maintain, nothing to pass in.
+   The numeral is OUTLINED rather than filled, and sits at the right end of the section rule. The
+   right is deliberate - the left gutter is where a numeral would have to live outside .wrap, and
+   it would clip the moment the viewport got narrower than the layout's max width. */
+main{counter-reset:sec}
+.sechead{counter-increment:sec}
+.sechead::after{
+  content:counter(sec,decimal-leading-zero);
+  position:absolute;top:-.34em;right:0;pointer-events:none;
+  font-family:var(--mono);font-weight:700;font-size:clamp(3.2rem,8vw,7rem);line-height:1;
+  letter-spacing:-.06em;color:transparent;
+  -webkit-text-stroke:1px var(--edge);text-stroke:1px var(--edge);
+  opacity:.75;z-index:0}
+.sechead>*{position:relative;z-index:1}
+@media(max-width:700px){ .sechead::after{font-size:3rem;opacity:.5;top:-.1em} }
+
+/* ---------------------------------------------------------------- the CLV column as a chart */
+.ledger td.clvbar{position:relative}
+.ledger td.clvbar::after{content:"";position:absolute;right:.9rem;bottom:5px;height:2px;
+  width:var(--v,0%);max-width:calc(100% - 1.8rem);border-radius:1px;opacity:.55;
+  transition:opacity .15s}
+.ledger td.clvbar.up::after{background:var(--win)}
+.ledger td.clvbar.down::after{background:var(--loss)}
+.ledger tbody tr:hover td.clvbar::after{opacity:1}
+
+/* ---------------------------------------------------------------- the scroll rail */
+.rail{position:fixed;left:18px;top:22vh;bottom:14vh;width:1px;background:var(--line);z-index:40;pointer-events:none}
+.rail .rfill{position:absolute;left:0;top:0;width:1px;background:var(--brand);height:0}
+.rail .rnum{position:absolute;left:-4px;bottom:-2.3rem;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.1em;color:var(--ink-faint);writing-mode:vertical-rl;transform:rotate(180deg)}
+@media(max-width:1099px){.rail{display:none}}
+
+/* ================================================================ THE BAND
+   A full-bleed strip of outlined display type that slides forever. It is the one purely graphic
+   element on the site and it is kept honest: the words in it are the site's own claims, not
+   filler. The track is DUPLICATED and the keyframe travels exactly -50%, which is what makes the
+   loop seamless - at -50% the second copy is sitting precisely where the first began. Any other
+   distance, or an unduplicated track, visibly jumps. */
+.band{overflow:hidden;border-block:1px solid var(--line);background:var(--ground);
+  padding:clamp(1.1rem,2.6vw,2.1rem) 0;position:relative}
+.band .track{display:flex;width:max-content;animation:bandslide 38s linear infinite}
+.band span{display:block;white-space:nowrap;padding-right:2.5rem;
+  font-family:var(--display);font-weight:900;font-variation-settings:'wdth' 112;
+  font-size:clamp(2.1rem,6.5vw,5rem);line-height:1;letter-spacing:-.04em;
+  color:transparent;-webkit-text-stroke:1.4px var(--ink-faint);text-stroke:1.4px var(--ink-faint)}
+.band span em{font-style:normal;color:var(--brand);-webkit-text-stroke:0;text-stroke:0}
+@keyframes bandslide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.band:hover .track{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.band .track{animation:none}}
+
 .mq div{display:flex;gap:2.6rem;width:max-content;animation:mqslide 48s linear infinite;
   font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--ink-faint);text-transform:uppercase}
 @keyframes mqslide{to{transform:translateX(-50%)}}
@@ -842,47 +902,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <main id="main">
-<script>
-(function(){
-  var r = document.documentElement, KEY = 'sb-theme';
-  var SUN  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.2v2.3M12 19.5v2.3M4.1 4.1l1.6 1.6M18.3 18.3l1.6 1.6M2.2 12h2.3M19.5 12h2.3M4.1 19.9l1.6-1.6M18.3 5.7l1.6-1.6"/></svg>';
-  var MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.4A8.6 8.6 0 1 1 9.6 3.5a6.9 6.9 0 0 0 10.9 10.9z"/></svg>';
-  function read(){ try { return localStorage.getItem(KEY); } catch(e){ return null; } }
-  function write(v){ try { localStorage.setItem(KEY, v); } catch(e){} }
-  var saved = read();
-  if(saved === 'dark' || saved === 'light'){ r.setAttribute('data-theme', saved); }
-  function isDark(){
-    var set = r.getAttribute('data-theme');
-    if(set) return set === 'dark';
-    try { return window.matchMedia('(prefers-color-scheme: dark)').matches; } catch(e){ return false; }
-  }
-  function paint(){
-    var btn = document.getElementById('themeToggle');
-    if(!btn) return;
-    var dark = isDark();
-    btn.innerHTML = dark ? SUN : MOON;
-    btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
-    btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
-  }
-  function wire(){
-    var btn = document.getElementById('themeToggle');
-    if(!btn) return;
-    btn.addEventListener('click', function(){
-      var next = isDark() ? 'light' : 'dark';
-      r.setAttribute('data-theme', next);
-      write(next);
-      paint();
-    });
-    paint();
-  }
-  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', wire); } else { wire(); }
-  try {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(){
-      if(!r.getAttribute('data-theme')) paint();
-    });
-  } catch(e){}
-})();
-</script><header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><span class="wm"><b>SPICE</b><i>BETS</i></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><button id="themeToggle" class="themebtn" type="button" aria-label="Switch theme"></button><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" width="2003" height="214" decoding="async" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;"><span class="wrap"><i class="pdot" style="background:#1652f0"></i><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;"><span class="wrap"><i class="pdot" style="background:#0b0d10"></i><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;"><span class="wrap"><i class="pdot" style="background:#c0f018"></i><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div id="intro" data-n="898"><div class="n">0</div><div class="bar"></div></div>
+<header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><span class="wm"><b>SPICE</b><i>BETS</i></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" width="2003" height="214" decoding="async" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;"><span class="wrap"><i class="pdot" style="background:#1652f0"></i><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;"><span class="wrap"><i class="pdot" style="background:#0b0d10"></i><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;"><span class="wrap"><i class="pdot" style="background:#c0f018"></i><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div id="intro" data-n="898"><div class="n">0</div><div class="bar"></div></div>
 <div class="hero solo recfirst"><canvas id="cv" data-w="446" data-l="451" data-p="1" aria-hidden="true"></canvas><div class="veil" aria-hidden="true"></div><div class="wrap">
 <!-- THE RECORD COMES FIRST, AND THE SENTENCE SECOND. Changed 16 Nov 2026.
      The headline used to open the site at clamp(...,11.5vw,10rem) across 116% of the viewport, so
@@ -896,7 +916,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 <div class="htile "><div class="k">Bot Play of the Day</div><div class="v pos">24-19</div><div class="s">56% &middot; 44 crowned, CLV +0.34%</div></div>
 </div>
 <h1><span><i>Graded against</i></span><span><i>the closing line.</i></span><span><i><em>Losses included.</em></i></span></h1><div class="scts"><a class="sct" href="soccer.html"><span class="n">Soccer</span><span class="r neg">164-177</span><span class="c pos">+0.76%</span></a><a class="sct" href="cfb.html"><span class="n">CFB</span><span class="r pos">173-160</span><span class="c pos">+0.04 pts</span></a><a class="sct" href="nfl.html"><span class="n">NFL</span><span class="r neg">40-42-1</span><span class="c pos">+0.03 pts</span></a><a class="sct" href="nhl.html"><span class="n">NHL</span><span class="r flat">15-15</span><span class="c pos">+0.72%</span></a><a class="sct" href="nba.html"><span class="n">NBA</span><span class="r pos">54-51-1</span><span class="c pos">+0.20 pts</span></a></div><p class="lede herofoot">Updated daily. CLV asks whether the price beat where the market finished, and it is published for every board, <strong>including the negative ones</strong>. <a href="method.html">How it works</a>.</p>
-</div></div><section><div class="wrap"><div class="sechead"><div><h2>The boards</h2><p>Each sport is screened, logged and graded on its own. Open one for every pick it has ever made.</p></div></div><div class="cards bleed"><a class="card" href="soccer.html"><span class="fill" aria-hidden="true"></span><div class="bname"><h3>Soccer</h3></div><div class="feet"><div>Picks<b>341</b></div><div>Record<b>164-177</b></div><div>Beat close<b>50%</b></div></div><div class="bfig"><span class="clv pos">+0.76%</span><span class="cap">mean CLV / 328 closes</span></div></a><a class="card" href="cfb.html"><span class="fill" aria-hidden="true"></span><div class="bname"><h3>College Football</h3></div><div class="feet"><div>Picks<b>336</b></div><div>Record<b>173-160</b></div><div>Beat number<b>52%</b></div></div><div class="bfig"><span class="clv pos">+0.04<em>pts</em></span><span class="cap">line CLV / 324 closes</span></div></a><a class="card" href="nfl.html"><span class="fill" aria-hidden="true"></span><div class="bname"><h3>NFL</h3></div><div class="feet"><div>Picks<b>84</b></div><div>Record<b>40-42-1</b></div><div>Beat number<b>50%</b></div></div><div class="bfig"><span class="clv pos">+0.03<em>pts</em></span><span class="cap">line CLV / 83 closes</span></div></a><a class="card" href="nhl.html"><span class="fill" aria-hidden="true"></span><div class="bname"><h3>NHL</h3></div><div class="feet"><div>Picks<b>30</b></div><div>Record<b>15-15</b></div><div>Beat close<b>47%</b></div></div><div class="bfig"><span class="clv pos">+0.72%</span><span class="cap">mean CLV / 30 closes</span></div></a><a class="card" href="nba.html"><span class="fill" aria-hidden="true"></span><div class="bname"><h3>NBA</h3><span class="tag">paper</span></div><div class="feet"><div>Picks<b>110</b></div><div>Record<b>54-51-1</b></div><div>Beat number<b>52%</b></div></div><div class="bfig"><span class="clv pos">+0.20<em>pts</em></span><span class="cap">line CLV / 106 closes</span></div></a></div><p class="note" style="margin-top:1.25rem;font-size:.88rem"><strong>Spread boards are in points, not percent, and the two do not average.</strong> On a spread the number moves, and a price-only percentage scores that as nothing. On the picks whose line held, the price comparison still works: +0.29% in college football over 138, -0.07% in the NFL over 49, +0.09% in the NBA over 46. Baseball is out of season and its board is hidden, but its 111 picks are still inside every site-wide figure.</p></div></section><section class="alt"><div class="wrap"><div class="sechead"><div><h2>Closing-line value by week</h2><p>Each bar is the average CLV of every percent-scored pick graded that week, in percentage points of implied probability. The spread boards - college football, the NFL and the NBA - are measured in points and are not in these bars. The number beneath each one is how many closes it is built on; weeks under five are left out, because at that size the bar says more about the sample than the book.</p></div></div><div class="panel bleed"><svg class="chart" viewBox="0 0 760 228" role="img" aria-label="Mean closing-line value by month"><line x1="38.0" y1="30.0" x2="746.0" y2="30.0" stroke="var(--line-soft)" stroke-width="1" stroke-dasharray="2 4"/><text x="30.0" y="33.0" fill="var(--ink-faint)" font-size="9.5" font-family="monospace" text-anchor="end" opacity=".6">+1.5</text><line x1="38.0" y1="109.0" x2="746.0" y2="109.0" stroke="var(--ink-faint)" stroke-width="1.25"/><text x="30.0" y="112.0" fill="var(--ink-faint)" font-size="9.5" font-family="monospace" text-anchor="end" opacity="1">+0.0</text><line x1="38.0" y1="188.0" x2="746.0" y2="188.0" stroke="var(--line-soft)" stroke-width="1" stroke-dasharray="2 4"/><text x="30.0" y="191.0" fill="var(--ink-faint)" font-size="9.5" font-family="monospace" text-anchor="end" opacity=".6">-1.5</text><rect x="60.4" y="109.0" width="26.0" height="1.2" fill="var(--loss)" rx="1"><title>week of 2026-08-31: -0.02% over 15 closes</title></rect><text x="73.4" y="123.2" fill="var(--loss)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">-0.02</text><text x="73.4" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">31 Aug</text><text x="73.4" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=15</text><rect x="131.2" y="103.0" width="26.0" height="6.0" fill="var(--accent)" rx="1"><title>week of 2026-09-07: +0.11% over 48 closes</title></rect><text x="144.2" y="96.0" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+0.1</text><text x="144.2" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">7 Sep</text><text x="144.2" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=48</text><rect x="202.0" y="95.4" width="26.0" height="13.6" fill="var(--accent)" rx="1"><title>week of 2026-09-14: +0.26% over 97 closes</title></rect><text x="215.0" y="88.4" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+0.3</text><text x="215.0" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">14 Sep</text><text x="215.0" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=97</text><rect x="272.8" y="56.9" width="26.0" height="52.1" fill="var(--accent)" rx="1"><title>week of 2026-09-21: +0.99% over 30 closes</title></rect><text x="285.8" y="49.9" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+1.0</text><text x="285.8" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">21 Sep</text><text x="285.8" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=30</text><rect x="343.6" y="104.7" width="26.0" height="4.3" fill="var(--accent)" rx="1"><title>week of 2026-09-28: +0.08% over 8 closes</title></rect><text x="356.6" y="97.7" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+0.1</text><text x="356.6" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">28 Sep</text><text x="356.6" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=8</text><rect x="414.4" y="109.0" width="26.0" height="1.4" fill="var(--loss)" rx="1"><title>week of 2026-10-05: -0.03% over 23 closes</title></rect><text x="427.4" y="123.4" fill="var(--loss)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">-0.03</text><text x="427.4" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">5 Oct</text><text x="427.4" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=23</text><rect x="485.2" y="79.0" width="26.0" height="30.0" fill="var(--accent)" rx="1"><title>week of 2026-10-12: +0.57% over 67 closes</title></rect><text x="498.2" y="72.0" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+0.6</text><text x="498.2" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">12 Oct</text><text x="498.2" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=67</text><rect x="556.0" y="38.9" width="26.0" height="70.1" fill="var(--accent)" rx="1"><title>week of 2026-10-19: +1.33% over 52 closes</title></rect><text x="569.0" y="31.9" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+1.3</text><text x="569.0" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">19 Oct</text><text x="569.0" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=52</text><rect x="626.8" y="109.0" width="26.0" height="1.0" fill="var(--loss)" rx="1"><title>week of 2026-10-26: -0.00% over 39 closes</title></rect><text x="639.8" y="123.0" fill="var(--loss)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">-0.00</text><text x="639.8" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">26 Oct</text><text x="639.8" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=39</text><rect x="697.6" y="51.4" width="26.0" height="57.6" fill="var(--accent)" rx="1"><title>week of 2026-11-02: +1.09% over 63 closes</title></rect><text x="710.6" y="44.4" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+1.1</text><text x="710.6" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">2 Nov</text><text x="710.6" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=63</text></svg></div></div></section><section class="alt"><div class="wrap"><div class="sechead"><div><h2>Latest graded picks</h2><p>The ten most recently settled, across every board.</p></div></div><div class="scroll bleed"><table class="ledger"><thead><tr><th class="mono">Date</th><th>Sport</th><th>Game</th><th>Pick</th><th class="mono">Entry</th><th class="mono">Close</th><th class="mono">CLV</th><th class="mono">Result</th></tr></thead><tbody><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Texans @ Browns</td><td>Texans −4.5</td><td class="mono">-115</td><td class="mono">-100</td><td class="mono"><span class="pnd">0.0 pts</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Dolphins @ Colts</td><td>Colts −3.5</td><td class="mono">-110</td><td class="mono">-115</td><td class="mono"><span class="pos">+1.0 pts</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Patriots @ Lions</td><td>Lions −2.5</td><td class="mono">-120</td><td class="mono">-115</td><td class="mono"><span class="pnd">0.0 pts</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-11-15</td><td>College Football</td><td>Ole Miss @ Oklahoma</td><td>Oklahoma +1.5</td><td class="mono">-120</td><td class="mono">-115</td><td class="mono"><span class="pos">+4.0 pts</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Rams @ Cardinals</td><td>Rams −9.5</td><td class="mono">-110</td><td class="mono">-115</td><td class="mono"><span class="pnd">0.0 pts</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Panthers @ Saints</td><td>Saints −2.5</td><td class="mono">-110</td><td class="mono">105</td><td class="mono"><span class="neg">-1.0 pts</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Seahawks @ Raiders</td><td>Seahawks −6.5</td><td class="mono">-105</td><td class="mono">-110</td><td class="mono"><span class="pnd">0.0 pts</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-11-14</td><td>College Football</td><td>Nevada @ N. Illinois</td><td>N. Illinois +7.5</td><td class="mono">-120</td><td class="mono">-105</td><td class="mono"><span class="pos">+1.0 pts</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-11-14</td><td>College Football</td><td>FL Atlantic @ Tulsa</td><td>Tulsa −5.5</td><td class="mono">-110</td><td class="mono">-120</td><td class="mono"><span class="pnd">0.0 pts</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-11-14</td><td>College Football</td><td>App State @ Marshall</td><td>Marshall +1.5</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+3.0 pts</span></td><td class="mono"><span class="l">L</span></td></tr></tbody></table></div></div></section><section><div class="wrap">
+</div></div><section><div class="wrap"><div class="sechead"><div><h2>The boards</h2><p>Each sport is screened, logged and graded on its own. Open one for every pick it has ever made.</p></div></div><div class="cards bleed"><a class="card" href="soccer.html"><span class="fill" aria-hidden="true"></span><div class="bname"><h3>Soccer</h3></div><div class="feet"><div>Picks<b>341</b></div><div>Record<b>164-177</b></div><div>Beat close<b>50%</b></div></div><div class="bfig"><span class="clv pos">+0.76%</span><span class="cap">mean CLV / 328 closes</span></div></a><a class="card" href="cfb.html"><span class="fill" aria-hidden="true"></span><div class="bname"><h3>College Football</h3></div><div class="feet"><div>Picks<b>336</b></div><div>Record<b>173-160</b></div><div>Beat number<b>52%</b></div></div><div class="bfig"><span class="clv pos">+0.04<em>pts</em></span><span class="cap">line CLV / 324 closes</span></div></a><a class="card" href="nfl.html"><span class="fill" aria-hidden="true"></span><div class="bname"><h3>NFL</h3></div><div class="feet"><div>Picks<b>84</b></div><div>Record<b>40-42-1</b></div><div>Beat number<b>50%</b></div></div><div class="bfig"><span class="clv pos">+0.03<em>pts</em></span><span class="cap">line CLV / 83 closes</span></div></a><a class="card" href="nhl.html"><span class="fill" aria-hidden="true"></span><div class="bname"><h3>NHL</h3></div><div class="feet"><div>Picks<b>30</b></div><div>Record<b>15-15</b></div><div>Beat close<b>47%</b></div></div><div class="bfig"><span class="clv pos">+0.72%</span><span class="cap">mean CLV / 30 closes</span></div></a><a class="card" href="nba.html"><span class="fill" aria-hidden="true"></span><div class="bname"><h3>NBA</h3><span class="tag">paper</span></div><div class="feet"><div>Picks<b>110</b></div><div>Record<b>54-51-1</b></div><div>Beat number<b>52%</b></div></div><div class="bfig"><span class="clv pos">+0.20<em>pts</em></span><span class="cap">line CLV / 106 closes</span></div></a></div><p class="note" style="margin-top:1.25rem;font-size:.88rem"><strong>Spread boards are in points, not percent, and the two do not average.</strong> On a spread the number moves, and a price-only percentage scores that as nothing. On the picks whose line held, the price comparison still works: +0.29% in college football over 138, -0.07% in the NFL over 49, +0.09% in the NBA over 46. Baseball is out of season and its board is hidden, but its 111 picks are still inside every site-wide figure.</p></div></section><div class="band" aria-hidden="true"><div class="track"><span>Graded against the closing line</span><span><em>Losses included</em></span><span>902 picks logged</span><span>Every board, including the negative ones</span><span><em>No tout</em></span><span>446 captured closes</span><span>Graded against the closing line</span><span><em>Losses included</em></span><span>902 picks logged</span><span>Every board, including the negative ones</span><span><em>No tout</em></span><span>446 captured closes</span></div></div><section class="alt"><div class="wrap"><div class="sechead"><div><h2>Closing-line value by week</h2><p>Each bar is the average CLV of every percent-scored pick graded that week, in percentage points of implied probability. The spread boards - college football, the NFL and the NBA - are measured in points and are not in these bars. The number beneath each one is how many closes it is built on; weeks under five are left out, because at that size the bar says more about the sample than the book.</p></div></div><div class="panel bleed"><svg class="chart" viewBox="0 0 760 228" role="img" aria-label="Mean closing-line value by month"><line x1="38.0" y1="30.0" x2="746.0" y2="30.0" stroke="var(--line-soft)" stroke-width="1" stroke-dasharray="2 4"/><text x="30.0" y="33.0" fill="var(--ink-faint)" font-size="9.5" font-family="monospace" text-anchor="end" opacity=".6">+1.5</text><line x1="38.0" y1="109.0" x2="746.0" y2="109.0" stroke="var(--ink-faint)" stroke-width="1.25"/><text x="30.0" y="112.0" fill="var(--ink-faint)" font-size="9.5" font-family="monospace" text-anchor="end" opacity="1">+0.0</text><line x1="38.0" y1="188.0" x2="746.0" y2="188.0" stroke="var(--line-soft)" stroke-width="1" stroke-dasharray="2 4"/><text x="30.0" y="191.0" fill="var(--ink-faint)" font-size="9.5" font-family="monospace" text-anchor="end" opacity=".6">-1.5</text><rect x="60.4" y="109.0" width="26.0" height="1.2" fill="var(--loss)" rx="1"><title>week of 2026-08-31: -0.02% over 15 closes</title></rect><text x="73.4" y="123.2" fill="var(--loss)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">-0.02</text><text x="73.4" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">31 Aug</text><text x="73.4" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=15</text><rect x="131.2" y="103.0" width="26.0" height="6.0" fill="var(--accent)" rx="1"><title>week of 2026-09-07: +0.11% over 48 closes</title></rect><text x="144.2" y="96.0" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+0.1</text><text x="144.2" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">7 Sep</text><text x="144.2" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=48</text><rect x="202.0" y="95.4" width="26.0" height="13.6" fill="var(--accent)" rx="1"><title>week of 2026-09-14: +0.26% over 97 closes</title></rect><text x="215.0" y="88.4" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+0.3</text><text x="215.0" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">14 Sep</text><text x="215.0" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=97</text><rect x="272.8" y="56.9" width="26.0" height="52.1" fill="var(--accent)" rx="1"><title>week of 2026-09-21: +0.99% over 30 closes</title></rect><text x="285.8" y="49.9" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+1.0</text><text x="285.8" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">21 Sep</text><text x="285.8" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=30</text><rect x="343.6" y="104.7" width="26.0" height="4.3" fill="var(--accent)" rx="1"><title>week of 2026-09-28: +0.08% over 8 closes</title></rect><text x="356.6" y="97.7" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+0.1</text><text x="356.6" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">28 Sep</text><text x="356.6" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=8</text><rect x="414.4" y="109.0" width="26.0" height="1.4" fill="var(--loss)" rx="1"><title>week of 2026-10-05: -0.03% over 23 closes</title></rect><text x="427.4" y="123.4" fill="var(--loss)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">-0.03</text><text x="427.4" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">5 Oct</text><text x="427.4" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=23</text><rect x="485.2" y="79.0" width="26.0" height="30.0" fill="var(--accent)" rx="1"><title>week of 2026-10-12: +0.57% over 67 closes</title></rect><text x="498.2" y="72.0" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+0.6</text><text x="498.2" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">12 Oct</text><text x="498.2" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=67</text><rect x="556.0" y="38.9" width="26.0" height="70.1" fill="var(--accent)" rx="1"><title>week of 2026-10-19: +1.33% over 52 closes</title></rect><text x="569.0" y="31.9" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+1.3</text><text x="569.0" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">19 Oct</text><text x="569.0" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=52</text><rect x="626.8" y="109.0" width="26.0" height="1.0" fill="var(--loss)" rx="1"><title>week of 2026-10-26: -0.00% over 39 closes</title></rect><text x="639.8" y="123.0" fill="var(--loss)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">-0.00</text><text x="639.8" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">26 Oct</text><text x="639.8" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=39</text><rect x="697.6" y="51.4" width="26.0" height="57.6" fill="var(--accent)" rx="1"><title>week of 2026-11-02: +1.09% over 63 closes</title></rect><text x="710.6" y="44.4" fill="var(--accent)" font-size="11" font-weight="600" font-family="monospace" text-anchor="middle">+1.1</text><text x="710.6" y="212.0" fill="var(--ink-soft)" font-size="10" font-family="monospace" text-anchor="middle">2 Nov</text><text x="710.6" y="224.0" fill="var(--ink-faint)" font-size="8.5" font-family="monospace" text-anchor="middle">n=63</text></svg></div></div></section><section class="alt"><div class="wrap"><div class="sechead"><div><h2>Latest graded picks</h2><p>The ten most recently settled, across every board.</p></div></div><div class="scroll bleed"><table class="ledger"><thead><tr><th class="mono">Date</th><th>Sport</th><th>Game</th><th>Pick</th><th class="mono">Entry</th><th class="mono">Close</th><th class="mono">CLV</th><th class="mono">Result</th></tr></thead><tbody><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Texans @ Browns</td><td>Texans −4.5</td><td class="mono">-115</td><td class="mono">-100</td><td class="mono"><span class="pnd">0.0 pts</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Dolphins @ Colts</td><td>Colts −3.5</td><td class="mono">-110</td><td class="mono">-115</td><td class="mono"><span class="pos">+1.0 pts</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Patriots @ Lions</td><td>Lions −2.5</td><td class="mono">-120</td><td class="mono">-115</td><td class="mono"><span class="pnd">0.0 pts</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-11-15</td><td>College Football</td><td>Ole Miss @ Oklahoma</td><td>Oklahoma +1.5</td><td class="mono">-120</td><td class="mono">-115</td><td class="mono"><span class="pos">+4.0 pts</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Rams @ Cardinals</td><td>Rams −9.5</td><td class="mono">-110</td><td class="mono">-115</td><td class="mono"><span class="pnd">0.0 pts</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Panthers @ Saints</td><td>Saints −2.5</td><td class="mono">-110</td><td class="mono">105</td><td class="mono"><span class="neg">-1.0 pts</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-11-15</td><td>NFL</td><td>Seahawks @ Raiders</td><td>Seahawks −6.5</td><td class="mono">-105</td><td class="mono">-110</td><td class="mono"><span class="pnd">0.0 pts</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-11-14</td><td>College Football</td><td>Nevada @ N. Illinois</td><td>N. Illinois +7.5</td><td class="mono">-120</td><td class="mono">-105</td><td class="mono"><span class="pos">+1.0 pts</span></td><td class="mono"><span class="l">L</span></td></tr><tr><td class="mono">2026-11-14</td><td>College Football</td><td>FL Atlantic @ Tulsa</td><td>Tulsa −5.5</td><td class="mono">-110</td><td class="mono">-120</td><td class="mono"><span class="pnd">0.0 pts</span></td><td class="mono"><span class="w">W</span></td></tr><tr><td class="mono">2026-11-14</td><td>College Football</td><td>App State @ Marshall</td><td>Marshall +1.5</td><td class="mono">-110</td><td class="mono">-110</td><td class="mono"><span class="pos">+3.0 pts</span></td><td class="mono"><span class="l">L</span></td></tr></tbody></table></div></div></section><section><div class="wrap">
 <div class="sechead"><div><p class="eyebrow">Members only</p><h2>Bot Play of the Day</h2>
 <p>One pick a day gets crowned. It is not posted here, and it has not been posted publicly since 21 October 2026.</p></div></div>
 <div class="bpotd">
@@ -944,7 +964,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:15 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:22 UTC</p>
 </div>
 </div></footer>
 </main>
@@ -1034,6 +1054,64 @@ if(intro){
       if(k<1&&!fired)requestAnimationFrame(run);else finish();})(0);
   }
 } else { light(); }
+
+/* ---- THE CLV COLUMN IS A CHART.
+   Every ledger already prints a signed CLV per row; this measures the column and draws each
+   value as a bar under its own number, so a page of numbers reads as a shape before it reads as
+   digits. Normalised PER COLUMN against that column's own largest magnitude, not against a fixed
+   scale - a board whose best week is +0.4% and one whose best is +4% should both fill the width,
+   because the bar is there to rank rows against each other, not to compare boards.
+   Done here rather than in the generator because the span and its sign class already exist in
+   the markup: the only thing missing was the measurement, and the measurement needs the rendered
+   column. Nothing is invented - if a cell has no parseable number it simply gets no bar. */
+document.querySelectorAll('table.ledger').forEach(function(tb){
+  var byCol = {};
+  tb.querySelectorAll('tbody td').forEach(function(td){
+    var sp = td.querySelector('span.pos, span.neg');
+    if(!sp) return;
+    var n = parseFloat(String(sp.textContent).replace(/[^0-9.+-]/g,''));
+    if(!isFinite(n)) return;
+    (byCol[td.cellIndex] = byCol[td.cellIndex] || []).push({td:td, v:n, up:sp.classList.contains('pos')});
+  });
+  Object.keys(byCol).forEach(function(k){
+    var list = byCol[k], max = 0;
+    list.forEach(function(r){ var a = Math.abs(r.v); if(a > max) max = a; });
+    if(!max) return;
+    list.forEach(function(r){
+      r.td.classList.add('clvbar', r.up ? 'up' : 'down');
+      r.td.style.setProperty('--v', (Math.abs(r.v) / max * 100).toFixed(1) + '%');
+    });
+  });
+});
+
+/* ---- THE RAIL. A hairline down the left edge that fills with scroll progress and prints the
+   section you are currently inside. It reads the SAME counter the section heads use, so the
+   number on the rail and the number beside the heading can never disagree.
+   Hidden under 1100px: at that width the rail would sit on top of the content rather than beside
+   it, and a progress indicator that covers what it is indicating is worse than none. */
+(function(){
+  if(innerWidth < 1100) return;
+  var heads = [].slice.call(document.querySelectorAll('.sechead'));
+  if(!heads.length) return;
+  var rail = document.createElement('div');
+  rail.className = 'rail';
+  rail.innerHTML = '<div class="rfill"></div><div class="rnum">01</div>';
+  document.body.appendChild(rail);
+  var fill = rail.querySelector('.rfill'), num = rail.querySelector('.rnum'), tick = false;
+  function upd(){
+    tick = false;
+    var h = document.documentElement.scrollHeight - innerHeight;
+    fill.style.height = (h > 0 ? Math.min(100, Math.max(0, scrollY / h * 100)) : 0) + '%';
+    var cur = 0;
+    for(var i = 0; i < heads.length; i++){
+      if(heads[i].getBoundingClientRect().top < innerHeight * 0.45) cur = i;
+    }
+    num.textContent = ('0' + (cur + 1)).slice(-2);
+  }
+  addEventListener('scroll', function(){ if(!tick){ tick = true; requestAnimationFrame(upd); } }, {passive:true});
+  addEventListener('resize', upd);
+  upd();
+})();
 
 /* ---- scroll reveals.
    *** THE SCRIPT MARKS ITS OWN TARGETS. *** .rv carries opacity:0, so if the class were written
