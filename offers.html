@@ -684,13 +684,15 @@ body.hot #cur2{transform:scale(1.9);opacity:.5}
 /* THE HEADLINE BREAKS THE VIEWPORT. 118% width with the lines masked and sliding up on a long
    cubic-bezier. The overflow is the point - a headline that fits inside its column reads as a
    paragraph that happens to be large. */
-.hero h1{font-size:clamp(2.6rem,11.5vw,10rem);font-weight:900;font-variation-settings:'wdth' 118;
-  letter-spacing:-.055em;line-height:.84;width:116%;max-width:none}
+/* The sentence under the numbers. It kept the masked three-line reveal and the red last line -
+   those are the brand - but it is no longer the first thing the eye lands on. 'wdth' drops from
+   118 to 98 as well: at display size the ultra-wide axis was most of what made it shout. */
+.hero h1{font-size:clamp(1.6rem,3.3vw,2.7rem);font-weight:800;font-variation-settings:'wdth' 98;
+  letter-spacing:-.025em;line-height:1.04;width:100%;max-width:30ch;margin-top:2.1rem}
 .hero h1 span{display:block;overflow:hidden}
 .hero h1 i{display:block;font-style:normal;transform:translateY(105%);
   transition:transform 1s cubic-bezier(.16,1,.3,1)}
 .hero.lit h1 i{transform:translateY(0)}
-.hero h1 i:nth-child(1){transition-delay:.04s}
 .hero h1 em{font-style:normal;color:var(--brand)}
 .hero .htiles{opacity:0;transform:translateY(18px);transition:opacity .8s .45s,transform .8s .45s}
 .hero.lit .htiles{opacity:1;transform:none}
@@ -775,6 +777,45 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 .htile.solo .v,.htiles .htile:first-child .v{font-size:clamp(3.4rem,9vw,7rem);color:var(--win)}
 .htile:not(:first-child) .v{font-size:clamp(1.5rem,3vw,2.1rem)}
 .htile .k{display:block;margin-bottom:.5rem}
+
+/* ---------------------------------------------------------------- the record AS the hero
+   Sizes here are deliberately display-scale: with the sentence reduced, these ARE the headline.
+   The three tiles are not equal claims and are not sized as if they were - mean CLV is the site's
+   argument, the straight record is the thing a visitor actually wants to see, and the crown's
+   record is context. Hence three distinct steps rather than one promoted tile and a flat rail.
+   .lead-block exists because the rule has to move: a 3px rule ABOVE the tiles made sense when they
+   sat under a headline, and reads as a stray line across the top of the page when they lead. */
+.hero .htiles.lead-block{margin-top:.4rem;border-top:0;border-bottom:0}
+/* The homepage hero carried ~130px of padding above the first figure, which was the right
+   amount of air under a 10rem headline and simply pushes the numbers down the screen now
+   that they lead. A class on the hero rather than :has() so the sport pages, which share
+   .hero.solo and still open with a title, keep their original spacing untouched. */
+.hero.recfirst{padding-block:clamp(1.4rem,3vw,2.6rem)}
+.hero.recfirst .wrap{padding-block:1.3rem 2.4rem}
+.hero .htiles.lead-block .htile{border-bottom:0}
+.hero .htiles.lead-block::after{content:"";display:block;grid-column:1/-1;height:1px;background:var(--line);margin-top:1.1rem}
+/* *** THESE FIGURES MUST NOT WRAP OR OVERRUN. *** The first pass set the lead at 13vw and
+   "+0.55%" ran straight through the next column into "446-451-1", which had itself broken across
+   two lines. A tabular-mono glyph is about .6em wide, so a figure's width is predictable: six
+   glyphs at 7rem is ~400px against a 1.6fr column of a 1250px content width. The clamps below are
+   set from that arithmetic rather than by eye, and nowrap makes a miscalculation show up as
+   overflow in testing instead of as a silent two-line record on someone's laptop. */
+.hero .htiles.lead-block .v{white-space:nowrap}
+.hero .htiles.lead-block .htile:first-child .v{font-size:clamp(3.2rem,7.6vw,6.6rem);letter-spacing:-.05em}
+.hero .htiles.lead-block .htile:nth-child(2) .v{font-size:clamp(1.9rem,3.6vw,2.9rem);letter-spacing:-.04em;opacity:1}
+.hero .htiles.lead-block .htile:nth-child(3) .v{font-size:clamp(1.45rem,2.5vw,1.95rem);opacity:.85}
+.hero .htiles.lead-block .htile:first-child .k{color:var(--brand)}
+@media(min-width:560px){
+  /* The lead figure takes the room it needs; the other two share what is left. */
+  .hero .htiles.lead-block{grid-template-columns:minmax(0,1.6fr) minmax(0,1.1fr) minmax(0,1fr);align-items:end}
+}
+
+/* THE TILES ARRIVE FIRST NOW. The old delays staged the headline in and the numbers 450ms behind
+   it; with the order flipped that would have left the page opening on an empty row. */
+.hero .htiles{opacity:0;transform:translateY(18px);transition:opacity .75s .05s,transform .75s .05s}
+.hero h1 span:nth-child(1) i{transition-delay:.34s}
+.hero h1 span:nth-child(2) i{transition-delay:.41s}
+.hero h1 span:nth-child(3) i{transition-delay:.48s}
 
 /* BOARD CARDS -> BANDS. Same markup, read as full-width rows with a red rule that wipes in. */
 .card{position:relative;background:transparent;border:0;border-top:1px solid var(--line);
@@ -885,7 +926,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:02 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 16 Nov 2026, 23:11 UTC</p>
 </div>
 </div></footer>
 </main>
