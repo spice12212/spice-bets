@@ -16,7 +16,7 @@
      Two tags with media queries, because a single theme-color cannot be right in both modes
      and the page honours the system setting. -->
 <meta name="theme-color" content="#070506">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c42e26'/%3E%3Ctext x='16' y='22' font-family='Segoe UI,Arial,sans-serif' font-size='19' font-weight='700' fill='%23ffffff' text-anchor='middle'%3ES%3C/text%3E%3Crect x='9' y='24.5' width='14' height='2.5' rx='1.2' fill='%23ffffff' fill-opacity='0.85'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%239d7bff'/%3E%3Cstop offset='1' stop-color='%235b3cf0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M16 5 C17.1 12 20 14.9 27 16 C20 17.1 17.1 20 16 27 C14.9 20 12 17.1 5 16 C12 14.9 14.9 12 16 5 Z' fill='%23ffffff'/%3E%3C/svg%3E">
 <link rel="canonical" href="https://spicebets.bet/cfb-attention.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Spice Bets">
@@ -59,7 +59,7 @@
   --line:#dde5e1; --line-soft:#eaf0ed;
   /* 4.12:1 on --raise, just under. #067c45 clears 4.68:1 and is the same green. */
   --accent:#067c45; --accent-ink:#ffffff; --accent-soft:#e4f4ec;
-  --brand:#c42e26; --brand-ink:#ffffff; --brand-soft:#fbe7e5; --brand-line:#eab4af;
+  --brand:#6d4bea; --brand-ink:#ffffff; --brand-soft:#eee9ff; --brand-line:#c3b2f7;
   --win:#067c45; --loss:#c0392c; --pend:#61716a;
   /* The banner gets EXPLICIT tokens instead of inheriting ink/ground. Derived, it flipped to a
      pale cream bar in dark mode - a washed-out strip sitting under a near-black header, which
@@ -79,7 +79,7 @@
   --line:#222c27; --line-soft:#1a221e;
   --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
 
-  --brand:#f0655a; --brand-ink:#1a0605; --brand-soft:#2f1310; --brand-line:#5d221d;
+  --brand:#8b6cff; --brand-ink:#0b0718; --brand-soft:#181232; --brand-line:#30235e;
 
 
   --promo-bg:#2a1708; --promo-ink:#ffeada;
@@ -97,7 +97,7 @@
   --line:#222c27; --line-soft:#1a221e;
   --accent:#3ddc84; --accent-ink:#06130c; --accent-soft:#0e2718;
 
-  --brand:#f0655a; --brand-ink:#1a0605; --brand-soft:#2f1310; --brand-line:#5d221d;
+  --brand:#8b6cff; --brand-ink:#0b0718; --brand-soft:#181232; --brand-line:#30235e;
 
 
   --promo-bg:#2a1708; --promo-ink:#ffeada;
@@ -568,7 +568,7 @@ body{text-rendering:optimizeLegibility;font-variant-numeric:tabular-nums}
    stays, in black on white, with link destinations spelled out. */
 @media print{
   :root{--ground:#fff;--surface:#fff;--raise:#fff;--ink:#000;--ink-soft:#333;--ink-faint:#555;
-        --line:#bbb;--line-soft:#ddd;--brand:#8a1f19;--accent:#0a6b35;--loss:#9a1c1c}
+        --line:#bbb;--line-soft:#ddd;--brand:#4a2fb8;--accent:#0a6b35;--loss:#9a1c1c}
   body{background:#fff;color:#000;font-size:10.5pt}
   nav.top,.promo,.flag,.themer,.bpotd-cta,.join,.cta,.btn,.scts{display:none!important}
   a{color:#000;text-decoration:underline}
@@ -639,7 +639,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   --ground:#fbf7f4; --surface:#ffffff; --raise:#f3ece8;
   --ink:#120c0b; --ink-soft:#4e403d; --ink-faint:#6f5e5a;
   --line:#e6dad4; --line-soft:#f0e7e2;
-  --brand:#d8281a; --brand-soft:#fde9e6; --brand-line:#f0b9b2;
+  --brand:#6d4bea; --brand-soft:#eee9ff; --brand-line:#c3b2f7;
   --win:#0b7a4a; --loss:#c22c1e;
   --rule:rgba(18,12,11,.045); --edge:#d9c7c0; --ground-rgb:251,247,244;
 }
@@ -647,7 +647,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   --ground:#070506; --surface:#0f0b0c; --raise:#17100f;
   --ink:#f7f3f2; --ink-soft:#a0908f; --ink-faint:#6b5755;
   --line:#271719; --line-soft:#1a1012;
-  --brand:#ff2d1f; --brand-soft:#2a100c; --brand-line:#5c1d16;
+  --brand:#8b6cff; --brand-soft:#181232; --brand-line:#30235e;
   --win:#19e08a; --loss:#ff4d44;
   --rule:rgba(255,255,255,.028); --edge:#3a2225; --ground-rgb:7,5,6;
 } }
@@ -655,7 +655,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   --ground:#070506; --surface:#0f0b0c; --raise:#17100f;
   --ink:#f7f3f2; --ink-soft:#a0908f; --ink-faint:#6b5755;
   --line:#271719; --line-soft:#1a1012;
-  --brand:#ff2d1f; --brand-soft:#2a100c; --brand-line:#5c1d16;
+  --brand:#8b6cff; --brand-soft:#181232; --brand-line:#30235e;
   --win:#19e08a; --loss:#ff4d44;
   --rule:rgba(255,255,255,.028); --edge:#3a2225; --ground-rgb:7,5,6;
 }
@@ -775,40 +775,32 @@ nav.top a:hover,nav.top a:focus-visible{color:var(--ink);background:var(--raise)
 nav.top a.here{color:var(--ink);background:transparent;box-shadow:inset 0 -2px 0 var(--brand)}
 nav.top a.pbcta{background:var(--raise)}
 
-/* ================================================================ THE MARK
-   *** THIS IS A SYMBOL, NOT STYLED TYPE. *** Three previous passes - an underline, a justified
-   two-line lockup, a cut running through the glyphs - were all the same move: take the words and
-   decorate them. The reference set the owner pointed at is overwhelmingly Geometric / Minimal /
-   Bold, and the thing almost every entry has that this did not is a DRAWN SYMBOL sitting beside
-   the name. So there is one now.
-   WHAT IT IS: a square split by a shallow diagonal - the line - with the two halves pushed apart
-   along it. The upper half is brand red, the lower is ink, and the shear between them is the
-   whole idea: a number and the line it is measured against, offset. It reads at 16px, it reads
-   in one colour, and it has a silhouette, which is what the wordmark never had.
-   IT IS INLINE SVG, NOT A FILE. currentColor and the palette tokens reach into it, so it recolours
-   with the theme and needs no second asset for the footer or a dark/light pair. */
-.mark{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;line-height:1}
-.mark .glyph{width:2.3rem;height:2.3rem;flex:none;display:block;overflow:visible}
-.mark .glyph .up{fill:var(--brand)}
-.mark .glyph .dn{fill:var(--ink)}
-/* ON HOVER THE HALVES CLOSE. The offset is the gap between a price and its close; the mark
-   resolving is the mark beating it. */
-.mark .glyph .up,.mark .glyph .dn{transition:transform .45s cubic-bezier(.16,1,.3,1)}
-.mark:hover .glyph .up{transform:translateX(2.6px)}
-.mark:hover .glyph .dn{transform:translateX(-2.6px)}
+/* ================================================================ THE LOCKUP
+   Lowercase, medium weight, a compact icon in a rounded tile. The previous five attempts were
+   all ALL-CAPS, ultra-condensed and hard-edged, which is the opposite of the reference the owner
+   was actually pointing at - the shape of the thing was wrong, not its decoration. */
+.mark{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;line-height:1}
+.mark .ico{width:2.35rem;height:2.35rem;flex:none;display:block;border-radius:26%}
+.mark .wm{display:inline;font-family:var(--display);font-variation-settings:'wdth' 100;
+  font-weight:700;font-size:1.46rem;letter-spacing:-.025em;line-height:1;color:var(--ink);
+  white-space:nowrap;text-transform:none;background:none;-webkit-text-fill-color:currentColor}
+.mark .wm em{font-style:normal}
+/* BOTH s's CARRY THE BRAND COLOUR - the name bracketed at each end. */
+.mark .wm .v{color:var(--brand);-webkit-text-fill-color:var(--brand)}
 
-/* THE WORDMARK GOES QUIET. With a symbol carrying the idea, the name's job is to be read: two
-   lines, tight leading, no cut, no rule, no tricks. */
-.mark .wm{flex-direction:column;align-items:flex-start;gap:0;position:relative;
-  background:none;-webkit-background-clip:border-box;background-clip:border-box;line-height:.82}
-.mark .wm b{-webkit-text-fill-color:var(--ink);color:var(--ink);font-size:1.32rem;letter-spacing:.01em}
-.mark .wm i{-webkit-text-fill-color:var(--brand);color:var(--brand);font-size:1.32rem;letter-spacing:.01em}
-.mark .wm b em{font-style:normal;display:inline;transform:none;
-  -webkit-text-fill-color:inherit;color:inherit}
-footer .mark .glyph{width:1.8rem;height:1.8rem}
-footer .mark .wm b,footer .mark .wm i{font-size:1.05rem}
-@media(max-width:620px){ .mark .glyph{width:1.9rem;height:1.9rem}
-  .mark .wm b,.mark .wm i{font-size:1.12rem} }
+/* THE i's DOT IS THE SPARK.
+   Sized and placed to REPLACE the dot, not hover over it: at .42em and -.04em it rendered as a
+   floating speck with a visible gap above the stem, which only showed up when the lockup was
+   blown up to 74px. .54em at .055em lands where the eye expects a dot. */
+.mark .wm .di{position:relative;display:inline-block}
+.mark .wm .spk{position:absolute;left:50%;top:.055em;width:.54em;height:.54em;
+  transform:translateX(-50%);display:block;pointer-events:none}
+
+.mark:hover .ico{transform:rotate(-8deg) scale(1.04)}
+.mark .ico{transition:transform .4s cubic-bezier(.16,1,.3,1)}
+footer .mark .ico{width:1.75rem;height:1.75rem}
+footer .mark .wm{font-size:1.1rem}
+@media(max-width:620px){ .mark .ico{width:1.95rem;height:1.95rem} .mark .wm{font-size:1.2rem} }
 
 /* ---------------------------------------------------------------- the board row ghost numeral
    Each board row carries its own pick count as an oversized outlined numeral bleeding off the
@@ -987,7 +979,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <main id="main">
-<header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><svg class="glyph" viewBox="0 0 36 32" aria-hidden="true" focusable="false"><path class="up" d="M0 0 H32 V9 L0 21 Z"/><path class="dn" d="M4 23 L36 11 V32 H4 Z"/></svg><span class="wm"><b>SP<em>I</em>CE</b><i>BETS</i></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html" class="here" aria-current="page">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" width="2003" height="214" decoding="async" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;"><span class="wrap"><i class="pdot" style="background:#1652f0"></i><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;"><span class="wrap"><i class="pdot" style="background:#0b0d10"></i><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;"><span class="wrap"><i class="pdot" style="background:#c0f018"></i><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
+<header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di">i<svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html" class="here" aria-current="page">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" width="2003" height="214" decoding="async" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;"><span class="wrap"><i class="pdot" style="background:#1652f0"></i><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;"><span class="wrap"><i class="pdot" style="background:#0b0d10"></i><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;"><span class="wrap"><i class="pdot" style="background:#c0f018"></i><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
 <p class="eyebrow">College football &middot; collection log</p>
 <h1>Counting, not ranking.</h1>
 <p class="lede">The attention collector runs on all 138 FBS teams every week. It produces <strong>no index, no ranking and no play</strong>. That is the design, not an unfinished edge. This page exists to show what has been banked so far.</p>
@@ -1012,7 +1004,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div></div></section><footer><div class="wrap">
 <div class="fgrid">
   <div>
-    <a class="mark" href="index.html" style="margin-bottom:.9rem"><svg class="glyph" viewBox="0 0 36 32" aria-hidden="true" focusable="false"><path class="up" d="M0 0 H32 V9 L0 21 Z"/><path class="dn" d="M4 23 L36 11 V32 H4 Z"/></svg><span class="wm"><b>SP<em>I</em>CE</b><i>BETS</i></span></a>
+    <a class="mark" href="index.html" style="margin-bottom:.9rem"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di">i<svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></a>
     <p class="ftag">Watching where the money goes</p>
     <p>A paper betting log. Every pick is written down at the price it was offered and graded against the closing line, including the ones that lost to it.</p>
   </div>
@@ -1030,7 +1022,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 17 Nov 2026, 00:00 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 17 Nov 2026, 00:15 UTC</p>
 </div>
 </div></footer>
 </main>
