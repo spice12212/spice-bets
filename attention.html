@@ -665,19 +665,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
    simply renders static, .rv elements are revealed by the script's own fallback branch, and
    prefers-reduced-motion is honoured in BOTH the stylesheet and the script - the script paints
    one canvas frame instead of animating, which CSS alone cannot do. */
-body.cursored{cursor:none}
-body.cursored a,body.cursored button,body.cursored summary{cursor:none}
-#cur,#cur2{position:fixed;top:0;left:0;pointer-events:none;z-index:999;border-radius:50%;mix-blend-mode:difference}
-#cur{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}
-#cur2{width:34px;height:34px;border:1px solid rgba(255,255,255,.45);margin:-17px 0 0 -17px;transition:transform .18s,opacity .18s}
-body.hot #cur2{transform:scale(1.9);opacity:.5}
-@media(hover:none){#cur,#cur2{display:none}body.cursored{cursor:auto}}
-
-#intro{position:fixed;inset:0;z-index:900;background:var(--ground);display:flex;align-items:center;justify-content:center;transition:opacity .7s .25s,visibility .7s .25s}
-#intro.done{opacity:0;visibility:hidden}
-#intro .n{font-family:var(--mono);font-size:clamp(3rem,13vw,9rem);font-weight:700;letter-spacing:-.05em;color:var(--win);font-variant-numeric:tabular-nums}
-#intro .bar{position:absolute;left:0;bottom:0;height:2px;background:var(--brand);width:0}
-
 /* WIDTH AND HEIGHT ARE EXPLICIT BECAUSE A CANVAS IS A REPLACED ELEMENT. With inset:0 and an
    auto width, a replaced element resolves to its INTRINSIC size - the canvas default of
    300x150 - not to its containing block. The field was being drawn into a 300px box in the
@@ -693,13 +680,17 @@ body.hot #cur2{transform:scale(1.9);opacity:.5}
    118 to 98 as well: at display size the ultra-wide axis was most of what made it shout. */
 .hero h1{font-size:clamp(1.6rem,3.3vw,2.7rem);font-weight:800;font-variation-settings:'wdth' 98;
   letter-spacing:-.025em;line-height:1.04;width:100%;max-width:30ch;margin-top:2.1rem}
-.hero h1 span{display:block;overflow:hidden}
-.hero h1 i{display:block;font-style:normal;transform:translateY(105%);
-  transition:transform 1s cubic-bezier(.16,1,.3,1)}
-.hero.lit h1 i{transform:translateY(0)}
+/* *** THE HERO RENDERS STATICALLY. NOTHING HIDES IT. ***
+   The headline lines used to start at translateY(105%) inside an overflow:hidden mask and the
+   stat tiles at opacity:0, with JavaScript adding .lit to reveal them. That means the hero's
+   content is INVISIBLE in the served markup and only a script makes it appear - so a blocked
+   script, a throttled background tab or one slow frame leaves a reader looking at an empty screen
+   where the record should be. It is the same flaw already fixed for the scroll reveals, in
+   reverse: there the script marks its own targets, so no-JS degrades to visible.
+   A slide-up on the one element carrying the whole argument is not worth that trade. */
+.hero h1 span{display:block}
+.hero h1 i{display:block;font-style:normal}
 .hero h1 em{font-style:normal;color:var(--brand)}
-.hero .htiles{opacity:0;transform:translateY(18px);transition:opacity .8s .45s,transform .8s .45s}
-.hero.lit .htiles{opacity:1;transform:none}
 
 .rv{opacity:0;transform:translateY(26px);
   transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
@@ -788,13 +779,27 @@ nav.top a.pbcta{background:var(--raise)}
 /* BOTH s's CARRY THE BRAND COLOUR - the name bracketed at each end. */
 .mark .wm .v{color:var(--brand);-webkit-text-fill-color:var(--brand)}
 
-/* THE i's DOT IS THE SPARK.
-   Sized and placed to REPLACE the dot, not hover over it: at .42em and -.04em it rendered as a
-   floating speck with a visible gap above the stem, which only showed up when the lockup was
-   blown up to 74px. .54em at .055em lands where the eye expects a dot. */
+/* THE i's DOT IS THE SPARK - MEASURED, NOT EYEBALLED.
+   Rasterising the glyph gives exact numbers for Bricolage Grotesque at weight 700: the dot is
+   0.175em wide and 0.14em tall, sitting 0.57-0.71em above the baseline, and the baseline sits
+   0.83em below the top of a line-height:1 inline-block. So the dot occupies 0.12-0.26em from the
+   top of the span, centred 48.4% across it.
+   TWO EARLIER MISTAKES, BOTH FROM GUESSING. The spark was set at 0.54em - THREE TIMES the dot's
+   width - so it spilled across the neighbouring letters and read as a star floating in the gap
+   rather than as the dot. And covering the dot cannot work at any size: a four-point star is thin
+   between its arms, so the round dot shows through at the corners however large the star is.
+   THE DOT IS THEREFORE REMOVED, NOT COVERED. A linear-gradient mask cuts everything above 0.28em
+   from the top of the letter - past the dot's bottom at 0.26em, short of the stem's top at about
+   0.31em - which deletes the dot while leaving the text content a plain "i", so the name still
+   copies, reads aloud and searches as "spice bets".
+   The spark is a SIBLING of the masked letter, not a child: inside it, the same mask that removes
+   the dot would remove the spark with it. */
 .mark .wm .di{position:relative;display:inline-block}
-.mark .wm .spk{position:absolute;left:50%;top:.055em;width:.54em;height:.54em;
-  transform:translateX(-50%);display:block;pointer-events:none}
+.mark .wm .ltr{display:inline-block;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0 .28em,#000 .28em);
+          mask-image:linear-gradient(to bottom,transparent 0 .28em,#000 .28em)}
+.mark .wm .spk{position:absolute;left:48.4%;top:.19em;width:.30em;height:.30em;
+  transform:translate(-50%,-50%);display:block;pointer-events:none}
 
 .mark:hover .ico{transform:rotate(-8deg) scale(1.04)}
 .mark .ico{transition:transform .4s cubic-bezier(.16,1,.3,1)}
@@ -949,10 +954,6 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 
 /* THE TILES ARRIVE FIRST NOW. The old delays staged the headline in and the numbers 450ms behind
    it; with the order flipped that would have left the page opening on an empty row. */
-.hero .htiles{opacity:0;transform:translateY(18px);transition:opacity .75s .05s,transform .75s .05s}
-.hero h1 span:nth-child(1) i{transition-delay:.34s}
-.hero h1 span:nth-child(2) i{transition-delay:.41s}
-.hero h1 span:nth-child(3) i{transition-delay:.48s}
 
 /* BOARD CARDS -> BANDS. Same markup, read as full-width rows with a red rule that wipes in. */
 .card{position:relative;background:transparent;border:0;border-top:1px solid var(--line);
@@ -979,7 +980,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <main id="main">
-<header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di">i<svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html" class="here" aria-current="page">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" width="2003" height="214" decoding="async" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;"><span class="wrap"><i class="pdot" style="background:#1652f0"></i><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;"><span class="wrap"><i class="pdot" style="background:#0b0d10"></i><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;"><span class="wrap"><i class="pdot" style="background:#c0f018"></i><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
+<header class="top"><div class="wrap"><div class="flag"><a class="mark" href="index.html"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di"><span class="ltr">i</span><svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></a><span class="strap">Watching where the money goes</span><span class="since">Paper log &middot; since 31 Aug 2026</span></div><nav class="top"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="attention.html" class="here" aria-current="page">Attention</a><a href="method.html">Method</a><a href="disclaimer.html">Disclaimer</a><a href="log.html">Full log</a><a class="cta pbcta" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener" aria-label="Playbooki"><img src="brand/playbooki-wordmark.png" alt="Playbooki" width="2003" height="214" decoding="async" onerror="this.remove()"><span>Playbooki</span></a></nav></div></header><style>@keyframes promoswitch{0%,33.3333%{opacity:1}33.3334%,100%{opacity:0}}</style><div class="promo" data-n="3"><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 0s infinite;"><span class="wrap"><i class="pdot" style="background:#1652f0"></i><b>Polymarket</b><span class="sep">|</span><span class="txt">Prediction markets - the fair-value anchor this book prices against</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 6s infinite;"><span class="wrap"><i class="pdot" style="background:#0b0d10"></i><b>Novig</b><span class="sep">|</span><span class="txt">A no-vig exchange - you are matched against other bettors</span><span class="go">Claim it &rarr;</span></span></a><a class="slide" href="offers.html" style="animation:promoswitch 18s step-end 12s infinite;"><span class="wrap"><i class="pdot" style="background:#c0f018"></i><b>Gambit Markets</b><span class="sep">|</span><span class="txt">Prediction markets - part of this book is mirrored there</span><span class="go">Claim it &rarr;</span></span></a></div><div class="hero solo"><div class="wrap">
 <p class="eyebrow">Members &middot; NFL</p>
 <h1>The attention board.</h1>
 <p class="lede">Every week it reads the league's editorial coverage and works out <strong>who the story is</strong> and who is invisible. Not who is good. Who is being <em>written about</em>. The loud end of the board is below; the rest is for members.</p>
@@ -1008,7 +1009,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div></div></section><footer><div class="wrap">
 <div class="fgrid">
   <div>
-    <a class="mark" href="index.html" style="margin-bottom:.9rem"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di">i<svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></a>
+    <a class="mark" href="index.html" style="margin-bottom:.9rem"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di"><span class="ltr">i</span><svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></a>
     <p class="ftag">Watching where the money goes</p>
     <p>A paper betting log. Every pick is written down at the price it was offered and graded against the closing line, including the ones that lost to it.</p>
   </div>
@@ -1026,27 +1027,13 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 17 Nov 2026, 00:15 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 17 Nov 2026, 00:28 UTC</p>
 </div>
 </div></footer>
 </main>
 <script>
 (function(){
 var RM = matchMedia('(prefers-reduced-motion:reduce)').matches;
-
-/* ---- cursor. Hidden entirely on touch, where a lagging ring is meaningless. */
-if(matchMedia('(hover:hover)').matches){
-  var c1=document.createElement('div'),c2=document.createElement('div');
-  c1.id='cur';c2.id='cur2';document.body.appendChild(c1);document.body.appendChild(c2);
-  var tx=0,ty=0,cx=0,cy=0;
-  addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;c1.style.transform='translate('+tx+'px,'+ty+'px)';});
-  (function l(){cx+=(tx-cx)*.16;cy+=(ty-cy)*.16;c2.style.left=cx+'px';c2.style.top=cy+'px';requestAnimationFrame(l);})();
-  document.addEventListener('mouseover',function(e){
-    if(e.target.closest('a,button,summary,.card,.band')) document.body.classList.add('hot');});
-  document.addEventListener('mouseout',function(e){
-    if(e.target.closest('a,button,summary,.card,.band')) document.body.classList.remove('hot');});
-  document.body.classList.add('cursored');
-}
 
 /* ---- the drift field. One particle per graded pick, coloured by its result. */
 var cv=document.getElementById('cv');
@@ -1055,7 +1042,7 @@ if(cv && cv.getContext){
   var W=+cv.dataset.w||0,L=+cv.dataset.l||0,P=+cv.dataset.p||0;
   /* *** THE CANVAS MUST BE RESIZED BY THE ELEMENT, NOT BY THE WINDOW. *** This listened only
      for window resize, but the hero's HEIGHT changes several times with no window resize at all:
-     when the intro overlay closes, when .lit reveals the stat tiles, and when the display face
+     when the display face finishes loading and when late content changes the hero's height
      finishes loading. Each time, the backing store kept its older, taller dimensions while the
      element's box shrank - so the browser scaled the whole drawing down into the shorter box,
      squashing every square particle into a wide dash and compressing the field into a band along
@@ -1106,130 +1093,6 @@ if(cv && cv.getContext){
   }
   if(RM) paint(); else step();
 }
-
-/* ---- count-up. Any element with data-count animates to it and keeps its own formatting. */
-function countTo(el){
-  var to=parseFloat(el.dataset.count),dp=+(el.dataset.dp||0),sfx=el.dataset.sfx||'',
-      sgn=el.dataset.sign==='1',ms=900,s=null;
-  if(RM){el.textContent=(sgn&&to>0?'+':'')+to.toFixed(dp)+sfx;return;}
-  function f(ts){if(!s)s=ts;var k=Math.min((ts-s)/ms,1),e=1-Math.pow(1-k,3),v=to*e;
-    el.textContent=(sgn&&v>0?'+':'')+v.toFixed(dp)+sfx;if(k<1)requestAnimationFrame(f);}
-  requestAnimationFrame(f);
-}
-
-/* ---- intro. Homepage only - an overlay on every click would be an obstacle, not a flourish. */
-var intro=document.getElementById('intro'),hero=document.querySelector('.hero');
-function light(){
-  if(hero) hero.classList.add('lit');
-  document.querySelectorAll('[data-count]').forEach(countTo);
-}
-if(intro){
-  var ic=intro.querySelector('.n'),ib=intro.querySelector('.bar'),N=+intro.dataset.n||0,st=null;
-  /* *** FAILSAFE. An intro must never be able to trap the page. *** requestAnimationFrame is
-     throttled to roughly 1fps in a background tab, so a visitor who opens this in a new tab and
-     comes back could otherwise find a full-screen overlay still sitting there. A hard timer and
-     a first-interaction handler both force it open regardless of how far the count got. */
-  var fired=false;
-  function finish(){if(fired)return;fired=true;intro.classList.add('done');light();}
-  setTimeout(finish,2600);
-  ['pointerdown','keydown','wheel','touchstart'].forEach(function(ev){
-    addEventListener(ev,finish,{once:true,passive:true});});
-  if(RM){finish();}
-  else{
-    (function run(ts){if(!st)st=ts;var k=Math.min((ts-st)/1500,1),e=1-Math.pow(1-k,3);
-      if(ic)ic.textContent=Math.round(e*N);if(ib)ib.style.width=(e*100)+'%';
-      if(k<1&&!fired)requestAnimationFrame(run);else finish();})(0);
-  }
-} else { light(); }
-
-/* ---- NAV DECODE.
-   Each nav label scrambles and resolves left-to-right on hover. It only works because the nav
-   is set in a MONOSPACE face at a fixed size: in a proportional face every substituted glyph
-   would change the label's width and the whole row would jitter as the reader moved across it.
-   The real text is captured once, up front, and restored on mouseleave AND when the run ends,
-   so an interrupted animation can never leave a link reading "QJXZ". Skipped entirely under
-   prefers-reduced-motion, and skipped for the one nav item that is an image rather than text. */
-(function(){
-  if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
-  var CH = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  document.querySelectorAll('nav.top a').forEach(function(a){
-    if(a.querySelector('img')) return;
-    var real = a.textContent, timer = null;
-    if(!real || real.length > 24) return;
-    a.addEventListener('mouseenter', function(){
-      var f = 0;
-      clearInterval(timer);
-      timer = setInterval(function(){
-        f++;
-        var out = '';
-        for(var k = 0; k < real.length; k++){
-          out += (real[k] === ' ' || k < f / 2) ? real[k] : CH[(Math.random() * CH.length) | 0];
-        }
-        a.textContent = out;
-        if(f / 2 >= real.length){ clearInterval(timer); a.textContent = real; }
-      }, 28);
-    });
-    a.addEventListener('mouseleave', function(){ clearInterval(timer); a.textContent = real; });
-  });
-})();
-
-/* ---- THE CLV COLUMN IS A CHART.
-   Every ledger already prints a signed CLV per row; this measures the column and draws each
-   value as a bar under its own number, so a page of numbers reads as a shape before it reads as
-   digits. Normalised PER COLUMN against that column's own largest magnitude, not against a fixed
-   scale - a board whose best week is +0.4% and one whose best is +4% should both fill the width,
-   because the bar is there to rank rows against each other, not to compare boards.
-   Done here rather than in the generator because the span and its sign class already exist in
-   the markup: the only thing missing was the measurement, and the measurement needs the rendered
-   column. Nothing is invented - if a cell has no parseable number it simply gets no bar. */
-document.querySelectorAll('table.ledger').forEach(function(tb){
-  var byCol = {};
-  tb.querySelectorAll('tbody td').forEach(function(td){
-    var sp = td.querySelector('span.pos, span.neg');
-    if(!sp) return;
-    var n = parseFloat(String(sp.textContent).replace(/[^0-9.+-]/g,''));
-    if(!isFinite(n)) return;
-    (byCol[td.cellIndex] = byCol[td.cellIndex] || []).push({td:td, v:n, up:sp.classList.contains('pos')});
-  });
-  Object.keys(byCol).forEach(function(k){
-    var list = byCol[k], max = 0;
-    list.forEach(function(r){ var a = Math.abs(r.v); if(a > max) max = a; });
-    if(!max) return;
-    list.forEach(function(r){
-      r.td.classList.add('clvbar', r.up ? 'up' : 'down');
-      r.td.style.setProperty('--v', (Math.abs(r.v) / max * 100).toFixed(1) + '%');
-    });
-  });
-});
-
-/* ---- THE RAIL. A hairline down the left edge that fills with scroll progress and prints the
-   section you are currently inside. It reads the SAME counter the section heads use, so the
-   number on the rail and the number beside the heading can never disagree.
-   Hidden under 1100px: at that width the rail would sit on top of the content rather than beside
-   it, and a progress indicator that covers what it is indicating is worse than none. */
-(function(){
-  if(innerWidth < 1100) return;
-  var heads = [].slice.call(document.querySelectorAll('.sechead'));
-  if(!heads.length) return;
-  var rail = document.createElement('div');
-  rail.className = 'rail';
-  rail.innerHTML = '<div class="rfill"></div><div class="rnum">01</div>';
-  document.body.appendChild(rail);
-  var fill = rail.querySelector('.rfill'), num = rail.querySelector('.rnum'), tick = false;
-  function upd(){
-    tick = false;
-    var h = document.documentElement.scrollHeight - innerHeight;
-    fill.style.height = (h > 0 ? Math.min(100, Math.max(0, scrollY / h * 100)) : 0) + '%';
-    var cur = 0;
-    for(var i = 0; i < heads.length; i++){
-      if(heads[i].getBoundingClientRect().top < innerHeight * 0.45) cur = i;
-    }
-    num.textContent = ('0' + (cur + 1)).slice(-2);
-  }
-  addEventListener('scroll', function(){ if(!tick){ tick = true; requestAnimationFrame(upd); } }, {passive:true});
-  addEventListener('resize', upd);
-  upd();
-})();
 
 /* ---- scroll reveals.
    *** THE SCRIPT MARKS ITS OWN TARGETS. *** .rv carries opacity:0, so if the class were written
