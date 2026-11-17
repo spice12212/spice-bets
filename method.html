@@ -798,7 +798,13 @@ nav.top a.pbcta{background:var(--raise)}
 .mark .wm .ltr{display:inline-block;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0 .28em,#000 .28em);
           mask-image:linear-gradient(to bottom,transparent 0 .28em,#000 .28em)}
-.mark .wm .spk{position:absolute;left:48.4%;top:.19em;width:.30em;height:.30em;
+/* *** THE STAR MAY OVERHANG ITS LETTER, AND THAT IS WHY IT CAN BE THIS BIG. *** The dot it
+   replaces is only 0.175em wide, so a star sized to match it is unreadable as a star - at .30em
+   it still registered as a speck. The thing that makes a larger one safe is WHERE it sits: the
+   dot is ABOVE the x-height, and both neighbours in "spice" are x-height letters with no ink up
+   there, so the star can spill past the i's 0.222em advance without touching a p or a c.
+   Raised slightly as it grew so its lower point stays clear of the stem the mask leaves behind. */
+.mark .wm .spk{position:absolute;left:48.4%;top:.15em;width:.46em;height:.46em;
   transform:translate(-50%,-50%);display:block;pointer-events:none}
 
 .mark:hover .ico{transform:rotate(-8deg) scale(1.04)}
@@ -1014,7 +1020,7 @@ h2{font-weight:900;font-variation-settings:'wdth' 106;letter-spacing:-.032em}
 </div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 17 Nov 2026, 00:30 UTC</p>
+<p class="fineline">Not betting advice &middot; 21+ where legal &middot; some links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 17 Nov 2026, 00:35 UTC</p>
 </div>
 </div></footer>
 </main>
