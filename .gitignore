@@ -19,6 +19,11 @@
 # which is what happened on the first publish of the social tags.
 !og.png
 
+# The preview picture for each day's own page (day-YYYY-MM-DD.html), added 18 Nov 2026.
+# Named by pattern, not *.png, for the same reason as og.png above. Without this line every
+# day page's og:image 404s on the live site while looking fine on disk.
+!og-day-*.png
+
 # Partner and Playbooki logos, fetched from each brand's own site. Named as a folder because
 # the set grows whenever a referral is added, and a per-file line would be forgotten.
 #
