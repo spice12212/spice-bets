@@ -403,9 +403,102 @@ dl.limits dd{margin:0}
   .panel[hidden]{display:block}
   .card,.sec-h{position:static}
 }
+
+/* ---------------------------------------------------------------- a day's own page */
+.dnum a{color:inherit;text-decoration:none;display:block}
+.dnum a:hover b{color:var(--brand)}
+.daynav{display:flex;justify-content:space-between;gap:1rem;font-size:14px;margin:0 0 1.8rem;padding-block:.75rem;border-block:1px solid var(--line)}
+.daynav a{color:var(--ink-soft);text-decoration:none;white-space:nowrap}
+.daynav a:hover{color:var(--ink)}
+.daynav span{min-width:1px}
+.share{display:flex;gap:.5rem;margin-top:1.5rem}
+.share button{font:600 14px var(--body);border-radius:6px;padding:.5rem .95rem;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--ink)}
+.share button:hover{border-color:var(--ink-faint)}
+.share button[data-share]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.dayl{margin-top:2.4rem;max-width:920px}
+.dayhead b{color:var(--brand);font-weight:800;white-space:nowrap}
+.dayhead.long{font-size:clamp(2.1rem,5vw,4rem);line-height:.98}
+.dayhead.rec{font-size:clamp(4.2rem,12vw,8.5rem);letter-spacing:-.055em;font-variant-numeric:tabular-nums}
+.vsline{margin:.8rem 0 0;font-size:1.12rem;color:var(--ink-soft)}
+.vsline span{font-family:var(--mono);font-size:.92em;color:var(--ink);white-space:nowrap}
+.when b{color:var(--brand);font-weight:600}
+
+/* ---------------------------------------------------------------- phones: the pick is the first screen
+   Everything from here to the end of this block exists only at phone width. Above it the page is
+   the desktop design, untouched: .first and .pin are not drawn at all, and "Also on the board"
+   reads "On the board".
+
+   WHY. Visitors arrive from a post on X, on a phone, and the first screen decides the visit. So
+   the first screen is the next pick as a headline, then the last graded day, the last ten and the
+   record. The scorecard moves below the open picks, the partner line below the three figures,
+   and the offer is pinned to the bottom edge instead of sitting in the masthead in purple. */
+.first,.pin,.pinl,.w-also,.showall{display:none}
+@media(max-width:760px){
+  body{padding-bottom:calc(60px + env(safe-area-inset-bottom,0px))}
+  header.top .wrap{padding-block:10px 2px}
+  header.top .mark{font-size:1.22rem}
+  header.top .pill{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:600;font-size:13.5px;padding:.38rem .7rem}
+  nav.top a{font-size:14px;padding:.4rem .65rem}
+
+  .pin{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;align-items:center;justify-content:space-between;gap:1rem;background:var(--brand);color:var(--brand-ink);text-decoration:none;padding:.55rem max(16px,env(safe-area-inset-right,0px)) calc(.6rem + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));transition:transform .22s}
+  .pin.off{transform:translateY(110%)}
+  .pin b{display:block;font-size:14px;font-weight:700;line-height:1.25}
+  .pin i{display:block;font-style:normal;font-size:12px;font-weight:500;line-height:1.3}
+  .pin .go{background:var(--brand-ink);color:#fff;font-weight:700;font-size:13.5px;padding:.5rem .85rem;border-radius:8px;white-space:nowrap;flex:none}
+
+  .pg-index>.partner,.pg-day>.partner,.pg-day .crumb{display:none}
+  .pg-day .ahero{padding-top:0}
+  .pg-day .daynav{border-top:0}
+  .pg-day .pinl{margin-top:1.4rem;border-top:1px solid var(--line)}
+  .first{display:block;border-top:1px solid var(--line)}
+  .tonight{display:block;text-decoration:none;padding:.8rem 0 1.15rem;border-bottom:1px solid var(--line)}
+  .when{display:flex;justify-content:space-between;gap:1rem;font-size:12.5px;color:var(--ink-faint)}
+  .tonight .on{display:block;font-family:var(--display);font-weight:800;font-size:clamp(2.5rem,12.6vw,3.2rem);line-height:.96;letter-spacing:-.045em;margin-top:1rem;text-wrap:balance}
+  .tonight .on.long{font-size:clamp(1.95rem,9.4vw,2.4rem);line-height:1}
+  .tonight .on b{color:var(--brand);font-weight:800;white-space:nowrap}
+  .tonight .vs{display:block;font-size:14.5px;color:var(--ink-soft);margin-top:.5rem}
+  .tonight .pr{display:flex;gap:.6rem;align-items:baseline;margin-top:.85rem;font-size:13px;color:var(--ink-faint)}
+  .tonight .num{font-family:var(--mono);color:var(--ink);font-weight:600;font-size:15px;white-space:nowrap}
+  .three{display:grid;grid-template-columns:.75fr 1.25fr 1.2fr;border-bottom:1px solid var(--line)}
+  .three>*{display:block;padding:.75rem 0 .8rem .8rem;border-left:1px solid var(--line);text-decoration:none;min-width:0}
+  .three>:first-child{padding-left:0;border-left:0}
+  .three .k{display:block;font-size:11.5px;color:var(--ink-faint);white-space:nowrap}
+  .three .v{display:block;font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:-.02em;line-height:1.35;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .three .s{display:block;font-family:var(--mono);font-size:11.5px;color:var(--ink-soft)}
+  .three .form{display:flex;gap:3px;margin:.62rem 0 .5rem}
+  .three .form i{width:9px;height:9px}
+  .pinl{display:flex;align-items:center;gap:.6rem;padding:.6rem 0;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink-soft);text-decoration:none}
+  .pinl b{color:var(--ink);font-weight:600;flex:none}
+  .pinl .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  .pinl .go{margin-left:auto;color:var(--brand);font-weight:600;flex:none}
+
+  /* the list under it: the open picks first, then the scorecard, then what was just graded */
+  .pg-index .split{padding-top:1.5rem;gap:0}
+  .pg-index #lists{display:contents}
+  .pg-index #lists>.block:first-child{order:1}
+  .pg-index .card{order:2;margin-top:2.2rem}
+  .pg-index #lists>.block+.block{order:3;margin-top:2.6rem}
+  .pg-index #lists>.block:first-child .mega{font-size:1.5rem;letter-spacing:-.03em;line-height:1.1}
+  .pg-index #lists>.block:first-child .count,.pg-index #lists>.block:first-child .sub{display:none}
+  .pg-index #lists>.block:first-child .chips{margin:.8rem 0 .7rem}
+  /* the pick in the headline is not listed a second time - unless a board filter is on, when the
+     headline steps aside and the list is complete again */
+  body:not(.flt) .w-also{display:inline}
+  body:not(.flt) .w-on{display:none}
+  body:not(.flt) .pk.lead,body:not(.flt) .day.lead-only,body:not(.flt) .block.solo{display:none}
+  body:not(.flt) .pk.lead+.pk{border-top-color:transparent}
+  body:not(.flt) .block.solo+.block{margin-top:0}
+  body.flt .tonight{display:none}
+  body:not(.flt):not(.all) .day.later{display:none}
+  body:not(.flt):not(.all) .showall{display:block;width:100%;font:600 14.5px var(--body);color:var(--ink);background:transparent;border:0;border-block:1px solid var(--line);padding:.95rem 0;text-align:left;cursor:pointer}
+  .showall::after{content:"+";float:right;font-family:var(--mono);color:var(--ink-faint)}
+
+  .daynav{margin-bottom:1.3rem}
+}
+@media print{ .pin,.first{display:none!important} }
 </style>
 </head>
-<body>
+<body class="pg-offers">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap"><a class="mark" href="index.html"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di"><span class="ltr">i</span><svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></a><nav class="top" aria-label="Boards and pages"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><span class="sep" aria-hidden="true"></span><a href="attention.html">Attention</a><a href="method.html">Method</a><a href="log.html">Full log</a></nav><a class="pill" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki &#8599;</a></div></header><div class="partner"><div class="wrap"><a href="offers.html" rel="sponsored"><span class="chip">Partner</span><b>Gambit Markets</b><span class="t">Prediction markets. Part of this book is mirrored there.</span><span class="go">See the offer &rarr;</span></a></div></div>
 <main id="main">
@@ -430,22 +523,51 @@ dl.limits dd{margin:0}
 <div class="mark giant" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg2)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di"><span class="ltr">i</span><svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p>Not betting advice &middot; 21+ where legal &middot; partner and referral links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 18 Nov 2026, 17:15 UTC</p>
+<p>Not betting advice &middot; 21+ where legal &middot; partner and referral links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 18 Nov 2026, 20:15 UTC</p>
 </div>
 </div></footer>
+<a class="pin" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener"><span><b>Every play, as I take it</b><i>3 days free, then &#36;20 a month</i></span><span class="go">Start free</span></a>
 <script>
 (function(){
-  var d = new Date(), iso = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+  function isoOf(x){ return x.getFullYear() + '-' + ('0' + (x.getMonth() + 1)).slice(-2) + '-' + ('0' + x.getDate()).slice(-2); }
+  var d = new Date(), iso = isoOf(d);
+  var yes = isoOf(new Date(d.getFullYear(), d.getMonth(), d.getDate() - 1)), tom = isoOf(new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1));
+  function rel(v){ return v === iso ? 'Today' : v === tom ? 'Tomorrow' : v === yes ? 'Yesterday' : ''; }
+  // "Today" is the reader's today, so it is written here and never stamped in at build time
+  document.querySelectorAll('[data-rel]').forEach(function(el){ var r = rel(el.getAttribute('data-rel')); if(r) el.textContent = r + ' \u00b7 '; });
+  document.querySelectorAll('[data-rel-day]').forEach(function(el){ var r = rel(el.getAttribute('data-rel-day')); if(r) el.textContent = r; });
+  var pin = document.querySelector('.pin'), offer = document.querySelector('.members,.cta');
+  if(pin && offer && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ pin.classList.toggle('off', es[0].isIntersecting); }).observe(offer);
+  }
   document.querySelectorAll('.day[data-d="' + iso + '"]').forEach(function(el){
     el.classList.add('today');
     var n = el.querySelector('.dnum'); if(!n || n.querySelector('em')) return;
     var e = document.createElement('em'); e.textContent = 'Today'; n.appendChild(e);
   });
+  // Phones only (the stylesheet decides): a long open list is cut after the first few picks so
+  // the results under it are not a dozen screens away. Without script the whole list shows.
+  var ob = document.querySelector('.pg-index #lists .block'), shown = 0, cut = false, later = 0;
+  if(ob){
+    ob.querySelectorAll('.day').forEach(function(day){
+      if(cut){ day.classList.add('later'); later += day.querySelectorAll('.pk').length; return; }
+      shown += day.querySelectorAll('.pk:not(.lead)').length; if(shown >= 5) cut = true;
+    });
+    if(later){
+      var mb = document.createElement('button'); mb.type = 'button'; mb.className = 'showall';
+      mb.textContent = 'Show ' + later + ' more open pick' + (later === 1 ? '' : 's');
+      mb.addEventListener('click', function(){ document.body.classList.add('all'); });
+      // before the first hidden day, not at the end: the last day must stay the last child, because
+      // the stylesheet closes the list with that day's bottom rule
+      var fl = ob.querySelector('.day.later'); fl.parentNode.insertBefore(mb, fl);
+    }
+  }
   document.querySelectorAll('.chips[data-filter]').forEach(function(box){
     box.addEventListener('click', function(ev){
       var b = ev.target.closest('button'); if(!b) return;
       box.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
       var f = b.getAttribute('data-f'), scope = document.querySelector(box.getAttribute('data-filter'));
+      document.body.classList.toggle('flt', f !== 'ALL');
       scope.querySelectorAll('.pk').forEach(function(r){ r.classList.toggle('hide', f !== 'ALL' && r.getAttribute('data-s') !== f); });
       scope.querySelectorAll('.day').forEach(function(day){ day.classList.toggle('hide', !day.querySelector('.pk:not(.hide)')); });
     });
