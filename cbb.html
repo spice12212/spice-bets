@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="137 college basketball paper picks, graded on points of closing line value. Nothing on this board is bet.">
+<meta name="theme-color" content="#09080d">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%239d7bff'/%3E%3Cstop offset='1' stop-color='%235b3cf0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='48' height='48' rx='13' fill='url(%23g)'/%3E%3Cpath d='M24 10C25.4 18.6 29.4 22.6 38 24C29.4 25.4 25.4 29.4 24 38C22.6 29.4 18.6 25.4 10 24C18.6 22.6 22.6 18.6 24 10Z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://spicebets.bet/cbb.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Spice Bets">
+<meta property="og:title" content="College Basketball - Spice Bets">
+<meta property="og:description" content="137 college basketball paper picks, graded on points of closing line value. Nothing on this board is bet.">
+<meta property="og:url" content="https://spicebets.bet/cbb.html">
+<meta property="og:image" content="https://spicebets.bet/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="College Basketball - Spice Bets">
+<meta name="twitter:description" content="137 college basketball paper picks, graded on points of closing line value. Nothing on this board is bet.">
+<meta name="twitter:image" content="https://spicebets.bet/og.png">
+<title>College Basketball - Spice Bets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* SPICE BETS - the site stylesheet. Read by build-site.ps1 and inlined into every page.
+
+   THE DESIGN IN ONE PARAGRAPH. The picks are the page. A visitor lands on what is open and what
+   just settled, set like a fixture list; the record sits beside it as a scorecard; the boards are
+   a standings table. Those are the forms a sports page already uses, built from rules and type
+   rather than rows of rounded cards. Charts live on the board pages, behind a tab.
+
+   RULES THAT ARE NOT DECORATION.
+   - Green and red belong to results and figures and to nothing else. Purple is the brand.
+   - Dark only (owner, 18 Nov 2026). There is no light palette to keep in step.
+   - One small corner radius (6-8px). No pill buttons, no large card corners.
+   - Every rule below is used by the builder. If an element goes, its rule goes with it: this
+     file replaced one that had ten redesigns stacked on top of each other as overrides. */
+:root{
+  --ground:#09080d; --surface:#111018; --raise:#181622;
+  --ink:#f3f1f8; --ink-soft:#aaa6ba; --ink-faint:#757089;
+  --line:#23202e; --line-soft:#191722;
+  --brand:#8b6cff; --brand-line:#3a2c78; --brand-ink:#0b0718;
+  --win:#3ddc84; --loss:#ff6b63; --flat:#757089;
+  --display:'Bricolage Grotesque','Archivo',Arial,sans-serif;
+  --body:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono',Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
+::selection{background:var(--brand);color:var(--brand-ink)}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:max(clamp(16px,4vw,40px),env(safe-area-inset-left,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+.pos{color:var(--win)} .neg{color:var(--loss)} .flat{color:var(--flat)}
+.hide{display:none!important}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--ground);padding:.6rem 1rem;border-radius:0 0 8px 0;font-weight:600;z-index:100}
+.skip:focus{left:0}
+@media(prefers-reduced-motion:reduce){ *{transition:none!important;animation:none!important} }
+
+/* ---------------------------------------------------------------- the lockup
+   The i's dot is removed by a mask and the spark set in its place; the measurements are for
+   Bricolage Grotesque at weight 700 and are in em, so the mark scales from the masthead to the
+   footer without being re-tuned. */
+.mark{display:inline-flex;align-items:center;gap:.34em;text-decoration:none;line-height:1;font-size:1.46rem}
+.mark .ico{width:1.6em;height:1.6em;flex:none;display:block}
+.mark .wm{font-family:var(--display);font-variation-settings:'wdth' 100;font-weight:700;font-size:1em;letter-spacing:-.025em;color:var(--ink);white-space:nowrap}
+.mark .wm em{font-style:normal;color:var(--brand)}
+.mark .wm .di{position:relative;display:inline-block}
+.mark .wm .ltr{display:inline-block;-webkit-mask-image:linear-gradient(to bottom,transparent 0 .28em,#000 .28em);mask-image:linear-gradient(to bottom,transparent 0 .28em,#000 .28em)}
+.mark .wm .spk{position:absolute;left:48.4%;top:.15em;width:.46em;height:.46em;transform:translate(-50%,-50%);display:block;pointer-events:none}
+.mark.giant{display:flex;margin:clamp(2.5rem,6vw,5rem) 0 1.5rem;font-size:clamp(3.2rem,13.2vw,11.5rem)}
+
+/* ---------------------------------------------------------------- masthead */
+header.top .wrap{display:flex;align-items:center;gap:1.5rem;height:72px}
+nav.top{display:flex;gap:.25rem;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+nav.top::-webkit-scrollbar{display:none}
+nav.top a{font-size:14.5px;font-weight:500;color:var(--ink-soft);text-decoration:none;padding:.45rem .7rem;border-radius:6px;white-space:nowrap}
+nav.top a:hover,nav.top a.here{color:var(--ink);background:var(--raise)}
+nav.top .sep{width:1px;background:var(--line);margin:.5rem .4rem;flex:none}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:var(--brand);color:var(--brand-ink);font-weight:700;font-size:14.5px;text-decoration:none;padding:.55rem 1rem;border-radius:8px;white-space:nowrap;flex:none}
+.pill:hover{background:#a08aff}
+@media(max-width:900px){
+  header.top .wrap{flex-wrap:wrap;height:auto;padding-block:14px 6px;gap:.4rem 1rem}
+  nav.top{order:3;width:100%;margin-left:-.7rem}
+  header.top .pill{margin-left:auto}
+}
+/* The one official partner. It is a paid placement and says so in the first word. */
+.partner{border-block:1px solid var(--line);font-size:14px;color:var(--ink-soft)}
+.partner a{display:flex;align-items:center;gap:.7rem;padding-block:.55rem;text-decoration:none}
+.partner b{color:var(--ink);font-weight:600;flex:none}
+.partner .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.partner .go{margin-left:auto;color:var(--brand);font-weight:600;flex:none}
+.chip{font-size:11.5px;font-weight:600;color:var(--ink-faint);border:1px solid var(--line);border-radius:4px;padding:0 .4rem;line-height:1.7;flex:none;white-space:nowrap}
+
+/* ---------------------------------------------------------------- shared type */
+.mega{font-weight:800;font-variation-settings:'wdth' 100;font-size:clamp(2.7rem,6.4vw,5.4rem);letter-spacing:-.035em;word-spacing:.04em;line-height:.92}
+.mega.second{font-size:clamp(2rem,4.2vw,3.4rem)}
+.mega.long{font-size:clamp(2.3rem,5.2vw,4.4rem);line-height:.98;max-width:17ch}
+.lh{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.count{font-size:14px;font-weight:600;color:var(--brand);border:1px solid var(--brand-line);border-radius:6px;padding:.2rem .6rem;white-space:nowrap;transform:translateY(-.5rem)}
+.count.soft{color:var(--ink-faint);border-color:var(--line)}
+.kick{font-size:14px;font-weight:600;color:var(--brand);margin:0 0 1rem}
+.sub{margin:.9rem 0 0;color:var(--ink-soft);max-width:56ch}
+.sub strong{color:var(--ink);font-weight:600}
+.sub a{color:var(--ink);text-decoration-color:var(--brand);text-underline-offset:3px}
+.note{font-size:13.5px;color:var(--ink-faint);margin:.9rem 0 0;max-width:86ch}
+.note strong{color:var(--ink-soft);font-weight:600}
+.note a{color:var(--ink-soft)}
+.more{display:inline-block;margin-top:1.2rem;font-weight:600;color:var(--brand);text-decoration:none}
+.more:hover{text-decoration:underline}
+.empty{margin:0;padding:1.4rem 0;border-block:1px solid var(--line);color:var(--ink-soft)}
+.chips{display:flex;gap:.4rem;flex-wrap:wrap;margin:1.4rem 0 1.2rem}
+.chips button{font:500 13.5px var(--body);color:var(--ink-soft);background:transparent;border:1px solid var(--line);border-radius:6px;padding:.34rem .8rem;cursor:pointer}
+.chips button b{font-weight:500;color:var(--ink-faint);margin-left:.3rem;font-family:var(--mono);font-size:12px}
+.chips button:hover{color:var(--ink);border-color:var(--ink-faint)}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.chips button[aria-pressed="true"] b{color:#4a465a}
+
+/* ---------------------------------------------------------------- home: picks left, scorecard pinned right */
+.split{display:grid;grid-template-columns:minmax(0,1fr) 370px;gap:clamp(2rem,5vw,4.5rem);align-items:start;padding-top:clamp(2rem,5vw,4rem)}
+.block+.block{margin-top:clamp(3rem,6vw,5rem)}
+.card{position:sticky;top:24px;border-top:3px solid var(--brand);padding:1.4rem 0 0}
+.card h1{font-weight:700;font-size:1.5rem;letter-spacing:-.025em;line-height:1.1}
+.card .lede{margin:.7rem 0 0;font-size:14.5px;color:var(--ink-soft)}
+.card .lede a{color:var(--ink)}
+.card .k{font-size:13px;color:var(--ink-faint)}
+.card .s{font-size:13px;color:var(--ink-faint)}
+.card .big{margin-top:1.6rem;padding-top:1.3rem;border-top:1px solid var(--line)}
+.card .big .v{display:block;font-family:var(--display);font-weight:800;font-size:4.7rem;letter-spacing:-.055em;line-height:.9;margin:.3rem 0 .45rem;font-variant-numeric:tabular-nums}
+.card .two{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+.card .two .v{font-family:var(--display);font-weight:700;font-size:1.55rem;letter-spacing:-.03em;line-height:1.2;font-variant-numeric:tabular-nums}
+.card .last{display:flex;align-items:center;gap:.8rem;margin-top:1.2rem;padding-top:1.1rem;border-top:1px solid var(--line)}
+.card .last .s{margin-left:auto;font-family:var(--mono);color:var(--ink-soft)}
+.card .pill{width:100%;margin-top:1.5rem;padding:.85rem 1rem;font-size:15.5px}
+.card .fine{font-size:12.5px;color:var(--ink-faint);margin:.7rem 0 0}
+@media(max-width:960px){
+  /* Phone and tablet: the picks must still be the first thing on screen, so the scorecard
+     shrinks to a strip above them - one line of headline, three figures, no second button. */
+  .split{grid-template-columns:1fr;gap:1.8rem}
+  .card{position:static;order:-1;padding:1rem 0 1.1rem;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:.2rem 1rem;align-items:end}
+  .card h1{grid-column:1/-1;font-size:1.05rem;margin-bottom:.6rem}
+  .card .lede,.card .pill,.card .fine,.card .last{display:none}
+  .card .big,.card .two{margin:0;padding:0;border:0}
+  .card .two{display:contents}
+  .card .big .v{font-size:2.3rem;margin:.1rem 0}
+  .card .two .v{font-size:1.02rem;white-space:nowrap}
+  .card .two .k{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .card .k,.card .s{font-size:11.5px}
+}
+
+/* ---------------------------------------------------------------- the fixture list
+   A day is a big date and its picks. A pick is the matchup itself: both sides set large, the one
+   that was picked in white with its number, the other dimmed. */
+.day{display:grid;grid-template-columns:5.4rem minmax(0,1fr);gap:0 1rem;border-top:1px solid var(--line)}
+.day:last-child{border-bottom:1px solid var(--line)}
+.dnum{padding:1rem 0}
+.dnum b{display:block;font-family:var(--display);font-weight:800;font-size:2.7rem;letter-spacing:-.05em;line-height:.9;font-variant-numeric:tabular-nums}
+.dnum span{display:block;font-size:12.5px;color:var(--ink-faint);margin-top:.3rem}
+.dnum small{display:block;font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);margin-top:.35rem;font-variant-numeric:tabular-nums}
+.dnum em{display:inline-block;font-style:normal;font-size:11.5px;font-weight:700;color:var(--brand-ink);background:var(--brand);border-radius:4px;padding:0 .4rem;margin-top:.4rem}
+.day.today .dnum b{color:var(--brand)}
+.pk{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:0 1.3rem;padding:.9rem;margin-left:-.9rem;border-top:1px solid var(--line-soft);border-radius:6px;text-decoration:none;transition:background .15s}
+.pk:first-child{border-top-color:transparent}
+a.pk:hover{background:var(--surface)}
+.mu{display:block;font-family:var(--display);font-weight:700;font-size:1.42rem;letter-spacing:-.022em;line-height:1.22}
+.mu .dim{color:var(--ink-faint);font-weight:600}
+.mu .at{font-family:var(--body);color:var(--ink-faint);font-weight:500;font-size:.62em;margin:0 .55em;letter-spacing:0}
+.mu .ln{font-weight:700;margin-left:.3em;font-variant-numeric:tabular-nums}
+.pk-game{display:block;font-size:13.5px;color:var(--ink-soft);margin-top:.1rem}
+.pk-price{font-family:var(--mono);font-size:14px;color:var(--ink-soft);white-space:nowrap;text-align:right}
+.pk-price small{display:block;font-size:11.5px;color:var(--ink-faint);font-family:var(--body)}
+.pk-end{display:flex;align-items:center;justify-content:flex-end;gap:.7rem;min-width:7.2rem}
+.clv{font-family:var(--mono);font-size:13.5px;font-weight:600;white-space:nowrap}
+.res{display:inline-grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;font-family:var(--mono);font-size:13px;font-weight:600;flex:none}
+.res.w{background:var(--win);color:#04130a}
+.res.l{color:var(--loss);border:1.5px solid var(--loss)}
+.res.p{color:var(--flat);border:1.5px solid var(--flat)}
+@media(max-width:620px){
+  .day{grid-template-columns:3.7rem minmax(0,1fr);gap:0 .6rem}
+  .dnum b{font-size:1.9rem}
+  .dnum span{font-size:11px;white-space:nowrap}
+  .pk{grid-template-columns:minmax(0,1fr) auto;gap:.2rem .8rem;padding-right:.2rem}
+  .mu{font-size:1.1rem}
+  .pk-price{grid-column:1;grid-row:2;text-align:left;font-size:12.5px}
+  .pk-price small{display:inline;margin-left:.4rem}
+  .pk-end{grid-column:2;grid-row:1/3;min-width:0;flex-direction:column;gap:.3rem;align-items:flex-end}
+}
+
+/* ---------------------------------------------------------------- form guide: oldest left, newest right */
+.form{display:inline-flex;gap:5px;vertical-align:middle}
+.form i{width:10px;height:10px;border-radius:50%;display:block}
+.form .w{background:var(--win)}
+.form .l{border:1.5px solid var(--loss)}
+.form .p{border:1.5px solid var(--flat)}
+
+/* ---------------------------------------------------------------- sections and the standings table */
+section{padding-top:clamp(3.5rem,7vw,6rem)}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:1rem 3rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.sh h2{font-weight:800;font-size:clamp(1.9rem,3.4vw,2.9rem);letter-spacing:-.03em;line-height:1.02}
+.sh p{margin:0;max-width:44ch;color:var(--ink-soft);font-size:.98rem}
+.stwrap{overflow-x:auto}
+.stwrap+p{margin-top:1.2rem}
+.standings{width:100%;border-collapse:collapse;border-top:1px solid var(--line)}
+.standings th{font-size:12.5px;font-weight:500;color:var(--ink-faint);text-align:right;padding:.7rem 0 .7rem 1.5rem;border-bottom:1px solid var(--line);white-space:nowrap}
+.standings td{padding:1.15rem 0 1.15rem 1.5rem;border-bottom:1px solid var(--line-soft);text-align:right;font-family:var(--mono);font-size:15px;color:var(--ink-soft);font-variant-numeric:tabular-nums;white-space:nowrap;vertical-align:baseline;transition:background .15s}
+.standings th:first-child,.standings td:first-child{text-align:left;padding-left:0}
+.standings td:first-child{width:40%}
+.standings tbody tr:hover td{background:var(--surface)}
+.standings .name{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,2.5vw,1.95rem);letter-spacing:-.028em;color:var(--ink);text-decoration:none}
+.standings tr:hover a.name{color:var(--brand)}
+.standings .chip{margin-left:.6rem;vertical-align:.25em;font-family:var(--body)}
+.standings .rec{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.02em;color:var(--ink)}
+.standings .fig{font-weight:600}
+.standings .op{font-family:var(--body);font-weight:600;color:var(--brand)}
+.standings .op.none{color:var(--ink-faint);font-weight:400}
+/* a plain data table (by market, the collection log) borrows the same rules at a smaller size */
+.standings.data td{font-size:14px;padding-block:.8rem}
+.standings.data td:first-child{width:auto;color:var(--ink)}
+.standings.data .name{font-size:1.1rem}
+@media(max-width:620px){
+  .standings:not(.data) th:nth-child(n+5),.standings:not(.data) td:nth-child(n+5){display:none}
+  .standings td,.standings th{padding-left:.7rem}
+  .standings td{font-size:12.5px;padding-block:.9rem}
+  .standings td:first-child{width:auto;white-space:normal}
+  .standings .name{font-size:1.08rem}
+  .standings .chip{display:none}
+  .standings .rec{font-size:.98rem}
+}
+
+/* ---------------------------------------------------------------- members: the brand colour, committed */
+.members{margin-top:clamp(3.5rem,7vw,6rem);background:var(--brand);color:var(--brand-ink);padding-block:clamp(3rem,6vw,5.5rem)}
+.members h2{font-weight:800;font-size:clamp(2.4rem,5.4vw,4.6rem);letter-spacing:-.04em;line-height:.96;max-width:14ch}
+.members .grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:2.5rem 4rem;align-items:start}
+.members .kick{color:var(--brand-ink);opacity:.72}
+.members .copy{margin:1.5rem 0 0;max-width:46ch;font-size:1.04rem;font-weight:500}
+.members .copy strong{font-weight:700}
+.price{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
+.price .free{font-family:var(--display);font-weight:800;font-size:2.2rem;letter-spacing:-.03em;line-height:1}
+.price .then{font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--brand-ink);color:#fff;font-weight:700;text-decoration:none;padding:.95rem 1.5rem;border-radius:8px;margin-top:1.4rem}
+.btn:hover{background:#1c1340}
+.members .small{font-size:13px;margin:1rem 0 0;max-width:46ch;opacity:.78}
+.perks{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--brand-ink)}
+.perks li{display:flex;gap:.8rem;padding:.72rem 0;border-bottom:1px solid rgba(11,7,24,.22);font-weight:500;font-size:.98rem}
+.perks svg{width:1.05rem;height:1.05rem;flex:none;margin-top:.22rem}
+.crown{grid-column:1/-1;display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.2rem 2.5rem;align-items:start;background:var(--brand-ink);color:var(--ink);border-radius:8px;padding:1.6rem 1.9rem;margin-top:.6rem}
+.crown .k{font-size:13px;font-weight:600;color:var(--brand)}
+.crown .v{font-family:var(--display);font-weight:800;font-size:3rem;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.crown .s{font-size:13px;color:var(--ink-soft)}
+.crown p{margin:0 0 .8rem;color:var(--ink-soft);font-size:.98rem;max-width:66ch}
+.crown p:last-child{margin-bottom:0}
+.crown p strong{color:var(--ink);font-weight:600}
+@media(max-width:820px){ .members .grid{grid-template-columns:1fr} .crown{grid-template-columns:1fr} }
+/* the same offer as one band, for every page that is not the home page */
+.cta{display:flex;align-items:center;justify-content:space-between;gap:1.2rem 2rem;flex-wrap:wrap;margin-top:clamp(3rem,6vw,5rem);background:var(--brand);color:var(--brand-ink);border-radius:8px;padding:1.8rem 2rem}
+.cta h2{font-weight:800;font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.03em;line-height:1.1}
+.cta p{margin:.4rem 0 0;font-weight:500}
+.cta .btn{margin-top:0}
+
+/* ---------------------------------------------------------------- footer */
+footer{padding-block:clamp(3rem,6vw,5rem) 2rem}
+.fgrid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:2rem}
+.fgrid h4{margin:0 0 .7rem;font-size:13px;font-weight:500;color:var(--ink-faint)}
+.fgrid ul{list-style:none;margin:0;padding:0}
+.fgrid li{margin:.3rem 0}
+.fgrid a{text-decoration:none;color:var(--ink-soft);font-size:15px}
+.fgrid a:hover{color:var(--ink)}
+.fgrid p{margin:0;color:var(--ink-soft);font-size:15px;max-width:34ch}
+.fgrid .chip{margin-left:.4rem}
+.fgrid .tagline{font-family:var(--display);font-weight:700;font-size:1.1rem;letter-spacing:-.015em;color:var(--ink);margin-bottom:.5rem}
+.fine{border-top:1px solid var(--line);padding-top:1.2rem;font-size:13px;color:var(--ink-faint)}
+.fine p{margin:0 0 .5rem;max-width:110ch}
+.fine strong{color:var(--ink-soft)}
+@media(max-width:820px){ .fgrid{grid-template-columns:1fr 1fr} .fgrid>div:first-child{grid-column:1/-1} }
+
+/* ---------------------------------------------------------------- page heads, figures and tabs */
+.ahero{padding-top:clamp(2rem,5vw,4rem)}
+.ahero .sub{font-size:1.08rem;max-width:64ch}
+.ahero .sub+.sub{margin-top:.8rem}
+.crumb{font-size:14px;color:var(--ink-faint);margin:0 0 1rem}
+.crumb a{color:var(--ink-soft);text-decoration:none}
+.crumb a:hover{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line);margin-top:2.2rem}
+.stats>div{padding:1.1rem 1.3rem;border-left:1px solid var(--line)}
+.stats>div:first-child{padding-left:0;border-left:0}
+.stats .k{font-size:13px;color:var(--ink-faint)}
+.stats .v{font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,2.8vw,2.4rem);letter-spacing:-.04em;line-height:1.15;font-variant-numeric:tabular-nums}
+.stats .s{font-size:12.5px;color:var(--ink-faint)}
+@media(max-width:820px){ .stats{grid-template-columns:1fr 1fr} .stats>div:nth-child(3){padding-left:0;border-left:0} .stats>div:nth-child(n+3){border-top:1px solid var(--line)} }
+.formline{display:flex;align-items:center;gap:.9rem;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.formline .k{font-size:13px;color:var(--ink-faint)}
+.formline .s{font-family:var(--mono);font-size:13px;color:var(--ink-soft)}
+.formline .form i{width:12px;height:12px}
+.tabs{display:flex;gap:.3rem;margin-top:2.4rem;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tabs button{font:600 15.5px var(--body);color:var(--ink-faint);background:none;border:0;border-bottom:2px solid transparent;padding:.8rem 1rem;margin-bottom:-1px;cursor:pointer;white-space:nowrap}
+.tabs button b{font-family:var(--mono);font-weight:500;font-size:12px;margin-left:.35rem;color:var(--ink-faint)}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--brand)}
+.panel{padding-top:2rem}
+.panel[hidden]{display:none}
+.panel h2.mid{font-weight:800;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-.03em;margin-bottom:1rem}
+/* on a board page the list keeps a readable width instead of stretching the price a foot from its game */
+.panel .block,.panel>.legend,.panel>#plot,.panel>.note,.panel>.wk{max-width:920px}
+.panel .block+.block{margin-top:3rem}
+.legend{display:flex;flex-wrap:wrap;gap:.3rem 1.1rem;font-size:13px;color:var(--ink-faint);margin-bottom:.4rem}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:.4rem;vertical-align:1px}
+.legend i.rule{width:16px;height:2px;border-radius:0;vertical-align:3px;background:var(--brand)}
+#plot svg{display:block;width:100%}
+#plot circle:hover{stroke:#fff;stroke-width:1.5}
+.tip{position:fixed;z-index:50;pointer-events:none;background:#fff;color:#0b0718;font-size:13px;font-weight:500;padding:.35rem .6rem;border-radius:6px;white-space:nowrap;transform:translate(-50%,-135%);opacity:0;transition:opacity .12s}
+.tip.on{opacity:1}
+/* an earlier football week: closed until asked for, with its record on the bar */
+.wk{border-bottom:1px solid var(--line)}
+.wk:first-of-type{border-top:1px solid var(--line)}
+.wk summary{display:flex;align-items:baseline;gap:.4rem 1.4rem;flex-wrap:wrap;padding:1rem 0;cursor:pointer;list-style:none}
+.wk summary::-webkit-details-marker{display:none}
+.wk summary::after{content:"+";margin-left:auto;font-family:var(--mono);color:var(--ink-faint)}
+.wk[open] summary::after{content:"\2212"}
+.wk .wn{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
+.wk .wd{font-size:13px;color:var(--ink-faint)}
+.wk .ws{font-family:var(--mono);font-size:13px;color:var(--ink-soft)}
+.wk .day:last-child{border-bottom:0}
+.wk[open]{padding-bottom:.6rem}
+
+/* ---------------------------------------------------------------- text pages
+   A section is a heading in the margin and its text beside it. The heading stays put while its
+   own text scrolls past, so a long page always says where you are. */
+.ahero+.sec,.stats+.sec{margin-top:clamp(2.5rem,5vw,4rem)}
+.sec{display:grid;grid-template-columns:minmax(0,290px) minmax(0,1fr);gap:1rem clamp(2rem,5vw,5rem);border-top:1px solid var(--line);padding-block:clamp(1.8rem,3.5vw,2.8rem)}
+.sec-h{position:sticky;top:24px;align-self:start}
+.sec-h .kick{font-size:13px;margin-bottom:.5rem}
+.sec-h h2{font-weight:800;font-size:clamp(1.45rem,2.3vw,1.95rem);letter-spacing:-.03em;line-height:1.06}
+.sec-b{max-width:70ch;color:var(--ink-soft);font-size:1.02rem;line-height:1.65;min-width:0}
+.sec-b p{margin:0 0 1rem}
+.sec-b>:last-child{margin-bottom:0}
+.sec-b strong{color:var(--ink);font-weight:600}
+.sec-b p a,.sec-b li a,.sec-b dd a{color:var(--ink);text-decoration-color:var(--brand);text-underline-offset:3px}
+.sec-b ul{margin:0 0 1rem;padding-left:1.15rem}
+.sec-b li{margin:.5rem 0;padding-left:.2rem}
+.sec-b li::marker{color:var(--brand)}
+.sec-b .intro{color:var(--ink);font-size:1.12rem;line-height:1.5}
+.sec-b .eg{margin-top:1.6rem;font-size:13.5px;color:var(--ink-faint)}
+.say{border-left:3px solid var(--brand);padding:.15rem 0 .15rem 1.3rem;margin:1.5rem 0}
+.say p:last-child{margin-bottom:0}
+.sec-b>.say:first-child{margin-top:0}
+dl.limits{margin:0;border-top:1px solid var(--line)}
+dl.limits>div{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:.3rem 2rem;padding:1rem 0;border-bottom:1px solid var(--line-soft)}
+dl.limits dt{font-family:var(--display);font-weight:700;color:var(--ink);font-size:1.08rem;letter-spacing:-.015em}
+dl.limits dd{margin:0}
+@media(max-width:820px){ .sec{grid-template-columns:1fr;gap:.9rem} .sec-h{position:static} dl.limits>div{grid-template-columns:1fr} }
+
+/* ---------------------------------------------------------------- attention: the published three as a ranking */
+.rank{border-top:1px solid var(--line)}
+.rank .r{display:grid;grid-template-columns:2.6rem minmax(0,1.2fr) minmax(0,1fr) auto auto;align-items:center;gap:0 1.2rem;padding:1.05rem 0;border-bottom:1px solid var(--line-soft)}
+.rank .n{font-family:var(--display);font-weight:800;font-size:2.1rem;letter-spacing:-.04em;line-height:1;color:var(--ink-faint)}
+.rank .t{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.02em;color:var(--ink)}
+.rank .bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.rank .bar i{display:block;height:100%;background:var(--ink-soft);border-radius:3px}
+.rank .i{font-family:var(--mono);font-weight:600;font-size:1.15rem;color:var(--ink);text-align:right;white-space:nowrap}
+.rank .i small{display:block;font-family:var(--body);font-weight:400;font-size:11.5px;color:var(--ink-faint)}
+.rank .a{font-family:var(--mono);font-size:13px;color:var(--ink-faint);white-space:nowrap;min-width:5.5rem;text-align:right}
+.gate{margin-top:1.8rem;background:var(--brand);color:var(--brand-ink);border-radius:8px;padding:1.5rem 1.6rem}
+.gate h3{font-weight:800;font-size:1.4rem;letter-spacing:-.025em;line-height:1.1}
+.gate p{margin:.6rem 0 0;color:var(--brand-ink);font-weight:500}
+.gate p strong{color:var(--brand-ink);font-weight:700}
+.gate .btn{margin-top:1.1rem}
+@media(max-width:620px){
+  .rank .r{grid-template-columns:2rem minmax(0,1fr) auto;gap:.2rem .8rem}
+  .rank .bar{grid-column:2/-1;grid-row:2}
+  .rank .a{display:none}
+  .rank .n{font-size:1.6rem}
+  .rank .t{font-size:1.1rem}
+}
+
+/* ---------------------------------------------------------------- offers: one row each, each saying what it is */
+.offers{border-top:1px solid var(--line);margin-top:clamp(2.5rem,5vw,4rem)}
+.offer{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:1rem 2rem;align-items:center;padding:1.7rem 0;border-bottom:1px solid var(--line)}
+.offer .logo{display:grid;place-items:center;height:64px;border-radius:8px;padding:0 1rem;border:1px solid var(--line)}
+.offer .logo img{max-width:100%;max-height:26px;display:block}
+.offer .logo.lm-light img,.offer .logo.lm-none img{filter:brightness(0) invert(1)}
+.offer .logo.lm-dark img{filter:brightness(0)}
+.offer .oh{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.offer h2{font-weight:800;font-size:1.6rem;letter-spacing:-.03em}
+.offer .count{transform:none}
+.offer .kind{font-size:13.5px;color:var(--ink-faint)}
+.offer p{margin:.45rem 0 0;color:var(--ink-soft);max-width:62ch}
+.code{display:inline-flex;align-items:center;gap:.7rem;margin-top:.9rem;background:none;border:1px dashed var(--ink-faint);border-radius:6px;padding:.4rem .7rem;color:var(--ink);cursor:pointer;font:500 13px var(--body)}
+.code span{color:var(--ink-faint)}
+.code b{font-family:var(--mono);font-weight:600;letter-spacing:.04em}
+.code i{font-style:normal;color:var(--brand);font-weight:600}
+.code:hover{border-color:var(--ink)}
+@media(max-width:760px){ .offer{grid-template-columns:1fr;gap:.9rem} .offer .logo{width:150px} .offer .pill{justify-self:start} }
+
+/* ---------------------------------------------------------------- print: the record, nothing else */
+@media print{
+  :root{--ground:#fff;--surface:#fff;--raise:#fff;--ink:#000;--ink-soft:#333;--ink-faint:#555;--line:#bbb;--line-soft:#ddd;--brand:#4a2fb8;--win:#0a6b35;--loss:#9a1c1c}
+  nav.top,.partner,.pill,.members,.cta,.btn,.chips,.tabs,.mark.giant,.skip{display:none!important}
+  .panel[hidden]{display:block}
+  .card,.sec-h{position:static}
+}
+
+/* ---------------------------------------------------------------- a day's own page */
+.dnum a{color:inherit;text-decoration:none;display:block}
+.dnum a:hover b{color:var(--brand)}
+.daynav{display:flex;justify-content:space-between;gap:1rem;font-size:14px;margin:0 0 1.8rem;padding-block:.75rem;border-block:1px solid var(--line)}
+.daynav a{color:var(--ink-soft);text-decoration:none;white-space:nowrap}
+.daynav a:hover{color:var(--ink)}
+.daynav span{min-width:1px}
+.share{display:flex;gap:.5rem;margin-top:1.5rem}
+.share button{font:600 14px var(--body);border-radius:6px;padding:.5rem .95rem;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--ink)}
+.share button:hover{border-color:var(--ink-faint)}
+.share button[data-share]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.dayl{margin-top:2.4rem;max-width:920px}
+.dayhead b{color:var(--brand);font-weight:800;white-space:nowrap}
+.dayhead.long{font-size:clamp(2.1rem,5vw,4rem);line-height:.98}
+.dayhead.rec{font-size:clamp(4.2rem,12vw,8.5rem);letter-spacing:-.055em;font-variant-numeric:tabular-nums}
+.vsline{margin:.8rem 0 0;font-size:1.12rem;color:var(--ink-soft)}
+.vsline span{font-family:var(--mono);font-size:.92em;color:var(--ink);white-space:nowrap}
+.when b{color:var(--brand);font-weight:600}
+
+/* ---------------------------------------------------------------- phones: the pick is the first screen
+   Everything from here to the end of this block exists only at phone width. Above it the page is
+   the desktop design, untouched: .first and .pin are not drawn at all, and "Also on the board"
+   reads "On the board".
+
+   WHY. Visitors arrive from a post on X, on a phone, and the first screen decides the visit. So
+   the first screen is the next pick as a headline, then the last graded day, the last ten and the
+   record. The scorecard moves below the open picks, the partner line below the three figures,
+   and the offer is pinned to the bottom edge instead of sitting in the masthead in purple. */
+.first,.pin,.pinl,.w-also,.showall{display:none}
+@media(max-width:760px){
+  body{padding-bottom:calc(60px + env(safe-area-inset-bottom,0px))}
+  header.top .wrap{padding-block:10px 2px}
+  header.top .mark{font-size:1.22rem}
+  header.top .pill{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:600;font-size:13.5px;padding:.38rem .7rem}
+  nav.top a{font-size:14px;padding:.4rem .65rem}
+
+  .pin{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;align-items:center;justify-content:space-between;gap:1rem;background:var(--brand);color:var(--brand-ink);text-decoration:none;padding:.55rem max(16px,env(safe-area-inset-right,0px)) calc(.6rem + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));transition:transform .22s}
+  .pin.off{transform:translateY(110%)}
+  .pin b{display:block;font-size:14px;font-weight:700;line-height:1.25}
+  .pin i{display:block;font-style:normal;font-size:12px;font-weight:500;line-height:1.3}
+  .pin .go{background:var(--brand-ink);color:#fff;font-weight:700;font-size:13.5px;padding:.5rem .85rem;border-radius:8px;white-space:nowrap;flex:none}
+
+  .pg-index>.partner,.pg-day>.partner,.pg-day .crumb{display:none}
+  .pg-day .ahero{padding-top:0}
+  .pg-day .daynav{border-top:0}
+  .pg-day .pinl{margin-top:1.4rem;border-top:1px solid var(--line)}
+  .first{display:block;border-top:1px solid var(--line)}
+  .tonight{display:block;text-decoration:none;padding:.8rem 0 1.15rem;border-bottom:1px solid var(--line)}
+  .when{display:flex;justify-content:space-between;gap:1rem;font-size:12.5px;color:var(--ink-faint)}
+  .tonight .on{display:block;font-family:var(--display);font-weight:800;font-size:clamp(2.5rem,12.6vw,3.2rem);line-height:.96;letter-spacing:-.045em;margin-top:1rem;text-wrap:balance}
+  .tonight .on.long{font-size:clamp(1.95rem,9.4vw,2.4rem);line-height:1}
+  .tonight .on b{color:var(--brand);font-weight:800;white-space:nowrap}
+  .tonight .vs{display:block;font-size:14.5px;color:var(--ink-soft);margin-top:.5rem}
+  .tonight .pr{display:flex;gap:.6rem;align-items:baseline;margin-top:.85rem;font-size:13px;color:var(--ink-faint)}
+  .tonight .num{font-family:var(--mono);color:var(--ink);font-weight:600;font-size:15px;white-space:nowrap}
+  .three{display:grid;grid-template-columns:.75fr 1.25fr 1.2fr;border-bottom:1px solid var(--line)}
+  .three>*{display:block;padding:.75rem 0 .8rem .8rem;border-left:1px solid var(--line);text-decoration:none;min-width:0}
+  .three>:first-child{padding-left:0;border-left:0}
+  .three .k{display:block;font-size:11.5px;color:var(--ink-faint);white-space:nowrap}
+  .three .v{display:block;font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:-.02em;line-height:1.35;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .three .s{display:block;font-family:var(--mono);font-size:11.5px;color:var(--ink-soft)}
+  .three .form{display:flex;gap:3px;margin:.62rem 0 .5rem}
+  .three .form i{width:9px;height:9px}
+  .pinl{display:flex;align-items:center;gap:.6rem;padding:.6rem 0;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink-soft);text-decoration:none}
+  .pinl b{color:var(--ink);font-weight:600;flex:none}
+  .pinl .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  .pinl .go{margin-left:auto;color:var(--brand);font-weight:600;flex:none}
+
+  /* the list under it: the open picks first, then the scorecard, then what was just graded */
+  .pg-index .split{padding-top:1.5rem;gap:0}
+  .pg-index #lists{display:contents}
+  .pg-index #lists>.block:first-child{order:1}
+  .pg-index .card{order:2;margin-top:2.2rem}
+  .pg-index #lists>.block+.block{order:3;margin-top:2.6rem}
+  .pg-index #lists>.block:first-child .mega{font-size:1.5rem;letter-spacing:-.03em;line-height:1.1}
+  .pg-index #lists>.block:first-child .count,.pg-index #lists>.block:first-child .sub{display:none}
+  .pg-index #lists>.block:first-child .chips{margin:.8rem 0 .7rem}
+  /* the pick in the headline is not listed a second time - unless a board filter is on, when the
+     headline steps aside and the list is complete again */
+  body:not(.flt) .w-also{display:inline}
+  body:not(.flt) .w-on{display:none}
+  body:not(.flt) .pk.lead,body:not(.flt) .day.lead-only,body:not(.flt) .block.solo{display:none}
+  body:not(.flt) .pk.lead+.pk{border-top-color:transparent}
+  body:not(.flt) .block.solo+.block{margin-top:0}
+  body.flt .tonight{display:none}
+  body:not(.flt):not(.all) .day.later{display:none}
+  body:not(.flt):not(.all) .showall{display:block;width:100%;font:600 14.5px var(--body);color:var(--ink);background:transparent;border:0;border-block:1px solid var(--line);padding:.95rem 0;text-align:left;cursor:pointer}
+  .showall::after{content:"+";float:right;font-family:var(--mono);color:var(--ink-faint)}
+
+  .daynav{margin-bottom:1.3rem}
+}
+@media print{ .pin,.first{display:none!important} }
+
+/* a paper pick on the home board says so beside its board name */
+.pk-game .chip{margin-left:.5rem;vertical-align:.08em}
+</style>
+</head>
+<body class="pg-cbb">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="mark" href="index.html"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di"><span class="ltr">i</span><svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></a><nav class="top" aria-label="Boards and pages"><a href="soccer.html">Soccer</a><a href="cfb.html">CFB</a><a href="nfl.html">NFL</a><a href="nhl.html">NHL</a><a href="nba.html">NBA</a><a href="cbb.html" class="here" aria-current="page">CBB</a><span class="sep" aria-hidden="true"></span><a href="attention.html">Attention</a><a href="method.html">Method</a><a href="log.html">Full log</a></nav><a class="pill" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki &#8599;</a></div></header><div class="partner"><div class="wrap"><a href="offers.html" rel="sponsored"><span class="chip">Partner</span><b>Gambit Markets</b><span class="t">Prediction markets. Part of this book is mirrored there.</span><span class="go">See the offer &rarr;</span></a></div></div>
+<main id="main">
+<div class="wrap"><div class="ahero"><p class="crumb"><a href="index.html">Boards</a> / College Basketball</p><div class="lh"><h1 class="mega">College Basketball</h1><span class="count">7 open</span><span class="count soft">paper</span></div><p class="sub">The newest board, opened with the 2026&ndash;27 season. Every pick on this page is written by the screener and graded, and <strong>none of it feeds a bet</strong>. Like the NBA board, it exists to find out whether the entry rule is worth anything before it is trusted with a stake.</p><div class="stats"><div><div class="k">Line CLV</div><div class="v neg">&minus;0.09 pts</div><div class="s">per pick, over 129 closes</div></div><div><div class="k">Beat the number</div><div class="v">43%</div><div class="s">20 better, 27 worse, of the 47 that moved &middot; 82 closed unchanged</div></div><div><div class="k">Record</div><div class="v">70&ndash;60</div><div class="s">against the spread, paper</div></div><div><div class="k">Price CLV</div><div class="v neg">&minus;0.11%</div><div class="s">on the 82 picks whose line held</div></div></div><div class="formline"><span class="k">Last ten graded</span><span class="form" role="img" aria-label="Last 10, oldest first: lost lost won lost lost won won won won lost"><i class="l"></i><i class="l"></i><i class="w"></i><i class="l"></i><i class="l"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="l"></i></span><span class="s">5&ndash;5</span></div></div><div class="tabs" role="tablist"><button type="button" role="tab" aria-selected="true" data-tab="picks">Picks<b>137</b></button><button type="button" role="tab" aria-selected="false" data-tab="chart">Chart</button><button type="button" role="tab" aria-selected="false" data-tab="about">About the numbers</button></div><div class="panel" id="p-picks" role="tabpanel" aria-label="Picks"><div class="block"><h2 class="mid">On the board</h2><div class="day" data-d="2026-11-15"><div class="dnum"><b>15</b><span>Sun &middot; Nov</span></div><div class="drows"><div class="pk"><span><span class="mu"><span>Pepperdine<b class="ln">+13.5</b></span><span class="at">at</span><span class="dim">Oregon</span></span></span><span class="pk-price">+13.5<small>number, at &minus;110</small></span></div></div></div><div class="day" data-d="2026-11-18"><div class="dnum"><b>18</b><span>Wed &middot; Nov</span></div><div class="drows"><div class="pk"><span><span class="mu"><span>Florida<b class="ln">&minus;2.5</b></span><span class="at">at</span><span class="dim">Houston</span></span></span><span class="pk-price">&minus;2.5<small>number, at &minus;104</small></span></div><div class="pk"><span><span class="mu"><span>Chattanooga<b class="ln">&minus;3.5</b></span><span class="at">at</span><span class="dim">Winthrop</span></span></span><span class="pk-price">&minus;3.5<small>number, at &minus;110</small></span></div><div class="pk"><span><span class="mu"><span class="dim">Vermont</span><span class="at">at</span><span>Yale<b class="ln">&minus;6.5</b></span></span></span><span class="pk-price">&minus;6.5<small>number, at &minus;108</small></span></div><div class="pk"><span><span class="mu"><span>Howard<b class="ln">+4.5</b></span><span class="at">at</span><span class="dim">Duquesne</span></span></span><span class="pk-price">+4.5<small>number, at &minus;110</small></span></div><div class="pk"><span><span class="mu"><span>West Virginia<b class="ln">+7.5</b></span><span class="at">at</span><span class="dim">Kansas</span></span></span><span class="pk-price">+7.5<small>number, at &minus;102</small></span></div><div class="pk"><span><span class="mu"><span class="dim">Louisiana</span><span class="at">at</span><span>San Francisco<b class="ln">&minus;10.5</b></span></span></span><span class="pk-price">&minus;10.5<small>number, at &minus;104</small></span></div></div></div></div><div class="block"><h2 class="mid">Every graded pick</h2><div class="day" data-d="2026-11-17"><div class="dnum"><b>17</b><span>Tue &middot; Nov</span><small>4&ndash;2</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">Lamar</span><span class="at">at</span><span>Omaha<b class="ln">&minus;1.5</b></span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;1.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>Indiana<b class="ln">&minus;1.5</b></span><span class="at">at</span><span class="dim">Arkansas</span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;1.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Bryant U<b class="ln">+9.5</b></span><span class="at">at</span><span class="dim">UMASS</span></span></span><span class="pk-price">+9.5 &rarr; +9.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Mississippi St<b class="ln">&minus;1.5</b></span><span class="at">at</span><span class="dim">UCF</span></span></span><span class="pk-price">&minus;1.5 &rarr; +1.5<small>number &rarr; close, at +105</small></span><span class="pk-end"><span class="clv neg">&minus;3.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">C. Michigan</span><span class="at">at</span><span>Dayton<b class="ln">&minus;12.5</b></span></span></span><span class="pk-price">&minus;12.5 &rarr; &minus;13.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Marist</span><span class="at">at</span><span>Army<b class="ln">&minus;1.5</b></span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;1.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div></div></div><div class="day" data-d="2026-11-16"><div class="dnum"><b>16</b><span>Mon &middot; Nov</span><small>1&ndash;2</small></div><div class="drows"><div class="pk"><span><span class="mu"><span>Ab Christian<b class="ln">+5.5</b></span><span class="at">at</span><span class="dim">Missouri St</span></span></span><span class="pk-price">+5.5 &rarr; +5.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>Tarleton St<b class="ln">+8.5</b></span><span class="at">at</span><span class="dim">Drake</span></span></span><span class="pk-price">+8.5 &rarr; +8.5<small>number &rarr; close, at &minus;101</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">W. Kentucky</span><span class="at">at</span><span>Tulsa<b class="ln">&minus;6.5</b></span></span></span><span class="pk-price">&minus;6.5 &rarr; &minus;6.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div></div></div><div class="day" data-d="2026-11-15"><div class="dnum"><b>15</b><span>Sun &middot; Nov</span><small>3&ndash;3</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">Alabama St</span><span class="at">at</span><span>San Jose St<b class="ln">&minus;13.5</b></span></span></span><span class="pk-price">&minus;13.5 &rarr; &minus;13.5<small>number &rarr; close, at &minus;106</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>W. Michigan<b class="ln">&minus;7.5</b></span><span class="at">at</span><span class="dim">Southern Indiana</span></span></span><span class="pk-price">&minus;7.5 &rarr; &minus;7.5<small>number &rarr; close, at &minus;107</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Chicago St</span><span class="at">at</span><span>Loyola Marymount<b class="ln">&minus;18.5</b></span></span></span><span class="pk-price">&minus;18.5 &rarr; &minus;18.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Missouri</span><span class="at">at</span><span>Marquette<b class="ln">&minus;1.5</b></span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;2.5<small>number &rarr; close, at &minus;104</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Boise State</span><span class="at">at</span><span>Nebraska<b class="ln">&minus;10.5</b></span></span></span><span class="pk-price">&minus;10.5 &rarr; &minus;10.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Louisville<b class="ln">&minus;9.5</b></span><span class="at">at</span><span class="dim">Memphis</span></span></span><span class="pk-price">&minus;9.5 &rarr; &minus;10.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res l">L</span></span></div></div></div><div class="day" data-d="2026-11-14"><div class="dnum"><b>14</b><span>Sat &middot; Nov</span><small>6&ndash;4</small></div><div class="drows"><div class="pk"><span><span class="mu"><span>Montana<b class="ln">&minus;1.5</b></span><span class="at">at</span><span class="dim">North Dakota</span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;1.5<small>number &rarr; close, at &minus;103</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>UAB<b class="ln">&minus;4.5</b></span><span class="at">at</span><span class="dim">Jax State</span></span></span><span class="pk-price">&minus;4.5 &rarr; &minus;2.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv neg">&minus;2.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Brown</span><span class="at">at</span><span>Siena<b class="ln">&minus;11.5</b></span></span></span><span class="pk-price">&minus;11.5 &rarr; &minus;9.5<small>number &rarr; close, at &minus;106</small></span><span class="pk-end"><span class="clv neg">&minus;2.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Colorado</span><span class="at">at</span><span>Providence<b class="ln">&minus;12.5</b></span></span></span><span class="pk-price">&minus;12.5 &rarr; &minus;11.5<small>number &rarr; close, at &minus;104</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Manhattan<b class="ln">+0.5</b></span><span class="at">at</span><span class="dim">Le Moyne</span></span></span><span class="pk-price">+0.5 &rarr; +1.5<small>number &rarr; close, at +100</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>LSU<b class="ln">+4.5</b></span><span class="at">at</span><span class="dim">Gonzaga</span></span></span><span class="pk-price">+4.5 &rarr; +4.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Wyoming<b class="ln">&minus;7.5</b></span><span class="at">at</span><span class="dim">Denver</span></span></span><span class="pk-price">&minus;7.5 &rarr; &minus;7.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Wofford<b class="ln">+5.5</b></span><span class="at">at</span><span class="dim">Queens</span></span></span><span class="pk-price">+5.5 &rarr; +5.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Marshall</span><span class="at">at</span><span>Youngstown St<b class="ln">&minus;1.5</b></span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;1.5<small>number &rarr; close, at +110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Bradley</span><span class="at">at</span><span>George Mason<b class="ln">&minus;13.5</b></span></span></span><span class="pk-price">&minus;13.5 &rarr; &minus;12.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res l">L</span></span></div></div></div><div class="day" data-d="2026-11-13"><div class="dnum"><b>13</b><span>Fri &middot; Nov</span><small>8&ndash;4</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">DePaul</span><span class="at">at</span><span>Northwestern<b class="ln">&minus;1.5</b></span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;1.5<small>number &rarr; close, at +105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>C. Arkansas<b class="ln">+22.5</b></span><span class="at">at</span><span class="dim">Arkansas</span></span></span><span class="pk-price">+22.5 &rarr; +22.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Xavier<b class="ln">&minus;3.5</b></span><span class="at">at</span><span class="dim">Mississippi St</span></span></span><span class="pk-price">&minus;3.5 &rarr; &minus;4.5<small>number &rarr; close, at &minus;106</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Arizona<b class="ln">&minus;2.5</b></span><span class="at">at</span><span class="dim">Auburn</span></span></span><span class="pk-price">&minus;2.5 &rarr; &minus;2.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Seton Hall</span><span class="at">at</span><span>Alabama<b class="ln">&minus;17.5</b></span></span></span><span class="pk-price">&minus;17.5 &rarr; &minus;18.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>Southern Miss<b class="ln">+9.5</b></span><span class="at">at</span><span class="dim">Texas St</span></span></span><span class="pk-price">+9.5 &rarr; +10.5<small>number &rarr; close, at &minus;101</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Texas Southern</span><span class="at">at</span><span>Murray State<b class="ln">&minus;29.5</b></span></span></span><span class="pk-price">&minus;29.5 &rarr; &minus;29.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Ohio State</span><span class="at">at</span><span>UConn<b class="ln">&minus;11.5</b></span></span></span><span class="pk-price">&minus;11.5 &rarr; &minus;12.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>App State<b class="ln">+7.5</b></span><span class="at">at</span><span class="dim">Charlotte</span></span></span><span class="pk-price">+7.5 &rarr; +7.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>FIU<b class="ln">+1.5</b></span><span class="at">at</span><span class="dim">FGCU</span></span></span><span class="pk-price">+1.5 &rarr; +2.5<small>number &rarr; close, at +104</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Harvard</span><span class="at">at</span><span>G Washington<b class="ln">&minus;12.5</b></span></span></span><span class="pk-price">&minus;12.5 &rarr; &minus;10.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv neg">&minus;2.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Chattanooga<b class="ln">+1.5</b></span><span class="at">at</span><span class="dim">Elon</span></span></span><span class="pk-price">+1.5 &rarr; +1.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div></div></div><div class="day" data-d="2026-11-12"><div class="dnum"><b>12</b><span>Thu &middot; Nov</span><small>2&ndash;6</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">UC Riverside</span><span class="at">at</span><span>San Jose St<b class="ln">&minus;8.5</b></span></span></span><span class="pk-price">&minus;8.5 &rarr; &minus;8.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">N. Mexico St</span><span class="at">at</span><span>UTEP<b class="ln">&minus;5.5</b></span></span></span><span class="pk-price">&minus;5.5 &rarr; &minus;5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv neg">&minus;0.5 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Montana St</span><span class="at">at</span><span>BYU<b class="ln">&minus;22.5</b></span></span></span><span class="pk-price">&minus;22.5 &rarr; &minus;22.5<small>number &rarr; close, at +100</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">OK State</span><span class="at">at</span><span>Texas A&amp;M<b class="ln">&minus;8.5</b></span></span></span><span class="pk-price">&minus;8.5 &rarr; &minus;8.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Richmond</span><span class="at">at</span><span>S. Illinois<b class="ln">+2.5</b></span></span></span><span class="pk-price">+2.5 &rarr; +2.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>CS Bakersfield<b class="ln">&minus;9.5</b></span><span class="at">at</span><span class="dim">W. Illinois</span></span></span><span class="pk-price">&minus;9.5 &rarr; &minus;9.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Canisius</span><span class="at">at</span><span>Brown<b class="ln">&minus;13.5</b></span></span></span><span class="pk-price">&minus;13.5 &rarr; &minus;13.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Coppin St</span><span class="at">at</span><span>Bradley<b class="ln">&minus;12.5</b></span></span></span><span class="pk-price">&minus;12.5 &rarr; &minus;13.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res l">L</span></span></div></div></div><div class="day" data-d="2026-11-11"><div class="dnum"><b>11</b><span>Wed &middot; Nov</span><small>4&ndash;5</small></div><div class="drows"><div class="pk"><span><span class="mu"><span>SFA<b class="ln">&minus;6.5</b></span><span class="at">at</span><span class="dim">Ab Christian</span></span></span><span class="pk-price">&minus;6.5 &rarr; &minus;6.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>Pepperdine<b class="ln">&minus;3.5</b></span><span class="at">at</span><span class="dim">Sam Houston</span></span></span><span class="pk-price">&minus;3.5 &rarr; &minus;3.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">N.J.I.T.</span><span class="at">at</span><span>VCU<b class="ln">&minus;34.5</b></span></span></span><span class="pk-price">&minus;34.5 &rarr; &minus;33.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Old Dominion<b class="ln">&minus;6.5</b></span><span class="at">at</span><span class="dim">Norfolk State</span></span></span><span class="pk-price">&minus;6.5 &rarr; &minus;6.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>UMass Lowell<b class="ln">+7.5</b></span><span class="at">at</span><span class="dim">UMASS</span></span></span><span class="pk-price">+7.5 &rarr; +7.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Southern Indiana</span><span class="at">at</span><span>IUIN<b class="ln">&minus;8.5</b></span></span></span><span class="pk-price">&minus;8.5 &rarr; &minus;8.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">NC Central</span><span class="at">at</span><span>VMI<b class="ln">&minus;8.5</b></span></span></span><span class="pk-price">&minus;8.5 &rarr; &minus;7.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Penn</span><span class="at">at</span><span>Navy<b class="ln">+7.5</b></span></span></span><span class="pk-price">+7.5 &rarr; +7.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Loyola (IL)<b class="ln">&minus;11</b></span><span class="at">at</span><span class="dim">Air Force</span></span></span><span class="pk-price">&minus;11<small>number, at &minus;110</small></span><span class="pk-end"><span class="clv flat">&ndash;</span><span class="res l">L</span></span></div></div></div><div class="day" data-d="2026-11-10"><div class="dnum"><b>10</b><span>Tue &middot; Nov</span><small>6&ndash;5</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">Hofstra</span><span class="at">at</span><span>Arizona St<b class="ln">&minus;18.5</b></span></span></span><span class="pk-price">&minus;18.5 &rarr; &minus;18.5<small>number &rarr; close, at &minus;106</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Hou Christian</span><span class="at">at</span><span>South Dakota<b class="ln">&minus;4.5</b></span></span></span><span class="pk-price">&minus;4.5 &rarr; &minus;4.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Alcorn State</span><span class="at">at</span><span>Murray State<b class="ln">&minus;30.5</b></span></span></span><span class="pk-price">&minus;30.5 &rarr; &minus;31.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>TN-Martin<b class="ln">+4.5</b></span><span class="at">at</span><span class="dim">Arkansas St</span></span></span><span class="pk-price">+4.5 &rarr; +5.5<small>number &rarr; close, at &minus;101</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Evansville</span><span class="at">at</span><span>Middle Tenn<b class="ln">&minus;9.5</b></span></span></span><span class="pk-price">&minus;9.5 &rarr; &minus;9.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Nicholls St</span><span class="at">at</span><span>Tulane<b class="ln">&minus;9.5</b></span></span></span><span class="pk-price">&minus;9.5 &rarr; &minus;9.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Texas St</span><span class="at">at</span><span>UT Grande Valley<b class="ln">+5</b></span></span></span><span class="pk-price">+5 &rarr; +5.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv neg">&minus;0.5 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>Army<b class="ln">&minus;1.5</b></span><span class="at">at</span><span class="dim">New Haven</span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;1.5<small>number &rarr; close, at +100</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>Washington St<b class="ln">+3.5</b></span><span class="at">at</span><span class="dim">Duquesne</span></span></span><span class="pk-price">+3.5 &rarr; +3.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>S. Alabama<b class="ln">+13.5</b></span><span class="at">at</span><span class="dim">UCF</span></span></span><span class="pk-price">+13.5 &rarr; +13.5<small>number &rarr; close, at &minus;109</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Maine</span><span class="at">at</span><span>Rhode Island<b class="ln">&minus;20.5</b></span></span></span><span class="pk-price">&minus;20.5 &rarr; &minus;20.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div></div></div><div class="day" data-d="2026-11-09"><div class="dnum"><b>9</b><span>Mon &middot; Nov</span><small>6&ndash;1</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">Cleveland St</span><span class="at">at</span><span>Bowling Green<b class="ln">&minus;13.5</b></span></span></span><span class="pk-price">&minus;13.5 &rarr; &minus;13.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Boston U<b class="ln">+14.5</b></span><span class="at">at</span><span class="dim">Northwestern</span></span></span><span class="pk-price">+14.5 &rarr; +13.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Florida A&amp;M</span><span class="at">at</span><span>UAB<b class="ln">&minus;18.5</b></span></span></span><span class="pk-price">&minus;18.5 &rarr; &minus;18.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">North Florida</span><span class="at">at</span><span>Miami (FL)<b class="ln">&minus;37.5</b></span></span></span><span class="pk-price">&minus;37.5 &rarr; &minus;35.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv neg">&minus;2.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>SC State<b class="ln">+1.5</b></span><span class="at">at</span><span class="dim">Chicago St</span></span></span><span class="pk-price">+1.5 &rarr; +1.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Long Island</span><span class="at">at</span><span>Towson<b class="ln">&minus;7.5</b></span></span></span><span class="pk-price">&minus;7.5 &rarr; &minus;8<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv pos">+0.5 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Stonehill</span><span class="at">at</span><span>Columbia<b class="ln">&minus;13.5</b></span></span></span><span class="pk-price">&minus;13.5 &rarr; &minus;13.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div></div></div><div class="day" data-d="2026-11-08"><div class="dnum"><b>8</b><span>Sun &middot; Nov</span><small>3&ndash;2</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">Norfolk State</span><span class="at">at</span><span>William &amp; Mary<b class="ln">&minus;9.5</b></span></span></span><span class="pk-price">&minus;9.5 &rarr; &minus;10.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Brown</span><span class="at">at</span><span>Lehigh<b class="ln">&minus;5.5</b></span></span></span><span class="pk-price">&minus;5.5 &rarr; &minus;5.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Central Conn</span><span class="at">at</span><span>Dartmouth<b class="ln">&minus;8.5</b></span></span></span><span class="pk-price">&minus;8.5 &rarr; &minus;8.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>Sacred Heart<b class="ln">+1.5</b></span><span class="at">at</span><span class="dim">New Hampshire</span></span></span><span class="pk-price">+1.5 &rarr; +1.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Arkansas</span><span class="at">at</span><span>Virginia<b class="ln">&minus;3.5</b></span></span></span><span class="pk-price">&minus;3.5 &rarr; &minus;4.5<small>number &rarr; close, at &minus;104</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res w">W</span></span></div></div></div><div class="day" data-d="2026-11-07"><div class="dnum"><b>7</b><span>Sat &middot; Nov</span><small>10&ndash;8</small></div><div class="drows"><div class="pk"><span><span class="mu"><span>W. Carolina<b class="ln">&minus;4.5</b></span><span class="at">at</span><span class="dim">UNC Asheville</span></span></span><span class="pk-price">&minus;4.5 &rarr; &minus;4.5<small>number &rarr; close, at &minus;106</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Washington St</span><span class="at">at</span><span>High Point<b class="ln">&minus;13.5</b></span></span></span><span class="pk-price">&minus;13.5 &rarr; &minus;13.5<small>number &rarr; close, at &minus;104</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">San Jose St</span><span class="at">at</span><span>UC Irvine<b class="ln">&minus;8.5</b></span></span></span><span class="pk-price">&minus;8.5 &rarr; &minus;8.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Sac State</span><span class="at">at</span><span>Santa Clara<b class="ln">&minus;20.5</b></span></span></span><span class="pk-price">&minus;20.5 &rarr; &minus;20<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv neg">&minus;0.5 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Fresno State</span><span class="at">at</span><span>UCSD<b class="ln">&minus;10.5</b></span></span></span><span class="pk-price">&minus;10.5 &rarr; &minus;10.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Utah Valley</span><span class="at">at</span><span>Weber State<b class="ln">+7.5</b></span></span></span><span class="pk-price">+7.5 &rarr; +7.5<small>number &rarr; close, at &minus;106</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">SE Louisiana</span><span class="at">at</span><span>Ark-Little Rock<b class="ln">&minus;10.5</b></span></span></span><span class="pk-price">&minus;10.5 &rarr; &minus;10.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Evansville</span><span class="at">at</span><span>Southern Indiana<b class="ln">+7.5</b></span></span></span><span class="pk-price">+7.5 &rarr; +7.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Maryland<b class="ln">&minus;3.5</b></span><span class="at">at</span><span class="dim">Georgetown</span></span></span><span class="pk-price">&minus;3.5 &rarr; &minus;3.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>St. Bonaventure<b class="ln">&minus;9.5</b></span><span class="at">at</span><span class="dim">Canisius</span></span></span><span class="pk-price">&minus;9.5 &rarr; &minus;9.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">N. Mexico St</span><span class="at">at</span><span>Gonzaga<b class="ln">&minus;29.5</b></span></span></span><span class="pk-price">&minus;29.5 &rarr; &minus;29.5<small>number &rarr; close, at &minus;106</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">N. Iowa</span><span class="at">at</span><span>Furman<b class="ln">&minus;5.5</b></span></span></span><span class="pk-price">&minus;5.5 &rarr; &minus;5.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">SIU-Edwardsville</span><span class="at">at</span><span>Lipscomb<b class="ln">&minus;8.5</b></span></span></span><span class="pk-price">&minus;8.5 &rarr; &minus;8.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Omaha</span><span class="at">at</span><span>Utah State<b class="ln">&minus;29.5</b></span></span></span><span class="pk-price">&minus;29.5 &rarr; &minus;29.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Samford<b class="ln">+10.5</b></span><span class="at">at</span><span class="dim">UNLV</span></span></span><span class="pk-price">+10.5 &rarr; +11.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Oakland</span><span class="at">at</span><span>UCSB<b class="ln">&minus;13.5</b></span></span></span><span class="pk-price">&minus;13.5 &rarr; &minus;13.5<small>number &rarr; close, at &minus;106</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Lamar<b class="ln">&minus;1.5</b></span><span class="at">at</span><span class="dim">Ab Christian</span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;1.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">NC A&amp;T</span><span class="at">at</span><span>Ohio<b class="ln">&minus;14.5</b></span></span></span><span class="pk-price">&minus;14.5 &rarr; &minus;14.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div></div></div><div class="day" data-d="2026-11-06"><div class="dnum"><b>6</b><span>Fri &middot; Nov</span><small>7&ndash;8</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">Tarleton St</span><span class="at">at</span><span>San Diego<b class="ln">&minus;7.5</b></span></span></span><span class="pk-price">&minus;7.5 &rarr; &minus;7.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Cal Baptist</span><span class="at">at</span><span>Oregon St<b class="ln">&minus;20.5</b></span></span></span><span class="pk-price">&minus;20.5 &rarr; &minus;20.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Wagner</span><span class="at">at</span><span>Miami (FL)<b class="ln">&minus;39.5</b></span></span></span><span class="pk-price">&minus;39.5 &rarr; &minus;38.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Michigan</span><span class="at">at</span><span>UConn<b class="ln">&minus;7.5</b></span></span></span><span class="pk-price">&minus;7.5 &rarr; &minus;7.5<small>number &rarr; close, at &minus;104</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Nicholls St</span><span class="at">at</span><span>UAB<b class="ln">&minus;16.5</b></span></span></span><span class="pk-price">&minus;16.5 &rarr; &minus;15.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Presbyterian</span><span class="at">at</span><span>Georgia<b class="ln">&minus;25.5</b></span></span></span><span class="pk-price">&minus;25.5 &rarr; &minus;24.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span>SC State<b class="ln">+4.5</b></span><span class="at">at</span><span class="dim">USC Upstate</span></span></span><span class="pk-price">+4.5 &rarr; +3.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">West Florida</span><span class="at">at</span><span>FIU<b class="ln">&minus;16.5</b></span></span></span><span class="pk-price">&minus;16.5 &rarr; &minus;16.5<small>number &rarr; close, at &minus;109</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">NDSU</span><span class="at">at</span><span>San Francisco<b class="ln">&minus;9.5</b></span></span></span><span class="pk-price">&minus;9.5 &rarr; &minus;8.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">N. Colorado</span><span class="at">at</span><span>Arizona St<b class="ln">&minus;18.5</b></span></span></span><span class="pk-price">&minus;18.5 &rarr; &minus;19.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">S. Illinois</span><span class="at">at</span><span>UMKC<b class="ln">+1.5</b></span></span></span><span class="pk-price">+1.5 &rarr; &minus;1.5<small>number &rarr; close, at +108</small></span><span class="pk-end"><span class="clv pos">+3.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Troy</span><span class="at">at</span><span>Florida St<b class="ln">&minus;22.5</b></span></span></span><span class="pk-price">&minus;22.5 &rarr; &minus;22.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">GA Southern</span><span class="at">at</span><span>G Tech<b class="ln">&minus;18.5</b></span></span></span><span class="pk-price">&minus;18.5 &rarr; &minus;17.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">E. Michigan</span><span class="at">at</span><span>Xavier<b class="ln">&minus;23.5</b></span></span></span><span class="pk-price">&minus;23.5 &rarr; &minus;23.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">E. Washington</span><span class="at">at</span><span>Oregon<b class="ln">&minus;17.5</b></span></span></span><span class="pk-price">&minus;17.5 &rarr; &minus;16.5<small>number &rarr; close, at &minus;104</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res w">W</span></span></div></div></div><div class="day" data-d="2026-11-05"><div class="dnum"><b>5</b><span>Thu &middot; Nov</span><small>5&ndash;3</small></div><div class="drows"><div class="pk"><span><span class="mu"><span>Vermont<b class="ln">&minus;1.5</b></span><span class="at">at</span><span class="dim">Fairfield</span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;1.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Towson<b class="ln">+8.5</b></span><span class="at">at</span><span class="dim">Utah</span></span></span><span class="pk-price">+8.5 &rarr; +7.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Jax State</span><span class="at">at</span><span>S. Alabama<b class="ln">&minus;5.5</b></span></span></span><span class="pk-price">&minus;5.5 &rarr; &minus;5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv neg">&minus;0.5 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Cornell</span><span class="at">at</span><span>Lehigh<b class="ln">&minus;1.5</b></span></span></span><span class="pk-price">&minus;1.5 &rarr; &minus;1.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Howard<b class="ln">&minus;9.5</b></span><span class="at">at</span><span class="dim">Alcorn State</span></span></span><span class="pk-price">&minus;9.5 &rarr; &minus;9.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">UMass Lowell</span><span class="at">at</span><span>Merrimack<b class="ln">&minus;9.5</b></span></span></span><span class="pk-price">&minus;9.5 &rarr; &minus;9.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">UMBC</span><span class="at">at</span><span>Marist<b class="ln">&minus;4.5</b></span></span></span><span class="pk-price">&minus;4.5 &rarr; &minus;4.5<small>number &rarr; close, at &minus;106</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span>Chattanooga<b class="ln">+11.5</b></span><span class="at">at</span><span class="dim">Penn State</span></span></span><span class="pk-price">+11.5 &rarr; +12.5<small>number &rarr; close, at &minus;106</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res w">W</span></span></div></div></div><div class="day" data-d="2026-11-04"><div class="dnum"><b>4</b><span>Wed &middot; Nov</span><small>1&ndash;3</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">Queens</span><span class="at">at</span><span>Loyola Marymount<b class="ln">&minus;8.5</b></span></span></span><span class="pk-price">&minus;8.5 &rarr; &minus;5.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv neg">&minus;3.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">MD-E Shore</span><span class="at">at</span><span>High Point<b class="ln">&minus;34.5</b></span></span></span><span class="pk-price">&minus;34.5 &rarr; &minus;34.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Longwood</span><span class="at">at</span><span>Saint Joe's<b class="ln">&minus;11</b></span></span></span><span class="pk-price">&minus;11 &rarr; &minus;11.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv pos">+0.5 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Fairleigh</span><span class="at">at</span><span>Butler<b class="ln">&minus;27.5</b></span></span></span><span class="pk-price">&minus;27.5 &rarr; &minus;28.5<small>number &rarr; close, at &minus;110</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res w">W</span></span></div></div></div><div class="day" data-d="2026-11-03"><div class="dnum"><b>3</b><span>Tue &middot; Nov</span><small>3&ndash;4</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">Wagner</span><span class="at">at</span><span>Boston Col<b class="ln">&minus;20.5</b></span></span></span><span class="pk-price">&minus;20.5 &rarr; &minus;20.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">North Florida</span><span class="at">at</span><span>Cal Baptist<b class="ln">&minus;11.5</b></span></span></span><span class="pk-price">&minus;11.5 &rarr; &minus;11.5<small>number &rarr; close, at &minus;104</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Alabama St</span><span class="at">at</span><span>Texas A&amp;M<b class="ln">&minus;32.5</b></span></span></span><span class="pk-price">&minus;32.5 &rarr; &minus;32.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Lipscomb</span><span class="at">at</span><span>Iowa<b class="ln">&minus;23.5</b></span></span></span><span class="pk-price">&minus;23.5 &rarr; &minus;24.5<small>number &rarr; close, at &minus;102</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res l">L</span></span></div><div class="pk"><span><span class="mu"><span class="dim">New Orleans</span><span class="at">at</span><span>LSU<b class="ln">&minus;27.5</b></span></span></span><span class="pk-price">&minus;27.5 &rarr; &minus;26.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv neg">&minus;1.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Stetson</span><span class="at">at</span><span>S. Carolina<b class="ln">&minus;19.5</b></span></span></span><span class="pk-price">&minus;19.5 &rarr; &minus;19.5<small>number &rarr; close, at &minus;105</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div><div class="pk"><span><span class="mu"><span class="dim">Drexel</span><span class="at">at</span><span>Virginia<b class="ln">&minus;31.5</b></span></span></span><span class="pk-price">&minus;31.5 &rarr; &minus;32.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv pos">+1.0 pts</span><span class="res l">L</span></span></div></div></div><div class="day" data-d="2026-11-02"><div class="dnum"><b>2</b><span>Mon &middot; Nov</span><small>1&ndash;0</small></div><div class="drows"><div class="pk"><span><span class="mu"><span class="dim">Purdue</span><span class="at">at</span><span>Gonzaga<b class="ln">&minus;5.5</b></span></span></span><span class="pk-price">&minus;5.5 &rarr; &minus;5.5<small>number &rarr; close, at &minus;108</small></span><span class="pk-end"><span class="clv flat">0.0 pts</span><span class="res w">W</span></span></div></div></div></div><p class="note">Each row shows the best number available at the time and the price that was at that number, then the best number available just before tip-off. A positive line CLV means the pick took a better number than the market finished at.</p></div><div class="panel" id="p-chart" role="tabpanel" aria-label="Chart" hidden><h2 class="mid">Every pick against its closing number</h2><div class="legend"><span><i class="rule"></i>the closing line</span><span><i style="background:var(--win)"></i>got a better number than the close</span><span><i style="background:var(--loss)"></i>got a worse one</span><span><i style="background:var(--flat)"></i>number did not move</span></div><div id="plot" role="img" aria-label="Every College Basketball pick with a close, plotted by date against how far it beat or missed the closing line."></div><p class="note" id="plotnote"></p></div><div class="panel" id="p-about" role="tabpanel" aria-label="About the numbers" hidden><h2 class="mid">What to know before reading this board</h2>
+<div class="sec-b"><div class="say">
+<p><strong>It is measured in points, not percent.</strong> These are spreads, so the number moves and not just the price. Points of line movement is the honest unit, and it is why this figure is never averaged into the site-wide CLV.</p>
+<p><strong>The entry rule is provisional.</strong> A game qualifies when its spread has moved by 1.5 points or by 15% of the opening number, whichever is larger. That threshold was set by judgement when the season started. It has not been tested against results yet, and this board is how it gets tested.</p>
+<p><strong>It covers the games the odds feed prices, not every game played.</strong> That is most of a Division I night but not all of it. The first two picks, on 2 and 3 November, came from a much shorter list of games, because the screener was not yet asking the feed for the full board.</p>
+<p><strong>The log records one pick per game.</strong> The screener runs twice a day, and only the first qualifying run for a game is written here. A later run that would have picked the other side does not appear.</p>
+<p><strong>The close is the last number captured before tip-off.</strong> A pick with no number captured before the start shows a dash, not an estimate.</p>
+</div></div></div><div class="cta"><div><h2>Everything I bet, as I bet it.</h2><p>The full log, the write-ups and the Bot Play of the Day are on Playbooki. 3 days free, then &#36;20 a month.</p></div><a class="btn" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Start the free trial</a></div></div>
+</main>
+<footer><div class="wrap">
+<div class="fgrid">
+  <div><p class="tagline">Watching where the money goes</p><p>A paper betting log. Every pick is written down at the price it was offered and graded against the closing line, including the ones that lost to it.</p></div>
+  <div><h4>Boards</h4><ul><li><a href="soccer.html">Soccer</a></li><li><a href="cfb.html">College Football</a></li><li><a href="nfl.html">NFL</a></li><li><a href="nhl.html">NHL</a></li><li><a href="nba.html">NBA</a></li><li><a href="cbb.html">College Basketball</a></li></ul></div>
+  <div><h4>The book</h4><ul><li><a href="method.html">Method</a></li><li><a href="attention.html">NFL attention board</a></li><li><a href="cfb-attention.html">CFB attention log</a></li><li><a href="log.html">Full pick log</a></li><li><a href="disclaimer.html">Disclaimer &amp; terms</a></li></ul></div>
+  <div><h4>Elsewhere</h4><ul><li><a href="https://x.com/spice_bets" target="_blank" rel="noopener">@spice_bets on X</a></li><li><a href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener">Playbooki</a></li><li><a href="offers.html">Gambit Markets</a><span class="chip">partner</span></li><li><a href="offers.html">Polymarket</a><span class="chip">referral</span></li><li><a href="offers.html">Novig</a><span class="chip">referral</span></li></ul></div>
+</div>
+<div class="mark giant" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg2)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di"><span class="ltr">i</span><svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></div>
+<div class="fine">
+<p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
+<p>Not betting advice &middot; 21+ where legal &middot; partner and referral links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 18 Nov 2026, 20:31 UTC</p>
+</div>
+</div></footer>
+<a class="pin" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener"><span><b>Every play, as I take it</b><i>3 days free, then &#36;20 a month</i></span><span class="go">Start free</span></a>
+<script>
+(function(){
+  function isoOf(x){ return x.getFullYear() + '-' + ('0' + (x.getMonth() + 1)).slice(-2) + '-' + ('0' + x.getDate()).slice(-2); }
+  var d = new Date(), iso = isoOf(d);
+  var yes = isoOf(new Date(d.getFullYear(), d.getMonth(), d.getDate() - 1)), tom = isoOf(new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1));
+  function rel(v){ return v === iso ? 'Today' : v === tom ? 'Tomorrow' : v === yes ? 'Yesterday' : ''; }
+  // "Today" is the reader's today, so it is written here and never stamped in at build time
+  document.querySelectorAll('[data-rel]').forEach(function(el){ var r = rel(el.getAttribute('data-rel')); if(r) el.textContent = r + ' \u00b7 '; });
+  document.querySelectorAll('[data-rel-day]').forEach(function(el){ var r = rel(el.getAttribute('data-rel-day')); if(r) el.textContent = r; });
+  var pin = document.querySelector('.pin'), offer = document.querySelector('.members,.cta');
+  if(pin && offer && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ pin.classList.toggle('off', es[0].isIntersecting); }).observe(offer);
+  }
+  document.querySelectorAll('.day[data-d="' + iso + '"]').forEach(function(el){
+    el.classList.add('today');
+    var n = el.querySelector('.dnum'); if(!n || n.querySelector('em')) return;
+    var e = document.createElement('em'); e.textContent = 'Today'; n.appendChild(e);
+  });
+  // Phones only (the stylesheet decides): a long open list is cut after the first few picks so
+  // the results under it are not a dozen screens away. Without script the whole list shows.
+  var ob = document.querySelector('.pg-index #lists .block'), shown = 0, cut = false, later = 0;
+  if(ob){
+    ob.querySelectorAll('.day').forEach(function(day){
+      if(cut){ day.classList.add('later'); later += day.querySelectorAll('.pk').length; return; }
+      shown += day.querySelectorAll('.pk:not(.lead)').length; if(shown >= 5) cut = true;
+    });
+    if(later){
+      var mb = document.createElement('button'); mb.type = 'button'; mb.className = 'showall';
+      mb.textContent = 'Show ' + later + ' more open pick' + (later === 1 ? '' : 's');
+      mb.addEventListener('click', function(){ document.body.classList.add('all'); });
+      // before the first hidden day, not at the end: the last day must stay the last child, because
+      // the stylesheet closes the list with that day's bottom rule
+      var fl = ob.querySelector('.day.later'); fl.parentNode.insertBefore(mb, fl);
+    }
+  }
+  document.querySelectorAll('.chips[data-filter]').forEach(function(box){
+    box.addEventListener('click', function(ev){
+      var b = ev.target.closest('button'); if(!b) return;
+      box.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
+      var f = b.getAttribute('data-f'), scope = document.querySelector(box.getAttribute('data-filter'));
+      document.body.classList.toggle('flt', f !== 'ALL');
+      scope.querySelectorAll('.pk').forEach(function(r){ r.classList.toggle('hide', f !== 'ALL' && r.getAttribute('data-s') !== f); });
+      scope.querySelectorAll('.day').forEach(function(day){ day.classList.toggle('hide', !day.querySelector('.pk:not(.hide)')); });
+    });
+  });
+})();
+</script><div class="tip" id="tip"></div>
+<script>
+(function(){
+  var P = [["2026-11-02",0,"W"],["2026-11-03",1,"L"],["2026-11-03",0,"W"],["2026-11-03",-1,"W"],["2026-11-03",1,"L"],["2026-11-03",0,"L"],["2026-11-03",0,"L"],["2026-11-03",0,"W"],["2026-11-04",1,"W"],["2026-11-04",0.5,"L"],["2026-11-04",0,"L"],["2026-11-04",-3,"L"],["2026-11-05",-1,"W"],["2026-11-05",0,"W"],["2026-11-05",0,"L"],["2026-11-05",0,"W"],["2026-11-05",0,"W"],["2026-11-05",-0.5,"L"],["2026-11-05",1,"L"],["2026-11-05",0,"W"],["2026-11-06",-1,"W"],["2026-11-06",0,"L"],["2026-11-06",-1,"L"],["2026-11-06",0,"W"],["2026-11-06",3,"W"],["2026-11-06",1,"W"],["2026-11-06",-1,"L"],["2026-11-06",0,"L"],["2026-11-06",1,"W"],["2026-11-06",-1,"L"],["2026-11-06",-1,"L"],["2026-11-06",0,"W"],["2026-11-06",-1,"L"],["2026-11-06",0,"W"],["2026-11-06",0,"L"],["2026-11-07",0,"L"],["2026-11-07",0,"L"],["2026-11-07",0,"W"],["2026-11-07",-1,"W"],["2026-11-07",0,"W"],["2026-11-07",0,"L"],["2026-11-07",0,"W"],["2026-11-07",0,"W"],["2026-11-07",0,"W"],["2026-11-07",0,"L"],["2026-11-07",0,"W"],["2026-11-07",0,"L"],["2026-11-07",0,"L"],["2026-11-07",0,"W"],["2026-11-07",-0.5,"L"],["2026-11-07",0,"W"],["2026-11-07",0,"L"],["2026-11-07",0,"W"],["2026-11-08",1,"W"],["2026-11-08",0,"W"],["2026-11-08",0,"L"],["2026-11-08",0,"L"],["2026-11-08",1,"W"],["2026-11-09",0,"W"],["2026-11-09",0.5,"W"],["2026-11-09",0,"W"],["2026-11-09",-2,"W"],["2026-11-09",0,"W"],["2026-11-09",1,"L"],["2026-11-09",0,"W"],["2026-11-10",0,"L"],["2026-11-10",0,"W"],["2026-11-10",0,"W"],["2026-11-10",0,"L"],["2026-11-10",-0.5,"L"],["2026-11-10",0,"W"],["2026-11-10",0,"L"],["2026-11-10",-1,"W"],["2026-11-10",1,"W"],["2026-11-10",0,"L"],["2026-11-10",0,"W"],["2026-11-11",0,"W"],["2026-11-11",-1,"W"],["2026-11-11",0,"L"],["2026-11-11",0,"L"],["2026-11-11",0,"W"],["2026-11-11",-1,"W"],["2026-11-11",0,"L"],["2026-11-11",0,"L"],["2026-11-12",1,"L"],["2026-11-12",0,"L"],["2026-11-12",0,"L"],["2026-11-12",0,"W"],["2026-11-12",0,"W"],["2026-11-12",0,"L"],["2026-11-12",-0.5,"L"],["2026-11-12",0,"L"],["2026-11-13",0,"W"],["2026-11-13",-2,"W"],["2026-11-13",-1,"W"],["2026-11-13",0,"W"],["2026-11-13",1,"W"],["2026-11-13",0,"L"],["2026-11-13",-1,"L"],["2026-11-13",1,"L"],["2026-11-13",0,"W"],["2026-11-13",1,"W"],["2026-11-13",0,"W"],["2026-11-13",0,"L"],["2026-11-14",-1,"L"],["2026-11-14",0,"W"],["2026-11-14",0,"W"],["2026-11-14",0,"W"],["2026-11-14",0,"W"],["2026-11-14",-1,"L"],["2026-11-14",-1,"W"],["2026-11-14",-2,"L"],["2026-11-14",-2,"L"],["2026-11-14",0,"W"],["2026-11-15",1,"L"],["2026-11-15",0,"W"],["2026-11-15",1,"L"],["2026-11-15",0,"W"],["2026-11-15",0,"W"],["2026-11-15",0,"L"],["2026-11-16",0,"L"],["2026-11-16",0,"W"],["2026-11-16",0,"L"],["2026-11-17",0,"L"],["2026-11-17",1,"W"],["2026-11-17",-3,"W"],["2026-11-17",0,"W"],["2026-11-17",0,"W"],["2026-11-17",0,"L"]], UNIT = 'pts', C = 5, TICKS = [-4,-2,2,4], DP = 1;
+  var DAY = 864e5, MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function ts(d){ return Date.parse(d + 'T00:00:00Z'); }
+  function css(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+  function sgn(v, dp){ var r = +v.toFixed(dp); return (r > 0 ? '+' : r < 0 ? '\u2212' : '') + Math.abs(r).toFixed(dp); }
+  function col(v){ var r = +v.toFixed(2); return r > 0 ? css('--win') : r < 0 ? css('--loss') : css('--flat'); }
+  function tfmt(t){ var x = new Date(t); return x.getUTCDate() + ' ' + MON[x.getUTCMonth()]; }
+  var unit = UNIT === 'pts' ? ' pts' : '%';
+  function renderPlot(){
+    var host = document.getElementById('plot'), W = host.clientWidth; if(!W || !P.length) return;
+    var small = W < 620, H = small ? 280 : 420, i, t;
+    var T0 = Infinity, T1 = -Infinity; P.forEach(function(p){ t = ts(p[0]); if(t < T0) T0 = t; if(t > T1) T1 = t; }); T1 += DAY;
+    var x0 = small ? 38 : 54, x1 = W - 4, top = 14, bot = H - 30, mid = (top + bot) / 2, half = (bot - top) / 2;
+    function y(v){ return mid - Math.max(-C, Math.min(C, v)) / C * half; }
+    function xs(q){ return x0 + (q - T0) / (T1 - T0) * (x1 - x0); }
+    var dayW = (x1 - x0) / ((T1 - T0) / DAY), count = {}, seen = {};
+    P.forEach(function(p){ count[p[0]] = (count[p[0]] || 0) + 1; });
+    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" height="' + H + '" xmlns="http://www.w3.org/2000/svg">';
+    TICKS.forEach(function(g){
+      s += '<line x1="' + x0 + '" x2="' + x1 + '" y1="' + y(g) + '" y2="' + y(g) + '" stroke="' + css('--line') + '" stroke-dasharray="2 5"/>';
+      s += '<text x="' + (x0 - 8) + '" y="' + (y(g) + 4) + '" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="11" fill="' + css('--ink-faint') + '">' + sgn(g, 0) + (UNIT === 'pts' ? '' : '%') + '</text>';
+    });
+    for(t = T0; t < T1; t += DAY){ var dt = new Date(t);
+      if((dt.getUTCDate() === 1 && t - T0 > 10 * DAY) || t === T0) s += '<text x="' + xs(t) + '" y="' + (bot + 22) + '" font-family="IBM Plex Mono,monospace" font-size="11" fill="' + css('--ink-faint') + '">' + tfmt(t) + '</text>'; }
+    s += '<line x1="0" x2="' + W + '" y1="' + mid + '" y2="' + mid + '" stroke="' + css('--brand') + '" stroke-width="1.6"/>';
+    P.forEach(function(p, n){ var k = seen[p[0]] = (seen[p[0]] || 0) + 1, x = xs(ts(p[0])) + (k - .5) / count[p[0]] * dayW;
+      s += '<circle data-i="' + n + '" cx="' + x.toFixed(1) + '" cy="' + y(p[1]).toFixed(1) + '" r="' + (small ? 2.4 : 3.4) + '" fill="' + col(p[1]) + '" opacity=".82"/>'; });
+    host.innerHTML = s + '</svg>';
+    var mean = 0, flat = 0, out = 0; P.forEach(function(p){ mean += p[1]; if(p[1] === 0) flat++; if(Math.abs(p[1]) > C) out++; }); mean /= P.length;
+    document.getElementById('plotnote').textContent = UNIT === 'pts'
+      ? 'Each dot is one pick: ' + P.length + ' with a closing number. Height is how many points better or worse the number taken was than the close. ' + flat + ' sit on the line because the spread never moved. Average: ' + sgn(mean, 2) + ' pts.'
+      : 'Each dot is one pick: ' + P.length + ' with a closing price. Above the line, the price taken was better than where the market finished.' + (out ? ' ' + out + ' beyond \u00b1' + C + '% are drawn at the edge.' : '') + ' Average: ' + sgn(mean, 2) + '%.';
+  }
+  var tip = document.getElementById('tip'), plot = document.getElementById('plot');
+  plot.addEventListener('pointermove', function(e){ var c = e.target.closest('[data-i]');
+    if(!c){ tip.classList.remove('on'); return; } var p = P[+c.getAttribute('data-i')];
+    tip.textContent = tfmt(ts(p[0])) + ' \u00b7 ' + sgn(p[1], DP) + unit + ' \u00b7 ' + (p[2] === 'W' ? 'won' : p[2] === 'L' ? 'lost' : 'push');
+    tip.style.left = e.clientX + 'px'; tip.style.top = e.clientY + 'px'; tip.classList.add('on'); });
+  plot.addEventListener('pointerleave', function(){ tip.classList.remove('on'); });
+  function show(name){
+    if(!document.getElementById('p-' + name)) return;
+    document.querySelectorAll('.tabs button').forEach(function(b){ b.setAttribute('aria-selected', b.getAttribute('data-tab') === name); });
+    document.querySelectorAll('.panel').forEach(function(p){ p.hidden = p.id !== 'p-' + name; });
+    if(name === 'chart') renderPlot();
+  }
+  document.querySelector('.tabs').addEventListener('click', function(e){ var b = e.target.closest('button'); if(b){ show(b.getAttribute('data-tab')); history.replaceState(null, '', '#' + b.getAttribute('data-tab')); } });
+  if(location.hash.length > 1) show(location.hash.slice(1));
+  var rz; addEventListener('resize', function(){ clearTimeout(rz); rz = setTimeout(renderPlot, 120); });
+})();
+</script>
+</body>
+</html>
