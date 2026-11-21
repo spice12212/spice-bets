@@ -1,4 +1,5 @@
-# Added 21 Nov 2026 for the upgrade plan (part 1, step 2), with the owner's OK.
+# Added 21 Nov 2026 for the upgrade plan (part 1, step 2), with the owner's OK. Runs on a push of this file or by hand.
+# Goes in spice12212/spice-bets at .github/workflows/an-probe.yml only after the owner OKs it.
 #
 # THE ONE BIG UNKNOWN before moving any data job off the home PC: does Action Network answer
 # requests from cloud servers the way it answers the PC? This workflow asks it once, from
@@ -7,6 +8,9 @@
 name: an-probe
 on:
   workflow_dispatch: {}
+  # 21 Nov 2026: also runs once whenever THIS file is pushed, so no one has to click Run.
+  push:
+    paths: ['.github/workflows/an-probe.yml']
 permissions:
   contents: read
 jobs:
@@ -24,6 +28,8 @@ jobs:
             code=$(curl -s -o body.json -w '%{http_code}' -A 'Mozilla/5.0' "$url")
             games=$(python3 -c "import json;print(len(json.load(open('body.json')).get('games',[])))" 2>/dev/null || echo "unreadable")
             echo "$sport: HTTP $code, games=$games"
+            echo "::notice title=an-probe ${sport}::HTTP $code, games=$games"
           done
           code=$(curl -s -o hist.json -w '%{http_code}' -A 'Mozilla/5.0' "https://api.actionnetwork.com/web/v2/markets/event/293657/history?bookIds=69")
           echo "history endpoint: HTTP $code, bytes=$(wc -c < hist.json)"
+          echo "::notice title=an-probe history::HTTP $code, bytes=$(wc -c < hist.json)"
