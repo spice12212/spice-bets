@@ -1,0 +1,29 @@
+# Added 21 Nov 2026 for the upgrade plan (part 1, step 2), with the owner's OK.
+#
+# THE ONE BIG UNKNOWN before moving any data job off the home PC: does Action Network answer
+# requests from cloud servers the way it answers the PC? This workflow asks it once, from
+# GitHub's machines, and prints the HTTP status, the game count and a sample - nothing is stored,
+# committed or sent anywhere. Run it by hand from the Actions tab ("Run workflow").
+name: an-probe
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ask Action Network from a cloud IP
+        shell: bash
+        run: |
+          set -u
+          for sport in nhl ncaaf ncaab; do
+            extra=""; [ "$sport" = "ncaab" ] && extra="&division=D1"
+            url="https://api.actionnetwork.com/web/v2/scoreboard/${sport}?periods=event&bookIds=15,69${extra}&date=$(TZ=America/Denver date +%Y%m%d)"
+            code=$(curl -s -o body.json -w '%{http_code}' -A 'Mozilla/5.0' "$url")
+            games=$(python3 -c "import json;print(len(json.load(open('body.json')).get('games',[])))" 2>/dev/null || echo "unreadable")
+            echo "$sport: HTTP $code, games=$games"
+          done
+          code=$(curl -s -o hist.json -w '%{http_code}' -A 'Mozilla/5.0' "https://api.actionnetwork.com/web/v2/markets/event/293657/history?bookIds=69")
+          echo "history endpoint: HTTP $code, bytes=$(wc -c < hist.json)"

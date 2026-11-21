@@ -46,3 +46,10 @@
 # the Artifact publisher supplies those - so served as a real web page it renders in quirks
 # mode with no charset and no viewport. index.html is the real home page; this is not.
 artifact-index.html
+
+# The Action Network cloud probe (21 Nov 2026, owner OK'd). A manual GitHub Actions run that asks
+# Action Network for today's boards from GitHub's machines and prints the HTTP status; it stores
+# and commits nothing. Named file by file so no other workflow can slip in.
+!.github/
+!.github/workflows/
+!.github/workflows/an-probe.yml
