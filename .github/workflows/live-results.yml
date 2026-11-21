@@ -1,0 +1,102 @@
+# LIVE RESULTS - the first job moved off the home PC. Built 21 Nov 2026 (owner: show W/L on the
+# site as games finish, even while the PC is off). Source copy: clv\cloud\live-results.yml; the
+# live copy is spice12212/spice-bets .github/workflows/live-results.yml (allowlisted in web\.gitignore).
+#
+# Every 15 minutes (GitHub's scheduler can run late; that is fine here):
+#   1. read picks-open.json from main - the PC's site build writes it: every pick the build left
+#      UNGRADED, with its Action Network event id, market, side and line (from watchlist.psv);
+#   2. ask Action Network's scoreboard for those games (the 21 Nov probe proved AN answers GitHub);
+#   3. grade each COMPLETE game exactly as daydata.ps1 does (spread: margin + line; total: over or
+#      under the line, push on equal; moneyline: the winner, so an NHL shootout counts);
+#   4. write live-results.json to the live-data branch, one orphan commit force-pushed, ONLY when
+#      a result changed. It never touches main, so it can never collide with the PC's site push.
+# The pages fetch that file and add a W/L to rows the build left open. The PC's own grade replaces
+# it on the next build. Nothing here can place, change or remove a pick.
+name: live-results
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch: {}
+  push:
+    paths: ['.github/workflows/live-results.yml']
+permissions:
+  contents: write
+concurrency:
+  group: live-results
+  cancel-in-progress: false
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout: picks-open.json
+          sparse-checkout-cone-mode: false
+      - name: Grade finished games
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, time, urllib.request
+          H = {'User-Agent': 'Mozilla/5.0'}
+          try:
+              feed = json.load(open('picks-open.json'))
+          except Exception as e:
+              print('no picks-open.json:', e); feed = {'picks': []}
+          boards = {}
+          def board(sport, date):
+              k = (sport, date)
+              if k not in boards:
+                  extra = '&division=D1' if sport == 'ncaab' else ''
+                  u = f'https://api.actionnetwork.com/web/v2/scoreboard/{sport}?periods=event&bookIds=15&date={date}{extra}'
+                  try:
+                      d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers=H), timeout=30))
+                      boards[k] = {str(g['id']): g for g in d.get('games', [])}
+                  except Exception as e:
+                      print('board failed', sport, date, e); boards[k] = {}
+                  time.sleep(0.3)
+              return boards[k]
+          out = {}
+          for p in feed.get('picks', []):
+              g = board(p['sport'], p['date']).get(str(p['ev']))
+              if not g or g.get('status') != 'complete': continue
+              b = g.get('boxscore') or {}
+              a, h = b.get('total_away_points'), b.get('total_home_points')
+              if a is None or h is None: continue
+              mine, theirs = (h, a) if p['side'] == 'home' else (a, h)
+              mkt = p['mkt']
+              if mkt == 'ml':
+                  tid = g['home_team_id'] if p['side'] == 'home' else g['away_team_id']
+                  w = g.get('winning_team_id')
+                  r = ('W' if w == tid else 'L') if w else ('W' if mine > theirs else 'L')
+              elif mkt == 'spread':
+                  d = mine + float(p['line']) - theirs
+                  r = 'W' if d > 0 else 'L' if d < 0 else 'P'
+              elif mkt == 'total':
+                  t, ln = a + h, float(p['line'])
+                  r = 'W' if t > ln else 'L' if t < ln else 'P'
+                  if p['side'] == 'under': r = {'W': 'L', 'L': 'W'}.get(r, r)
+              else:
+                  continue
+              out[p['id']] = {'r': r, 'score': f'{a}-{h}'}
+          res = {'builtAt': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'feedBuiltAt': feed.get('builtAt'), 'results': out}
+          json.dump(res, open('live-results.json', 'w'), separators=(',', ':'))
+          print(f"graded {len(out)} of {len(feed.get('picks', []))} open pick(s)")
+          for k, v in sorted(out.items()): print(' ', k, v['r'], v['score'])
+          PY
+      - name: Publish to live-data when anything changed
+        shell: bash
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          old=$(curl -sf "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/live-data/live-results.json" || echo '{}')
+          same=$(python3 -c "import json,sys; a=json.loads(sys.argv[1] or '{}').get('results'); b=json.load(open('live-results.json'))['results']; print('yes' if a==b else 'no')" "$old")
+          if [ "$same" = "yes" ]; then echo "no change - nothing pushed"; exit 0; fi
+          mkdir pub && cp live-results.json pub/ && cd pub
+          git init -q && git checkout -q -b live-data
+          git -c user.name='live-results bot' -c user.email='actions@users.noreply.github.com' add live-results.json
+          git -c user.name='live-results bot' -c user.email='actions@users.noreply.github.com' commit -q -m "live results $(date -u +%FT%TZ)"
+          git push -q -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" live-data
+          echo "pushed live-results.json to live-data"

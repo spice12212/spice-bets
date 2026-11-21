@@ -53,3 +53,9 @@ artifact-index.html
 !.github/
 !.github/workflows/
 !.github/workflows/an-probe.yml
+
+# The cloud grader (21 Nov 2026). live-results.yml grades finished games on GitHub every 15 minutes
+# and writes to the live-data branch only; picks-open.json is its input, written by build-site.ps1
+# (the ungraded picks with their event ids, lines and sides - all already public on the pages).
+!.github/workflows/live-results.yml
+!picks-open.json
