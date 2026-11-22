@@ -1,0 +1,121 @@
+# SPLITS SNAPSHOTS - money % and tickets % for every game, every 30 minutes, day and night. Built 21 Nov
+# 2026 (owner: never lose data while the PC is off). Source copy: clv\cloud\splits-snapshots.yml; live
+# copy: spice12212/spice-bets .github/workflows/splits-snapshots.yml (allowlisted in web\.gitignore).
+#
+# WHY: unlike prices, betting splits are NEVER recoverable afterwards - Action Network shows only the
+# current numbers, so a snapshot that is not taken is gone. The RLM tracker, the splits reads and the
+# contrarian filter all depend on how money % and tickets % move over time.
+#
+# WHAT: for NFL, CFB, NHL, NBA, D1 CBB and soccer, every game that has not started and starts within
+# 48 hours: consensus (AN book 15, FanDuel 69 as fallback) tickets % and money % per market and side,
+# plus the consensus line/price at that moment. CHANGE-ONLY: a game is written into a snapshot only
+# when one of its numbers moved since its last write that day, so quiet hours cost nothing.
+# Market data only - no picks. Writes ONLY the data-splits branch: splits/<snapshot date MT>/<sport>.json.gz
+#   {"snaps": [["2026-11-21T23:37:04Z", {"<ev>": {"start": ..., "m": {"spread": {"home": [tix, mon, line, odds], ...}}}}], ...]}
+name: splits-snapshots
+on:
+  schedule:
+    - cron: '7,37 * * * *'
+  workflow_dispatch: {}
+  push:
+    paths: ['.github/workflows/splits-snapshots.yml']
+permissions:
+  contents: write
+concurrency:
+  group: splits-snapshots
+  cancel-in-progress: false
+jobs:
+  snap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Get the archive branch
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git init -q data && cd data
+          git remote add origin "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git fetch -q --depth 1 origin data-splits 2>/dev/null; then
+            git checkout -q -b data-splits FETCH_HEAD
+          else
+            git checkout -q --orphan data-splits
+            printf 'Betting-splits snapshots written by .github/workflows/splits-snapshots.yml. Market data only.\n' > README.md
+          fi
+      - name: Snapshot the splits
+        working-directory: data
+        run: |
+          python3 - <<'PY'
+          import gzip, json, os, time, urllib.request
+          from datetime import datetime, timezone, timedelta
+          H = {'User-Agent': 'Mozilla/5.0'}
+          SPORTS = ['nfl', 'ncaaf', 'nhl', 'nba', 'ncaab', 'soccer']
+          now = datetime.now(timezone.utc); y = now.year
+          def nth_sunday(month, n):
+              d = datetime(y, month, 1, tzinfo=timezone.utc); d += timedelta(days=(6 - d.weekday()) % 7)
+              return d + timedelta(weeks=n - 1)
+          off = -6 if nth_sunday(3, 2) + timedelta(hours=9) <= now < nth_sunday(11, 1) + timedelta(hours=8) else -7
+          mt = now + timedelta(hours=off)
+          stamp = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+          def get(u):
+              for a in range(3):
+                  try:
+                      return json.load(urllib.request.urlopen(urllib.request.Request(u, headers=H), timeout=40))
+                  except Exception:
+                      if a == 2: raise
+                      time.sleep(3)
+          total = written = 0
+          for sp in SPORTS:
+              path = 'splits/%s/%s.json.gz' % (mt.strftime('%Y-%m-%d'), sp)
+              try:
+                  with gzip.open(path, 'rt', encoding='utf-8') as f: day = json.load(f)
+              except FileNotFoundError:
+                  day = {'snaps': []}
+              last = {}   # latest values already written today, per event
+              for _, games in day['snaps']:
+                  for ev, v in games.items(): last[ev] = v['m']
+              snap, seen = {}, set()
+              for dd in (0, 1, 2):
+                  dt = (mt + timedelta(days=dd)).strftime('%Y%m%d')
+                  u = 'https://api.actionnetwork.com/web/v2/scoreboard/%s?date=%s&periods=event&bookIds=15,69%s' % (sp, dt, '&division=D1' if sp == 'ncaab' else '')
+                  try:
+                      games = get(u).get('games', [])
+                  except Exception as e:
+                      print('scoreboard failed', sp, dt, e); continue
+                  time.sleep(0.4)
+                  for g in games:
+                      ev = str(g['id'])
+                      if ev in seen or g.get('status') != 'scheduled': continue
+                      st = datetime.strptime(g['start_time'][:19], '%Y-%m-%dT%H:%M:%S').replace(tzinfo=timezone.utc)
+                      if not (now < st <= now + timedelta(hours=48)): continue
+                      seen.add(ev)
+                      m = {}
+                      for mk in ('moneyline', 'spread', 'total'):
+                          for book in ('15', '69'):
+                              rows = (((g.get('markets') or {}).get(book) or {}).get('event') or {}).get(mk) or []
+                              got = {}
+                              for r in rows:
+                                  bi = r.get('bet_info') or {}
+                                  t, mo = (bi.get('tickets') or {}).get('percent'), (bi.get('money') or {}).get('percent')
+                                  if t is None and mo is None: continue
+                                  got[r.get('side') or 'x'] = [t, mo, r.get('value'), r.get('odds')]
+                              if got:
+                                  m[mk] = got; break
+                      if not m: continue
+                      total += 1
+                      if last.get(ev) != m:
+                          snap[ev] = {'start': g['start_time'], 'm': m}
+              if snap:
+                  day['snaps'].append([stamp, snap]); written += len(snap)
+                  os.makedirs(os.path.dirname(path), exist_ok=True)
+                  with gzip.open(path, 'wt', encoding='utf-8') as f: json.dump(day, f, separators=(',', ':'))
+          print('games with splits in the next 48h: %d, changed and written: %d' % (total, written))
+          PY
+      - name: Commit the snapshot
+        working-directory: data
+        run: |
+          git add -A
+          if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
+          git -c user.name='splits bot' -c user.email='actions@users.noreply.github.com' commit -q -m "splits $(date -u +%FT%TZ)"
+          git push -q origin data-splits
+          echo "pushed"
