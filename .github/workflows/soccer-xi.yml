@@ -11,8 +11,8 @@
 # which matches are within 150 min of kickoff (a match AN does not price cannot be bet), ESPN's
 # board is joined on kickoff +-15 min plus BOTH team names and must be UNIQUE or it is skipped, and
 # a row is written when 22 starters first appear or the XI changes. GitHub's schedule can run late,
-# so a run that finds a match in the window keeps polling ESPN every 2.5 min for ~8 min; with the
-# 10-min cron that keeps the gap between looks small. Quiet runs make two AN calls and exit.
+# (MEASURED 22 Nov: the 30-min splits cron actually ran ~hourly), so a run that finds a match in the
+# window keeps polling ESPN every 2.5 min for ~22 min. Quiet runs make two AN calls and exit.
 # EXTRA COLUMN prevCheck = the last time this job looked at that match and saw NO full XI: the XI
 # landed between prevCheck and stamp, so the timing uncertainty is written down, not assumed.
 # Branch data-xi only (never main): xi/<YYYY-MM>.psv (MT month), state/, log/<YYYY-MM>.log.
@@ -32,7 +32,7 @@ concurrency:
 jobs:
   xi:
     runs-on: ubuntu-latest
-    timeout-minutes: 13
+    timeout-minutes: 30
     steps:
       - name: Get the archive branch
         env:
@@ -54,7 +54,7 @@ jobs:
           import json, os, re, time, unicodedata, urllib.request
           from datetime import datetime, timezone, timedelta
           UA = {'User-Agent': 'Mozilla/5.0'}
-          LEAD, LOOPS, GAP = 150, 4, 150        # window minutes, polls per run, seconds between polls
+          LEAD, LOOPS, GAP = 150, 10, 150       # window minutes, polls per run (~22 min), seconds between polls
           LGMAP = {'epl': ['eng.1', 'eng.2'], 'laliga': ['esp.1'], 'seriea': ['ita.1'], 'bundesliga': ['ger.1', 'ger.2'],
                    'ligue1': ['fra.1'], 'mls': ['usa.1'], 'champions': ['uefa.champions'], 'europa': ['uefa.europa'],
                    'conference': ['uefa.europa.conf']}
