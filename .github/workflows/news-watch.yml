@@ -1,0 +1,284 @@
+# NEWS WATCH - news, injuries, NHL goalies and CFB availability, every 15 minutes, day and night.
+# Built 22 Nov 2026 (step 3 of the PC-off plan; owner: "start on step 3 the news and injuries stuff").
+# Source copy: clv\cloud\news-watch.yml; live copy: spice12212/spice-bets
+# .github/workflows/news-watch.yml (allowlisted in web\.gitignore).
+#
+# WHY: every one of these feeds serves CURRENT STATE ONLY. ESPN's news feed is a rolling 50-item
+# window (about 6 h deep for NFL on a Sunday), its injury feed keeps only the latest status, the
+# goalie probables only the latest projection, the conference availability reports only the
+# latest update. A status that changes while the PC is dark (9-13 h most nights) is gone for good.
+# The PC collectors (news-collect, injury-observe, nhl-goalies, nhl-goalies-rw, cfb-avail) keep
+# running; this is the always-on twin.
+#
+# WHAT: the SAME change-only logic and the SAME row formats as those PC scripts, so a cloud row can
+# be read by anything that reads the PC file. One state per collector in state/ (seeded once from
+# the PC's own files on 22 Nov, so the first cloud rows are real changes, not a first-sight flood).
+# Files on the data-news branch only (never main), one per month in Mountain time:
+#   news/<YYYY-MM>.psv          id|sport|published|lastModified|type|teams|athletes|byline|headline|seenAt
+#   injuries/<YYYY-MM>.psv      stamp|sport|teamId|team|player|pos|status|prevStatus|comment
+#   goalies-espn/<YYYY-MM>.psv  stamp|date|espnId|game|awayAbbr|homeAbbr|awayG|awayGId|awayStat|homeG|homeGId|homeStat|state
+#   goalies-rw/<YYYY-MM>.psv    stamp|date|game|awayAbbr|homeAbbr|awayG|awayStat|homeG|homeStat|kind
+#   cfb-avail/<YYYY-MM>.psv     stamp|publishDate|reportType|postedTime|team|opp|player|status|prevStatus|exempt|kind|gameDate|gameLoc|gameTime|conf|tz
+#   log/<YYYY-MM>.log           one line per run: what each source returned, so a dead source shows.
+# Public data only - no picks. Kalshi is NOT here on purpose: its API serves price history
+# (candlesticks) after the fact, so a missed Kalshi window can be rebuilt on the PC.
+name: news-watch
+on:
+  schedule:
+    - cron: '4,19,34,49 * * * *'
+  workflow_dispatch: {}
+  push:
+    paths: ['.github/workflows/news-watch.yml']
+permissions:
+  contents: write
+concurrency:
+  group: news-watch
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Get the archive branch
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git init -q data && cd data
+          git remote add origin "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git fetch -q --depth 1 origin data-news 2>/dev/null; then
+            git checkout -q -b data-news FETCH_HEAD
+          else
+            git checkout -q --orphan data-news
+            printf 'News / injury / goalie / availability change logs written by .github/workflows/news-watch.yml. Public data only.\n' > README.md
+          fi
+      - name: Poll the feeds
+        working-directory: data
+        run: |
+          python3 - <<'PY'
+          import json, os, re, time, urllib.request
+          from datetime import datetime, timezone, timedelta
+          UA = {'User-Agent': 'Mozilla/5.0'}
+          now = datetime.now(timezone.utc); y = now.year
+          def nth_sunday(month, n):
+              d = datetime(y, month, 1, tzinfo=timezone.utc); d += timedelta(days=(6 - d.weekday()) % 7)
+              return d + timedelta(weeks=n - 1)
+          off = -6 if nth_sunday(3, 2) + timedelta(hours=9) <= now < nth_sunday(11, 1) + timedelta(hours=8) else -7
+          mt = now + timedelta(hours=off); et = now + timedelta(hours=off + 2)
+          month = mt.strftime('%Y-%m')
+          stamp = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+          def get(url, data=None, headers=None, tries=3):
+              for a in range(tries):
+                  try:
+                      req = urllib.request.Request(url, data=data, headers=dict(UA, **(headers or {})), method='POST' if data else 'GET')
+                      return json.load(urllib.request.urlopen(req, timeout=40))
+                  except Exception:
+                      if a == tries - 1: raise
+                      time.sleep(3)
+          def s(x): return '' if x is None else str(x)
+          def clean(x): return re.sub(r'[|\r\n\t]', ' ', s(x)).strip()
+          def jload(p, dflt):
+              try:
+                  with open(p, encoding='utf-8') as f: return json.load(f)
+              except FileNotFoundError:
+                  return dflt
+          def jsave(p, v):
+              os.makedirs(os.path.dirname(p), exist_ok=True)
+              with open(p, 'w', encoding='utf-8') as f: json.dump(v, f, separators=(',', ':'), sort_keys=True)
+          def append(folder, header, rows):
+              if not rows: return
+              p = '%s/%s.psv' % (folder, month)
+              os.makedirs(folder, exist_ok=True)
+              new = not os.path.exists(p)
+              with open(p, 'a', encoding='utf-8', newline='\n') as f:
+                  if new: f.write(header + '\n')
+                  f.write('\n'.join(rows) + '\n')
+          log = [stamp]
+
+          # ---- NEWS (news-collect.ps1) -------------------------------------------------------------
+          FEEDS = {'nfl': 'football/nfl', 'ncaaf': 'football/college-football', 'mlb': 'baseball/mlb',
+                   'nhl': 'hockey/nhl', 'nba': 'basketball/nba'}
+          seen = jload('state/news-seen.json', {})
+          rows, part = [], []
+          for sp, path in FEEDS.items():
+              try:
+                  d = get('https://site.api.espn.com/apis/site/v2/sports/%s/news?limit=50' % path)
+              except Exception as e:
+                  part.append('%s=FAIL' % sp); continue
+              arts = d.get('articles') or []; n = 0
+              for a in arts:
+                  aid = s(a.get('id'))
+                  if not aid or (sp + '/' + aid) in seen: continue
+                  seen[sp + '/' + aid] = stamp; n += 1
+                  teams, aths = [], []
+                  for c in a.get('categories') or []:
+                      if c.get('type') == 'team' and c.get('teamId'): v = '%s:%s' % (c['teamId'], clean(c.get('description')))
+                      elif c.get('type') == 'athlete' and c.get('athleteId'): v = '%s:%s' % (c['athleteId'], clean(c.get('description')))
+                      else: continue
+                      lst = teams if c.get('type') == 'team' else aths
+                      if v not in lst: lst.append(v)
+                  rows.append('|'.join([aid, sp, s(a.get('published')), s(a.get('lastModified')), clean(a.get('type')),
+                                        ','.join(teams), ','.join(aths), clean(a.get('byline')), clean(a.get('headline')), stamp]))
+              part.append('%s=%d/%d' % (sp, n, len(arts)))
+              time.sleep(0.3)
+          cut = (now - timedelta(days=120)).strftime('%Y-%m-%dT%H:%M:%SZ')
+          seen = {k: v for k, v in seen.items() if v >= cut}
+          append('news', 'id|sport|published|lastModified|type|teams|athletes|byline|headline|seenAt', rows)
+          jsave('state/news-seen.json', seen)
+          log.append('news +%d (%s)' % (len(rows), ' '.join(part)))
+
+          # ---- INJURIES (injury-observe.ps1) -------------------------------------------------------
+          PATHS = {'nfl': 'football/nfl', 'ncaaf': 'football/college-football', 'nba': 'basketball/nba',
+                   'nhl': 'hockey/nhl', 'mlb': 'baseball/mlb'}
+          last = jload('state/injury-last.json', {})
+          rows, part = [], []
+          for sp, path in PATHS.items():
+              try:
+                  r = get('https://site.api.espn.com/apis/site/v2/sports/%s/injuries' % path)
+              except Exception:
+                  part.append('%s=FAIL' % sp); continue
+              n = 0
+              for t in r.get('injuries') or []:
+                  for i in t.get('injuries') or []:
+                      ath = i.get('athlete') or {}
+                      nm = s(ath.get('displayName'))
+                      if not nm: continue
+                      n += 1
+                      st = s(i.get('status'))
+                      k = '%s|%s|%s' % (sp, s(t.get('id')), nm)
+                      prev = last.get(k, '')
+                      if prev == '' and st == 'Active': continue      # first sight of a healthy player is not a change
+                      if prev == st: continue
+                      cmt = re.sub(r'[|\r\n]', ' ', s(i.get('shortComment')))[:220]
+                      rows.append('|'.join([stamp, sp, s(t.get('id')), re.sub(r'[|\r\n]', ' ', s(t.get('displayName'))),
+                                            re.sub(r'[|\r\n]', ' ', nm), s((ath.get('position') or {}).get('abbreviation')), st, prev, cmt]))
+                      last[k] = st
+              part.append('%s=%d' % (sp, n))
+              time.sleep(0.3)
+          append('injuries', 'stamp|sport|teamId|team|player|pos|status|prevStatus|comment', rows)
+          jsave('state/injury-last.json', last)
+          log.append('injuries +%d (%s)' % (len(rows), ' '.join(part)))
+
+          # ---- NHL GOALIES, ESPN (nhl-goalies.ps1) -------------------------------------------------
+          ALIAS = {'Mammoth': 'Utah'}
+          gl = jload('state/goalies-espn.json', {})       # espnId -> [key, date]
+          rows, nseen, fails = [], 0, 0
+          for dd in (0, 1, 2):
+              dt = (et + timedelta(days=dd)).strftime('%Y%m%d')
+              try:
+                  j = get('https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=%s' % dt)
+              except Exception:
+                  fails += 1; continue
+              for ev in j.get('events') or []:
+                  nseen += 1
+                  comp = (ev.get('competitions') or [{}])[0]
+                  state = re.sub('^STATUS_', '', s(((ev.get('status') or {}).get('type') or {}).get('name')))
+                  cs = comp.get('competitors') or []
+                  h = next((c for c in cs if c.get('homeAway') == 'home'), None)
+                  a = next((c for c in cs if c.get('homeAway') == 'away'), None)
+                  if not h or not a: continue
+                  def goalie(c):
+                      for p in c.get('probables') or []:
+                          if s(p.get('name')) != 'probableStartingGoalie': continue
+                          at = p.get('athlete')
+                          if not at: continue
+                          return {'nm': s(at.get('displayName')), 'id': s(at.get('id')), 'st': s((p.get('status') or {}).get('name'))}
+                      return None
+                  hg, ag = goalie(h), goalie(a)
+                  an = s((a.get('team') or {}).get('name')); hn = s((h.get('team') or {}).get('name'))
+                  game = '%s @ %s' % (ALIAS.get(an, an), ALIAS.get(hn, hn))
+                  key = '|'.join([ag['id'] if ag else '', ag['st'] if ag else '', hg['id'] if hg else '', hg['st'] if hg else '', state])
+                  eid = s(ev.get('id'))
+                  if (gl.get(eid) or [None])[0] == key: continue
+                  rows.append('|'.join([stamp, dt, eid, game, s((a.get('team') or {}).get('abbreviation')), s((h.get('team') or {}).get('abbreviation')),
+                                        ag['nm'] if ag else '', ag['id'] if ag else '', ag['st'] if ag else '',
+                                        hg['nm'] if hg else '', hg['id'] if hg else '', hg['st'] if hg else '', state]))
+                  gl[eid] = [key, dt]
+              time.sleep(0.3)
+          old = (et - timedelta(days=14)).strftime('%Y%m%d')
+          gl = {k: v for k, v in gl.items() if v[1] >= old}
+          append('goalies-espn', 'stamp|date|espnId|game|awayAbbr|homeAbbr|awayG|awayGId|awayStat|homeG|homeGId|homeStat|state', rows)
+          jsave('state/goalies-espn.json', gl)
+          log.append('goalies-espn +%d (%d games%s)' % (len(rows), nseen, ', %d date FAIL' % fails if fails else ''))
+
+          # ---- NHL GOALIES, ROTOWIRE (nhl-goalies-rw.ps1; also writes the 'kind' column the PC drops) -
+          day = mt.strftime('%Y-%m-%d')
+          try:
+              games = get('https://www.rotowire.com/hockey/tables/projected-goalies.php?date=%s' % day) or []
+              prev = jload('state/goalies-rw.json', {})
+              cur, rows = {}, []
+              for g in games:
+                  aw, hm = s(g.get('visitteam')), s(g.get('hometeam'))
+                  k = '%s|%s|%s' % (day, aw, hm)
+                  v = [s(g.get('visitPlayer')), s(g.get('visitStatus')), s(g.get('homePlayer')), s(g.get('homeStatus'))]
+                  cur[k] = v; p = prev.get(k)
+                  kind = 'first' if p is None else 'name' if (p[0] != v[0] or p[2] != v[2]) else 'status' if (p[1] != v[1] or p[3] != v[3]) else ''
+                  if kind: rows.append('|'.join([stamp, day, aw + ' @ ' + hm, aw, hm, v[0], v[1], v[2], v[3], kind]))
+              if rows:
+                  append('goalies-rw', 'stamp|date|game|awayAbbr|homeAbbr|awayG|awayStat|homeG|homeStat|kind', rows)
+                  jsave('state/goalies-rw.json', cur)
+              log.append('goalies-rw +%d (%d games)' % (len(rows), len(games)))
+          except Exception as e:
+              log.append('goalies-rw FAIL (%s)' % clean(e)[:80])
+
+          # ---- CFB AVAILABILITY REPORTS (cfb-avail.ps1) --------------------------------------------
+          CONFS = [('B12', 'https://big12sports.com/'), ('SEC', 'https://www.secsports.com/'), ('B10', 'https://bigten.org/'),
+                   ('ACC', 'https://theacc.com/'), ('MWC', 'https://themw.com/'), ('MAC', 'https://getsomemaction.com/'),
+                   ('CUSA', 'https://conferenceusa.com/')]
+          flat, ok, failed = [], set(), []
+          for code, ref in CONFS:
+              body = json.dumps({'sport': 'Football', 'organization': code, 'conference': code}, separators=(',', ':')).encode()
+              try:
+                  data = get('https://app.hdintelligence.com/api/get-publish-public', data=body,
+                             headers={'Referer': ref, 'Content-Type': 'application/json'})
+              except Exception:
+                  failed.append(code); continue
+              if data is None: failed.append(code); continue
+              ok.add(code)
+              for rep in (data.values() if isinstance(data, dict) else []):
+                  if not rep or rep.get('games') is None: continue
+                  ft = rep.get('footer') or {}
+                  teams = [s(g.get('teamDisplayName')) for g in rep['games']]
+                  for gm in rep['games']:
+                      tn = s(gm.get('teamDisplayName')); opp = ''
+                      for t in teams:
+                          if t != tn: opp = t
+                      for rw in gm.get('rows') or []:
+                          if rw is None: continue
+                          flat.append({'conf': code, 'tz': s(rep.get('conferenceTimeZone')), 'reportType': s(rep.get('ReportType')),
+                                       'postedTime': s(rep.get('postedTime')), 'publishDate': s(rep.get('publishDate')),
+                                       'gameDate': s(ft.get('date')), 'gameLoc': s(ft.get('location')).replace('|', ' ').strip(),
+                                       'gameTime': s(ft.get('time')), 'team': tn, 'opp': opp,
+                                       'player': s(rw.get('name')).replace('|', ' ').strip(), 'status': s(rw.get('status')),
+                                       'exempt': s(rw.get('exemptStatus'))})
+              time.sleep(0.3)
+          if flat:
+              prev = jload('state/cfb-avail.json', {})       # "conf\tteam\tplayer" -> status
+              cur, rows = {}, []
+              for r in flat:
+                  k = '\t'.join([r['conf'], r['team'], r['player']])
+                  cur[k] = r['status']; was = prev.get(k)
+                  kind = 'new' if was is None else 'change' if was != r['status'] else ''
+                  if not kind: continue
+                  rows.append('|'.join([stamp, r['publishDate'], r['reportType'], r['postedTime'], r['team'], r['opp'], r['player'],
+                                        r['status'], was or '', r['exempt'], kind, r['gameDate'], r['gameLoc'], r['gameTime'], r['conf'], r['tz']]))
+              for k, v in prev.items():                        # a conference that did not answer keeps its last state
+                  if k not in cur and k.split('\t')[0] not in ok: cur[k] = v
+              append('cfb-avail', 'stamp|publishDate|reportType|postedTime|team|opp|player|status|prevStatus|exempt|kind|gameDate|gameLoc|gameTime|conf|tz', rows)
+              jsave('state/cfb-avail.json', cur)
+              log.append('cfb-avail +%d (%d rows, %d/7 confs%s)' % (len(rows), len(flat), len(ok), ' FAIL ' + ','.join(failed) if failed else ''))
+          else:
+              log.append('cfb-avail PARSED 0 ROWS (%d/7 confs%s)' % (len(ok), ' FAIL ' + ','.join(failed) if failed else ''))
+
+          os.makedirs('log', exist_ok=True)
+          with open('log/%s.log' % month, 'a', encoding='utf-8', newline='\n') as f: f.write(' | '.join(log) + '\n')
+          print(' | '.join(log))
+          PY
+      - name: Commit
+        working-directory: data
+        run: |
+          git add -A
+          if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
+          git -c user.name='news-watch bot' -c user.email='actions@users.noreply.github.com' commit -q -m "news watch $(date -u +%FT%TZ)"
+          git push -q origin data-news
+          echo "pushed"
