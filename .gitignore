@@ -72,3 +72,7 @@ artifact-index.html
 # conference CFB availability reports every 15 minutes to the data-news branch, because every one of
 # those feeds serves current state only. Public data only.
 !.github/workflows/news-watch.yml
+
+# Soccer XI watch (22 Nov 2026): first-seen confirmed starting XIs to the data-xi branch, because ESPN
+# gives no publication time and European kickoffs fall while the PC is dark. Public data only.
+!.github/workflows/soccer-xi.yml

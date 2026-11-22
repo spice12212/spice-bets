@@ -1,0 +1,189 @@
+# SOCCER XI WATCH - first-seen confirmed starting XIs, built 22 Nov 2026 (owner: "do the soccer lineups
+# in the cloud next"). Source copy: clv\cloud\soccer-xi.yml; live copy: spice12212/spice-bets
+# .github/workflows/soccer-xi.yml (allowlisted in web\.gitignore).
+#
+# WHY: soccer-xi.ps1 on the PC records WHEN each XI became knowable (ESPN posts it ~T-60..T-50 and
+# exposes no publication stamp, so only a poll can date it). European kickoffs fall 05:30-13:00 MT,
+# exactly when the PC is dark most days, so most XI landings were never timed. WHO started is
+# recoverable from ESPN later; WHEN it was posted is not.
+#
+# HOW: the same gate, join and row format as soccer-xi.ps1 - Action Network's soccer board decides
+# which matches are within 150 min of kickoff (a match AN does not price cannot be bet), ESPN's
+# board is joined on kickoff +-15 min plus BOTH team names and must be UNIQUE or it is skipped, and
+# a row is written when 22 starters first appear or the XI changes. GitHub's schedule can run late,
+# so a run that finds a match in the window keeps polling ESPN every 2.5 min for ~8 min; with the
+# 10-min cron that keeps the gap between looks small. Quiet runs make two AN calls and exit.
+# EXTRA COLUMN prevCheck = the last time this job looked at that match and saw NO full XI: the XI
+# landed between prevCheck and stamp, so the timing uncertainty is written down, not assumed.
+# Branch data-xi only (never main): xi/<YYYY-MM>.psv (MT month), state/, log/<YYYY-MM>.log.
+# Public data only - no picks. The PC's spot-screen hand-off and alert stay on the PC.
+name: soccer-xi
+on:
+  schedule:
+    - cron: '2-59/10 * * * *'
+  workflow_dispatch: {}
+  push:
+    paths: ['.github/workflows/soccer-xi.yml']
+permissions:
+  contents: write
+concurrency:
+  group: soccer-xi
+  cancel-in-progress: false
+jobs:
+  xi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - name: Get the archive branch
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git init -q data && cd data
+          git remote add origin "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git fetch -q --depth 1 origin data-xi 2>/dev/null; then
+            git checkout -q -b data-xi FETCH_HEAD
+          else
+            git checkout -q --orphan data-xi
+            printf 'First-seen soccer starting XIs written by .github/workflows/soccer-xi.yml. Public data only.\n' > README.md
+          fi
+      - name: Watch the XIs
+        working-directory: data
+        run: |
+          python3 - <<'PY'
+          import json, os, re, time, unicodedata, urllib.request
+          from datetime import datetime, timezone, timedelta
+          UA = {'User-Agent': 'Mozilla/5.0'}
+          LEAD, LOOPS, GAP = 150, 4, 150        # window minutes, polls per run, seconds between polls
+          LGMAP = {'epl': ['eng.1', 'eng.2'], 'laliga': ['esp.1'], 'seriea': ['ita.1'], 'bundesliga': ['ger.1', 'ger.2'],
+                   'ligue1': ['fra.1'], 'mls': ['usa.1'], 'champions': ['uefa.champions'], 'europa': ['uefa.europa'],
+                   'conference': ['uefa.europa.conf']}
+          def utcnow(): return datetime.now(timezone.utc)
+          def iso(t): return t.strftime('%Y-%m-%dT%H:%M:%SZ')
+          def P(x):   # AN "2026-11-22T12:30:00.000Z", ESPN "2026-11-22T12:30Z" (no seconds)
+              g = re.match(r'(\d{4})-(\d\d)-(\d\d)[T ](\d\d):(\d\d)(?::(\d\d))?', x).groups(default='0')
+              return datetime(*map(int, g), tzinfo=timezone.utc)
+          def get(u):
+              for a in range(3):
+                  try: return json.load(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=30))
+                  except Exception:
+                      if a == 2: raise
+                      time.sleep(3)
+          def s(x): return '' if x is None else str(x)
+          def norm(x):
+              x = ''.join(c for c in unicodedata.normalize('NFD', s(x)) if unicodedata.category(c) != 'Mn')
+              return re.sub(r'\s+', ' ', re.sub(r'[^a-z0-9 ]', ' ', x.lower())).strip()
+          def namehit(a, b):
+              ta = [t for t in norm(a).split(' ') if len(t) >= 4]; tb = [t for t in norm(b).split(' ') if len(t) >= 4]
+              return any(x == y or x.startswith(y) or y.startswith(x) for x in ta for y in tb)
+          def jload(p, d):
+              try:
+                  with open(p, encoding='utf-8') as f: return json.load(f)
+              except FileNotFoundError: return d
+          t0 = utcnow(); y = t0.year
+          def nth_sunday(month, n):
+              d = datetime(y, month, 1, tzinfo=timezone.utc); d += timedelta(days=(6 - d.weekday()) % 7)
+              return d + timedelta(weeks=n - 1)
+          off = -6 if nth_sunday(3, 2) + timedelta(hours=9) <= t0 < nth_sunday(11, 1) + timedelta(hours=8) else -7
+          mt = t0 + timedelta(hours=off); month = mt.strftime('%Y-%m')
+          log = [iso(t0)]
+          # ---- who is near kickoff? (AN board, today and tomorrow MT)
+          cand, seen_ev = [], set()
+          for dd in (0, 1):
+              try: an = get('https://api.actionnetwork.com/web/v2/scoreboard/soccer?date=%s' % (mt + timedelta(days=dd)).strftime('%Y%m%d'))
+              except Exception: log.append('AN board FAIL'); continue
+              for g in an.get('games') or []:
+                  if s(g.get('status')) != 'scheduled' or s(g.get('id')) in seen_ev: continue
+                  ko = P(g['start_time']); mins = (ko - t0).total_seconds() / 60
+                  if mins > LEAD or mins < 0: continue
+                  seen_ev.add(s(g['id']))
+                  tm = {t['id']: t for t in g.get('teams') or []}
+                  cand.append({'ev': s(g['id']), 'league': s(g.get('league_name')), 'ko': ko,
+                               'away': s((tm.get(g.get('away_team_id')) or {}).get('full_name')),
+                               'home': s((tm.get(g.get('home_team_id')) or {}).get('full_name'))})
+          rows = []
+          if cand:
+              unmapped = sorted({c['league'] for c in cand if c['league'] not in LGMAP})
+              slugs = sorted({sl for c in cand for sl in LGMAP.get(c['league'], [])})
+              esp = []
+              for lg in slugs:
+                  for dt in sorted({iso(t0)[:10].replace('-', ''), iso(t0 + timedelta(days=1))[:10].replace('-', '')}):
+                      try: sb = get('https://site.api.espn.com/apis/site/v2/sports/soccer/%s/scoreboard?dates=%s' % (lg, dt))
+                      except Exception: continue
+                      for e in sb.get('events') or []:
+                          cm = (e.get('competitions') or [None])[0]
+                          if not cm: continue
+                          side = {c.get('homeAway'): s((c.get('team') or {}).get('displayName')) for c in cm.get('competitors') or []}
+                          esp.append({'league': lg, 'id': s(e.get('id')), 'short': s(e.get('shortName')), 'ko': P(s(e.get('date'))),
+                                      'home': side.get('home', ''), 'away': side.get('away', '')})
+              last = jload('state/xi-last.json', {})          # espnId -> {stamp, starters, homeXI, awayXI}
+              lastxi = jload('state/xi-team.json', {})        # norm(team) -> XI
+              pend = jload('state/xi-pending.json', {})       # espnId -> last look that saw NO full XI
+              matched, skipped = [], 0
+              for c in cand:
+                  hits = [m for m in esp if abs((m['ko'] - c['ko']).total_seconds()) <= 900 and namehit(m['home'], c['home']) and namehit(m['away'], c['away'])]
+                  if len(hits) == 1: matched.append((c, hits[0]))
+                  else: skipped += 1
+              for loop in range(LOOPS):
+                  if loop: time.sleep(GAP)
+                  now = utcnow(); stamp = iso(now)
+                  live = [(c, m) for c, m in matched if c['ko'] > now]
+                  if not live: break
+                  for c, m in live:
+                      try: sm = get('https://site.api.espn.com/apis/site/v2/sports/soccer/%s/summary?event=%s' % (m['league'], m['id']))
+                      except Exception: continue
+                      starters, xi = 0, {}
+                      for r in sm.get('rosters') or []:
+                          names = [s((p.get('athlete') or {}).get('displayName')) for p in r.get('roster') or [] if p.get('starter')]
+                          starters += len(names)
+                          if r.get('homeAway'): xi[r['homeAway']] = ';'.join(names)
+                      hxi, axi = xi.get('home', ''), xi.get('away', '')
+                      if starters < 22:
+                          pend[m['id']] = stamp; continue
+                      prev = last.get(m['id'])
+                      # compare as SETS: ESPN re-sorts the roster (by position, by shirt) without changing
+                      # who starts; an order-sensitive compare made 16 of the PC's first 17 "XI CHANGED" rows
+                      same = lambda a, b: sorted(s(a).split(';')) == sorted(s(b).split(';'))
+                      if prev and s(prev.get('starters')) == '22' and same(prev.get('homeXI'), hxi) and same(prev.get('awayXI'), axi):
+                          continue
+                      what = 'XI CHANGED' if prev and s(prev.get('starters')) == '22' else 'XI confirmed'
+                      drop = []
+                      for team, now_xi in ((c['home'], hxi), (c['away'], axi)):
+                          was = lastxi.get(norm(team))
+                          if was:
+                              gone = [n for n in was.split(';') if n and n not in now_xi.split(';')]
+                              if gone: drop.append('%s: -%d (%s)' % (team, len(gone), ', '.join(gone[:4])))
+                      clean = lambda v: s(v).replace('|', '/')
+                      rows.append('|'.join([stamp, m['league'], m['id'], c['ev'], clean(m['short']), clean(c['away']), clean(c['home']),
+                                            iso(c['ko']), str(starters), what, clean(axi), clean(hxi), clean(' / '.join(drop)),
+                                            pend.get(m['id'], '')]))
+                      last[m['id']] = {'stamp': stamp, 'starters': starters, 'homeXI': hxi, 'awayXI': axi}
+                      lastxi[norm(c['home'])] = hxi; lastxi[norm(c['away'])] = axi
+                      pend[m['id']] = stamp
+              cut = iso(t0 - timedelta(days=3))
+              pend = {k: v for k, v in pend.items() if v >= cut}
+              os.makedirs('state', exist_ok=True)
+              for name, v in (('xi-last.json', last), ('xi-team.json', lastxi), ('xi-pending.json', pend)):
+                  with open('state/' + name, 'w', encoding='utf-8') as f: json.dump(v, f, separators=(',', ':'), sort_keys=True)
+              if rows:
+                  os.makedirs('xi', exist_ok=True)
+                  p = 'xi/%s.psv' % month; new = not os.path.exists(p)
+                  with open(p, 'a', encoding='utf-8', newline='\n') as f:
+                      if new: f.write('stamp|league|espnId|anEv|short|awayTeam|homeTeam|ko|starters|what|awayXI|homeXI|note|prevCheck\n')
+                      f.write('\n'.join(rows) + '\n')
+              log.append('%d in window, %d joined, %d not uniquely joined%s, %d XI row(s)' % (
+                  len(cand), len(matched), skipped, (', UNMAPPED ' + ','.join(unmapped)) if unmapped else '', len(rows)))
+          else:
+              log.append('no AN soccer match within %d min' % LEAD)
+          os.makedirs('log', exist_ok=True)
+          with open('log/%s.log' % month, 'a', encoding='utf-8', newline='\n') as f: f.write(' | '.join(log) + '\n')
+          print(' | '.join(log)); [print('  ' + r[:200]) for r in rows]
+          PY
+      - name: Commit
+        working-directory: data
+        run: |
+          git add -A
+          if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
+          git -c user.name='soccer-xi bot' -c user.email='actions@users.noreply.github.com' commit -q -m "soccer xi $(date -u +%FT%TZ)"
+          git push -q origin data-xi
+          echo "pushed"
