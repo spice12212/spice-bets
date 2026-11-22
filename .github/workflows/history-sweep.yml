@@ -1,0 +1,127 @@
+# LINE HISTORY SWEEP - the first data-capture job moved off the PC. Built 21 Nov 2026 (owner: "never
+# miss any gaps in data ... if the PC is off"). Source copy: clv\cloud\history-sweep.yml; live copy:
+# spice12212/spice-bets .github/workflows/history-sweep.yml (allowlisted in web\.gitignore).
+#
+# WHY: the PC is dark ~9-13 h most nights, and Action Network deletes a game's line history about a
+# day after it starts. 25 closes were lost that way by 21 Nov. Every 3 hours this job finds every game
+# (NFL, CFB, NHL, NBA, D1 CBB, soccer) that has STARTED in the last 36 hours and was not saved yet, and
+# archives its full pre-game history: every print at FanDuel 69, Caesars 13, DraftKings 68,
+# BetRivers 71, consensus 15 and AN Open 30, for moneyline / spread / total, with timestamps and the
+# line status (opener, normal, suspended). From that archive the closing line, the opener and every
+# move can always be rebuilt, however long the PC was off.
+#
+# Market data only - no picks. Writes ONLY the data-history branch (never main), so it cannot collide
+# with the PC's site pushes. Files: history/<start date MT>/<sport>.json.gz, a dict keyed by event id.
+name: history-sweep
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch: {}
+  push:
+    paths: ['.github/workflows/history-sweep.yml']
+permissions:
+  contents: write
+concurrency:
+  group: history-sweep
+  cancel-in-progress: false
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Get the archive branch
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git init -q data && cd data
+          git remote add origin "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git fetch -q --depth 1 origin data-history 2>/dev/null; then
+            git checkout -q -b data-history FETCH_HEAD
+          else
+            git checkout -q --orphan data-history
+            printf 'Line history archive written by .github/workflows/history-sweep.yml. Market data only.\n' > README.md
+          fi
+      - name: Sweep started games
+        working-directory: data
+        run: |
+          python3 - <<'PY'
+          import gzip, json, os, time, urllib.request
+          from datetime import datetime, timezone, timedelta
+          H = {'User-Agent': 'Mozilla/5.0'}
+          BOOKS = '69,13,68,71,15,30'
+          SPORTS = ['nfl', 'ncaaf', 'nhl', 'nba', 'ncaab', 'soccer']
+          now = datetime.now(timezone.utc)
+          y = now.year
+          def nth_sunday(month, n):
+              d = datetime(y, month, 1, tzinfo=timezone.utc); d += timedelta(days=(6 - d.weekday()) % 7)
+              return d + timedelta(weeks=n - 1)
+          off = -6 if nth_sunday(3, 2) + timedelta(hours=9) <= now < nth_sunday(11, 1) + timedelta(hours=8) else -7
+          mt = now + timedelta(hours=off)
+          def get(u):
+              for a in range(3):
+                  try:
+                      return json.load(urllib.request.urlopen(urllib.request.Request(u, headers=H), timeout=40))
+                  except Exception as e:
+                      if a == 2: raise
+                      time.sleep(3)
+          def load(path):
+              try:
+                  with gzip.open(path, 'rt', encoding='utf-8') as f: return json.load(f)
+              except FileNotFoundError:
+                  return {}
+          files, saved, failed, seen = {}, 0, 0, 0
+          for sp in SPORTS:
+              for dd in (-1, 0):
+                  day = (mt + timedelta(days=dd)).strftime('%Y%m%d')
+                  u = 'https://api.actionnetwork.com/web/v2/scoreboard/%s?date=%s&periods=event&bookIds=15%s' % (sp, day, '&division=D1' if sp == 'ncaab' else '')
+                  try:
+                      games = get(u).get('games', [])
+                  except Exception as e:
+                      print('scoreboard failed', sp, day, e); continue
+                  time.sleep(0.4)
+                  for g in games:
+                      st = datetime.strptime(g['start_time'][:19], '%Y-%m-%dT%H:%M:%S').replace(tzinfo=timezone.utc)
+                      if not (now - timedelta(hours=36) <= st <= now - timedelta(minutes=5)): continue
+                      if g.get('status') in ('scheduled', 'postponed', 'cancelled', 'canceled'): continue
+                      seen += 1
+                      sday = (st + timedelta(hours=off)).strftime('%Y-%m-%d')
+                      path = 'history/%s/%s.json.gz' % (sday, sp)
+                      if path not in files: files[path] = load(path)
+                      if str(g['id']) in files[path]: continue
+                      try:
+                          h = get('https://api.actionnetwork.com/web/v2/markets/event/%s/history?bookIds=%s' % (g['id'], BOOKS))
+                      except Exception as e:
+                          print('history failed', g['id'], e); failed += 1; continue
+                      time.sleep(0.4)
+                      books = {}
+                      for b, blob in (h or {}).items():
+                          for mk in ('moneyline', 'spread', 'total'):
+                              for m in ((blob or {}).get('event') or {}).get(mk) or []:
+                                  side = m.get('side') or 'x'
+                                  pts = [[x.get('updated_at'), x.get('value'), x.get('odds'), x.get('line_status')] for x in (m.get('history') or [])]
+                                  pts = [p for p in pts if p[0] and p[0] < g['start_time']]   # pre-game prints only
+                                  if pts:
+                                      books.setdefault(b, {}).setdefault(mk, {})[side] = pts
+                      teams = {t['id']: t for t in g.get('teams', [])}
+                      bx = g.get('boxscore') or {}
+                      files[path][str(g['id'])] = {
+                          'sport': sp, 'league': g.get('league_name'), 'start': g['start_time'], 'status': g.get('status'),
+                          'away': (teams.get(g.get('away_team_id')) or {}).get('full_name'),
+                          'home': (teams.get(g.get('home_team_id')) or {}).get('full_name'),
+                          'awayId': g.get('away_team_id'), 'homeId': g.get('home_team_id'),
+                          'savedAt': now.strftime('%Y-%m-%dT%H:%M:%SZ'), 'books': books}
+                      saved += 1
+          for path, d in files.items():
+              os.makedirs(os.path.dirname(path), exist_ok=True)
+              with gzip.open(path, 'wt', encoding='utf-8') as f: json.dump(d, f, separators=(',', ':'))
+          print('started games in window: %d, newly archived: %d, history fetch failures: %d' % (seen, saved, failed))
+          PY
+      - name: Commit the archive
+        working-directory: data
+        run: |
+          git add -A
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git -c user.name='history-sweep bot' -c user.email='actions@users.noreply.github.com' commit -q -m "line history $(date -u +%FT%TZ)"
+          git push -q origin data-history
+          echo "pushed"

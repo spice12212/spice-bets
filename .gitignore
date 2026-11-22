@@ -59,3 +59,7 @@ artifact-index.html
 # (the ungraded picks with their event ids, lines and sides - all already public on the pages).
 !.github/workflows/live-results.yml
 !picks-open.json
+
+# The line history sweep (21 Nov 2026): archives every started game's pre-game line history to the
+# data-history branch every 3 hours so closes/openers survive the PC being off. Market data only.
+!.github/workflows/history-sweep.yml
