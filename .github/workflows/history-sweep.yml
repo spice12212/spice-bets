@@ -12,6 +12,10 @@
 #
 # Market data only - no picks. Writes ONLY the data-history branch (never main), so it cannot collide
 # with the PC's site pushes. Files: history/<start date MT>/<sport>.json.gz, a dict keyed by event id.
+# FORMAT v2 (21 Nov 2026): books[book][market][side] = LIST of series {alt, pts:[[t, value, odds, status]]}.
+# v1 kept one series per side and the last duplicate overwrote the rest - a 3-print stub could replace
+# the real market (the long-plus-stub shape, clv-capture-system). Readers pick ONE series the same way
+# recover-closes.ps1 does: main line first, then most pre-game prints, then the earliest first print.
 name: history-sweep
 on:
   schedule:
@@ -88,7 +92,7 @@ jobs:
                       sday = (st + timedelta(hours=off)).strftime('%Y-%m-%d')
                       path = 'history/%s/%s.json.gz' % (sday, sp)
                       if path not in files: files[path] = load(path)
-                      if str(g['id']) in files[path]: continue
+                      if (files[path].get(str(g['id'])) or {}).get('v') == 2: continue   # v1 rows are re-saved as v2
                       try:
                           h = get('https://api.actionnetwork.com/web/v2/markets/event/%s/history?bookIds=%s' % (g['id'], BOOKS))
                       except Exception as e:
@@ -101,14 +105,17 @@ jobs:
                                   side = m.get('side') or 'x'
                                   pts = [[x.get('updated_at'), x.get('value'), x.get('odds'), x.get('line_status')] for x in (m.get('history') or [])]
                                   pts = [p for p in pts if p[0] and p[0] < g['start_time']]   # pre-game prints only
-                                  if pts:
-                                      books.setdefault(b, {}).setdefault(mk, {})[side] = pts
+                                  if pts:   # v2: EVERY series per side (AN serves duplicates), with its alt flag
+                                      books.setdefault(b, {}).setdefault(mk, {}).setdefault(side, []).append(
+                                          {'alt': bool(m.get('is_alt_market')), 'pts': pts})
                       teams = {t['id']: t for t in g.get('teams', [])}
                       bx = g.get('boxscore') or {}
                       files[path][str(g['id'])] = {
-                          'sport': sp, 'league': g.get('league_name'), 'start': g['start_time'], 'status': g.get('status'),
+                          'v': 2, 'sport': sp, 'league': g.get('league_name'), 'start': g['start_time'], 'status': g.get('status'),
                           'away': (teams.get(g.get('away_team_id')) or {}).get('full_name'),
                           'home': (teams.get(g.get('home_team_id')) or {}).get('full_name'),
+                          'awayName': (teams.get(g.get('away_team_id')) or {}).get('display_name'),
+                          'homeName': (teams.get(g.get('home_team_id')) or {}).get('display_name'),
                           'awayId': g.get('away_team_id'), 'homeId': g.get('home_team_id'),
                           'savedAt': now.strftime('%Y-%m-%dT%H:%M:%SZ'), 'books': books}
                       saved += 1

@@ -104,7 +104,10 @@ jobs:
                       if not m: continue
                       total += 1
                       if last.get(ev) != m:
-                          snap[ev] = {'start': g['start_time'], 'm': m}
+                          tm = {t['id']: t for t in g.get('teams', [])}
+                          snap[ev] = {'start': g['start_time'], 'm': m,
+                                      'away': (tm.get(g.get('away_team_id')) or {}).get('display_name'),
+                                      'home': (tm.get(g.get('home_team_id')) or {}).get('display_name')}
               if snap:
                   day['snaps'].append([stamp, snap]); written += len(snap)
                   os.makedirs(os.path.dirname(path), exist_ok=True)
