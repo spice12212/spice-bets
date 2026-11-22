@@ -174,6 +174,7 @@ a.pk:hover{background:var(--surface)}
 .pk-game{display:block;font-size:13.5px;color:var(--ink-soft);margin-top:.1rem}
 .pk-price{font-family:var(--mono);font-size:14px;color:var(--ink-soft);white-space:nowrap;text-align:right}
 .pk-price small{display:block;font-size:11.5px;color:var(--ink-faint);font-family:var(--body)}
+.pk-price small.inplay{color:var(--win)}
 .pk-end{display:flex;align-items:center;justify-content:flex-end;gap:.7rem;min-width:7.2rem}
 .clv{font-family:var(--mono);font-size:13.5px;font-weight:600;white-space:nowrap}
 .res{display:inline-grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;font-family:var(--mono);font-size:13px;font-weight:600;flex:none}
@@ -541,7 +542,7 @@ dl.limits dd{margin:0}
 <div class="mark giant" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="sbg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7bff"/><stop offset="1" stop-color="#5b3cf0"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#sbg2)"/><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="#fff"/></svg><span class="wm"><em class="v">s</em>p<span class="di"><span class="ltr">i</span><svg class="spk" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 10 C25.4 18.6 29.4 22.6 38 24 C29.4 25.4 25.4 29.4 24 38 C22.6 29.4 18.6 25.4 10 24 C18.6 22.6 22.6 18.6 24 10 Z" fill="var(--brand)"/></svg></span>ce bet<em class="v">s</em></span></div>
 <div class="fine">
 <p><strong>Everything here is paper.</strong> These are logged screener outputs, not betting slips, and no figure on this site represents money staked. Entry prices are FanDuel on all but a handful of picks. The exceptions are named on the <a href="method.html">Method</a> page. The closing price is captured automatically before the game starts, and records are frozen once graded and never re-priced.</p>
-<p>Not betting advice &middot; 21+ where legal &middot; partner and referral links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 22 Nov 2026, 19:00 UTC</p>
+<p>Not betting advice &middot; 21+ where legal &middot; partner and referral links are paid &middot; <a href="disclaimer.html">disclaimer and terms</a> &middot; <a href="method.html">method</a> &middot; updated 22 Nov 2026, 19:15 UTC</p>
 </div>
 </div></footer>
 <a class="pin" href="https://playbooki.com/Spice_bets" target="_blank" rel="noopener"><span><b>Every play, as I take it</b><i>3 days free, then &#36;20 a month</i></span><span class="go">Start free</span></a>
@@ -601,6 +602,21 @@ dl.limits dd{margin:0}
         });
       }).catch(function(){});
   }
+  // KICKOFF, 22 Nov 2026. Rows this build left open carry data-ko (UTC kickoff). Once it has
+  // passed, the row's note reads "in play" and the headline's "Next up" reads "Live now", so a
+  // page built hours ago (the PC is often off overnight) never calls a running game upcoming.
+  var nowKo = Date.now();
+  document.querySelectorAll('[data-ko]').forEach(function(el){
+    var t = Date.parse(el.getAttribute('data-ko'));
+    if(!t || t > nowKo) return;
+    if(el.classList.contains('tonight')){
+      var hb = el.querySelector('.when b'); if(hb && hb.textContent === 'Next up') hb.textContent = 'Live now';
+      return;
+    }
+    if(el.querySelector('.res')) return;
+    var sm = el.querySelector('.pk-price small');
+    if(sm && !sm.classList.contains('inplay')){ sm.classList.add('inplay'); sm.textContent = 'in play'; }
+  });
   document.querySelectorAll('.chips[data-filter]').forEach(function(box){
     box.addEventListener('click', function(ev){
       var b = ev.target.closest('button'); if(!b) return;
