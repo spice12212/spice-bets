@@ -12,3 +12,449 @@ stamp|publishDate|reportType|postedTime|team|opp|player|status|prevStatus|exempt
 2026-11-24T03:02:03Z|2026-11-23|Initial|21:00:00|Texas Tech|TCU|OLB #32 LaDamion Guyton|Doubtful|Out|NonExempt|change|2026-11-26|Lubbock, TX|19:00:00|B12|CT
 2026-11-24T03:02:03Z|2026-11-23|Initial|21:00:00|Texas Tech|TCU|OL #52 Cash Cleveland|Questionable|Available|NonExempt|change|2026-11-26|Lubbock, TX|19:00:00|B12|CT
 2026-11-24T03:02:03Z|2026-11-23|Initial|21:00:00|Texas Tech|TCU|DL #92 Bryce Butler|Questionable|Available|NonExempt|change|2026-11-26|Lubbock, TX|19:00:00|B12|CT
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #0 Darian Blachewicz|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|RB #0 Mason King|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #1 Ardell Banks|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #1 A'tiq Muhammad|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #2 Joel Cordoba|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|QB #2 Nolan Good|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #3 Jay Jay Etheridge|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #3 Derrick Jackson III|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #4 Jared Kelley|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #4 Rocco Nicholl|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #5 Thomas Aden|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|RB #5 Jakorion Caffey|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #6 Wayne Harris|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #7 Angelo Stockstill|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #8 Da'Realyst Clark|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #8 Josue Cordoba|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|QB #10 Ethan Thanthanavong|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #10 Hayden Dawahare|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|TE #11 Zy'aire Fletcher|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #11 Camdon Wilborn|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|QB #12 Dru DeShields|Questionable||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #12 Lionel Burns III|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|TE #13 Dakota Taylor|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #13 Quan Rhodes-McKee|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #14 Tyler Bivens|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|QB #14 Deante Ruffin|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #15 Sayed Abuhamdeh|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|QB #15 Gavin Peeps|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #17 Semaj Bridgeman|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|QB #17 Cole Miller|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|FB #18 Hunter Hopperton|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #18 Norey Johnson|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #19 DJ Barnes|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #19 Ali Fisher|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|RB #20 Marques Hicks|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #20 Rafael Terrero Jr.|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #21 TeJuan Barbour|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|RB #22 Brandon White|Questionable||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #22 Davion Pritchard|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #23 Ezekiel Castex|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #23 Maurice Stephens|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #24 Tanner Mintz|Questionable||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|RB #24 Jackson Farley|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #25 Martell Buchanan|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|RB #25 Donovan Delaney Jr.|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #26 BuddyRow Garrer|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|RB #26 Dylan Armentrout|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #27 Lennox Lemon|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #27 Javier Wills|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #28 Brodyn Bishop|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|RB #29 Cade Romanini|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DB #29 Jeremiah Johnson|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #30 Matthew Sollberger|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #31 Jacob Broach|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #32 Trey Rubinstein|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|RB #33 Ayden Harris|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #33 Jaihien Roy|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #35 Nate Gregory|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #36 Wyatt Januska|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|S #38 Clinton Robinson|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|K #39 Eli Tucker|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LS #41 Gus Goodell|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|P #42 Kolten Ford|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LB #43 Kendall McNutt|Questionable||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #44 Antonio Bottiggi|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|TE #44 Holtz Maine|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|TE #45 Tommy Arnold|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|TE #47 Andrew Rickelman|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|LS #48 Chase Mantooth|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|K #49 Tommy Newcomb|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #50 Garrett Dial|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #50 Ben Midea|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #52 Aiden Burgess|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #52 Gavin Kanar|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #54 Dustyn Morell|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #55 Jaxon Dunn|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #56 Carlos Shird|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #56 Moustafa Daoud|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #58 Colin Prichard|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #59 Eckley Bridges|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #64 David Iannini|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #66 Quinten Young|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #67 Max Gembus|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #70 Hudson Chasko|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #71 Liam Dalton|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #72 Cecil Wilson|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #73 William Johnson III|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #74 Donovan Dark|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #75 Boston Crowell|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #76 Mofe Adewole|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #77 Rico Steele|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|OL #78 Tyler Meadows|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #80 Teaunn Hunter|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #81 Zymir Reed|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #83 Garrett Long|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #84 Aidan Stewart|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #85 Brendyn Smith|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #86 Matthew Maxey|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #87 William Bierfeldt|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #88 Mohammed Hazime|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|WR #88 Luke Simms|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|TE #89 Terik Mulder|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #90 Bryce Griffin|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #91 Dion'Dre Taylor|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #93 Daiveon Taylor|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #94 Kale Webb|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #95 Anthony Adams III|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|K #96 Sean Leonard|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|P #97 Jake Stoeckel|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Kent State|Eastern Michigan|DL #98 Bryce Faulk|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|QB #1 Noah Kim|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #2 Nick Devereaux|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #3 Barry Manning|Questionable||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #3 Benson Prosper|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #4 Juan Salas|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #5 Makhi Gilbert|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #5 Harold Mack|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #6 Bryce Llewellyn|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #7 Jordan Toney|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #8 Jaivian Norman|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|TE #9 Joshua Long|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #9 Davion Williams|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #10 Tylan Boykin|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|QB #10 Brogan McCaughey|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #11 Antonio Floyd|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #11 Zach Mowchan|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|QB #12 Jace Stuckey|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #13 Jason Marshall|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|QB #13 Nick Kinsey|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|TE #14 Armaad Sharp|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|RB #15 Amareon Blue|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #16 Caleb Coley|Questionable||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|TE #16 Jackson Holt|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #17 Caleb Dobbs|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #18 Dior Boyd|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #18 Mekhi Fox|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|QB #19 Bryce Button|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #19 Jonnie Carter|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #20 Ray Hester|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|RB #21 Malachi James|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|RB #22 Decorie Johnson|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #23 Eli Lovett|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|RB #24 Joey Mattord|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #24 Horace Glenn III|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #25 Rayquan Adkins|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #25 Quinn Fracassi|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #26 Solomon Bell|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|RB #26 Nazir Jones-Davis|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #27 Marty Collins|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|RB #27 XaVior Tyus|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #28 Davontey Oliver|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|RB #28 Braydon Bennett|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #29 Donmiel Rogers|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #31 Antonio Solares-Vitti|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #32 Kijon Braxton|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #33 Carter Evans|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|K #33 Adam Samaha|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DB #35 Jabari Monds|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #36 Colin Main|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|K #37 Nathan Dibert|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|P #38 Van Krisiloff|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|P #39 Daniel Hull|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #40 Bryce Eliuk|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LS #41 Reeves Taylor|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LS #42 Jack Kautz|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #42 Jonah Flowers|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #43 Marvell Eggleston|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|TE #43 Payton Kokaly|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #44 Mark Debiak|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|TE #44 Adon Turner|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #45 Kadin Bailey|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|K #46 Rudy Kessinger|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #46 Noah Knigga|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|TE #48 Nathan Piggott|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|TE #49 Brady Shelton|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #50 Kevin Wojciechowski|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #50 CJ McCoy|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #51 Elgin McDuffey|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #52 Richardo Wourman|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #53 Alijah Lacey|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #54 Quincy Byas|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #54 Nathan Henry|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #55 Javon Thomas|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #55 Guzzy Kayed|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #56 RJ Alphonse|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #56 Chad Troxler|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|LB #57 Aaron Kearse|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #58 Peyton Christian|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #59 Andrew Trahin|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #62 Adham Abouraya|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #64 Noah Patterson|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #65 Nicholas Gallegos|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #66 Joshua Anderson|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #68 Tyler McMillan|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #70 Samuel Adjin|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #71 Tyler Brumfield|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #72 Cole Dellinger|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #74 Carter Miculka|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #75 Elijha Payne|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #76 Nily Taylor|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #77 Cole Powell|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #78 Dennis Strey Jr.|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|OL #79 Jackson Higgins|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #80 Shawn Fishwick|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #82 Nate Lyman|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #83 Bacori Minner|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #84 JT Beasley|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #85 Jefferson Adam|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #85 Kozy Isaac|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #86 Dalin Wilkins|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #87 CJ Miller|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #88 Ronn Hardin|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|TE #88 Tanner Lemaster|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|WR #89 Carl Jean-Bart|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #90 Hector Gonzalez|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #91 Reggie Gardner|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #93 Owen Edlen|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #94 Brandon Simmons Jr.|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #95 Milan Colvin|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #96 Antoniyo Smith|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #97 Jahbarri Frost|Out||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #98 Joseph Oluwayemi|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Eastern Michigan|Kent State|DL #99 Warren-Stevens Tayou|Available||NonExempt|new|2026-11-24|Ypsilanti, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #0 Amariyun Knighten|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|RB #0 Rodney Nelson|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #1 Maleek Huggins|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #1 Dillon Tatum|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #2 Jackson Pons|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #2 Brady Simmons|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #2 Carl Jenkins|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #3 Malcolm McCain|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #3 Quintin Simmons|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #4 Devin Hyatt|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #4 Brach Rice|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #5 Keith Reynolds|Out||Out|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #5 Devin Bell|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #6 Jermaine Agee|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #6 Adrian Walker Jr.|Out||Out|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|QB #6 Caleb Heavner|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #8 Damarion Witten|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #8 CJ Young|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #9 Javon Hammonds|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|RB #9 D'Shawntae Jones|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #10 Lynel Billups-Williams|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #11 Brock Uihlein|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|QB #11 Drew Bellisari|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #12 Kaleb Martin|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|QB #13 Thomas Gotkowski|Out||Out|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #13 Desmon Yharbrough|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #14 Will Pressley|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #14 Luke Myers|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #15 Blayne Myrick|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|TE #15 Christian Ross|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #16 Christian McKinney|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|QB #16 David McComb|Out||Out|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #17 Ben Minich|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #17 Justen Hodge|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #18 Braylon Isom|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #18 Isaiah Rollins|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #19 Jerome Smith|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|QB #19 Luke Berry|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #20 Zhaiylen Scott|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|RB #20 Cade Yacamelli|Questionable||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #21 Toney Coleman Jr.|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|RB #21 Lazaro Rogers|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #22 Bai Jobe|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|RB #22 Chancellor Sparks|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #23 Ian Tepas|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|TE #23 Isaiah Harris|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #24 Mychal Yharbrough|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #24 Scoop Smith|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #25 Mitch Bolden|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|RB #25 Ike Steward|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #26 Eli Coppess|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #27 London Shackleford-Vickroy|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #27 Jackson Ruth|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #28 Leo Colombi|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #29 Easton Jointer|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #30 Josh Ringer|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #31 Mason Ellens|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|K #31 Brady Stidham|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #32 James Schott|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #33 Harrison Brewster|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|P #34 Pierse Stainton|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #34 Amir Morelan|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #35 Tyler Dikos|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|K #36 Carter Holden|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #36 Tommy Thies|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #37 Vito McConnell|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|K #38 Kellan McLaughlin|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #38 Max Deckard|Out||Out|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #39 Eli Limouris|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #43 Grant Lyons|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|TE #44 Noam Butbul|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DB #44 Jake Britt|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #45 Ryan Stolarski|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|TE #48 Gray Maultsby|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #48 Brody Sink|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #49 Anthony Ludington|Out||Out|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #50 Zach Hultgren|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #51 Eric Smith|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #52 Marcus Moore|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #53 Malik Ray|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #54 Evan Malcore|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #55 Ayden Annarino|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #56 Mitchell Butler|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LB #57 Evan Gilder|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #58 Max Hauck|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #59 Mohamed Bangoura|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LS #60 Trey Wallman|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #61 Andrew Lowry|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #63 Max Kief|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|LS #64 Nick Brady|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #66 Dominik Kosznicki|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #67 Carson Noonan|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #70 Jacob Schorsch|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #71 Lucas Barnes|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #72 Kris Manu|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #73 Brandon Lawhorn Moore|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #74 Greg Smith Jr.|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #76 Brian Beidatsch|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #77 Shaun Shahu|Out||Out|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #78 Devontae Armstrong|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|OL #79 Jonathan Stangl|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #80 Michael Parrish|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|TE #81 Brendan Loftus|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #82 Andrew Bjorson|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|TE #83 Eric Karner|Out||Out|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #84 Tristan Reed|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|TE #85 Trey Zvonar|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #86 Wilson Roberts|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #87 Leo Scheidler|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|WR #88 CJ Castner|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|TE #89 Brayden Boeing|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #90 Donovan Davis|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #91 Sam Williams|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #92 Roosevelt Andrews III|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #93 Logan Howell|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #95 Aariz Taylor|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #96 Carmine Orozco|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #97 William Goodvine III|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Miami|Western Michigan|DL #99 OJ Alexander|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LB #0 Brenden Anes|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|RB #0 AJ Green Jr.|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DB #1 Joshua Franklin|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|WR #1 Emazon Littlejohn|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|WR #2 Aveion Chenault|Questionable||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #2 Scoop Gardner Jr.|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|WR #3 Keivin Boone-Nelson II|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #4 Austin Alexander|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|RB #4 Cole Cabana|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LB #5 Justyce Betts|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|WR #5 Kordell Gouldsby|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|RB #6 Jalen Buckley|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|S #6 Joey Pope|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|WR #7 Baylin Brooks|Questionable||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DL #7 Gian Carter|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|WR #8 Egypt Nelson|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|CB #8 Jarvarius Sims|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #9 Will Gerig|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LB #10 Teegan Haines|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|QB #10 Trey Petty|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|WR #11 Terence Marshall|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LB #11 Jermar McCarter|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|QB #12 Broc Lowry|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LB #12 Dillon Moore|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|QB #13 Mason Reynolds|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|CB #13 Jordon Thomas|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|S #14 Daeh McCullough|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #15 KJ Burley|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|TE #15 Adam Parks|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|QB #16 Jaxson Dosh|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|CB #16 Brodon Moore|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|CB #17 Cam'ron Barber|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|WR #17 Elijah Lucas|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|S #18 Micah Davis|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|WR #19 Angelo Chapman|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|S #19 Braden Steely|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|K #20 Palmer Domschke|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|CB #20 Willard Ferrell|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|RB #21 Chase Dawkins|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|S #21 CJ Miles Jr.|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|CB #22 Amarian Louis|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|RB #22 Donovan Triplett|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|S #23 Tahj Owens|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|RB #24 Ofa "Lolo" Mataele|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|S #24 Camari Patterson|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|P #25 Ryan Millmore|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|S #26 Kouri Crump|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|RB #27 JR Hays|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LS #28 Will Peterson|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|S #29 Trevon Collard|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|S #30 Keegan McCue|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #31 DeJuan Echoles Jr.|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|K #32 Dieter Kelly|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|K #33 Zak Zeman|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|P #34 Tanner Holt|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|TE #35 Enese Tonga|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LB #36 Freddy Brown|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|CB #37 Carlos Mitchell Jr.|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LB #38 Breck Mallory|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #40 Cody Haworth|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|TE #40 Nathan Sines|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DT #41 Zavian Tibbs|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LB #42 Gabe Welch|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #43 Chris Stewart|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LB #45 Andrew Baker|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #46 Max Baker|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LS #46 Drew Doyle|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|LB #47 Domanick Moon|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|CB #48 Tre Johnson|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|C #54 Alex Poholik|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DT #55 Blair Alexander|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #55 Jacob Bailey|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #57 Jake Chellman|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #58 Liam Vaughan|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #60 Brandon Smith|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #61 Jacob Krause|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #64 Nolan Miller|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #65 Jeremy Schleicher|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #66 Munachimdainanma Newman-Nwodika|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #67 Ryan Westrich|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #68 Gavin Beachner|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #70 KJ Kotalik|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #72 Gavin Dabo|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #73 Ben Roebuck|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #75 Spencer Beckeman|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #76 Chad Schuster|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #77 Hunter Whitenack|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|OL #78 Jacob Wilk|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|WR #80 Harper Hughes|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|TE #81 Michael Dersa|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|TE #83 Ryan Brotherton|Questionable||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|TE #86 Ryan Rocheleau|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|TE #87 Brady Rhoad|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #88 August Johanningsmeier|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|TE #88 Nate Levicki|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|TE #89 Brennan Wooten|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DT #90 Jori Benson|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DL #91 Angelo Pugliano|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DL #93 Jayden Aswell|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DT #94 Ahmed Tounkara|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DL #95 DeShawn Robinson|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DL #96 Dalton Gustwiller|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #97 Noah Bishop|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DL #98 Dakari Frazier|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
