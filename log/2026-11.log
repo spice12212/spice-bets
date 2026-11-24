@@ -62,3 +62,4 @@
 2026-11-24T19:45:30Z | news +8 (nfl=1/50 ncaaf=2/50 mlb=5/50 nhl=0/50 nba=0/50) | injuries +9 (nfl=800 ncaaf=3 nba=93 nhl=120 mlb=143) | goalies-espn +0 (15 games) | goalies-rw +0 (1 games) | cfb-avail +0 (224 rows, 7/7 confs)
 2026-11-24T20:33:39Z | news +6 (nfl=4/50 ncaaf=2/50 mlb=0/50 nhl=0/50 nba=0/50) | injuries +3 (nfl=800 ncaaf=3 nba=93 nhl=120 mlb=143) | goalies-espn +0 (15 games) | goalies-rw +0 (1 games) | cfb-avail +0 (224 rows, 7/7 confs)
 2026-11-24T21:28:34Z | news +7 (nfl=5/50 ncaaf=2/50 mlb=0/50 nhl=0/50 nba=0/50) | injuries +3 (nfl=800 ncaaf=3 nba=93 nhl=120 mlb=143) | goalies-espn +0 (1 games, 1 date FAIL) | goalies-rw +0 (1 games) | cfb-avail +0 (224 rows, 7/7 confs)
+2026-11-24T22:25:47Z | news +3 (nfl=1/50 ncaaf=0/50 mlb=0/50 nhl=2/50 nba=0/50) | injuries +6 (nfl=800 ncaaf=3 nba=95 nhl=120 mlb=143) | goalies-espn +0 (15 games) | goalies-rw +0 (1 games) | cfb-avail +0 (224 rows, 7/7 confs)
