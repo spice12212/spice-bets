@@ -458,3 +458,917 @@ stamp|publishDate|reportType|postedTime|team|opp|player|status|prevStatus|exempt
 2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DL #96 Dalton Gustwiller|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
 2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DE #97 Noah Bishop|Out||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
 2026-11-24T23:20:34Z|2026-11-24|Game Day|18:00:00|Western Michigan|Miami|DL #98 Dakari Frazier|Available||NonExempt|new|2026-11-24|Kalamazoo, MI|19:00:00|MAC|ET
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LB #0 Fatt Forrest|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #0 Gracen Harris|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|CB #1 Kelley Jones|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|QB #1 Kamario Taylor|Out||Out|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #2 Isaac Smith|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #2 Marquis Johnson|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #3 Anthony Evans III|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #3 Kendel Dolby|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|EDG #4 Amaree Williams|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|TE #4 Zayion Cotton|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|RB #5 Xavier Gayten|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #5 Jardin Gilbert|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|RB #6 Kolin Wilson|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #6 Bralan Womack|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LB #7 Zakari Tillman|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #7 Zion Ragins|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|QB #8 Jaden Rashada|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|CB #8 Kaylib Singleton|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #9 Jaray Bledsoe|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #9 Camden Capehart|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #10 Bull Mitchell|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LB #10 Jalen Smith|Out||Out|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LB #11 Tyler Lockhart|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #11 Ayden Williams|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LB #12 Ja'Bryis Stewart|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #12 Matt Mayfield|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|EDG #13 LaKendrick James|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #13 Sanfrisco Magee|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|QB #14 Brodie McWhorter|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #14 Dealyn Evans|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|QB #15 Parker "Billy" Puckett|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #15 Marcus Williams|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LB #16 Derion Gullette|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #16 Jayden Cration|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|CB #17 Kyle Johnson|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|QB #17 AJ Swann|Doubtful||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #18 Sekou Smith Jr.|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|TE #18 Riley Williams|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #19 Junior Henderson|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #19 Micah Nickerson|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|CB #20 Jett Jefferson|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #21 Dre Riley|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|RB #21 J.J. Hill|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|RB #22 Brinston Williams|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|ATH #22 Jayytee Taylor|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #23 Trevion Williams|Out||Out|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|RB #24 Fluff Bothwell|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|CB #24 Quentin Taylor|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|RB #25 Cooper Crosby|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #25 Kolby Barrett|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|CB #26 Jamroc Grimsley|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #27 Antavious Watts|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #28 Tanner Johnson|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #29 Boogie Johnson|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|CB #30 Camron Brown|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #31 Terrance Love|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LB #32 AJ Rice|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|EDG #33 Douglas Adams III|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|S #34 Vic Sutton|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #35 Kalvin Dinkins|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|CB #36 Terrell Johnson Jr.|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|CB #37 Dre Otey|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|CB #38 Jaylen Antoine|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LS #39 Kallen Cosper|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #40 Gus Cordova|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #41 Tyshun Willis|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #42 DJ Reed|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #43 Will Whitson|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LB #44 Gav Holman|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LB #45 James Heard Jr.|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|LS #46 Kyle Rushing|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|K #47 William Wilkinson|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|K #48 Hayden Chambers|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|EDG #48 Chris Addison|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|EDG #49 Shawn Gee|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #50 LJ Prudhomme|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #53 Dylan Steen|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #54 Blake Steen|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #55 Colin Coates|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #55 Jakheem Shumpert-Perkins|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #56 Wesley Davis|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #58 Miles McVay|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #59 Tyler Miller|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #60 Matthew Lefeau|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #62 Jamari Freeman|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #65 Spencer Dowland|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #66 Ja'Elyne Matthews|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #70 Breyden Turnage|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #71 Saquon Miles|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #72 Canon Boone|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #73 Leon Noil Jr.|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #74 Kison Shepard|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #75 Isaiah Dent|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #76 Jayden Ross|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #77 TJ Lockhart|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #78 DJ Chester|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|OL #79 Dalton Toothman|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|K #80 Kyle Ferrie|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #80 Fisher Southall|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #81 Zion Crumpton|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|K #83 Oisin Flynn|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|TE #84 Adam Land|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|TE #85 Luke Hutchinson|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|TE #87 Sam West|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|P #88 Ethan Pulliam|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|TE #88 Joeseph Skipworth|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #88 Tico Crittendon Jr.|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|WR #89 Jessie Primer IV|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #90 Davon Young|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #91 Lorenz Cammon|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #92 Kaleb Morris|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #93 Eddie Kelly|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #97 Jayson Jenkins|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Mississippi State|Ole Miss|DL #99 Diesel Moye|Out||Out|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #0 Johntay Cook II|Probable||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #0 Jalyn Crawford|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #1 Deuce Alexander|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DE #1 Jordan Renaud|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #2 Jaylon Braxton|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|QB #2 Deuce Knight|Questionable||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #3 Caleb Cunningham|Probable||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DE #3 Blake Purchase|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|TE #4 Caleb Odom|Questionable||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #4 Suntarine Perkins|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DE #5 Kam Franklin|Probable||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|RB #5 Kewan Lacy|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|QB #6 Trinidad Chambliss|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #6 Joenel Aguero|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #7 Traylon Ray|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #7 Sharif Denson|Probable||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #8 Antonio Kite|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|QB #8 AJ Maddox|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|TE #9 Luke Hasz|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DT #9 Jehiem Oatis|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #11 Keaton Thomas|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #11 Horatio Fields|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #12 Izaiah Hartrup|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #12 Luke Ferrelli|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #13 Cedrick Beavers|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|QB #13 Jack Patterson|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #14 Edwin Joseph|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|QB #14 Walker Howard|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DE #15 Landon Barnes|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #15 Darrell Gill Jr.|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|QB #16 George Hamsley|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #16 Dorian Barney|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|K #17 Lucas Carneiro|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DE #17 Jonathan Maldonado|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #19 MJ Preston|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|QB #19 Rees Wise|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #20 Anthony Robinson III|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #21 Tavoy Feagin|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #22 Raymond Collins|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #22 Cameron Miller|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #23 Jarcoby Hopson|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #24 Andy Jaffe|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #24 Case Thomas|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #25 Maison Dunn|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|RB #25 Makhi Frazier|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #26 Ant Davis Jr.|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|RB #26 JT Lindsey|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #27 Pat Broomfield|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #27 Kervin Johnson Jr.|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #28 Dante Core|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|RB #28 Joshua Dye|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #29 Nick Cull|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #29 William Jones|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #30 JaMichael Garrett|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #31 Ladarian Clardy|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #32 Victor Lincoln Jr.|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|P #33 Oscar Bird|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|RB #33 Shekai Mills-Knight|Questionable||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #34 Iverson McCoy|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|RB #35 Damarius Yates|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #35 Craig Tutt|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #36 Keon Young|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|RB #36 Ja'Michael Jones|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #37 Cortez Thomas|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #39 Gerald Lacy Jr.|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #41 John Ross Ashley|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|K #41 Peter McStravick|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|TE #42 Jack Harper|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #42 Bryson Walters|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|CB #43 Isreal Solomon|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LS #44 Caleb Blankenship|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #44 Tony Mitchell|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DE #45 Talib Graham|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|S #46 Nascar McCoy|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|K #46 Jackson Moore|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #47 Anthony Aguirre|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|P #47 Stephon Weise|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #48 Mark Trigg Jr.|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #49 Tah'j Butler|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #50 Troy Everett|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #51 Delano Townsend|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DT #52 Will Echoles|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #52 Cooper Johnson|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #53 Ford Beeker|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #53 Trey Nightingale|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DE #54 Tre Ellis|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DE #55 Cam Clark|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #55 Terez Davis|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #56 Mason Waddle|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LB #56 Hayden Parker|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #57 Carius Curne|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #61 Tommy Kinsler IV|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #62 Brycen Sanders|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #65 Connor Howes|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #67 Kane Mankins|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #69 Joe Koury|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #70 Jalan Chapman|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #71 Emanuel Faulkner|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #75 Patrick Kutas|Doubtful||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #76 John Wayne Oliver|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #77 Enoch Wangoy|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|OL #79 Roman Womack|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|TE #80 Hayden Bradley|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #81 Samari Reed|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|TE #82 Michael Smith|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #83 Levi Blount|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LS #83 Sean Judge|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #84 Dillon Alfred|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #85 Isaiah Spencer|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|TE #86 Brady Prieskorn|Out||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|TE #87 Wyatt Smalley|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DT #88 Michai Boireau|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #88 Jase Mathews|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|WR #89 Dylan Davis|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DT #90 Jayden Curtis|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DT #91 Jamarion Owens|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|LS #93 Richie Bruder|Exempt||Exempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DT #95 Andrew Maddox|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DT #96 Jamarious Brown|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DT #97 Kamron Beavers|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Ole Miss|Mississippi State|DE #99 Carmelow Reed|Available||NonExempt|new|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|RB #0 Raleek Brown|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #0 John Meredith III|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|EDG #1 Colin Simmons|Questionable||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #1 Ryan Wingo|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|RB #2 Hollywood Smothers|Out||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #2 Derek Williams Jr.|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|LB #3 Rasheem Biles|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #3 Emmett Mosley V|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #4 Jermaine Bishop Jr.|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #4 Jelani McDonald|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|RB #5 Derrek Cooper|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #5 Bo Mascoe|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|QB #6 Dia Bell|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #6 Kobe Black|Out||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #7 Kaliq Lockett|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #8 Cam Coleman|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #8 Kade Phillips|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|QB #9 Karle "KJ" Lacey Jr.|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #9 Jonah Williams|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #11 Samari Matthews|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|RB #11 Michael Terry III|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #13 Kohen Brown|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #13 Zelus Hicks|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|EDG #14 Brad Spence|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #14 Chris Stewart|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|TE #15 Michael Masunas|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #15 Justus Terry|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|LB #16 Tyler Atkinson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|QB #16 Arch Manning|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #17 Xavier Filsaime|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #17 Daylan McCutcheon|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #18 Sterling Berkhalter|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|LB #18 Kosi Okpala|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|QB #19 MJ Morris|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|EDG #19 Zina Umeozulu|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #21 Hayward Howard Jr.|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|RB #21 Ryan Niblett|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #23 Jordon Johnson-Rubell|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #24 Warren Roberson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #25 Toray Davis|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|QB #25 Luke Dunham|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #27 Wardell Mack|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|LB #28 Justin Cryer|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|RB #28 Jett Walker|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #29 Graceson Littleton|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|LB #30 Rocky Cummings|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #31 Yaheim Riley|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|RB #31 James Simon|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|LB #32 Brady Sarkisian|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|RB #33 Carson Berger|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #33 Myron Charles|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #35 Rett Andersen|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #35 McCoy Bruce|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #36 Nick Hudson|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|LB #37 Jonathan Cunningham|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #39 Evan Enderlin|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|EDG #40 Lance Jackson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #41 Ziky Umeozulu|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DS #42 Trott O'Neal|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|P #43 Mac Chiumento|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|LB #43 Eric Garza|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|K #44 Gianni Spetic|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|LB #44 Markus Boswell|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|P #45 Mikey Bukauskas|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|LB #45 Darius Snow|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|EDG #46 Smith Orogbo|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|K #46 Spencer Barnett|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DS #47 Trey Dubuc|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|TE #48 Bryce Chambers|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DB #48 Jackson Duffey|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|K #49 Jake Collett|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #50 Laurence Seymore III|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #51 John Turntine III|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #52 James Johnson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #53 Isaiah Coleman|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #54 Cole Hutson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #55 Elijah Ali|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #56 Dylan Sikorski|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #58 Devin Coleman|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #62 Connor Robertson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #64 Robert Sweeney|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #68 Paris Patterson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #69 Brooks Kieschnick Jr.|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #70 Kaden Scherer|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #71 Melvin Siani|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #72 Nicolas Robertson|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #73 Brandon Baker|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #74 Trevor Goosby|Out||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #75 Jaydon Chatman|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #76 Jackson Christian|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #77 Andre Cojoe|Questionable||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #78 Jordan Coleman|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|OL #79 Jonte Newman|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|EDG #80 Brinley Tita|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|TE #81 Nick Townsend|Out||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|TE #82 Ridge Barker|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|TE #83 Spencer Shannon|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|TE #85 Emaree Winston|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #86 Hudson Powell|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|TE #87 Will Randle|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|TE #88 Charlie Jilek|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #88 Maraad Watson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|WR #89 Ty Boatright|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #90 Josiah Sharma|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|EDG #92 Colton Vasek|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #93 Hero Kanu|Out||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|EDG #94 Jamarion Carlton|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #95 Ian Geffrard|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #96 Zion Williams|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|DL #97 Alex January|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas|Texas A&M|EDG #99 Richard Wesley|Questionable||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|RB #0 KJ Edwards|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #0 Noah Mikhail|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #1 Mario Craver|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|NCK #1 Bryce Anderson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|RB #2 Jamarion Morrow|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|CB #2 Dezz Ricks|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #3 Aaron Gregory|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|S #3 Marcus Ratcliffe|Out||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|S #4 Tawfiq Byard|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|RB #4 Rueben Owens II|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DT #5 DJ Hicks|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|CB #6 Julio Humphrey|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #6 Terry Bussey|Out||Out|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #7 Isaiah Horton|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|S #7 Dalton Brooks|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|NCK #8 Jordan Shaw|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #8 Ashton Bethel-Roman|Out||Out|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|CB #9 Rickey Gibson III|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|TE #9 Kiotti Armstrong|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #10 Marco Jones|Questionable||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|QB #10 Marcel Reed|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DT #11 Brandon Davis-Swain|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #11 Kelshaun Johnson|Questionable||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #12 Nana Boadi-Owusu|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|S #13 Myles Davis|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|NCK #13 Deyjhon Pettaway|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|QB #13 Brady Hart|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #14 Anto Saka|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|QB #14 Eli Morcos|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|TE #15 Caleb Tafua|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #15 Sam M'Pemba|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|S #15 Tylan Wilson|Questionable||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|QB #16 Helaman Casuga|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #16 Bryce Perry-Wright|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|CB #16 Jamar Beal-Goines|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #17 Ryan Henderson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #17 Madden Williams|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #18 TK Norman|Out||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #18 T.J. Searcy|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|QB #19 Paxton Land|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|TE #19 KK Johnson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|NCK #19 Bravion Rogers|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #20 Mike Brown|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|CB #20 Adonyss Currie|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #21 Ray Coney|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|CB #21 Vic Singleton|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|RB #22 Carsyn Baker|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|S #22 Tom Tom Johnson Jr.|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #22 Tristian Givens|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|CB #23 Brandon Arrington|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|RB #23 DeDe Murray|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|K #24 David Olano|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|NCK #24 Camren Hamiel|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|RB #24 Ramarian Tillman|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #25 Tamarion Watkins|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|S #26 Layne Gerke|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #27 Daymion Sanford|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|S #28 Chance Collins|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|NCK #29 Justin Echols|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #30 TJ Smith|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #31 Kelvion Riggins|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LS #31 Shea Freibaum|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #32 Tank King|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #33 Storm Miller|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #34 Kyle Garvis|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|S #37 Peyton Gay|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|P #37 Tyler White|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #38 Whitaker Williams|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|P #38 Jared White|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|NCK #39 Adam Graham|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LS #40 Gray Evans|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #42 Kendall Jackson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LS #42 Boomer Graham|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|TE #43 Carter Braugh|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #43 Jeremiah Searcy|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #45 Tommy Colligan|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #46 Qui Beck|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #50 Isendre "Papa" Ahfua|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #52 Blake Ivy|Out||Out|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|LB #54 Jordan Lockhart|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #54 Mark Nabou Jr.|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #55 Samu Moala|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #55 Hunter McKinney|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DT #59 Chace Sims|Exempt||Exempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #64 Sam Roseborough|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #65 Avery Morcho|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #70 Robert Bourdon|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #71 Tyree Adams|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #72 Joshua Moses|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #73 Ashton Funk|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #74 Zaden Krempin|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #75 Wilkin Formby|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #76 Trovon Baugh|Out||Out|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #77 Tyler Thomas|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #78 Coen Echols|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|OL #79 Lamont Rogers|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #81 Jayden Warren|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|TE #81 Luke Braden|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|K #83 Colton Chmelar|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #83 Will Hargett|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|TE #84 Richie Anderson III|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #85 Chase Burton|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|CB #86 Ryan Burtin|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|TE #86 Evan Jacobson|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|TE #87 Houston Thomas|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|TE #88 Micah Riley|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DT #88 DJ Sanders|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|WR #89 Kade Stewart|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|K #90 Asher Murray|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DT #92 CJ Mims|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DT #93 Nathan Mabon|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DT #94 Angelo McCullom|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|P #95 Alex Abbott|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|P #96 Waylon Peters|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DT #98 Jermaine Kinsler|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DE #98 Jesse Chukwu|Available||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:10:00|Texas A&M|Texas|DT #99 Landon Rink|Out||NonExempt|new|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #0 Owen Chambliss|Out||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #1 Nyziah Hunter|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #1 Jahsear Whittington|Out||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #2 Jacory Barney Jr.|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #2 Cameron Lenhardt|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #3 Kwazi Gilmer|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #4 Janiran Bonner|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #4 Jamir Conn|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #5 Anthony Jones Jr.|Questionable||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #6 Roman Mangini|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #7 Andrew Marshall|Out||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #8 Donovan Jones|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|TE #8 Luke Lindenmeyer|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #10 Vincent Shavers Jr.|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|QB #10 Anthony Colandrea|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #11 Demitrius Bell|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #11 Larry Tarver Jr.|Questionable||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #12 Justyn Rhett|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|QB #12 Daniel Kaelin|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #13 Rex Guthrie|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|RB #13 Mekhi Nelson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #14 Amare Sanders|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|QB #14 TJ Lateef|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #15 Keelan Smith|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|QB #16 Bode Soukup|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #16 Danny Odem III|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #17 Willis McGahee IV|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #17 Larry Miles|Out||Out|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #18 Quinn Clark|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #19 Kahmir Prescott|Out||Out|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #19 Cortez Mills Jr.|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|RB #21 Kwinten Ives|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #21 Jasin Shiggs|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|RB #22 Isaiah Mozee|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #22 Victor Evans III|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #23 Blye Hill|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|RB #23 Conor Booth|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #24 Dexter Foster|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #24 Nalin Scott|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #25 Jeremiah Charles|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|RB #25 Jamal Rule|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #26 Dwayne McDougle III|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #28 Caleb Benning|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|TE #29 Carter Nelson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #29 Braylen Prude|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|RB #30 Vincent Genatone|Out||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #30 Tanner Terch|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #31 Mario Buford|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #32 Trent Uhlir|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #33 Jeremiah Jones|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #34 Owen Stoudmire|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #35 Christian Jones|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #36 Rowdy Bauer|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|P #37 Kamdyn Koch|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #38 Thomas D'Onofrio|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DB #39 Bryson Webber|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #40 Dawson Merritt|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #42 Derek Wacker|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #43 Will Hawthorne|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #44 Riley Van Poppel|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|TE #44 Luke Sorensen|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #45 Dylan Rogers|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #47 Gage Stenger|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|TE #48 Cayden Echternach|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|TE #49 Danny King|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #49 Malcolm Simpson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #50 Hayden Ainsworth|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LS #50 Kyson Gana|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #51 Justin Evans|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #51 Ethan Duda|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #52 Jase Reynolds|Out||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #53 David Höffken|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #54 Jacob Bower|Out||Out|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #54 Brendan Black|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #55 Tree Babalade|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LS #55 Jack Wills|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|LB #56 Pierce Mooberry|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #56 Ashton Murphy|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #57 Elijah Pritchett|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #58 Jake Peters|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #62 Sam Sledge|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #65 Paul Mubenga|Questionable||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #66 Grant Brix|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #68 Preston Taumua|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #69 Landen Davidson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #70 Nolan Fennessy|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #71 Tyson Terry|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #71 Claude Mpouma|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #72 Gibson Pyle|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #74 Brock Knutson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #75 Tyler Knaak|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #76 Rex Waterman|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #77 Gunnar Gottula|Probable||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #78 Jacob Brandl|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|OL #79 Shawn Hammerbeck|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #81 Hayes Miller|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|TE #82 Eric Ingwerson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|P #83 Archie Wilson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #84 DJ Singleton Jr.|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|K #84 Michael Sarikizis|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #85 Jamari Brown|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #86 Mason Goldman|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #88 Jackson Carpenter|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|WR #89 Maurice Purify II|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|K #90 John Hohl|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #90 Dylan Berymon|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|K #91 Kyle Cunanan|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #92 Sua Lefotu|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #93 Kade Pietrzak|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #94 Jordan Ochoa|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #95 Gabe Moore|Out||Out|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #96 Williams Nwaneri|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #98 Conor Connealy|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Nebraska|Iowa|DL #99 Dylan Parrott|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #0 Jarriett Buie|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #0 Cody Haddad|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #1 KJ Parker|Doubtful||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #1 Darion Jones|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #2 Reece Vander Zee|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #2 Tyler Brown|Out||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|QB #3 Jimmy Sullivan|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #3 Jaylen Watson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #4 Julian Manson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|QB #4 Tradon Bessinger|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|RB #5 Nathan McNeil|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #5 Anthony Hawkins|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #6 Zach Lutmer|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #6 Xavier Stinson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #7 Rashad Godfrey, Jr.|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #7 Dayton Howard|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #8 Deshaun Lee|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #8 Evan James|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|QB #9 Hank Brown|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #9 Kasen Thomas|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #10 Burke Gautcher|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|QB #10 Jeremy Hecklinski|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #11 Jacob Wallace|Questionable||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #11 Brody Schaffer|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #12 Billy Weivoda|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #12 Diondre Smith|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DE #13 Drew Campbell|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|RB #13 Brevin Doll|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #14 Alex Mota|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #14 Tony Diaz|Questionable||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #15 Carson Cooney|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|RB #15 O’Lontae Dean|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|QB #16 Ryan Fitzgerald|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #16 Ronnie Hill|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #17 Alex Eichmann|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #18 Xavier Styles|Questionable||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|TE #18 Luke Brewer|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #19 Kyler Gerardy|Out||Out|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|TE #19 Mason Woods|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #20 Ty Hudkins|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|RB #21 L.J. Phillips Jr.|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #21 Marcello Vitti|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|RB #22 Braeden Jackson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #22 Derek Weisskopf|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #23 Landyn Van Kekerix|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|K #25 Eli Ozick|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|RB #26 Xavier Williams|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #26 Eli Robbins|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|RB #28 Kamari Moulton|Out||Out|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #29 Noah Daniel|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #30 Eli Kampman|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #31 Nolan DeLong|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #32 Sawyer Jezierski|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #33 Cam Buffington|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DB #34 Drew MacPherson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|P #35 Tanner Philpott|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #36 Jayden Montgomery|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #37 Brayton Alford|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DE #40 Chima Chineke|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #42 David Fason|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #43 Kahmari Brown|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #44 Kenneth Merrieweather|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #45 Jack Janda|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #46 Preston Ries|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LB #47 Jack Laughlin|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|TE #48 Zach Ortwerth|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|P #49 Boston Everitt|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #50 Will Lockhart|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #51 Luke Gaffney|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #52 Will Hahn|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #53 Michael Myslinski|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LS #54 Matty McLaughlin|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #56 Maddux Borcherding-Johnson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #57 Will Hubert|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #58 Kade Pieper|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #59 Trevor Lauck|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #60 Lucas Allgeyer|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #61 Cael Winter|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #63 Josh Janowski|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #64 Leighton Jones|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #65 Trent Wilson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #68 Will Nolan|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|LS #69 Ike Speltz|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #70 Hudson Parliament|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #71 Jack Dotzler|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #72 Owen Linder|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #73 Colin Whitters|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #74 Bodey McCaslin|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #75 Cannon Leonard|Out||Out|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #77 George Nahas|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #78 Gene Riordan|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|OL #79 Carson Nielsen|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|TE #80 Michael Burt|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|TE #81 DJ Vonnahme|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|TE #82 Dylan Stecker|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #83 Jackson Naeve|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DE #84 Joseph Anderson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #84 Apollo Payne|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|TE #85 Thomas Meyer|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|TE #86 Eli Johnson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|TE #87 Addison Ostrenga|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #88 Lance Beeghley|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #88 Emmanuel Olagbaju|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|WR #89 Isaiah Oliver|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #91 Devan Kennedy|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|K #92 Caden Buhr|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #92 Brice Stevenson|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #95 Lance Ingold|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #96 Bryce Hawthorne|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #97 Iose Epenesa|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Iowa|Nebraska|DL #99 Brad Fitzgibbon|Available||NonExempt|new|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #0 Anthony Smith|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #1 Jaxon Howard|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|RB #1 Darius Taylor|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LB #2 Emmanuel Karmo|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|RB #2 A.J. Turner|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #3 TJ Bush Jr.|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #3 Perry Thompson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|TE #4 Roman Voss|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #4 Zack Harden|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|QB #5 Drake Lindsey|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #5 Aydan West|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LB #6 Maverick Baranowski|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|QB #6 Max Shikenjanski|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #7 Aidan Gousby|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #7 Bradley Martino|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #8 Mike Gerald|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #8 Jalen Smith|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|RB #9 Xavier Ford|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #9 Garrison Monroe|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #11 Karter Menz|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #11 Javon Tracy|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|QB #12 Michael Merdinger|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|K #12 Luke Drzewiecki|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #13 Zahir Rainer|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #13 Noah Jennings|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #14 Kerry Brown|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|QB #14 Dylan Wittke|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #15 Samuel Madu|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|QB #15 Owen Lansu|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LB #16 Hudson Dunn|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|QB #16 Brady Palmer|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #17 Braiden Stevens|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #17 John Nestor|Questionable||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #18 Donielle Hayes|Out||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #18 Rhyland Kelly|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LB #19 Joey Gerlach|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|TE #19 Pierce Walsh|Probable||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|RB #20 Ryan Estrada|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #20 Parker Knutson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #21 Naiim Parrish|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|RB #21 Grant Washington|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #22 Mekhai Smith|Out||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|RB #22 Jaron Thomas|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #23 Lamont Hamilton|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|RB #23 TJ Thomas|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #24 Chance Payne|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #25 Zion Steptoe|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #25 Justin Hopkins|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #26 Elisha West|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|RB #26 Zeke Bates|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #27 Simon Seidl|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|RB #28 Niko Castillo|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #28 Trason Richardson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LB #29 Andrew Marshall|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #31 Jordan Lampkins|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LB #32 Angel Luciano|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #33 Rhett Hlavacka|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LB #35 Nate Cleveland|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DB #36 Tavian White|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|K #36 Daniel Jackson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|P #37 Zachary Robbins|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #41 Anthony Charles|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|P #42 Tom Weston|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LS #43 Jakob Lutz|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|TE #44 George Rohl|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LB #44 Ethan Stendel|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #45 Sam Macy|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LB #46 Mason Carrier|Questionable||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #47 Enoch Atewogbola|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #48 Aaden Aytch|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LB #49 Matt Kingsbury|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #50 Nathan Roy|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #51 Daniel Shipp|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #55 Jaylin Hicks|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #55 Jerome Williams|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #56 Brett Carroll|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #56 Jay'Quan Stubbs|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #57 Aaron Thomas|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #58 Jaden Ball|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #59 Tony Nelson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #60 Kaveon Lee|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #65 Greg Johnson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #66 Beckett Schreiber|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #68 Bennett Warren|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #69 Gavin Meier|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #70 Naquan Crowder|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #71 Lucas Tielsch|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #75 Mark Handy|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #77 Nick Spence|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #78 Ashton Beers|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|OL #79 Andrew Trout|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|LS #80 Alan Soukup|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #81 Josiah Dozier|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|TE #82 Julian Johnson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|TE #83 Sam Peters|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #84 Hayden Moore|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #85 Rico Blassingame|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|TE #86 Gabe Weaver|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|TE #87 Kaden Helms|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|TE #88 Jacob Simpson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #88 Josiah Anyansi|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|WR #89 Quayd Hendryx|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #90 Xion Chapman|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #91 Howie Johnson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #92 Sid Kaba|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|K #92 Beckham Sunderland|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #93 Riley Sunram|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #94 Mo Saine|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #95 Colin Hansen|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #96 Abu Tarawallie|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #97 Jeremiah Benson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #98 Adam Kissayi|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Minnesota|Wisconsin|DL #99 Theorin Randle|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #0 Tyrell Henry|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #0 Justus Boone|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|CB #1 Eric Fletcher Jr.|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|QB #1 Colton Joseph|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #2 Chris Brooks Jr.|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|CB #2 Javan Robinson|Doubtful||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|CB #3 Cai Bates|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|RB #3 Abu Sama III|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|S #4 Marvin Burks Jr.|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #4 Malachi Coleman|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|QB #5 Carter Smith|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|CB #5 Bryce West|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|RB #6 Darrion Dupree|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|CB #6 Jai'mier Scott|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #7 Tyreese Fearbry|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #7 Shamar Rigby|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LB #8 Mason Posa|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|QB #8 Deuce Adams|Questionable||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #9 Jaylon Domingeaux|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|QB #10 Ryan Hopkins|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #11 Kash Brock|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|S #11 Carson Van Dinter|Questionable||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #12 Nicolas Clayton|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #12 Zion Kearney|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #13 Eugene Hilton Jr.|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|S #13 Matthew Traynor|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #14 Liam Danitz|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #14 Keeyshawn Tabuteau|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #15 Sebastian Cheeks|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|RB #15 Nate Palmer|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|S #16 Grant Dean|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|TE #17 Nizyi Davis|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|CB #17 Carsen Eloms|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|QB #18 Danny O'Neil|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|CB #18 Donovan Dunmore|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LB #19 Thomas Heiberger|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #19 Langdon Nordgaard|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|S #20 Luke Emmerich|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|RB #20 Juju Pope|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|S #21 Cairo Skanes|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|RB #21 Bryan Jackson II|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #22 Jaylen Williams|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #22 Dorsett Stecker|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LB #23 Landon Gauthier|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #24 Zion Legree|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|S #25 Will Mikonowicz|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|S #26 Kah'ni Watts|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #26 Eli Adams|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|S #27 Raphael Dunn|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LB #28 Jon Jon Kamara|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|S #29 Matthew Jung|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|DL #30 Charles Perkins|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|CB #31 Deshuan Moss|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|RB #32 Harrison Bortolotti|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #34 Ashton Fickell|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|TE #37 Treve Stoffel|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|RB #38 Mason Lane|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #39 Jayden Loftin|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|FB #41 McCoy Smith|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|FB #42 Tyler Jansey|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LB #43 Taylor Schaefer|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LB #44 Cooper Catalano|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #45 Yahya Gaad|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #47 Evan Van Dyn Hoven|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LB #49 Ben Wenzel|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|TE #49 Aydon Fickell|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #50 Ryan Cory|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #50 Sam Lateju|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #51 Micheal Garner|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #51 Austin Kawecki|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #52 Hardy Watts|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LS #53 Andrew Goodman|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #53 Cam Clark|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #54 Brady Bekkenhuis|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LB #55 Drew Braam|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #55 Kevin Heywood|Out||Out|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LS #56 James Roe|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #58 Michael Roeske|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|LB #59 Aaron Witt|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #60 Nolan Davenport|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #64 Evan Brown|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #65 Aiden Dirksen|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #70 Barrett Nelson|Questionable||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #71 PJ Wilkins|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #72 Lucas Simmons-Johansson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #73 Blake Cherry|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #75 Emerson Mandell|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|DL #76 Dillan Johnson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #76 Stylz Blackmon|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #77 Peyton Lange|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OLB #77 Will McDonald|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #78 Colin Cubberly|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|OL #79 Logan Powell|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #81 Mason Kelley|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|TE #82 Emmett Bork|Out||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|TE #84 Ryan Schwendeman|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|TE #85 Grant Stec|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|TE #86 Jack Sievers|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|WR #87 Jackson McGohan|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|TE #89 Jacob Harris|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|DL #90 Djidjou Bah|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|P #90 Will Kelly|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|P #91 Sean West|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|DL #91 Hammond Russell IV|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|DL #92 Nolan Vils|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|DL #93 DeNigel Cooper|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|DL #94 Xavier Ukponu|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|K #94 Brady Melum|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|DL #95 Jacob Anderson|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|DL #96 Arthur Scott III|Exempt||Exempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|K #97 Gavin Lahm|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|DL #97 Junior Poyser|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-25T01:29:18Z|2026-11-24|Initial|19:00:00|Wisconsin|Minnesota|P #98 Ethan Tranel|Available||NonExempt|new|2026-11-27|Madison, WI|18:30:00|B10|CT
