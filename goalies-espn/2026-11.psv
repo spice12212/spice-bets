@@ -61,3 +61,18 @@ stamp|date|espnId|game|awayAbbr|homeAbbr|awayG|awayGId|awayStat|homeG|homeGId|ho
 2026-11-24T18:37:45Z|20261125|401892789|Canucks @ Red Wings|VAN|DET|Leevi Merilainen|4894703|Expected|Daniil Tarasov|4587994|Confirmed|SCHEDULED
 2026-11-25T01:29:18Z|20261124|401892780|Golden Knights @ Oilers|VGK|EDM|Carter Hart|4064582|Confirmed|Devon Levi|4894487|Confirmed|IN_PROGRESS
 2026-11-25T03:41:42Z|20261124|401892780|Golden Knights @ Oilers|VGK|EDM|Carter Hart|4064582|Confirmed|Devon Levi|4894487|Confirmed|FINAL
+2026-11-25T05:42:20Z|20261127|401892795|Maple Leafs @ Bruins|TOR|BOS|Sergei Bobrovsky|5571|Expected|Jeremy Swayman|4712036|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892796|Flames @ Devils|CGY|NJ|Dustin Wolf|4587952|Expected|Connor Hellebuyck|3020225|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892797|Utah @ Predators|UTA|NSH|Karel Vejmelka|3942065|Expected|Juuse Saros|3042109|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892798|Stars @ Blues|DAL|STL|Jake Oettinger|4196914|Expected|Joel Hofer|4587909|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892799|Senators @ Lightning|OTT|TB|Linus Ullmark|3069285|Expected|Andrei Vasilevskiy|2976847|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892800|Canucks @ Flyers|VAN|PHI|Leevi Merilainen|4894703|Expected|Dan Vladar|3942459|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892801|Panthers @ Capitals|FLA|WSH|Jacob Markstrom|5452|Expected|Logan Thompson|4272888|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892802|Red Wings @ Blue Jackets|DET|CBJ|John Gibson|2590824|Expected|Cam Talbot|5734|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892803|Avalanche @ Wild|COL|MIN|Mackenzie Blackwood|3904177|Expected|Jesper Wallstedt|4874737|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892804|Kings @ Ducks|LA|ANA|Darcy Kuemper|2610321|Expected|Lukas Dostal|4588165|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892805|Golden Knights @ Sharks|VGK|SJ|Carter Hart|4064582|Expected|Yaroslav Askarov|4697394|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892806|Rangers @ Blackhawks|NYR|CHI|Dylan Garand|4697705|Expected|Spencer Knight|4565234|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892807|Jets @ Islanders|WPG|NYI|Stuart Skinner|4268767|Expected|Ilya Sorokin|3151981|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892808|Penguins @ Sabres|PIT|BUF|Arturs Silovs|4576894|Expected|Alex Lyon|3654006|Expected|SCHEDULED
+2026-11-25T05:42:20Z|20261127|401892809|Kraken @ Oilers|SEA|EDM|Philipp Grubauer|5657|Expected|Devon Levi|4894487|Expected|SCHEDULED
