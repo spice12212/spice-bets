@@ -24,6 +24,16 @@
 # day page's og:image 404s on the live site while looking fine on disk.
 !og-day-*.png
 
+# Each board page's own preview picture (og-<slug>.png), added 25 Nov 2026 so a shared link to
+# nhl.html shows the hockey board, not the site-wide card. One line per board, deliberately not
+# og-*.png: a board added to build-site.ps1 needs its line here or its og:image 404s.
+!og-soccer.png
+!og-cfb.png
+!og-nfl.png
+!og-nhl.png
+!og-nba.png
+!og-cbb.png
+
 # Partner and Playbooki logos, fetched from each brand's own site. Named as a folder because
 # the set grows whenever a referral is added, and a per-file line would be forgotten.
 #
