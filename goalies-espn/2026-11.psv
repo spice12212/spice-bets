@@ -95,3 +95,5 @@ stamp|date|espnId|game|awayAbbr|homeAbbr|awayG|awayGId|awayStat|homeG|homeGId|ho
 2026-11-25T18:30:01Z|20261125|401892794|Blackhawks @ Kraken|CHI|SEA|Spencer Knight|4565234|Expected|Joey Daccord|3942073|Expected|SCHEDULED
 2026-11-25T19:27:39Z|20261125|401892792|Canadiens @ Avalanche|MTL|COL|Jacob Fowler|5188437|Confirmed|Mackenzie Blackwood|3904177|Confirmed|SCHEDULED
 2026-11-25T19:27:39Z|20261125|401892793|Sharks @ Ducks|SJ|ANA|Yaroslav Askarov|4697394|Expected|Laurent Brossoit|3026526|Expected|SCHEDULED
+2026-11-25T20:22:42Z|20261125|401892793|Sharks @ Ducks|SJ|ANA|Alex Nedeljkovic|3114994|Confirmed|Laurent Brossoit|3026526|Expected|SCHEDULED
+2026-11-25T20:22:42Z|20261127|401892795|Maple Leafs @ Bruins|TOR|BOS|Anthony Stolarz|3067313|Confirmed|Jeremy Swayman|4712036|Expected|SCHEDULED
