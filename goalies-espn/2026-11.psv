@@ -150,3 +150,19 @@ stamp|date|espnId|game|awayAbbr|homeAbbr|awayG|awayGId|awayStat|homeG|homeGId|ho
 2026-11-26T22:38:03Z|20261128|401892812|Predators @ Red Wings|NSH|DET|Justus Annunen|4393408|Expected|John Gibson|2590824|Expected|SCHEDULED
 2026-11-27T10:51:48Z|20261129|401892823|Wild @ Blackhawks|MIN|CHI|Jesper Wallstedt|4874737|Expected|Spencer Knight|4565234|Expected|SCHEDULED
 2026-11-27T10:51:48Z|20261129|401892824|Canucks @ Bruins|VAN|BOS|Leevi Merilainen|4894703|Expected|Jeremy Swayman|4712036|Expected|SCHEDULED
+2026-11-27T19:48:28Z|20261127|401892795|Maple Leafs @ Bruins|TOR|BOS|Anthony Stolarz|3067313|Confirmed|Jeremy Swayman|4712036|Confirmed|END_PERIOD
+2026-11-27T19:48:28Z|20261127|401892796|Flames @ Devils|CGY|NJ|Devin Cooley|4319911|Confirmed|Jake Allen|5111|Confirmed|END_PERIOD
+2026-11-27T19:48:28Z|20261127|401892797|Utah @ Predators|UTA|NSH|Karel Vejmelka|3942065|Confirmed|Juuse Saros|3042109|Confirmed|END_PERIOD
+2026-11-27T19:48:28Z|20261127|401892798|Stars @ Blues|DAL|STL|Casey DeSmith|3025540|Confirmed|Joel Hofer|4587909|Confirmed|END_PERIOD
+2026-11-27T19:48:28Z|20261127|401892799|Senators @ Lightning|OTT|TB|Linus Ullmark|3069285|Confirmed|Andrei Vasilevskiy|2976847|Expected|SCHEDULED
+2026-11-27T19:48:28Z|20261127|401892800|Canucks @ Flyers|VAN|PHI|Leevi Merilainen|4894703|Expected|Dan Vladar|3942459|Confirmed|SCHEDULED
+2026-11-27T19:48:28Z|20261127|401892801|Panthers @ Capitals|FLA|WSH|Jacob Markstrom|5452|Confirmed|Logan Thompson|4272888|Confirmed|SCHEDULED
+2026-11-27T19:48:28Z|20261127|401892805|Golden Knights @ Sharks|VGK|SJ|Carter Hart|4064582|Expected|Yaroslav Askarov|4697394|Confirmed|SCHEDULED
+2026-11-27T19:48:28Z|20261127|401892807|Jets @ Islanders|WPG|NYI|Stuart Skinner|4268767|Confirmed|Semyon Varlamov|3759|Confirmed|SCHEDULED
+2026-11-27T19:48:28Z|20261127|401892808|Penguins @ Sabres|PIT|BUF|Sergei Murashov|5188366|Confirmed|Ukko-Pekka Luukkonen|4233889|Confirmed|SCHEDULED
+2026-11-27T19:48:28Z|20261127|401892809|Kraken @ Oilers|SEA|EDM|Philipp Grubauer|5657|Confirmed|Tristan Jarry|3042020|Confirmed|SCHEDULED
+2026-11-27T19:48:28Z|20261128|401892813|Jets @ Devils|WPG|NJ|Nico Daws|4697683|Expected|Connor Hellebuyck|3020225|Confirmed|SCHEDULED
+2026-11-27T19:48:28Z|20261128|401892815|Maple Leafs @ Penguins|TOR|PIT|Sergei Bobrovsky|5571|Confirmed|Arturs Silovs|4576894|Expected|SCHEDULED
+2026-11-27T19:48:28Z|20261128|401892818|Islanders @ Flyers|NYI|PHI|Ilya Sorokin|3151981|Confirmed|Joseph Woll|4271575|Expected|SCHEDULED
+2026-11-27T19:48:28Z|20261128|401892819|Utah @ Stars|UTA|DAL|Sebastian Cossa|4874732|Expected|Jake Oettinger|4196914|Expected|SCHEDULED
+2026-11-27T19:48:28Z|20261128|401892822|Oilers @ Kraken|EDM|SEA|Devon Levi|4894487|Expected|Joey Daccord|3942073|Expected|SCHEDULED

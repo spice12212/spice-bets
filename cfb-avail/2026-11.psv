@@ -6982,3 +6982,449 @@ stamp|publishDate|reportType|postedTime|team|opp|player|status|prevStatus|exempt
 2026-11-27T10:51:48Z|2026-11-26|Update 1|23:00:00|Pittsburgh|California|DB #21 Shadarian Harrison|Out|Questionable|NonExempt|change|2026-11-28|Berkeley, CA|19:30:00|ACC|ET
 2026-11-27T10:51:48Z|2026-11-26|Update 1|23:00:00|Pittsburgh|California|RB #26 Damon Ferguson Jr.|Out|Doubtful|NonExempt|change|2026-11-28|Berkeley, CA|19:30:00|ACC|ET
 2026-11-27T10:51:48Z|2026-11-26|Update 1|23:00:00|Pittsburgh|California|TE #49 Jordan Fields|Out|Doubtful|NonExempt|change|2026-11-28|Berkeley, CA|19:30:00|ACC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:30:00|Mississippi State|Ole Miss|QB #17 AJ Swann|Game Time Decision|Doubtful|NonExempt|change|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:30:00|Ole Miss|Mississippi State|QB #2 Deuce Knight|Available|Probable|NonExempt|change|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:30:00|Ole Miss|Mississippi State|TE #4 Caleb Odom|Available|Probable|NonExempt|change|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:30:00|Ole Miss|Mississippi State|RB #33 Shekai Mills-Knight|Game Time Decision|Questionable|NonExempt|change|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:00:00|Nebraska|Iowa|LB #10 Vincent Shavers Jr.|Game Time Decision|Questionable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:00:00|Nebraska|Iowa|DB #11 Larry Tarver Jr.|Game Time Decision|Questionable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:00:00|Nebraska|Iowa|OL #65 Paul Mubenga|Available|Probable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:00:00|Nebraska|Iowa|OL #77 Gunnar Gottula|Available|Probable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:00:00|Iowa|Nebraska|WR #1 KJ Parker|Game Time Decision|Questionable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:00:00|Iowa|Nebraska|WR #7 Dayton Howard|Available|Probable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:00:00|Iowa|Nebraska|DB #11 Jacob Wallace|Available|Probable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:00:00|Iowa|Nebraska|WR #14 Tony Diaz|Available|Probable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|9:00:00|Iowa|Nebraska|DB #18 Xavier Styles|Available|Probable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #0 Kobi Blackwell|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|RB #0 Nino Hill|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #1 SaVeon Brown|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #1 Phillip Folmar|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #2 Jaylen Andrews|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #2 Stevie Bracey|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #3 Patrick Clacks III|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #3 Oliver Bridges|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|RB #4 Messiah Burch|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|S #4 Ronnell Davis|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #5 Mikey Crawford|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|TE #5 Clint Walker|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|S #6 Miles Greer|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #6 Chance Morrow|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|S #7 John Keough|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|QB #7 Jason Wright|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #8 Jasaiah Gathings|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #8 Ramari Taylor|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #9 Keontez Bradley|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #9 Alvin Jones III|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|S #10 Jamiere Munson|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #10 Mark-Anthony Scott, Jr.|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #11 Will Clark|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #11 Dwayne Early, Jr.|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #12 Jackson Small|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|QB #12 Qur'an McNeill|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #13 Bobby Mays|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #13 Joey Cheshire|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|S #14 Jonathan Rousseau|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #14 Tyrell Simmons, Jr.|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|QB #15 Mason Cumbie|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #15 Sedrick Vessah|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|QB #16 Elijah Holmes|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #16 Caleb Oliver|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #17 Jeremiah Watkins|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #17 Logan Goodwin|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #18 George Hill|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|QB #18 Jake Forburger|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #19 Mathew Hilty|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #20 DJ Mangan|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #21 Bradley Ilunga-Bisselele|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|RB #21 Devare Mathis|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #22 Donovan Rodriguez|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|S #23 Xavier Leonard|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|RB #24 James McNeil, Jr.|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #24 Sayre Smothers|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|RB #25 Terrance Shelton, Jr.|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #25 Na'Rod "Flipp" Jarvis|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|RB #26 Chase Enlow|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|S #26 Zae Jennings|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|NCK #27 Davion Coffee|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #28 Shey Williams|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #28 Drayson Crane|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #29 Cardel Staples|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #30 Jacari Bennett|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|K #31 Oliver Hautanen|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #31 Drake Saltarelli|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #32 Matthew Heininger|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #33 Jordan Owens|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #34 Preston Lunsford|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #35 Malachi Ervin|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|CB #37 Jamarcus Jones|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|S #38 Dylan Cleary|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|K #39 Blake Sholder|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #40 Amari Snowden|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LS #42 Sam Stratton|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|S #43 Xair Stevenson|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #44 Zach Bergmann|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|TE #45 Stone Rozak|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|S #47 Bryce Williams|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LS #48 Joseph Stoever|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #49 Aiden Anderson|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #50 Zach Pettitt|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #51 Tyrone Davis|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #51 Anwar Witherspoon, Jr.|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|LB #52 Jack Garbolino|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #55 Thomas Barr|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|DT #55 Mason Nickel|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #56 Marco Cate|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #58 Ben Foglia-Albrecht|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #59 Gabriel Arena|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|DT #59 Royce Rogers|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #60 Val Kondratenko|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #62 Paul Clark|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #64 Jacob Merritt|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|DT #66 Will Reed|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #68 Mike Whalen|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #69 Jackson Bellamy|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #70 Robbie Westmiller|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #71 Caleb Watts|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #72 Jaden Maxey|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #74 Nino Francavilla|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #75 Ahmaan Thomas|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #76 Nathan Natoli|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #77 Jackson Davenport|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #78 Joe Crocker|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|OL #79 Cam Davis|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|TE #81 TJ Sabatucci|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #82 Terrell Richards|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #83 Jack Eskridge|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|TE #85 Aiden Howard|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|TE #86 Michael Gelatko|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|TE #87 Trevor Wilson|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|DL #88 Rex Stinchcomb|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|WR #88 Aaron Clark|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|TE #89 Nick Leonard|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|P #90 Ethan Stumpf|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #91 Henri Zeneli|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|DT #92 Luke Yau Gayle|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|P #93 Andrew VanSlyke|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|EDG #94 Noah Wittmer|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|DT #95 Stantavious Smith|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|P #95 Evan Pfeifer|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|DT #96 Charlton Goodell|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|K #96 Zach McGowan|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|DL #97 Christopher Climes|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|DT #98 Mason Naple|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Buffalo|Akron|DT #99 Cornell Evans|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DL #1 Cyrus Durham|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|RB #1 Jordan Gant|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|S #2 Daymon David|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #2 Marcel Williams|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #3 Alex Branch|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #3 Kyan Mason|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #4 Miles Burris|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|CB #4 Zach Hobson|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DL #5 Ronald Hull|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #5 Titus Myers|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|QB #6 Brayden Roggow|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|S #6 Jamari Somerville|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LB #7 Jeremiah Jones|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #8 Brandon Hills|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DL #8 Jon'Trell Mixon|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #9 Aamii Branch|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #9 Jean Louis III|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|QB #10 Semaj Beals|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|QB #11 Cibastian Broughton|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|CB #11 Dawayne Galloway Jr.|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #12 Iesa Jarmon|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #12 Cameron Monteiro|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|S #13 Rodrick Hunter|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|RB #13 Sean Patrick|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #14 Khory Moss|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|S #15 Terence Thomas|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #15 Jaborree Riggins|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #16 Paul Davis|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DE #16 Dahvon Frazier|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|CB #17 Caiden Newsome|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|QB #18 Johnny Brookhart|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LB #18 Dwight Nunoo|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LB #19 Eddie Smith III|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #20 Mehki Flowers|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #21 Catrell White|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|CB #22 Henry Perrymond|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LB #23 Daunte Curtis|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|TE #23 Yaseen DeReese|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|RB #24 Marquese Williams|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|CB #24 Savion Lewis|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|RB #25 Chris Gee|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LB #25 Jason Hocker|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|RB #26 Taven Curry|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #27 Keyveon Johnson|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|RB #28 Luke Reed|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #29 Tairan Davis Jr.|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #30 Terry Lee Jr|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LB #31 Gavin James|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LB #32 Donelius Johnson|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LB #34 Cam Macon|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #35 Rod Smith Jr.|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LS #36 Charlie Volpe|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|K #37 Aidan Stire|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|K #40 Jordan Westrich|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LS #41 Stone Dean|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LB #42 Jude Buchanan|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DB #43 Austin Wondolowski|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DL #44 Jasun Ridley|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LB #45 Devin Reeves|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|K #47 Matthew Schramm|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|LS #49 Frank Miner|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DE #50 Jahvon Frazier|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #50 Allen Jones, Jr.|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DL #51 Omari Bivens|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #51 Jason Hoskins|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DT #52 Vaughn Highland|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #52 Nate Hampton|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #53 Alex Fox|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #55 Amarie Archer|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DT #55 Jalen Williams|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #56 Brandon Smith|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DE #56 Omari Abor|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DL #57 Elijah Davis|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #57 Ian Falkner|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #61 Jon Stephens|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #62 Max Mobley|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #63 August Weight|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DL #65 Logan Hindmarch|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #68 Jonathan Gould|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #70 Melvin Puckett|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #71 Carlos Slayden|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #72 Colin Lyons|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #73 Jonas Mann|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #75 Dayne Shor|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #77 Lorvens Barthelemy|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #78 Daxton Christman-Gourley|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|OL #79 Nick Stopiak|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #80 Jalen Hightower|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #81 Luke Sivon|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #82 Troy Hazuda|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|TE #83 Elijah Alexander|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|TE #84 Wyatt Hook|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|TE #85 Conner Cravaack|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #87 Gentz Hilburn|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|WR #88 Dominic Monz|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DE #90 Kurtis Waye|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DE #92 Israel Duncan|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DL #93 Ty Watkins|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DL #94 Malakai Ross-Graves|Out||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|P #95 Joseph Castle|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DE #96 Brandon Tobias II|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DE #97 Vann Kavals|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Akron|Buffalo|DL #99 Jaiden Brown-Demery|Available||NonExempt|new|2026-11-27|Akron, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #0 Andrew Zock|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|CB #1 Cam Jones|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #1 Rico Bond|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #2 Trenton Jones|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #2 Ezra Odinjor|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #3 Adjatay Dabbs|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #3 Sharard Vaughn III|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #4 Donovan Watkins|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|RB #4 Autavius Ison|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #5 Terrell Crosby Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LB #5 Damon Ollison II|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #6 Langston Long|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|QB #6 John Alan Richter|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|QB #7 Khamoni Robinson|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #7 Armorion Smith|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|RB #8 Connor Walendzak|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|CB #8 KJ Thomas|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #9 Kalvin Gilbert Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LB #10 Julian Fox|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #10 Seth Elchert|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|CB #11 Hyajah Miller|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|QB #11 Walter Moses|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #12 Bryson Hammer|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #12 Mo Conteh|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|QB #13 Jake DeHaan|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #13 Cooper Rusk|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LB #13 Kari Jackson|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #14 Tashi Braceful|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #15 Michael-Arinz√© Ezirim|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #17 Kaleb Hutchinson|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #19 Daryl Barnett Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LB #19 Isaac Prince|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|CB #20 LaDavion Osborn|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|RB #20 Corey Smith|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #21 Ben Sahakian|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #22 Nicholas Thompson|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|RB #22 CJ Miller|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|RB #23 Noah Sanders|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|CB #23 Israel Petite|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|CB #24 Bo Jacobs|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|CB #25 Tyrell Russell|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #26 Tyler Hackenbracht|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|RB #27 Dane Nauman|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #27 Ziiyahn Blair|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LB #28 Sam Smith Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|RB #28 Kadale Williams|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|TE #29 Tanner Rubinstein|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LB #29 Jordan Fox|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LB #30 Hayden Roy|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LB #31 Maddox Arnold|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #33 Andrew Fineske|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DT #35 Bryant Weatherspoon Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|P #36 Emilio Duran|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LB #36 Nathan Gersh|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #37 Desmond Okantey|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|CB #38 Clarence Tucker|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|S #39 Dylan Hohler|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|K #39 Anthony Ruggles|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DT #41 Cam Gwinn|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|TE #43 Sam Lee|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DT #43 Tyrell O'Neal|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LB #44 Isaac Zay|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LS #45 Reece Strittmatter|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|P #46 Hunter Probst|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|P #47 Markus Meincke|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DT #48 Jordin Farrow|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|LS #49 Max Allen|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #50 Luke Rector|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #51 Zackery Samuel|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DT #52 Lucas Lambert-Pipkin|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #53 Samuel Toniolo|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #55 Ibrahim Traore|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #56 Jacob Kropchak|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #58 Jake Palucki|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #60 Jake Grimm|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #62 Christian Medlock|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #63 Grant Zimmerly|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #65 Stephen Gales|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #67 Cade Wilhelmi|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #69 Dominic Johnson|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #70 Nick Thomas|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #71 Matt Hofer|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #72 Brian Mahoney III|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #73 Jonathan Harder|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #74 Ahmad Carwise|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #75 Preston Dazey|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #76 Vincenzo Pizzo|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|OL #78 Dylan Senda|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|TE #80 Peyton Strickland|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|TE #81 Ethan Malafa|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #83 Omar Mims Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #85 Josh Lee|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|WR #85 Anthony Simpson|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|TE #87 Tucker Kelleher|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|TE #88 Jacob Newell|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #90 Zach Johnson|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DT #91 Laith Shamma|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #92 Tommy Huss|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|K #93 Reice Griffith|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DL #93 Leonard Sharp|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DT #94 Adrian Love Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DL #95 Wayne Peart II|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DL #96 Nathaniel Chandler|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DE #97 Brian Stovall Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DT #98 Micah Fils-Aime|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Toledo|Ohio|DT #99 Caden Camese|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #0 Delaney Crawford|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DL #0 Nehemiah Dukes|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|S #2 DJ Walker|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #2 Preston Bowman|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #3 Dom Dorwart|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|S #3 JT Haskins|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DB #4 Darren James-Hamilton|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|RB #4 Victor Rosa|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|QB #5 Hype Grand|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|CB #5 KJ Sejour|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|RB #6 Duncan Brune|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|S #6 Tony Mathis|Out||Out|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|QB #7 Levi Davis|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|S #7 Eli Thompson|Out||Out|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|QB #8 Nick Poulos|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DB #8 Barry Dillon|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DL #9 Tyler Gillison|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|QB #9 Matt Vezza|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DT #10 Drayden Pavey|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #10 Ian Ver Steeg|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DL #11 Evan Herrmann|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #11 Zach Hackleman|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #12 Jermaine Minnis|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #12 Eian Pugh|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|CB #13 DJ Morton|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #13 Rashad Perry|Out||Out|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DE #14 Ike Ackerman|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #14 Marcus Cain|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #15 Riley Neer|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #15 William Marzolf|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|QB #16 Matthew Papas|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|S #16 Ryan Miller|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|S #17 Caleb Chamberlin|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #17 Blake Parker|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #18 Miles Cremascoli|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|S #18 Andrew Vera|Out||Out|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|CB #19 Bobby Miller|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|CB #20 Kendall Bannister|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|CB #21 Ronald Jackson Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|RB #22 Mike Taylor Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|S #22 Brandon Jenkins|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DE #23 Joseph Marsh|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|RB #23 James Kelly|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|RB #24 Irving Brown|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DB #24 Cam Cope|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #25 Michael Molnar|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|CB #26 Tyson Long|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #27 Jack Fries|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|CB #28 Kindall Brown|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DB #29 Jay Brewer III|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #30 Charlie Christopher|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #31 Khamani Debrow|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #32 Alex Brown|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|TE #33 Jake Furtney|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DE #34 Troy Stiggers|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #35 Mac Capen|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DB #36 Malachi Taylor|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #37 Blake Guffey|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #41 Colin Wooldridge|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|P #42 Magnus Haines|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|K #43 Brack Peacock|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|TE #44 Aiden Lowery|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DT #44 Austin Adkins|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #45 Brady Wharton|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LS #46 Nick Hemer|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|K #47 Will Hryszko|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|CB #49 Xavier Williams|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DE #50 Owen DiFranco|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #51 Job Mavrick|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DL #51 Isaiah Street|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #52 Nolan Ogburn|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #53 Lance Blakely Jr.|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #54 Will Odenthal|Out||Out|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #55 CJ Dawson II|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #56 Ben Maldonado|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LB #56 Cody Raymond|Out||Out|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DT #57 Nathan Hale|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #60 Colton Crosley|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #63 Seth Anstead|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #65 Josh Waite|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #66 Mike Montgomery|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #70 Joshua Johnson|Out||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #71 Cassius Hulbert|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #72 Sandro Malicevic|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #74 Tigana Cisse|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #75 Jarian Shelby|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #76 Bryce Parson|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #77 Trumain Lawson|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|OL #78 Danny Fortson|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #80 Kaden Page|Out||Out|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR #81 MC Walker II|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|LS #83 Ethan Najm|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|TE #84 AJ Miller|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|TE #85 Riley Palmeter|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|TE #86 Andrew Metzger|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|TE #87 Tim Boals|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|TE #88 Calvin Moody|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|P #90 Kolten Bartels|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DT #92 RJ Keuchler|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|K #93 Owen Schaadt|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DT #94 Brandon Weaver|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DE #96 Tyler Stearman|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DT #98 Derek Reagans|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|DL #99 Ty Neubert|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|RB Braden Mitchum|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
+2026-11-27T19:48:28Z|2026-11-27|Game Day|11:00:00|Ohio|Toledo|WR Simon Smith|Available||NonExempt|new|2026-11-27|Athens, OH|12:00:00|MAC|ET
