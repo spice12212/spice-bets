@@ -6914,3 +6914,53 @@ stamp|publishDate|reportType|postedTime|team|opp|player|status|prevStatus|exempt
 2026-11-26T23:37:42Z|2026-11-26|Game Day|17:30:00|Texas Tech|TCU|OL #52 Cash Cleveland|Available|Probable|NonExempt|change|2026-11-26|Lubbock, TX|19:00:00|B12|CT
 2026-11-26T23:37:42Z|2026-11-26|Game Day|17:30:00|Texas Tech|TCU|OL #61 Connor Carty|Game Time Decision|Available|NonExempt|change|2026-11-26|Lubbock, TX|19:00:00|B12|CT
 2026-11-26T23:37:42Z|2026-11-26|Game Day|17:30:00|Texas Tech|TCU|DL #92 Bryce Butler|Available|Probable|NonExempt|change|2026-11-26|Lubbock, TX|19:00:00|B12|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:10:00|Ole Miss|Mississippi State|TE #4 Caleb Odom|Probable|Questionable|NonExempt|change|2026-11-27|Oxford, MS|11:00:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:10:00|Texas|Texas A&M|EDG #99 Richard Wesley|Probable|Questionable|NonExempt|change|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:10:00|Texas A&M|Texas|WR #11 Kelshaun Johnson|Probable|Questionable|NonExempt|change|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:10:00|Texas A&M|Texas|S #15 Tylan Wilson|Out|Questionable|NonExempt|change|2026-11-27|College Station, TX|18:30:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:10:00|LSU|Arkansas|WR #4 Jackson Harris|Probable|Questionable|NonExempt|change|2026-11-28|Fayetteville, AR|11:45:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:10:00|LSU|Arkansas|TE #12 Malachi Thomas|Out|Questionable|NonExempt|change|2026-11-28|Fayetteville, AR|11:45:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:10:00|Oklahoma|Missouri|OL #70 Ryan Fodje|Available|Probable|NonExempt|change|2026-11-28|Columbia, MO|15:15:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:10:00|Oklahoma|Missouri|DL #94 Kenny Ozowalu|Probable|Questionable|NonExempt|change|2026-11-28|Columbia, MO|15:15:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:10:00|Alabama|Auburn|LB #4 Luke Metz|Available|Probable|NonExempt|change|2026-11-28|Tuscaloosa, AL|18:30:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:10:00|Alabama|Auburn|LB #9 Desmond Umeozulu|Available|Probable|NonExempt|change|2026-11-28|Tuscaloosa, AL|18:30:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:10:00|Alabama|Auburn|DL #14 Fatutoa Henry|Available|Probable|NonExempt|change|2026-11-28|Tuscaloosa, AL|18:30:00|SEC|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:00:00|Nebraska|Iowa|DL #5 Anthony Jones Jr.|Out|Questionable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:00:00|Iowa|Nebraska|WR #1 KJ Parker|Questionable|Doubtful|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:00:00|Iowa|Nebraska|WR #7 Dayton Howard|Probable|Questionable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:00:00|Iowa|Nebraska|DB #11 Jacob Wallace|Probable|Questionable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:00:00|Iowa|Nebraska|WR #14 Tony Diaz|Probable|Questionable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:00:00|Iowa|Nebraska|DB #18 Xavier Styles|Probable|Questionable|NonExempt|change|2026-11-27|Iowa City, IA|11:00:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:00:00|Minnesota|Wisconsin|LB #46 Mason Carrier|Probable|Questionable|NonExempt|change|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:00:00|Wisconsin|Minnesota|CB #2 Javan Robinson|Out|Doubtful|NonExempt|change|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:00:00|Wisconsin|Minnesota|S #11 Carson Van Dinter|Probable|Questionable|NonExempt|change|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 2|19:00:00|Wisconsin|Minnesota|OL #70 Barrett Nelson|Probable|Questionable|NonExempt|change|2026-11-27|Madison, WI|18:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Ohio State|Michigan|CB #7 Jermaine Mathews Jr.|Questionable|Available|NonExempt|change|2026-11-28|Columbus, OH|11:00:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Ohio State|Michigan|S #29 Deshawn Stewart|Out|Questionable|NonExempt|change|2026-11-28|Columbus, OH|11:00:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Northwestern|Illinois|DB #13 Josh Fussell|Doubtful|Questionable|NonExempt|change|2026-11-28|Evanston, IL|11:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Northwestern|Illinois|WR #16 Brennan Saxe|Available|Probable|NonExempt|change|2026-11-28|Evanston, IL|11:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Northwestern|Illinois|LB #45 Jack Sadowsky V|Out|Doubtful|NonExempt|change|2026-11-28|Evanston, IL|11:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Northwestern|Illinois|OL #73 Deuce McGuire|Available|Probable|NonExempt|change|2026-11-28|Evanston, IL|11:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|USC|UCLA|DE #10 Braylan Shelby|Available|Probable|NonExempt|change|2026-11-28|Pasadena, CA|14:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|USC|UCLA|LB #58 GianCarlo Rufo|Available|Probable|NonExempt|change|2026-11-28|Pasadena, CA|14:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Penn State|Maryland|CB #0 Jahmir Joseph|Probable|Questionable|NonExempt|change|2026-11-28|College Park, MD|14:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Penn State|Maryland|CB #35 Tyler Armstead|Doubtful|Questionable|NonExempt|change|2026-11-28|College Park, MD|14:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Maryland|Penn State|LB #1 Daniel Wingate|Probable|Questionable|NonExempt|change|2026-11-28|College Park, MD|14:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Maryland|Penn State|DB #2 Lavain Scruggs|Probable|Questionable|NonExempt|change|2026-11-28|College Park, MD|14:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Maryland|Penn State|DB #6 Jordan Scruggs|Probable|Questionable|NonExempt|change|2026-11-28|College Park, MD|14:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Maryland|Penn State|RB #26 Terrez Worthy|Probable|Questionable|NonExempt|change|2026-11-28|College Park, MD|14:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Maryland|Penn State|OL #77 Amory Hills|Probable|Questionable|NonExempt|change|2026-11-28|College Park, MD|14:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Indiana|Purdue|DB #4 A.J. Harris|Out|Probable|NonExempt|change|2026-11-28|Bloomington, IN|18:00:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Indiana|Purdue|LB #5 Rolijah Hardy|Available|Probable|NonExempt|change|2026-11-28|Bloomington, IN|18:00:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Washington|Oregon|WR #2 Dezmen Roebuck|Probable|Questionable|NonExempt|change|2026-11-28|Eugene, OR|18:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Washington|Oregon|WR #8 Chris Lawson|Probable|Questionable|NonExempt|change|2026-11-28|Eugene, OR|18:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Washington|Oregon|RB #22 Trey Cooley|Doubtful|Questionable|NonExempt|change|2026-11-28|Eugene, OR|18:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|19:00:00|Washington|Oregon|K #38 Hunter McKee|Doubtful|Questionable|NonExempt|change|2026-11-28|Eugene, OR|18:30:00|B10|CT
+2026-11-27T02:04:55Z|2026-11-26|Update 1|20:00:00|Boston College|Miami|DL #59 Micah Amedee|Available|Questionable|NonExempt|change|2026-11-28|Miami Gardens, FL|12:00:00|ACC|ET
+2026-11-27T02:04:55Z|2026-11-26|Update 1|20:00:00|Miami|Boston College|LB #9 Chase Smith|Available|Probable|NonExempt|change|2026-11-28|Miami Gardens, FL|12:00:00|ACC|ET
+2026-11-27T02:04:55Z|2026-11-26|Update 1|20:00:00|Miami|Boston College|DB #16 Ja'Boree Antoine|Probable|Questionable|NonExempt|change|2026-11-28|Miami Gardens, FL|12:00:00|ACC|ET
+2026-11-27T02:04:55Z|2026-11-26|Update 1|20:00:00|Miami|Boston College|OL #66 Max Buchanan|Probable|Questionable|NonExempt|change|2026-11-28|Miami Gardens, FL|12:00:00|ACC|ET
+2026-11-27T02:04:55Z|2026-11-26|Update 1|20:00:00|NC State|North Carolina|RB #1 Jayden "Duke" Scott|Out|Questionable|NonExempt|change|2026-11-28|Chapel Hill, NC|12:00:00|ACC|ET
+2026-11-27T02:04:55Z|2026-11-26|Update 1|20:00:00|North Carolina|NC State|QB #9 Billy Edwards Jr.|Questionable|Available|NonExempt|change|2026-11-28|Chapel Hill, NC|12:00:00|ACC|ET
+2026-11-27T02:04:55Z|2026-11-26|Update 1|20:00:00|Wake Forest|Duke|OL #74 John Ohnegian|Probable|Questionable|NonExempt|change|2026-11-28|Winston-Salem, NC|15:30:00|ACC|ET
+2026-11-27T02:04:55Z|2026-11-26|Update 1|20:00:00|Wake Forest|Duke|DL #95 Brandon Smiley|Probable|Questionable|NonExempt|change|2026-11-28|Winston-Salem, NC|15:30:00|ACC|ET
